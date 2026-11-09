@@ -1,0 +1,5 @@
+/local_data/
+*.zip
+*.csv
+*.csv.gz
+__pycache__/
