@@ -1,4 +1,4 @@
-from nnblocks import MLP, GNN, GCN, GAT
+from model.nnblocks import MLP, GNN, GCN, GAT
 
 import numpy as np
 from tqdm import tqdm
@@ -133,7 +133,7 @@ class NeuralClassifier(nn.Module):
         self.model.train()
 
         for epoch in range(self.max_iter):
-            with tqdm(loader, desc=f"Epoch {epoch+1}/{self.max_iter}", unit="batch", leave=False) as tepoch:
+            with tqdm(loader, desc=f"Epoch {epoch+1}/{self.max_iter}", unit="batch", leave=False, disable=True) as tepoch:
                 for batch_idx, (inputs, targets) in enumerate(tepoch):
                     if self.cuda_:
                         inputs = inputs.cuda()
@@ -155,7 +155,6 @@ class NeuralClassifier(nn.Module):
                     
                     loss.backward()
                     self.optimizer.step()
-                    tepoch.set_postfix(loss=loss.item())
 
     def predict_proba(self, X):
         X = X.to_numpy(dtype=np.float32)
@@ -301,13 +300,20 @@ class GATClassifier(NeuralClassifier):
         out = np.empty(len(X_t), dtype=np.float64)
         self.model.eval()
         with torch.no_grad():
+            # Reuse the identical reference-reference block for each query graph.
+            ref_sim = torch.abs(F.cosine_similarity(reference[:, None, :], reference[None, :, :], dim=-1))
             # Several participants per forward pass: their graphs are stacked block-diagonally, so messages never
             # cross graphs and the result equals predicting each participant separately.
             for start in range(0, len(X_t), 64):
                 chunk = X_t[start:start + 64].to(device)
                 k = len(chunk)
                 graphs = torch.cat([reference.unsqueeze(0).expand(k, -1, -1), chunk.unsqueeze(1)], dim=1)
-                sim = torch.abs(F.cosine_similarity(graphs[:, None, :, :], graphs[:, :, None, :], dim=-1))
+                sim = torch.empty((k, n_nodes, n_nodes), device=device, dtype=graphs.dtype)
+                sim[:, :-1, :-1] = ref_sim
+                query_sim = torch.abs(F.cosine_similarity(chunk[:, None, :], reference[None, :, :], dim=-1))
+                sim[:, -1, :-1] = query_sim
+                sim[:, :-1, -1] = query_sim
+                sim[:, -1, -1] = torch.abs(F.cosine_similarity(chunk, chunk, dim=-1))
                 eps = torch.quantile(sim.reshape(k, -1), self.alpha, dim=1, interpolation='nearest')
                 g, row, col = torch.where(sim >= eps[:, None, None])
                 edge_index = torch.stack([row + g * n_nodes, col + g * n_nodes])

@@ -1,22 +1,4 @@
-"""Formatted manuscript tables (Tables 2 and 3) and Supplementary Tables S10-S19, from results/tables/ and the
-outcome-status table. Writes one CSV per table to results/tables/supplementary/ and, with --docx, a Word file.
-
-Table 2   internal validation (all participants)
-Table 3   temporal validation (all participants)
-S10 outcome status by cohort and horizon
-S11 participants with complete vs incomplete predictors
-S12 cohort overlap and temporal-validation performance by overlap group
-S13 accuracy (all participants) and complete-case results
-S14 paired differences between models, internal validation; S14b 8-year vs 6-year per model
-S15 paired differences between models, temporal validation; S15b 8-year vs 6-year per model
-S16 selected hyperparameters and decision thresholds
-S17 runtime
-S18 SHAP vs permutation importance
-S19 outcome-definition sensitivity analysis
-
-Usage: python supplementary_tables.py [--docx "paper/Supplementary Tables.docx"]
-"""
-import argparse
+"""Tabular sources for the submitted manuscript and supplement numbering."""
 import json
 import os
 from collections import Counter
@@ -26,10 +8,11 @@ import pandas as pd
 
 from make_figures import MODELS, NAMES, VARIABLE_LABELS
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
-TABLES = os.path.join(ROOT, 'results', 'tables')
+from inference import evaluation
+from train.cohorts import ARTIFACTS
+
+TABLES = ARTIFACTS / "tables"
 OUT = os.path.join(TABLES, 'supplementary')
-STATUS = os.path.join(ROOT, 'data', 'preprocessed data', 'outcome_status.csv')
 COHORT = {'temporal': '2010 cohort', 'internal': '2000 cohort'}
 PCT = ('AUROC', 'AUPRC', 'Accuracy', 'Precision', 'Recall', 'F1')
 MAIN_METRICS = ['AUROC', 'AUPRC', 'Precision', 'Recall', 'F1', 'Brier', 'calibration_intercept',
@@ -77,24 +60,8 @@ def metric_table(df, metrics, population='all'):
     return pd.DataFrame(rows)
 
 
-def t10_outcome_status():
-    s = pd.read_csv(STATUS)
-    label = {'demcls00-06': ('2000', '6-year (2000-2006)'), 'demcls00-08': ('2000', '8-year (2000-2008)'),
-             'demcls10-16': ('2010', '6-year (2010-2016)'), 'demcls10-18': ('2010', '8-year (2010-2018)')}
-    rows = []
-    for _, r in s.iterrows():
-        cohort, window = label[r['window']]
-        e = r['eligible']
-        pct = lambda v: f'{v:,} ({100 * v / e:.1f})'
-        rows.append({'Baseline cohort': cohort, 'Horizon (window)': window, 'Eligible at baseline': f'{e:,}',
-                     'Incident dementia, n (%)': pct(r['incident dementia']),
-                     'Assessed dementia-free at final wave, n (%)': pct(r['assessed dementia-free']),
-                     'Died before final wave, no dementia observed, n (%)':
-                         pct(r['died before final wave, no dementia observed']),
-                     'Alive or unknown, not assessed at final wave, n (%)':
-                         pct(r['alive or unknown, not assessed at final wave']),
-                     'Analytic cohort': f'{r["incident dementia"] + r["assessed dementia-free"]:,}'})
-    return pd.DataFrame(rows)
+def s1_outcome_status():
+    return read("S1_outcome_flow.csv")
 
 
 def t11_complete_vs_incomplete():
@@ -195,7 +162,7 @@ def t16_selection():
     rows = []
     for h in (6, 8):
         for m in MODELS:
-            s = json.load(open(os.path.join(ROOT, 'results', f'h{h}', m, 'selection.json')))
+            s = evaluation.load(h, m, 'selection')
             reps = s['per_repeat']
             counts = Counter(_params(r['params']) for r in reps)
             thr = np.array([r['threshold'] for r in reps])
@@ -266,105 +233,47 @@ def t19_sensitivity():
         {NAMES[m]: i for i, m in enumerate(MODELS)}) if c.name == 'Model' else c, kind='stable')
 
 
-TITLES = {
-    'Table2': 'Table 2. Internal validation in the 2000 development cohort (all participants). Mean over 10 random '
-              '60/20/20 splits with 95% CIs from the corrected resampled t interval; n and cases are per test set.',
-    'Table3': 'Table 3. Temporal validation within the HRS (2010 cohort, all participants). Models fitted on the full '
-              '2000 cohort; 95% CIs from a household cluster bootstrap (2,000 resamples).',
-    'S10': 'Supplementary Table S10. Outcome status of participants eligible at baseline, by cohort and horizon.',
-    'S11': 'Supplementary Table S11. Characteristics of analytic-cohort participants with complete and incomplete '
-           'predictors. Values are means or percentages; standardized difference = (incomplete - complete) / pooled SD.',
-    'S12': 'Supplementary Table S12. Overlap between the 2010 temporal-validation cohort and the 2000 development '
-           'cohort, and temporal-validation performance by overlap group.',
-    'S13a': 'Supplementary Table S13a. Accuracy (all participants) at the F1-maximizing threshold selected on '
-            'validation data (internal) or carried over from development (temporal).',
-    'S13b': 'Supplementary Table S13b. Performance among participants with complete predictors (complete-case '
-            'sensitivity analysis).',
-    'S14': 'Supplementary Table S14. Paired differences between models, internal validation (all participants). '
-           'Corrected resampled t intervals and p values; relative difference with respect to model B.',
-    'S14b': 'Supplementary Table S14b. 8-year vs 6-year performance of each model, internal validation (all '
-            'participants). The horizons use different cohorts and splits (prevalence 11.7% vs 15.6%), so the '
-            'difference of the means has a t interval with the two corrected variances added (conservative). AUPRC, '
-            'F1, and Brier score depend on prevalence; AUROC is the comparable measure.',
-    'S15': 'Supplementary Table S15. Paired differences between models, temporal validation (all participants). '
-           'Household cluster-bootstrap intervals and p values; relative difference with respect to model B.',
-    'S15b': 'Supplementary Table S15b. 8-year vs 6-year performance of each model, temporal validation (all '
-            'participants; prevalence 11.6% vs 15.9%). 95% CIs from a joint household cluster bootstrap over both '
-            '2010 cohorts. AUPRC, F1, and Brier score depend on prevalence; AUROC is the comparable measure.',
-    'S16': 'Supplementary Table S16. Selected hyperparameters and decision thresholds (selection by validation AUPRC; '
-           'threshold maximizing F1 on the validation set; temporal threshold = median of the internal thresholds).',
-    'S17': 'Supplementary Table S17. Runtime: all fits of the hyperparameter search and the final refits (median '
-           'seconds per fit includes prediction on the validation set; neural models on an NVIDIA GeForce RTX 4080).',
-    'S18a': 'Supplementary Table S18a. Agreement between SHAP and permutation importance ranks (2010 cohort, 6-year horizon).',
-    'S18b': 'Supplementary Table S18b. Predictors in the top 10 by either method.',
-    'S18c': 'Supplementary Table S18c. Check of the approximation: KernelSHAP with the settings used for RealMLP, '
-            'TabICL, and GAT, applied to models with exact SHAP values; agreement of the approximate ranks (500 '
-            'participants) with the exact ranks (all 2010 participants).',
-    'S19': 'Supplementary Table S19. Outcome-definition sensitivity analysis: non-cases defined as assessed '
-           'dementia-free at any follow-up wave, compared with the primary definition.',
-}
-
-
 def build():
     i, t = read('internal_metrics.csv'), read('temporal_metrics.csv')
     s13a, s13b = t13_accuracy_complete()
     s18a, s18b = t18_shap()
-    s18c = t18c_kernel_check() if os.path.exists(os.path.join(TABLES, 'importance_kernel_shap_check_h6.csv')) else None
-    tables = {'Table2': metric_table(i, MAIN_METRICS), 'Table3': metric_table(t, MAIN_METRICS),
-              'S10': t10_outcome_status(), 'S11': t11_complete_vs_incomplete(), 'S12': t12_overlap(),
-              'S13a': s13a, 'S13b': s13b, 'S14': pairwise_table('internal_pairwise.csv'),
-              'S14b': horizon_comparison('internal'),
-              'S15': pairwise_table('temporal_pairwise.csv'), 'S15b': horizon_comparison('temporal'),
-              'S16': t16_selection(), 'S17': t17_runtime(),
-              'S18a': s18a, 'S18b': s18b}
-    if s18c is not None:
-        tables['S18c'] = s18c
-    tables['S19'] = t19_sensitivity()
+    s18c = t18c_kernel_check()
+    main = pd.concat([metric_table(i, MAIN_METRICS).assign(Validation="Internal"),
+                      metric_table(t, MAIN_METRICS).assign(Validation="Temporal")], ignore_index=True)
+    main = main[["Validation"] + [c for c in main if c != "Validation"]]
+    internal = metric_table(i, MAIN_METRICS)
+    temporal = metric_table(t, MAIN_METRICS)
+    tables = {
+        "Table1": main,
+        "S1": s1_outcome_status(),
+        "S11": t11_complete_vs_incomplete(),
+        "S13": s13b,
+        "S14": t12_overlap(),
+        "S15": t16_selection(),
+        "S16": pairwise_table("internal_pairwise.csv"),
+        "S17": pairwise_table("temporal_pairwise.csv"),
+        "S18": horizon_comparison("internal"),
+        "S19": horizon_comparison("temporal"),
+        "S20": t17_runtime(),
+        "S21": s18c,
+        "S22a": internal[internal.Horizon.eq("6-year")],
+        "S22b": internal[internal.Horizon.eq("8-year")],
+        "S23": s13a,
+        "S24a": temporal[temporal.Horizon.eq("6-year")],
+        "S24b": temporal[temporal.Horizon.eq("8-year")],
+        "S25": s18b,
+        "S26": s18a,
+        "S27": t19_sensitivity(),
+    }
+    for name, file in (("S9", "S9_predictor_summary.csv"), ("S10", "S10_predictor_distribution.csv"),
+                       ("S12", "S12_imputation_comparison_h6.csv")):
+        if (TABLES / file).exists():
+            tables[name] = read(file)
     return tables
 
 
-def write_docx(tables, path):
-    from docx import Document
-    from docx.enum.section import WD_ORIENT
-    from docx.shared import Cm, Pt
-    doc = Document()
-    sec = doc.sections[0]
-    sec.orientation = WD_ORIENT.LANDSCAPE
-    sec.page_width, sec.page_height = Cm(29.7), Cm(21.0)
-    for side in ('left_margin', 'right_margin', 'top_margin', 'bottom_margin'):
-        setattr(sec, side, Cm(1.5))
-    doc.styles['Normal'].font.name = 'Arial'
-    doc.styles['Normal'].font.size = Pt(8)
-    for k, df in tables.items():
-        doc.add_paragraph().add_run(TITLES[k]).bold = True
-        tab = doc.add_table(rows=1, cols=len(df.columns))
-        tab.style = 'Table Grid'
-        for c, col in enumerate(df.columns):
-            run = tab.rows[0].cells[c].paragraphs[0].add_run(str(col))
-            run.bold = True
-        for _, r in df.iterrows():
-            cells = tab.add_row().cells
-            for c, v in enumerate(r):
-                cells[c].text = str(v)
-        for row in tab.rows:
-            for cell in row.cells:
-                for p in cell.paragraphs:
-                    p.paragraph_format.space_after = Pt(0)
-                    for run in p.runs:
-                        run.font.size = Pt(7)
-        doc.add_paragraph()
-    doc.save(path)
-
-
-if __name__ == '__main__':
-    ap = argparse.ArgumentParser()
-    ap.add_argument('--docx', help='also write all tables to this Word file')
-    args = ap.parse_args()
-    tables = build()
+if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
-    for k, df in tables.items():
-        df.to_csv(os.path.join(OUT, f'{k}.csv'), index=False)
-        print(f'{k}: {len(df)} rows')
-    if args.docx:
-        write_docx(tables, args.docx)
-        print('wrote', args.docx)
+    for name, frame in build().items():
+        frame.to_csv(os.path.join(OUT, f"{name}.csv"), index=False)
+        print(f"wrote {name}")

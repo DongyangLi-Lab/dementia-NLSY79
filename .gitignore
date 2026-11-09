@@ -8,3 +8,7 @@ __pycache__/
 
 # Local revision notes (not published)
 REVISION_LOG.md
+.venv/
+artifacts/*
+!artifacts/README.md
+.venv-cu128/

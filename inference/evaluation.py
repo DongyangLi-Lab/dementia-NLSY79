@@ -24,26 +24,27 @@ from scipy import stats
 from sklearn.metrics import (accuracy_score, average_precision_score, brier_score_loss, f1_score, precision_score,
                              recall_score, roc_auc_score)
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
-RESULTS = os.path.join(ROOT, 'results')
-TABLES = os.path.join(RESULTS, 'tables')
-MODELS = ['LR', 'GNB', 'DT', 'LightGBM', 'CatBoost', 'RealMLP', 'TabICL', 'GAT']
+from artifact_store import job_dir
+from train.cohorts import ARTIFACTS
+from model.specs import MODELS
+
+TABLES = ARTIFACTS / "tables"
+OUTCOME = "final"
 N_BOOT = 2000
 TEST_TRAIN_RATIO = 0.2 / 0.8  # test / (train + validation) in each internal repeat
 DCA_THRESHOLDS = np.round(np.arange(0.05, 0.41, 0.01), 2)
 
 
 def available_models(horizon):
-    return [m for m in MODELS if os.path.exists(os.path.join(RESULTS, f'h{horizon}', m, 'metrics.csv'))]
+    return [m for m in MODELS if (job_dir("predictions", horizon, OUTCOME, m) / "inference.done.json").is_file()]
 
 
 def load(horizon, model, kind):
-    """kind: 'metrics', 'test' (internal test predictions), 'temporal' (2010 predictions), 'selection'."""
-    d = os.path.join(RESULTS, f'h{horizon}', model)
-    if kind == 'selection':
-        return json.load(open(os.path.join(d, 'selection.json')))
-    name = {'metrics': 'metrics.csv', 'test': 'test_predictions.csv', 'temporal': 'temporal_predictions.csv'}[kind]
-    return pd.read_csv(os.path.join(d, name))
+    if kind == "selection":
+        path = job_dir("checkpoints", horizon, OUTCOME, model) / "selection.json"
+        return json.loads(path.read_text(encoding="utf-8"))
+    name = {"metrics": "metrics.csv", "test": "test_predictions.csv", "temporal": "temporal_predictions.csv"}[kind]
+    return pd.read_csv(job_dir("predictions", horizon, OUTCOME, model) / name)
 
 
 def _subset(df, population):
@@ -275,12 +276,15 @@ def horizon_table(metrics=('AUROC', 'AUPRC', 'F1', 'Brier'), n_boot=N_BOOT):
 def runtime_table(horizon):
     rows = []
     for m in available_models(horizon):
-        d = os.path.join(RESULTS, f'h{horizon}', m)
+        d = job_dir("checkpoints", horizon, OUTCOME, m)
         grid = pd.read_csv(os.path.join(d, 'validation_grid.csv'))
         met = load(horizon, m, 'metrics').drop_duplicates(['setting', 'repeat'])
         rows.append({'horizon': horizon, 'model': m, 'fits': len(grid) + len(met),
                      'median_seconds_per_fit': float(np.median(np.r_[grid['fit_seconds'], met['fit_seconds']])),
-                     'total_minutes': (grid['fit_seconds'].sum() + met['fit_seconds'].sum()) / 60})
+                     'total_minutes': (grid['fit_seconds'].sum() + met['fit_seconds'].sum()) / 60,
+                     'total_prediction_minutes': (grid['prediction_seconds'].sum() + met['prediction_seconds'].sum()) / 60,
+                     'device': load(horizon, m, 'selection')['device']['backend'],
+                     'gpu': load(horizon, m, 'selection')['device'].get('gpu_name', '')})
     return pd.DataFrame(rows)
 
 
@@ -290,16 +294,15 @@ if __name__ == '__main__':
     ap.add_argument('--outcome', default='final', choices=['final', 'any'],
                     help="'any': tables for the outcome-definition sensitivity analysis (results/sensitivity_any)")
     args = ap.parse_args()
-    prefix = ''
-    if args.outcome != 'final':
-        RESULTS = os.path.join(RESULTS, f'sensitivity_{args.outcome}')
-        prefix = f'sensitivity_{args.outcome}_'
+    OUTCOME = args.outcome
+    prefix = '' if OUTCOME == 'final' else f'sensitivity_{OUTCOME}_'
+    for horizon in (6, 8):
+        if available_models(horizon) != list(MODELS):
+            raise RuntimeError(f'Incomplete {OUTCOME} model outputs for h{horizon}')
     os.makedirs(TABLES, exist_ok=True)
     out = {k: [] for k in ['internal_metrics', 'internal_pairwise', 'temporal_metrics', 'temporal_pairwise',
                            'calibration_curves', 'decision_curves', 'runtime']}
     for horizon in (6, 8):
-        if not available_models(horizon):
-            continue
         for population in ('all', 'complete'):
             a, b = internal_table(horizon, population); out['internal_metrics'].append(a); out['internal_pairwise'].append(b)
             a, b = temporal_table(horizon, population); out['temporal_metrics'].append(a); out['temporal_pairwise'].append(b)

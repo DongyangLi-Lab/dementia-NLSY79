@@ -1,8 +1,6 @@
 """Feature importance on held-out data: the 2010 temporal-validation cohort.
 
-For each model, the temporal-validation model of benchmark.run is refitted (configuration selected on development
-data, fitted on the full imputed development cohort) and evaluated on the imputed 2010 cohort, which was not used
-for fitting or selection.
+Load each frozen temporal checkpoint and evaluate it on the imputed 2010 cohort.
 
 - Permutation importance: for each of the 60 predictors, the drop in AUPRC when that predictor is randomly permuted
   in the 2010 data (one-hot groups and functional items with their "don't do" indicator are permuted jointly),
@@ -25,18 +23,20 @@ not indicate a causal or modifiable effect, and correlated predictors share impo
 Usage: python importance.py [--horizon 6] [--models LR LightGBM ...] [--kernel-shap]
 """
 import argparse
-import os
-import pickle
+from pathlib import Path
 import time
-import warnings
 
 import numpy as np
 import pandas as pd
 from scipy import stats
 from sklearn.metrics import average_precision_score
 
-import benchmark
-import evaluation
+from artifact_store import job_dir, load_model, save_receipt, verified, write_file
+from inference import evaluation
+from inference.scoring import predict as _predict
+from model.specs import MODELS
+from train.cohorts import ARTIFACTS, atomic_csv, load_cohorts, sha256
+from train.imputation import cache_stamp, category_groups, read_cache
 
 N_PERMUTATIONS = 5
 N_BOOT = 500
@@ -48,7 +48,7 @@ KS_EXPLAIN, KS_COALITIONS, KS_BACKGROUND, KS_CHUNK = 500, 800, 10, 8000  # chunk
 def predictor_groups(predictors):
     """Variable name -> model-input columns (60 groups for the 94 inputs)."""
     groups = {}
-    for name, cols in benchmark._category_groups(predictors).items():
+    for name, cols in category_groups(predictors).items():
         groups[name[:-len('_item')] if name.endswith('_item') else name] = cols
     grouped = {c for cols in groups.values() for c in cols}
     for c in predictors:
@@ -57,34 +57,39 @@ def predictor_groups(predictors):
     return groups
 
 
-def fit_temporal_model(model_name, horizon):
-    cls, grid, fixed = benchmark.model_specs()[model_name]
-    sel = evaluation.load(horizon, model_name, 'selection')['temporal']
-    dev, ext, P = benchmark.load_cohorts(horizon)
-    e = pickle.load(open(benchmark._cache_path(horizon, 'external'), 'rb'))
-    model = cls(**{**fixed, **sel['params']})
-    model.fit(e['X_dev'].astype(np.float32), pd.Series(dev['y'].to_numpy()))
-    return model, e['X_dev'], e['X_ext'].astype(np.float32), ext['y'].to_numpy(), ext['hhidpn'].to_numpy(), P
+def load_temporal_model(model_name, horizon):
+    _, ext, predictors = load_cohorts(horizon)
+    cache = read_cache(horizon, "final", "external", cache_stamp(horizon, "final"))
+    model = load_model(job_dir("checkpoints", horizon, "final", model_name) / "temporal.pkl")
+    return model, cache["X_dev"], cache["X_ext"].astype(np.float32), ext.y.to_numpy(), ext.hhidpn.to_numpy(), predictors
 
 
-def _predict(model, X):
-    return np.asarray(model.predict_proba(X))[:, 1]
-
-
-def permutation_importance(model_name, horizon, n_perm=N_PERMUTATIONS, n_boot=N_BOOT, seed=2026):
-    model, X_dev, X_ext, y, hhidpn, P = fit_temporal_model(model_name, horizon)
+def permutation_importance(model_name, horizon, target, stamp, n_perm=N_PERMUTATIONS, n_boot=N_BOOT, seed=2026):
+    model, X_dev, X_ext, y, hhidpn, P = load_temporal_model(model_name, horizon)
     groups = predictor_groups(P)
     base = _predict(model, X_ext)
     saved = evaluation.load(horizon, model_name, 'temporal')['p'].to_numpy()
-    rng = np.random.default_rng(seed)
+    if not np.allclose(base, saved, rtol=1e-5, atol=1e-7):
+        raise ValueError(f"{model_name}: frozen checkpoint did not reproduce held-out predictions")
     permuted = {}
     t0 = time.time()
-    for name, cols in groups.items():
-        permuted[name] = []
-        for _ in range(n_perm):
-            Xp = X_ext.copy()
-            Xp[cols] = X_ext[cols].to_numpy()[rng.permutation(len(Xp))]
-            permuted[name].append(_predict(model, Xp))
+    for i, (name, cols) in enumerate(groups.items()):
+        raw = target / "permutations" / f"{i:02d}.npy"
+        receipt = raw.with_suffix(".done.json")
+        if not verified(receipt, stamp, (raw,)):
+            rng = np.random.default_rng(np.random.SeedSequence([seed, i]))
+            probabilities = []
+            for _ in range(n_perm):
+                Xp = X_ext.copy()
+                Xp[cols] = X_ext[cols].to_numpy()[rng.permutation(len(Xp))]
+                probabilities.append(_predict(model, Xp))
+            def save(p):
+                with p.open("wb") as stream:
+                    np.save(stream, np.asarray(probabilities))
+            write_file(raw, save)
+            save_receipt(receipt, stamp, (raw,))
+        permuted[name] = np.load(raw)
+        print(f"{model_name} {name} permutation predictions ready", flush=True)
     seconds = time.time() - t0
     base_auprc = average_precision_score(y, base)
     point = {g: base_auprc - np.mean([average_precision_score(y, p) for p in ps]) for g, ps in permuted.items()}
@@ -183,93 +188,67 @@ def _gnb_terms(model, X):
     return logpdf(1) - logpdf(0)
 
 
-def run(horizon, models):
-    warnings.filterwarnings('ignore')
-    os.makedirs(evaluation.TABLES, exist_ok=True)
-    perm_rows, shap_rows, agree_rows, meta_rows = [], [], [], []
-    for m in models:
-        perm, meta, model, X_dev, X_ext, groups = permutation_importance(m, horizon)
-        perm_rows.append(perm); meta_rows.append(meta)
-        print(f"{m} h{horizon}: permutation done in {meta['permutation_seconds']:.0f}s; "
-              f"top 5: {list(perm['variable'][:5])}", flush=True)
-        if m in SHAP_MODELS:
-            sh = shap_importance(m, model, X_dev, X_ext, groups, horizon)
-            shap_rows.append(sh.assign(method='exact'))
-            merged = perm.merge(sh, on=['horizon', 'model', 'variable'], suffixes=('_perm', '_shap'))
-            rho = stats.spearmanr(merged['importance_AUPRC_drop'], merged['mean_abs_SHAP']).correlation
-            top10 = len(set(perm['variable'][:10]) & set(sh['variable'][:10]))
-            agree_rows.append({'horizon': horizon, 'model': m, 'spearman_rank_correlation': rho,
-                               'shared_top10': top10, 'method': 'exact'})
-    suffix = f'h{horizon}'
-    _save_merged(pd.concat(perm_rows), f'importance_permutation_{suffix}.csv', models)
-    _save_merged(pd.DataFrame(meta_rows), f'importance_meta_{suffix}.csv', models)
-    if shap_rows:
-        _save_merged(pd.concat(shap_rows), f'importance_shap_{suffix}.csv', models)
-        _save_merged(pd.DataFrame(agree_rows), f'importance_rank_agreement_{suffix}.csv', models)
+def run_model(model, horizon=6):
+    target = job_dir("importance", horizon, "final", model)
+    pred = job_dir("predictions", horizon, "final", model) / "inference.done.json"
+    stamp = {"inference": sha256(pred), "implementation": sha256(Path(__file__))}
+    names = ["permutation", "meta", "shap", "rank_agreement"]
+    if model in ("LightGBM", "LR"):
+        names.append("kernel_shap_check")
+    files = [target / f"{name}.csv" for name in names]
+    done = target / "importance.done.json"
+    if verified(done, stamp, files):
+        return
+    perm, meta, estimator, X_dev, X_ext, groups = permutation_importance(model, horizon, target, stamp)
+    exact = model in SHAP_MODELS
+    method = "exact" if exact else "KernelSHAP (approximate)"
+    if exact:
+        shap = shap_importance(model, estimator, X_dev, X_ext, groups, horizon)
+    if not exact or model in ("LightGBM", "LR"):
+        groups_order, phi = kernel_shap(estimator, X_dev, X_ext, groups)
+        approximate = pd.DataFrame({"horizon": horizon, "model": model, "variable": groups_order,
+                                    "mean_abs_SHAP": np.abs(phi).mean(axis=0)})
+        approximate["rank"] = approximate["mean_abs_SHAP"].rank(ascending=False, method="min").astype(int)
+        approximate = approximate.sort_values("rank")
+        with (target / "kernel_shap_values.npz").open("wb") as stream:
+            np.savez_compressed(stream, groups=groups_order, values=phi)
+        if not exact:
+            shap = approximate
+        else:
+            check = shap.merge(approximate, on="variable", suffixes=("_exact", "_kernel"))
+            rho = stats.spearmanr(check.mean_abs_SHAP_exact, check.mean_abs_SHAP_kernel).correlation
+            top = len(set(shap.variable.iloc[:10]) & set(approximate.variable.iloc[:10]))
+            atomic_csv(pd.DataFrame([{"horizon": horizon, "model": model,
+                                      "spearman_rank_correlation": rho, "shared_top10": top}]), files[4])
+    paired = perm.merge(shap, on=["horizon", "model", "variable"])
+    agree = {"horizon": horizon, "model": model, "method": method,
+             "spearman_rank_correlation": stats.spearmanr(paired.importance_AUPRC_drop, paired.mean_abs_SHAP).correlation,
+             "shared_top10": len(set(perm.variable.iloc[:10]) & set(shap.variable.iloc[:10]))}
+    for frame, path in zip((perm, pd.DataFrame([meta]), shap.assign(method=method), pd.DataFrame([agree])), files):
+        atomic_csv(frame, path)
+    save_receipt(done, stamp, files)
 
 
-def run_kernel_shap(horizon, models, validate=('LightGBM', 'LR')):
-    """Approximate SHAP for the models without an exact method, compared with their saved permutation importance.
-    The same KernelSHAP settings are applied to models with exact SHAP values (validate) to check the approximation:
-    rank agreement between the approximate values and the exact values (all 2010 participants)."""
-    warnings.filterwarnings('ignore')
-    suffix = f'h{horizon}'
-    perm_all = pd.read_csv(os.path.join(evaluation.TABLES, f'importance_permutation_{suffix}.csv'))
-    exact = pd.read_csv(os.path.join(evaluation.TABLES, f'importance_shap_{suffix}.csv'))
-    shap_rows, agree_rows, check_rows = [], [], []
-    for m in list(validate) + list(models):
-        t0 = time.time()
-        model, X_dev, X_ext, y, hhidpn, P = fit_temporal_model(m, horizon)
-        names, phi = kernel_shap(model, X_dev, X_ext, predictor_groups(P))
-        sh = pd.DataFrame({'horizon': horizon, 'model': m, 'variable': names, 'mean_abs_SHAP': np.abs(phi).mean(axis=0)})
-        sh['rank'] = sh['mean_abs_SHAP'].rank(ascending=False, method='min').astype(int)
-        sh = sh.sort_values('rank')
-        print(f'{m} h{horizon}: KernelSHAP done in {time.time() - t0:.0f}s; top 5: {list(sh["variable"][:5])}', flush=True)
-        if m in validate:
-            ex = exact[exact['model'] == m]
-            mg = ex.merge(sh, on='variable', suffixes=('_exact', '_kernel'))
-            check_rows.append({'horizon': horizon, 'model': m,
-                               'spearman_rank_correlation': stats.spearmanr(mg['mean_abs_SHAP_exact'],
-                                                                            mg['mean_abs_SHAP_kernel']).correlation,
-                               'shared_top10': len(set(ex.sort_values('rank')['variable'][:10]) &
-                                                   set(sh['variable'][:10]))})
-            continue
-        shap_rows.append(sh.assign(method='KernelSHAP (approximate)'))
-        perm = perm_all[perm_all['model'] == m]
-        mg = perm.merge(sh, on='variable')
-        agree_rows.append({'horizon': horizon, 'model': m, 'spearman_rank_correlation':
-                           stats.spearmanr(mg['importance_AUPRC_drop'], mg['mean_abs_SHAP']).correlation,
-                           'shared_top10': len(set(perm.sort_values('rank')['variable'][:10]) & set(sh['variable'][:10])),
-                           'method': 'KernelSHAP (approximate)'})
-    if shap_rows:
-        _save_merged(pd.concat(shap_rows), f'importance_shap_{suffix}.csv', models)
-        _save_merged(pd.DataFrame(agree_rows), f'importance_rank_agreement_{suffix}.csv', models)
-    if check_rows:
-        _save_merged(pd.DataFrame(check_rows), f'importance_kernel_shap_check_{suffix}.csv', list(validate))
+def merge(horizon=6):
+    names = ("permutation", "meta", "shap", "rank_agreement", "kernel_shap_check")
+    for name in names:
+        models = ("LR", "LightGBM") if name == "kernel_shap_check" else MODELS
+        frames = []
+        for model in models:
+            target = job_dir("importance", horizon, "final", model)
+            if not (target / "importance.done.json").exists():
+                raise ValueError(f"Incomplete importance for {model}")
+            frames.append(pd.read_csv(target / f"{name}.csv"))
+        atomic_csv(pd.concat(frames, ignore_index=True), evaluation.TABLES / f"importance_{name}_h{horizon}.csv")
 
 
-def _save_merged(new, name, models):
-    """Write a table, replacing the rows of the models just run and keeping rows of other models."""
-    path = os.path.join(evaluation.TABLES, name)
-    if os.path.exists(path):
-        old = pd.read_csv(path)
-        if 'method' in new and 'method' not in old:
-            old['method'] = 'exact'  # tables written before approximate SHAP was added
-        new = pd.concat([old[~old['model'].isin(models)], new], ignore_index=True)
-    order = {m: i for i, m in enumerate(evaluation.MODELS)}
-    new = new.sort_values(['model'] + (['rank'] if 'rank' in new else []), key=lambda c: c.map(order) if c.name == 'model' else c)
-    new.to_csv(path, index=False)
-
-
-if __name__ == '__main__':
-    os.environ.setdefault('LOKY_MAX_CPU_COUNT', str(os.cpu_count()))
-    ap = argparse.ArgumentParser()
-    ap.add_argument('--horizon', type=int, default=6, choices=[6, 8])
-    ap.add_argument('--models', nargs='*', default=evaluation.MODELS)
-    ap.add_argument('--kernel-shap', action='store_true',
-                    help='approximate SHAP for RealMLP, TabICL, and GAT (uses the saved permutation importance)')
-    args = ap.parse_args()
-    if args.kernel_shap:
-        run_kernel_shap(args.horizon, [m for m in args.models if m in KERNEL_SHAP_MODELS])
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    action = parser.add_mutually_exclusive_group(required=True)
+    action.add_argument("--model", choices=MODELS)
+    action.add_argument("--merge", action="store_true")
+    args = parser.parse_args()
+    if args.merge:
+        merge()
     else:
-        run(args.horizon, args.models)
+        run_model(args.model)
