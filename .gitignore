@@ -8,3 +8,7 @@ __pycache__/
 
 # Local revision notes (not published)
 REVISION_LOG.md
+
+# Revised benchmark outputs and local environments
+artifacts/
+.venv/
