@@ -1,0 +1,3961 @@
+{
+  "common": {
+    "age_years": {
+      "feature": "age_years",
+      "status": "compatible_operational",
+      "primary14": "True",
+      "nlsy_source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "nlsy_n_observed": "8021",
+      "hrs_n_observed": "206455",
+      "hrs_official_source_rule": "RwAGEY_M; completed age at interview midpoint",
+      "hrs_n_observed_v3": "224530"
+    },
+    "female": {
+      "feature": "female",
+      "status": "compatible_operational",
+      "primary14": "True",
+      "nlsy_source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "nlsy_n_observed": "8021",
+      "hrs_n_observed": "206455",
+      "hrs_official_source_rule": "RAGENDER:1male/2female",
+      "hrs_n_observed_v3": "224530"
+    },
+    "education4": {
+      "feature": "education4",
+      "status": "coarsened",
+      "primary14": "True",
+      "nlsy_source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "nlsy_n_observed": "8021",
+      "hrs_n_observed": "205858",
+      "hrs_official_source_rule": "RAEDYRS bins0-7/8-11/12/13+; not RAEDUC",
+      "hrs_n_observed_v3": "223359"
+    },
+    "race3": {
+      "feature": "race3",
+      "status": "coarsened",
+      "primary14": "True",
+      "nlsy_source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "nlsy_n_observed": "8021",
+      "hrs_n_observed": "206237",
+      "hrs_official_source_rule": "RAHISPAN/RARACEM:Hispanic/non-HispanicBlack/other (NLSY residual race category)",
+      "hrs_n_observed_v3": "223784"
+    },
+    "region4": {
+      "feature": "region4",
+      "status": "coarsened",
+      "primary14": "True",
+      "nlsy_source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "nlsy_n_observed": "7947",
+      "hrs_n_observed": "204777",
+      "hrs_official_source_rule": "RwCENDIV:1-2NE/3-4MW/5-7South/8-9West",
+      "hrs_n_observed_v3": "220766"
+    },
+    "height_m": {
+      "feature": "height_m",
+      "status": "compatible_operational",
+      "primary14": "True",
+      "nlsy_source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "nlsy_n_observed": "7946",
+      "hrs_n_observed": "205704",
+      "hrs_official_source_rule": "RwHEIGHT metres",
+      "hrs_n_observed_v3": "223668"
+    },
+    "weight_kg": {
+      "feature": "weight_kg",
+      "status": "compatible_operational",
+      "primary14": "True",
+      "nlsy_source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "nlsy_n_observed": "7858",
+      "hrs_n_observed": "203794",
+      "hrs_official_source_rule": "RwWEIGHT kilograms",
+      "hrs_n_observed_v3": "221625"
+    },
+    "bmi": {
+      "feature": "bmi",
+      "status": "compatible_operational",
+      "primary14": "True",
+      "nlsy_source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "nlsy_n_observed": "7799",
+      "hrs_n_observed": "203122",
+      "hrs_official_source_rule": "RwWEIGHT/RwHEIGHT**2; no clipping",
+      "hrs_n_observed_v3": "220854"
+    },
+    "self_memory_0_4": {
+      "feature": "self_memory_0_4",
+      "status": "compatible_operational",
+      "primary14": "True",
+      "nlsy_source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "nlsy_n_observed": "8004",
+      "hrs_n_observed": "193022",
+      "hrs_official_source_rule": "RwSLFMEM1-5 minus1;2022 observed CogImp flag0 if omitted fromRAND",
+      "hrs_n_observed_v3": "209645"
+    },
+    "employed": {
+      "feature": "employed",
+      "status": "coarsened",
+      "primary14": "True",
+      "nlsy_source": "DOI_EMPLOYED",
+      "rule": "any job at date of interview",
+      "nlsy_n_observed": "7935",
+      "hrs_n_observed": "206455",
+      "hrs_official_source_rule": "RwLBRF:1,2,4->1;3,5,6,7->0",
+      "hrs_n_observed_v3": "224530"
+    },
+    "relationship4": {
+      "feature": "relationship4",
+      "status": "coarsened",
+      "primary14": "True",
+      "nlsy_source": "MARSTAT-KEY + SYMBOL_PAFLAG/HH5-2A/OCCSP-A",
+      "rule": "1married/partnered;2separated/divorced;3widowed;4never; absent partner evidence stays missing",
+      "nlsy_n_observed": "7992",
+      "hrs_n_observed": "188531",
+      "hrs_official_source_rule": "RwMSTAT:1-3->1;4-6->2;7->3;8->4",
+      "hrs_n_observed_v3": "224299"
+    },
+    "smoke_ever100": {
+      "feature": "smoke_ever100",
+      "status": "compatible_operational",
+      "primary14": "True",
+      "nlsy_source": "DS-2 before/at baseline",
+      "rule": "any prior positive persists; a negative requires explicit same-round DS-2=0; current smoking alone does not prove100 lifetime",
+      "nlsy_n_observed": "7354",
+      "hrs_n_observed": "205100",
+      "hrs_official_source_rule": "RwSMOKEV0/1",
+      "hrs_n_observed_v3": "223094"
+    },
+    "smoke_now": {
+      "feature": "smoke_now",
+      "status": "compatible_operational",
+      "primary14": "True",
+      "nlsy_source": "DS-5 + same-round DS-2",
+      "rule": "current1daily/2occasional->1;3none->0; explicit never100 & valid skip->0",
+      "nlsy_n_observed": "6235",
+      "hrs_n_observed": "205272",
+      "hrs_official_source_rule": "RwSMOKEN0/1",
+      "hrs_n_observed_v3": "220940"
+    },
+    "vigorous_high_approx": {
+      "feature": "vigorous_high_approx",
+      "status": "approximate_protocol_sensitivity_required",
+      "primary14": "False",
+      "nlsy_source": "Q11-GENHLTH_1A_1 + _2",
+      "rule": ">1/week; HRS2000/02 uses3+/week,2004+ uses>1/week; content/duration differences",
+      "nlsy_n_observed": "7933",
+      "hrs_n_observed": "205927",
+      "hrs_official_source_rule": "RwVIGACT2000/02;RwVGACTX1,2->1;3-5->0 later",
+      "hrs_n_observed_v3": "223934"
+    },
+    "health_limits_work": {
+      "feature": "health_limits_work",
+      "status": "compatible_operational",
+      "primary14": "True",
+      "nlsy_source": "Q11-3/4/5",
+      "rule": "health preclusion or type/amount limitation; explicit negatives only",
+      "nlsy_n_observed": "7999",
+      "hrs_n_observed": "190725",
+      "hrs_official_source_rule": "RwHLTHLM0/1",
+      "hrs_n_observed_v3": "202204"
+    },
+    "shlt_0_4": {
+      "feature": "shlt_0_4",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H40-SF12-2/H50SF12-2",
+      "rule": "same-round self-rated health0excellent..4poor",
+      "nlsy_n_observed": "425",
+      "hrs_n_observed": "206279",
+      "hrs_official_source_rule": "RwSHLT1-5 minus1",
+      "hrs_n_observed_v3": "224333"
+    },
+    "hibpe": {
+      "feature": "hibpe",
+      "status": "prior_positive_or_same_round_negative",
+      "primary14": "False",
+      "nlsy_source": "H40-CHRC-1/H50CHRC-1",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "nlsy_n_observed": "1742",
+      "hrs_n_observed": "206455",
+      "hrs_official_source_rule": "RwHIBPE:0/1",
+      "hrs_n_observed_v3": "224530"
+    },
+    "diabe": {
+      "feature": "diabe",
+      "status": "prior_positive_or_same_round_negative",
+      "primary14": "False",
+      "nlsy_source": "H40-CHRC-2/H50CHRC-2",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "nlsy_n_observed": "839",
+      "hrs_n_observed": "206455",
+      "hrs_official_source_rule": "RwDIABE:0/1",
+      "hrs_n_observed_v3": "224530"
+    },
+    "cancre": {
+      "feature": "cancre",
+      "status": "prior_positive_or_same_round_negative",
+      "primary14": "False",
+      "nlsy_source": "H40-CHRC-3/H50CHRC-3",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "nlsy_n_observed": "581",
+      "hrs_n_observed": "206455",
+      "hrs_official_source_rule": "RwCANCRE:0/1",
+      "hrs_n_observed_v3": "224530"
+    },
+    "lunge": {
+      "feature": "lunge",
+      "status": "prior_positive_or_same_round_negative",
+      "primary14": "False",
+      "nlsy_source": "H40-CHRC-4/H50CHRC-4",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "nlsy_n_observed": "638",
+      "hrs_n_observed": "206455",
+      "hrs_official_source_rule": "RwLUNGE:0/1",
+      "hrs_n_observed_v3": "224530"
+    },
+    "hearte": {
+      "feature": "hearte",
+      "status": "prior_positive_or_same_round_negative",
+      "primary14": "False",
+      "nlsy_source": "H40-CHRC-5/H50CHRC-5",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "nlsy_n_observed": "648",
+      "hrs_n_observed": "206455",
+      "hrs_official_source_rule": "RwHEARTE:0/1",
+      "hrs_n_observed_v3": "224530"
+    },
+    "stroke": {
+      "feature": "stroke",
+      "status": "prior_positive_or_same_round_negative",
+      "primary14": "False",
+      "nlsy_source": "H40-CHRC-7/H50CHRC-7",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "nlsy_n_observed": "489",
+      "hrs_n_observed": "206455",
+      "hrs_official_source_rule": "RwSTROKE:0/1",
+      "hrs_n_observed_v3": "224530"
+    },
+    "arthre": {
+      "feature": "arthre",
+      "status": "prior_positive_or_same_round_negative",
+      "primary14": "False",
+      "nlsy_source": "H40-CHRC-9/H50CHRC-9",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "nlsy_n_observed": "1324",
+      "hrs_n_observed": "206455",
+      "hrs_official_source_rule": "RwARTHRE:0/1",
+      "hrs_n_observed_v3": "224530"
+    },
+    "cesd_depres": {
+      "feature": "cesd_depres",
+      "status": "approximate_protocol_sensitivity_required",
+      "primary14": "False",
+      "nlsy_source": "H40-CESD~000004/H50CESD~000004",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "nlsy_n_observed": "422",
+      "hrs_n_observed": "192764",
+      "hrs_official_source_rule": "RwDEPRES:0/1; approximate NLSY item harmonisation",
+      "hrs_n_observed_v3": "209450"
+    },
+    "cesd_effort": {
+      "feature": "cesd_effort",
+      "status": "approximate_protocol_sensitivity_required",
+      "primary14": "False",
+      "nlsy_source": "H40-CESD~000005/H50CESD~000005",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "nlsy_n_observed": "423",
+      "hrs_n_observed": "192619",
+      "hrs_official_source_rule": "RwEFFORT:0/1; approximate NLSY item harmonisation",
+      "hrs_n_observed_v3": "209278"
+    },
+    "cesd_sleepr": {
+      "feature": "cesd_sleepr",
+      "status": "approximate_protocol_sensitivity_required",
+      "primary14": "False",
+      "nlsy_source": "H40-CESD~000006/H50CESD~000006",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "nlsy_n_observed": "424",
+      "hrs_n_observed": "192695",
+      "hrs_official_source_rule": "RwSLEEPR:0/1; approximate NLSY item harmonisation",
+      "hrs_n_observed_v3": "209372"
+    },
+    "cesd_flone": {
+      "feature": "cesd_flone",
+      "status": "approximate_protocol_sensitivity_required",
+      "primary14": "False",
+      "nlsy_source": "H40-CESD~000007/H50CESD~000007",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "nlsy_n_observed": "423",
+      "hrs_n_observed": "192743",
+      "hrs_official_source_rule": "RwFLONE:0/1; approximate NLSY item harmonisation",
+      "hrs_n_observed_v3": "209429"
+    },
+    "cesd_fsad": {
+      "feature": "cesd_fsad",
+      "status": "approximate_protocol_sensitivity_required",
+      "primary14": "False",
+      "nlsy_source": "H40-CESD~000008/H50CESD~000008",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "nlsy_n_observed": "423",
+      "hrs_n_observed": "192658",
+      "hrs_official_source_rule": "RwFSAD:0/1; approximate NLSY item harmonisation",
+      "hrs_n_observed_v3": "209328"
+    },
+    "cesd_going": {
+      "feature": "cesd_going",
+      "status": "approximate_protocol_sensitivity_required",
+      "primary14": "False",
+      "nlsy_source": "H40-CESD~000009/H50CESD~000009",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "nlsy_n_observed": "423",
+      "hrs_n_observed": "192356",
+      "hrs_official_source_rule": "RwGOING:0/1; approximate NLSY item harmonisation",
+      "hrs_n_observed_v3": "208999"
+    },
+    "function_walksa3": {
+      "feature": "function_walksa3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000002",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "403",
+      "hrs_n_observed": "203739",
+      "hrs_official_source_rule": "RwWALKSA:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223939"
+    },
+    "function_walk1a3": {
+      "feature": "function_walk1a3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000003",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "404",
+      "hrs_n_observed": "204878",
+      "hrs_official_source_rule": "RwWALK1A:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223941"
+    },
+    "function_sita3": {
+      "feature": "function_sita3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000004",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "403",
+      "hrs_n_observed": "205018",
+      "hrs_official_source_rule": "RwSITA:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223900"
+    },
+    "function_chaira3": {
+      "feature": "function_chaira3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000005",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "404",
+      "hrs_n_observed": "205619",
+      "hrs_official_source_rule": "RwCHAIRA:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223829"
+    },
+    "function_climsa3": {
+      "feature": "function_climsa3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000006",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "400",
+      "hrs_n_observed": "196399",
+      "hrs_official_source_rule": "RwCLIMSA:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223624"
+    },
+    "function_clim1a3": {
+      "feature": "function_clim1a3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000007",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "402",
+      "hrs_n_observed": "202524",
+      "hrs_official_source_rule": "RwCLIM1A:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223802"
+    },
+    "function_lifta3": {
+      "feature": "function_lifta3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000008",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "404",
+      "hrs_n_observed": "202099",
+      "hrs_official_source_rule": "RwLIFTA:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223884"
+    },
+    "function_stoopa3": {
+      "feature": "function_stoopa3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000009",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "403",
+      "hrs_n_observed": "203994",
+      "hrs_official_source_rule": "RwSTOOPA:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223775"
+    },
+    "function_dimea3": {
+      "feature": "function_dimea3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000010",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "404",
+      "hrs_n_observed": "205613",
+      "hrs_official_source_rule": "RwDIMEA:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223796"
+    },
+    "function_armsa3": {
+      "feature": "function_armsa3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000011",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "404",
+      "hrs_n_observed": "205454",
+      "hrs_official_source_rule": "RwARMSA:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223854"
+    },
+    "function_pusha3": {
+      "feature": "function_pusha3",
+      "status": "same_round_only",
+      "primary14": "False",
+      "nlsy_source": "H50FL-2~000012",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "nlsy_n_observed": "403",
+      "hrs_n_observed": "199916",
+      "hrs_official_source_rule": "RwPUSHA:0->0,1/2->1,7/.x/.z->2;other missings remainNA",
+      "hrs_n_observed_v3": "223860"
+    }
+  },
+  "core": {
+    "age_years": {
+      "variable": "age_years",
+      "nlsy_source": "AGEATINT, cognition source round",
+      "hrs_source": "agey_m",
+      "coding_and_limits": "completed years at interview; no age restriction applied"
+    },
+    "female": {
+      "variable": "female",
+      "nlsy_source": "SAMPLE_SEX 1/2 -> 0/1",
+      "hrs_source": "gender 0/1",
+      "coding_and_limits": "0 male, 1 female; recorded sex variable"
+    },
+    "education4": {
+      "variable": "education4",
+      "nlsy_source": "HGCREV in baseline round",
+      "hrs_source": "edstg dummies decoded preserving NA",
+      "coding_and_limits": "1 0-7; 2 8-11; 3 12; 4 13+ years; schooling systems differ"
+    },
+    "race3": {
+      "variable": "race3",
+      "nlsy_source": "SAMPLE_RACE screener",
+      "hrs_source": "raceeth dummies coarsened",
+      "coding_and_limits": "1 Hispanic; 2 non-Hispanic Black; 3 non-Black/non-Hispanic; NLSY screener and HRS Tracker definitions may differ"
+    },
+    "region4": {
+      "variable": "region4",
+      "nlsy_source": "REGION baseline round",
+      "hrs_source": "cendiv decoded then coarsened",
+      "coding_and_limits": "1 Northeast; 2 North Central/Midwest; 3 South; 4 West; non-US HRS code11 -> NA"
+    },
+    "height_m": {
+      "variable": "height_m",
+      "nlsy_source": "observed feet AND inches *0.0254",
+      "hrs_source": "height",
+      "coding_and_limits": "self-report metres; no guessed missing inches"
+    },
+    "weight_kg": {
+      "variable": "weight_kg",
+      "nlsy_source": "pounds *0.45359237",
+      "hrs_source": "weight",
+      "coding_and_limits": "self-report kg; HRS legacy conversion retained"
+    },
+    "bmi": {
+      "variable": "bmi",
+      "nlsy_source": "weight_kg / height_m**2",
+      "hrs_source": "weight_kg / height_m**2",
+      "coding_and_limits": "no winsorization; outside 10-70 flagged"
+    },
+    "self_memory_0_4": {
+      "variable": "self_memory_0_4",
+      "nlsy_source": "COGNITION_C1 X0031200 minus1",
+      "hrs_source": "slfmem",
+      "coding_and_limits": "0 excellent to4 poor; NLSY question source HRS2002"
+    }
+  },
+  "nlsy": {
+    "age_years": {
+      "feature": "age_years",
+      "source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "destination": "common"
+    },
+    "female": {
+      "feature": "female",
+      "source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "destination": "common"
+    },
+    "education4": {
+      "feature": "education4",
+      "source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "destination": "common"
+    },
+    "race3": {
+      "feature": "race3",
+      "source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "destination": "common"
+    },
+    "region4": {
+      "feature": "region4",
+      "source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "destination": "common"
+    },
+    "height_m": {
+      "feature": "height_m",
+      "source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "destination": "common"
+    },
+    "weight_kg": {
+      "feature": "weight_kg",
+      "source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "destination": "common"
+    },
+    "bmi": {
+      "feature": "bmi",
+      "source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "destination": "common"
+    },
+    "self_memory_0_4": {
+      "feature": "self_memory_0_4",
+      "source": "alignment_core_v1/common_feature_manifest.csv",
+      "rule": "audited core v1 mapping; source round retained",
+      "destination": "common"
+    },
+    "baseline_interview_mode": {
+      "feature": "baseline_interview_mode",
+      "source": "INTMODE",
+      "rule": "same cognition-source survey round",
+      "destination": "NLSY_extension"
+    },
+    "baseline_sampling_weight_raw": {
+      "feature": "baseline_sampling_weight_raw",
+      "source": "SAMPWEIGHT",
+      "rule": "same cognition-source survey round",
+      "destination": "NLSY_extension"
+    },
+    "baseline_telephone": {
+      "feature": "baseline_telephone",
+      "source": "INTMODE",
+      "rule": "71/74 personal;72/75 telephone",
+      "destination": "NLSY_extension"
+    },
+    "baseline_sampling_weight_positive": {
+      "feature": "baseline_sampling_weight_positive",
+      "source": "SAMPWEIGHT",
+      "rule": "positive survey-provided cross-sectional weight; no pooling/reweighting",
+      "destination": "NLSY_extension"
+    },
+    "birth_year": {
+      "feature": "birth_year",
+      "source": "R0000500",
+      "rule": "recorded birth year, existing audited derivation",
+      "destination": "NLSY_extension"
+    },
+    "afqt_3": {
+      "feature": "afqt_3",
+      "source": "R0618301",
+      "rule": "raw /1000; test administered1980, release field1981",
+      "destination": "NLSY_extension"
+    },
+    "employed": {
+      "feature": "employed",
+      "source": "DOI_EMPLOYED",
+      "rule": "any job at date of interview",
+      "destination": "common"
+    },
+    "retired_status_raw": {
+      "feature": "retired_status_raw",
+      "source": "DOI_RETIRED",
+      "rule": "separate overlapping status; retired military code2 retained",
+      "destination": "NLSY_extension"
+    },
+    "disabled_status": {
+      "feature": "disabled_status",
+      "source": "DOI_DISABLED",
+      "rule": "separate overlapping status; retired military code2 retained",
+      "destination": "NLSY_extension"
+    },
+    "worked_at_least30h_if_employed": {
+      "feature": "worked_at_least30h_if_employed",
+      "source": "DOI_HOURS_WORKED",
+      "rule": "separate overlapping status; retired military code2 retained",
+      "destination": "NLSY_extension"
+    },
+    "relationship4": {
+      "feature": "relationship4",
+      "source": "MARSTAT-KEY + SYMBOL_PAFLAG/HH5-2A/OCCSP-A",
+      "rule": "1married/partnered;2separated/divorced;3widowed;4never; absent partner evidence stays missing",
+      "destination": "common"
+    },
+    "marital_legal_raw": {
+      "feature": "marital_legal_raw",
+      "source": "MARSTAT-KEY",
+      "rule": "legal marital state, separate from partner-overriding HRS MSTAT",
+      "destination": "NLSY_extension"
+    },
+    "partner_in_household": {
+      "feature": "partner_in_household",
+      "source": "SYMBOL_PAFLAG/HH5-2A/OCCSP-A",
+      "rule": "only explicit0/1, no global skip-to-no conversion",
+      "destination": "NLSY_extension"
+    },
+    "smoke_ever100": {
+      "feature": "smoke_ever100",
+      "source": "DS-2 before/at baseline",
+      "rule": "any prior positive persists; a negative requires explicit same-round DS-2=0; current smoking alone does not prove100 lifetime",
+      "destination": "common"
+    },
+    "smoke_now": {
+      "feature": "smoke_now",
+      "source": "DS-5 + same-round DS-2",
+      "rule": "current1daily/2occasional->1;3none->0; explicit never100 & valid skip->0",
+      "destination": "common"
+    },
+    "smoking_ever_contradiction": {
+      "feature": "smoking_ever_contradiction",
+      "source": "DS-2 history",
+      "rule": "prior positive vs current negative; do not silently erase",
+      "destination": "NLSY_extension"
+    },
+    "smoking_current_route_zero": {
+      "feature": "smoking_current_route_zero",
+      "source": "DS-2/DS-5",
+      "rule": "only documented never100 universe; no other negative code filled",
+      "destination": "NLSY_extension"
+    },
+    "smoking_last_report_raw": {
+      "feature": "smoking_last_report_raw",
+      "source": "DS-5",
+      "rule": "latest report before baseline; age gap explicit, not current unless same round",
+      "destination": "NLSY_extension"
+    },
+    "alcohol_30day": {
+      "feature": "alcohol_30day",
+      "source": "Q12-3",
+      "rule": "same-round only; not HRS usually/ever drinking; days bounded0..30",
+      "destination": "NLSY_extension"
+    },
+    "alcohol_30day_last_report": {
+      "feature": "alcohol_30day_last_report",
+      "source": "Q12-3",
+      "rule": "historical last report; not filled into current common drinking",
+      "destination": "NLSY_extension"
+    },
+    "alcohol_days_30day": {
+      "feature": "alcohol_days_30day",
+      "source": "Q12-5",
+      "rule": "same-round only; not HRS usually/ever drinking; days bounded0..30",
+      "destination": "NLSY_extension"
+    },
+    "alcohol_days_30day_last_report": {
+      "feature": "alcohol_days_30day_last_report",
+      "source": "Q12-5",
+      "rule": "historical last report; not filled into current common drinking",
+      "destination": "NLSY_extension"
+    },
+    "alcohol_drinks_typical_day": {
+      "feature": "alcohol_drinks_typical_day",
+      "source": "Q12-6",
+      "rule": "same-round only; not HRS usually/ever drinking; days bounded0..30",
+      "destination": "NLSY_extension"
+    },
+    "alcohol_drinks_typical_day_last_report": {
+      "feature": "alcohol_drinks_typical_day_last_report",
+      "source": "Q12-6",
+      "rule": "historical last report; not filled into current common drinking",
+      "destination": "NLSY_extension"
+    },
+    "alcohol_heavy_occasion_frequency_raw": {
+      "feature": "alcohol_heavy_occasion_frequency_raw",
+      "source": "Q12-4",
+      "rule": "same-round only; not HRS usually/ever drinking; days bounded0..30",
+      "destination": "NLSY_extension"
+    },
+    "alcohol_heavy_occasion_frequency_raw_last_report": {
+      "feature": "alcohol_heavy_occasion_frequency_raw_last_report",
+      "source": "Q12-4",
+      "rule": "historical last report; not filled into current common drinking",
+      "destination": "NLSY_extension"
+    },
+    "vigorous_times_week": {
+      "feature": "vigorous_times_week",
+      "source": "Q11-GENHLTH_1A_1 + _2",
+      "rule": "frequency units converted; unable/explicitnever=0; >=900 flagged",
+      "destination": "NLSY_extension"
+    },
+    "vigorous_source_range_flag": {
+      "feature": "vigorous_source_range_flag",
+      "source": "Q11-GENHLTH_1A_1",
+      "rule": "implausible/special frequency retained raw, excluded from converted rate",
+      "destination": "NLSY_extension"
+    },
+    "vigorous_high_approx": {
+      "feature": "vigorous_high_approx",
+      "source": "Q11-GENHLTH_1A_1 + _2",
+      "rule": ">1/week; HRS2000/02 uses3+/week,2004+ uses>1/week; content/duration differences",
+      "destination": "common"
+    },
+    "health_limits_work": {
+      "feature": "health_limits_work",
+      "source": "Q11-3/4/5",
+      "rule": "health preclusion or type/amount limitation; explicit negatives only",
+      "destination": "common"
+    },
+    "health_history_shlt_0_4": {
+      "feature": "health_history_shlt_0_4",
+      "source": "H40-SF12-2/H50SF12-2",
+      "rule": "latest observed prior-module health; lag retained",
+      "destination": "NLSY_extension"
+    },
+    "shlt_0_4": {
+      "feature": "shlt_0_4",
+      "source": "H40-SF12-2/H50SF12-2",
+      "rule": "same-round self-rated health0excellent..4poor",
+      "destination": "common"
+    },
+    "shlt_0_4_lag2": {
+      "feature": "shlt_0_4_lag2",
+      "source": "H40/H50 SF12-2",
+      "rule": "sensitivity: latest measurement within2 surveyyears",
+      "destination": "NLSY_extension"
+    },
+    "hibpe": {
+      "feature": "hibpe",
+      "source": "H40-CHRC-1/H50CHRC-1",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "destination": "common"
+    },
+    "health_history_hibpe": {
+      "feature": "health_history_hibpe",
+      "source": "H40-CHRC-1/H50CHRC-1",
+      "rule": "last historical value; old negative not current negative",
+      "destination": "NLSY_extension"
+    },
+    "hibpe_reversal_flag": {
+      "feature": "hibpe_reversal_flag",
+      "source": "H40-CHRC-1/H50CHRC-1",
+      "rule": "ever-positive followed by negative, retained for review",
+      "destination": "NLSY_extension"
+    },
+    "diabe": {
+      "feature": "diabe",
+      "source": "H40-CHRC-2/H50CHRC-2",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "destination": "common"
+    },
+    "health_history_diabe": {
+      "feature": "health_history_diabe",
+      "source": "H40-CHRC-2/H50CHRC-2",
+      "rule": "last historical value; old negative not current negative",
+      "destination": "NLSY_extension"
+    },
+    "diabe_reversal_flag": {
+      "feature": "diabe_reversal_flag",
+      "source": "H40-CHRC-2/H50CHRC-2",
+      "rule": "ever-positive followed by negative, retained for review",
+      "destination": "NLSY_extension"
+    },
+    "cancre": {
+      "feature": "cancre",
+      "source": "H40-CHRC-3/H50CHRC-3",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "destination": "common"
+    },
+    "health_history_cancre": {
+      "feature": "health_history_cancre",
+      "source": "H40-CHRC-3/H50CHRC-3",
+      "rule": "last historical value; old negative not current negative",
+      "destination": "NLSY_extension"
+    },
+    "cancre_reversal_flag": {
+      "feature": "cancre_reversal_flag",
+      "source": "H40-CHRC-3/H50CHRC-3",
+      "rule": "ever-positive followed by negative, retained for review",
+      "destination": "NLSY_extension"
+    },
+    "lunge": {
+      "feature": "lunge",
+      "source": "H40-CHRC-4/H50CHRC-4",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "destination": "common"
+    },
+    "health_history_lunge": {
+      "feature": "health_history_lunge",
+      "source": "H40-CHRC-4/H50CHRC-4",
+      "rule": "last historical value; old negative not current negative",
+      "destination": "NLSY_extension"
+    },
+    "lunge_reversal_flag": {
+      "feature": "lunge_reversal_flag",
+      "source": "H40-CHRC-4/H50CHRC-4",
+      "rule": "ever-positive followed by negative, retained for review",
+      "destination": "NLSY_extension"
+    },
+    "hearte": {
+      "feature": "hearte",
+      "source": "H40-CHRC-5/H50CHRC-5",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "destination": "common"
+    },
+    "health_history_hearte": {
+      "feature": "health_history_hearte",
+      "source": "H40-CHRC-5/H50CHRC-5",
+      "rule": "last historical value; old negative not current negative",
+      "destination": "NLSY_extension"
+    },
+    "hearte_reversal_flag": {
+      "feature": "hearte_reversal_flag",
+      "source": "H40-CHRC-5/H50CHRC-5",
+      "rule": "ever-positive followed by negative, retained for review",
+      "destination": "NLSY_extension"
+    },
+    "stroke": {
+      "feature": "stroke",
+      "source": "H40-CHRC-7/H50CHRC-7",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "destination": "common"
+    },
+    "health_history_stroke": {
+      "feature": "health_history_stroke",
+      "source": "H40-CHRC-7/H50CHRC-7",
+      "rule": "last historical value; old negative not current negative",
+      "destination": "NLSY_extension"
+    },
+    "stroke_reversal_flag": {
+      "feature": "stroke_reversal_flag",
+      "source": "H40-CHRC-7/H50CHRC-7",
+      "rule": "ever-positive followed by negative, retained for review",
+      "destination": "NLSY_extension"
+    },
+    "arthre": {
+      "feature": "arthre",
+      "source": "H40-CHRC-9/H50CHRC-9",
+      "rule": "ever diagnosis: prior positive persists; zero requires same-round explicit negative",
+      "destination": "common"
+    },
+    "health_history_arthre": {
+      "feature": "health_history_arthre",
+      "source": "H40-CHRC-9/H50CHRC-9",
+      "rule": "last historical value; old negative not current negative",
+      "destination": "NLSY_extension"
+    },
+    "arthre_reversal_flag": {
+      "feature": "arthre_reversal_flag",
+      "source": "H40-CHRC-9/H50CHRC-9",
+      "rule": "ever-positive followed by negative, retained for review",
+      "destination": "NLSY_extension"
+    },
+    "health_history_cesd_depres": {
+      "feature": "health_history_cesd_depres",
+      "source": "H40-CESD~000004/H50CESD~000004",
+      "rule": "ordinal0..3; latest observed prebaseline module",
+      "destination": "NLSY_extension"
+    },
+    "cesd_depres": {
+      "feature": "cesd_depres",
+      "source": "H40-CESD~000004/H50CESD~000004",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "destination": "common"
+    },
+    "cesd_depres_threshold2": {
+      "feature": "cesd_depres_threshold2",
+      "source": "H40-CESD~000004/H50CESD~000004",
+      "rule": "sensitivity threshold>=2, same round",
+      "destination": "NLSY_extension"
+    },
+    "health_history_cesd_effort": {
+      "feature": "health_history_cesd_effort",
+      "source": "H40-CESD~000005/H50CESD~000005",
+      "rule": "ordinal0..3; latest observed prebaseline module",
+      "destination": "NLSY_extension"
+    },
+    "cesd_effort": {
+      "feature": "cesd_effort",
+      "source": "H40-CESD~000005/H50CESD~000005",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "destination": "common"
+    },
+    "cesd_effort_threshold2": {
+      "feature": "cesd_effort_threshold2",
+      "source": "H40-CESD~000005/H50CESD~000005",
+      "rule": "sensitivity threshold>=2, same round",
+      "destination": "NLSY_extension"
+    },
+    "health_history_cesd_sleepr": {
+      "feature": "health_history_cesd_sleepr",
+      "source": "H40-CESD~000006/H50CESD~000006",
+      "rule": "ordinal0..3; latest observed prebaseline module",
+      "destination": "NLSY_extension"
+    },
+    "cesd_sleepr": {
+      "feature": "cesd_sleepr",
+      "source": "H40-CESD~000006/H50CESD~000006",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "destination": "common"
+    },
+    "cesd_sleepr_threshold2": {
+      "feature": "cesd_sleepr_threshold2",
+      "source": "H40-CESD~000006/H50CESD~000006",
+      "rule": "sensitivity threshold>=2, same round",
+      "destination": "NLSY_extension"
+    },
+    "health_history_cesd_flone": {
+      "feature": "health_history_cesd_flone",
+      "source": "H40-CESD~000007/H50CESD~000007",
+      "rule": "ordinal0..3; latest observed prebaseline module",
+      "destination": "NLSY_extension"
+    },
+    "cesd_flone": {
+      "feature": "cesd_flone",
+      "source": "H40-CESD~000007/H50CESD~000007",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "destination": "common"
+    },
+    "cesd_flone_threshold2": {
+      "feature": "cesd_flone_threshold2",
+      "source": "H40-CESD~000007/H50CESD~000007",
+      "rule": "sensitivity threshold>=2, same round",
+      "destination": "NLSY_extension"
+    },
+    "health_history_cesd_fsad": {
+      "feature": "health_history_cesd_fsad",
+      "source": "H40-CESD~000008/H50CESD~000008",
+      "rule": "ordinal0..3; latest observed prebaseline module",
+      "destination": "NLSY_extension"
+    },
+    "cesd_fsad": {
+      "feature": "cesd_fsad",
+      "source": "H40-CESD~000008/H50CESD~000008",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "destination": "common"
+    },
+    "cesd_fsad_threshold2": {
+      "feature": "cesd_fsad_threshold2",
+      "source": "H40-CESD~000008/H50CESD~000008",
+      "rule": "sensitivity threshold>=2, same round",
+      "destination": "NLSY_extension"
+    },
+    "health_history_cesd_going": {
+      "feature": "health_history_cesd_going",
+      "source": "H40-CESD~000009/H50CESD~000009",
+      "rule": "ordinal0..3; latest observed prebaseline module",
+      "destination": "NLSY_extension"
+    },
+    "cesd_going": {
+      "feature": "cesd_going",
+      "source": "H40-CESD~000009/H50CESD~000009",
+      "rule": "approx>=1 on0..3 scale; HRS binary much-of-time differs; same round",
+      "destination": "common"
+    },
+    "cesd_going_threshold2": {
+      "feature": "cesd_going_threshold2",
+      "source": "H40-CESD~000009/H50CESD~000009",
+      "rule": "sensitivity threshold>=2, same round",
+      "destination": "NLSY_extension"
+    },
+    "cesd_shared6_approx": {
+      "feature": "cesd_shared6_approx",
+      "source": "six shared item transformations",
+      "rule": "requires six observed items; not the official NLSY7 or HRS8 score",
+      "destination": "NLSY_extension"
+    },
+    "function_walksa3": {
+      "feature": "function_walksa3",
+      "source": "H50FL-2~000002",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_walksa3": {
+      "feature": "health_history_function_walksa3",
+      "source": "H50FL-2~000002",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "function_walk1a3": {
+      "feature": "function_walk1a3",
+      "source": "H50FL-2~000003",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_walk1a3": {
+      "feature": "health_history_function_walk1a3",
+      "source": "H50FL-2~000003",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "function_sita3": {
+      "feature": "function_sita3",
+      "source": "H50FL-2~000004",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_sita3": {
+      "feature": "health_history_function_sita3",
+      "source": "H50FL-2~000004",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "function_chaira3": {
+      "feature": "function_chaira3",
+      "source": "H50FL-2~000005",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_chaira3": {
+      "feature": "health_history_function_chaira3",
+      "source": "H50FL-2~000005",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "function_climsa3": {
+      "feature": "function_climsa3",
+      "source": "H50FL-2~000006",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_climsa3": {
+      "feature": "health_history_function_climsa3",
+      "source": "H50FL-2~000006",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "function_clim1a3": {
+      "feature": "function_clim1a3",
+      "source": "H50FL-2~000007",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_clim1a3": {
+      "feature": "health_history_function_clim1a3",
+      "source": "H50FL-2~000007",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "function_lifta3": {
+      "feature": "function_lifta3",
+      "source": "H50FL-2~000008",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_lifta3": {
+      "feature": "health_history_function_lifta3",
+      "source": "H50FL-2~000008",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "function_stoopa3": {
+      "feature": "function_stoopa3",
+      "source": "H50FL-2~000009",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_stoopa3": {
+      "feature": "health_history_function_stoopa3",
+      "source": "H50FL-2~000009",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "function_dimea3": {
+      "feature": "function_dimea3",
+      "source": "H50FL-2~000010",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_dimea3": {
+      "feature": "health_history_function_dimea3",
+      "source": "H50FL-2~000010",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "function_armsa3": {
+      "feature": "function_armsa3",
+      "source": "H50FL-2~000011",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_armsa3": {
+      "feature": "health_history_function_armsa3",
+      "source": "H50FL-2~000011",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "function_pusha3": {
+      "feature": "function_pusha3",
+      "source": "H50FL-2~000012",
+      "rule": "0none;1anydifficulty;2dontdo; same-round only",
+      "destination": "common"
+    },
+    "health_history_function_pusha3": {
+      "feature": "health_history_function_pusha3",
+      "source": "H50FL-2~000012",
+      "rule": "prior H50 only; no postbaseline carryback",
+      "destination": "NLSY_extension"
+    },
+    "father_living_at_baseline": {
+      "feature": "father_living_at_baseline",
+      "source": "H40-BPAR-1/H50BPAR-1",
+      "rule": "prior death persists; living requires same-round observation; biological parent",
+      "destination": "NLSY_extension"
+    },
+    "father_living_last_observed": {
+      "feature": "father_living_last_observed",
+      "source": "H40-BPAR-1/H50BPAR-1",
+      "rule": "historical report, not automatically current",
+      "destination": "NLSY_extension"
+    },
+    "father_age_at_death_prebaseline": {
+      "feature": "father_age_at_death_prebaseline",
+      "source": "H40-BPAR-3/H50BPAR-3",
+      "rule": "positive reported death age only; not substituted for age of living parent",
+      "destination": "NLSY_extension"
+    },
+    "mother_living_at_baseline": {
+      "feature": "mother_living_at_baseline",
+      "source": "H40-BPAR-6/H50BPAR-6",
+      "rule": "prior death persists; living requires same-round observation; biological parent",
+      "destination": "NLSY_extension"
+    },
+    "mother_living_last_observed": {
+      "feature": "mother_living_last_observed",
+      "source": "H40-BPAR-6/H50BPAR-6",
+      "rule": "historical report, not automatically current",
+      "destination": "NLSY_extension"
+    },
+    "mother_age_at_death_prebaseline": {
+      "feature": "mother_age_at_death_prebaseline",
+      "source": "H40-BPAR-8/H50BPAR-8",
+      "rule": "positive reported death age only; not substituted for age of living parent",
+      "destination": "NLSY_extension"
+    },
+    "biological_parents_living_count": {
+      "feature": "biological_parents_living_count",
+      "source": "H40/H50 BPAR1/6",
+      "rule": "requires two known current-status values; current HRS parent count not assumed interchangeable",
+      "destination": "NLSY_extension"
+    },
+    "official_cesd7_last_prebaseline": {
+      "feature": "official_cesd7_last_prebaseline",
+      "source": "H40/H50 CESD_SCORE_7_ITEM",
+      "rule": "official0..21 NLSY score; not HRS8 or shared6",
+      "destination": "NLSY_extension"
+    },
+    "psychiatric_history_last_observed": {
+      "feature": "psychiatric_history_last_observed",
+      "source": "H40-CHRC-8/H50CHRC-8",
+      "rule": "historical diagnosis item, separate from depression symptoms",
+      "destination": "NLSY_extension"
+    },
+    "self_memory_change_raw": {
+      "feature": "self_memory_change_raw",
+      "source": "COGNITION_C2",
+      "rule": "better/same/worse at first cognition; reference period retained in codebook",
+      "destination": "NLSY_extension"
+    },
+    "moderate_activity_frequency_raw": {
+      "feature": "moderate_activity_frequency_raw",
+      "source": "Q11-GENHLTH_2A_1/Q11-GENHLTH_2A_1A",
+      "rule": "round-specific raw frequency/time-unit code; no unsupported HRS match",
+      "destination": "NLSY_extension"
+    },
+    "moderate_activity_unit_raw": {
+      "feature": "moderate_activity_unit_raw",
+      "source": "Q11-GENHLTH_2A_2/Q11-GENHLTH_2A_1B",
+      "rule": "round-specific raw frequency/time-unit code; no unsupported HRS match",
+      "destination": "NLSY_extension"
+    },
+    "time_since_physical_exam_raw": {
+      "feature": "time_since_physical_exam_raw",
+      "source": "Q11-GENHLTH_4A",
+      "rule": "time since physical exam; NOT doctor visit count (documentary crosswalk corrected)",
+      "destination": "NLSY_extension"
+    },
+    "mother_education_1979": {
+      "feature": "mother_education_1979",
+      "source": "HGC-MOTHER",
+      "rule": "historical background reported1979, not current family composition",
+      "destination": "NLSY_extension"
+    },
+    "father_education_1979": {
+      "feature": "father_education_1979",
+      "source": "HGC-FATHER",
+      "rule": "historical background reported1979, not current family composition",
+      "destination": "NLSY_extension"
+    },
+    "siblings_count_1979": {
+      "feature": "siblings_count_1979",
+      "source": "FAM-28A",
+      "rule": "historical background reported1979, not current family composition",
+      "destination": "NLSY_extension"
+    },
+    "family_structure_age14_raw": {
+      "feature": "family_structure_age14_raw",
+      "source": "FAM-7",
+      "rule": "historical background reported1979, not current family composition",
+      "destination": "NLSY_extension"
+    },
+    "urban_rural_age14_raw": {
+      "feature": "urban_rural_age14_raw",
+      "source": "FAM-6",
+      "rule": "historical background reported1979, not current family composition",
+      "destination": "NLSY_extension"
+    },
+    "south_residence_age14_raw": {
+      "feature": "south_residence_age14_raw",
+      "source": "FAM-RES",
+      "rule": "historical background reported1979, not current family composition",
+      "destination": "NLSY_extension"
+    },
+    "childhood_foreign_language_raw": {
+      "feature": "childhood_foreign_language_raw",
+      "source": "FAM-3",
+      "rule": "historical background reported1979, not current family composition",
+      "destination": "NLSY_extension"
+    },
+    "family_poverty_1978": {
+      "feature": "family_poverty_1978",
+      "source": "POVSTATUS",
+      "rule": "historical background reported1979, not current family composition",
+      "destination": "NLSY_extension"
+    },
+    "two_biological_parents_age14": {
+      "feature": "two_biological_parents_age14",
+      "source": "FAM-7",
+      "rule": "11 father-mother; unknown adult codes remain missing",
+      "destination": "NLSY_extension"
+    },
+    "own_children_ever_born": {
+      "feature": "own_children_ever_born",
+      "source": "NUMKIDYY",
+      "rule": "same-round count; neither equals HRS respondent-plus-partner living children",
+      "destination": "NLSY_extension"
+    },
+    "children_in_household": {
+      "feature": "children_in_household",
+      "source": "NUMCHYY",
+      "rule": "same-round count; neither equals HRS respondent-plus-partner living children",
+      "destination": "NLSY_extension"
+    },
+    "spouse_partner_count_reported": {
+      "feature": "spouse_partner_count_reported",
+      "source": "NUMSPPTRYY",
+      "rule": "dated suffix only; never use undated latest XRND value",
+      "destination": "NLSY_extension"
+    },
+    "employer01_occupation_census2000_raw": {
+      "feature": "employer01_occupation_census2000_raw",
+      "source": "OCCALL-EMP.01",
+      "rule": "employer01 code, not assumed current primary job; no mixing occupation systems",
+      "destination": "NLSY_extension"
+    },
+    "income_n_observed": {
+      "feature": "income_n_observed",
+      "source": "TNFI_TRUNC",
+      "rule": "number of observed prebaseline interview reports; no gap filling",
+      "destination": "NLSY_extension"
+    },
+    "income_last_dollars2020": {
+      "feature": "income_last_dollars2020",
+      "source": "TNFI_TRUNC",
+      "rule": "last valid prebaseline report; not assumed current",
+      "destination": "NLSY_extension"
+    },
+    "income_last_asinh_2020k": {
+      "feature": "income_last_asinh_2020k",
+      "source": "TNFI_TRUNC",
+      "rule": "CPI-U2020 dollars, asinh(amount/1000); valid negatives retained",
+      "destination": "NLSY_extension"
+    },
+    "income_mean_dollars2020": {
+      "feature": "income_mean_dollars2020",
+      "source": "TNFI_TRUNC",
+      "rule": "mean observed report amounts, not complete annual income",
+      "destination": "NLSY_extension"
+    },
+    "income_asinh_2020k_slope_per_year": {
+      "feature": "income_asinh_2020k_slope_per_year",
+      "source": "TNFI_TRUNC",
+      "rule": "OLS slope across >=3 observed CPI-adjusted report years; no missing-year interpolation",
+      "destination": "NLSY_extension"
+    },
+    "wealth_n_observed": {
+      "feature": "wealth_n_observed",
+      "source": "TNFW_TRUNC",
+      "rule": "number of observed prebaseline interview reports; no gap filling",
+      "destination": "NLSY_extension"
+    },
+    "wealth_last_dollars2020": {
+      "feature": "wealth_last_dollars2020",
+      "source": "TNFW_TRUNC",
+      "rule": "last valid prebaseline report; not assumed current",
+      "destination": "NLSY_extension"
+    },
+    "wealth_last_asinh_2020k": {
+      "feature": "wealth_last_asinh_2020k",
+      "source": "TNFW_TRUNC",
+      "rule": "CPI-U2020 dollars, asinh(amount/1000); valid negatives retained",
+      "destination": "NLSY_extension"
+    },
+    "wealth_mean_dollars2020": {
+      "feature": "wealth_mean_dollars2020",
+      "source": "TNFW_TRUNC",
+      "rule": "mean observed report amounts, not complete annual income",
+      "destination": "NLSY_extension"
+    },
+    "wealth_asinh_2020k_slope_per_year": {
+      "feature": "wealth_asinh_2020k_slope_per_year",
+      "source": "TNFW_TRUNC",
+      "rule": "OLS slope across >=3 observed CPI-adjusted report years; no missing-year interpolation",
+      "destination": "NLSY_extension"
+    },
+    "education_n_observed": {
+      "feature": "education_n_observed",
+      "source": "HGCREV",
+      "rule": "number of observed prebaseline interview reports; no gap filling",
+      "destination": "NLSY_extension"
+    },
+    "education_last_value": {
+      "feature": "education_last_value",
+      "source": "HGCREV",
+      "rule": "last valid prebaseline report; not assumed current",
+      "destination": "NLSY_extension"
+    },
+    "education_change_observed": {
+      "feature": "education_change_observed",
+      "source": "HGCREVYY",
+      "rule": "last minus first observed grade; negative changes retained/reviewed",
+      "destination": "NLSY_extension"
+    },
+    "work_weeks_pcy_n_observed": {
+      "feature": "work_weeks_pcy_n_observed",
+      "source": "WKSWK-PCY",
+      "rule": "number of observed prebaseline interview reports; no gap filling",
+      "destination": "NLSY_extension"
+    },
+    "work_weeks_pcy_last_value": {
+      "feature": "work_weeks_pcy_last_value",
+      "source": "WKSWK-PCY",
+      "rule": "last valid prebaseline report; not assumed current",
+      "destination": "NLSY_extension"
+    },
+    "work_weeks_sli_n_observed": {
+      "feature": "work_weeks_sli_n_observed",
+      "source": "WKSWK-SLI",
+      "rule": "number of observed prebaseline interview reports; no gap filling",
+      "destination": "NLSY_extension"
+    },
+    "work_weeks_sli_last_value": {
+      "feature": "work_weeks_sli_last_value",
+      "source": "WKSWK-SLI",
+      "rule": "last valid prebaseline report; not assumed current",
+      "destination": "NLSY_extension"
+    },
+    "worked_weeks_sum_observed_intervals": {
+      "feature": "worked_weeks_sum_observed_intervals",
+      "source": "WKSWK-SLI",
+      "rule": "sum since-last-interview reports; coverage flags separate; not complete career years",
+      "destination": "NLSY_extension"
+    },
+    "marital_n_observed": {
+      "feature": "marital_n_observed",
+      "source": "MARSTAT-KEY",
+      "rule": "number of observed prebaseline interview reports; no gap filling",
+      "destination": "NLSY_extension"
+    },
+    "marital_last_value": {
+      "feature": "marital_last_value",
+      "source": "MARSTAT-KEY",
+      "rule": "last valid prebaseline report; not assumed current",
+      "destination": "NLSY_extension"
+    },
+    "marital_changes_observed": {
+      "feature": "marital_changes_observed",
+      "source": "MARSTAT-KEY",
+      "rule": "changes between observed legal states; not number of marriages",
+      "destination": "NLSY_extension"
+    },
+    "calendar_weeks_sum_observed_intervals": {
+      "feature": "calendar_weeks_sum_observed_intervals",
+      "source": "WKSSINCELI",
+      "rule": "coverage descriptor; does not turn unaccounted weeks into nonwork",
+      "destination": "NLSY_extension"
+    },
+    "work_interval_max_unaccounted_percent": {
+      "feature": "work_interval_max_unaccounted_percent",
+      "source": "WKSUNACCT-SLI",
+      "rule": "coverage descriptor; does not turn unaccounted weeks into nonwork",
+      "destination": "NLSY_extension"
+    },
+    "work_pcy_max_unaccounted_percent": {
+      "feature": "work_pcy_max_unaccounted_percent",
+      "source": "WKSUNACCT-PCY",
+      "rule": "coverage descriptor; does not turn unaccounted weeks into nonwork",
+      "destination": "NLSY_extension"
+    },
+    "wealth_extreme_negative_review": {
+      "feature": "wealth_extreme_negative_review",
+      "source": "TNFW_TRUNC",
+      "rule": "extreme reported debt/value review flag",
+      "destination": "NLSY_extension"
+    }
+  },
+  "categories": {
+    "education4": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "race3": [
+      1,
+      2,
+      3
+    ],
+    "region4": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "relationship4": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "function_walksa3": [
+      0,
+      1,
+      2
+    ],
+    "function_walk1a3": [
+      0,
+      1,
+      2
+    ],
+    "function_sita3": [
+      0,
+      1,
+      2
+    ],
+    "function_chaira3": [
+      0,
+      1,
+      2
+    ],
+    "function_climsa3": [
+      0,
+      1,
+      2
+    ],
+    "function_clim1a3": [
+      0,
+      1,
+      2
+    ],
+    "function_lifta3": [
+      0,
+      1,
+      2
+    ],
+    "function_stoopa3": [
+      0,
+      1,
+      2
+    ],
+    "function_dimea3": [
+      0,
+      1,
+      2
+    ],
+    "function_armsa3": [
+      0,
+      1,
+      2
+    ],
+    "function_pusha3": [
+      0,
+      1,
+      2
+    ]
+  },
+  "types": {
+    "fixed_common_categories": {
+      "education4": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "race3": [
+        1,
+        2,
+        3
+      ],
+      "region4": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "relationship4": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "function_walksa3": [
+        0,
+        1,
+        2
+      ],
+      "function_walk1a3": [
+        0,
+        1,
+        2
+      ],
+      "function_sita3": [
+        0,
+        1,
+        2
+      ],
+      "function_chaira3": [
+        0,
+        1,
+        2
+      ],
+      "function_climsa3": [
+        0,
+        1,
+        2
+      ],
+      "function_clim1a3": [
+        0,
+        1,
+        2
+      ],
+      "function_lifta3": [
+        0,
+        1,
+        2
+      ],
+      "function_stoopa3": [
+        0,
+        1,
+        2
+      ],
+      "function_dimea3": [
+        0,
+        1,
+        2
+      ],
+      "function_armsa3": [
+        0,
+        1,
+        2
+      ],
+      "function_pusha3": [
+        0,
+        1,
+        2
+      ]
+    },
+    "nlsy_extension_coded_categorical_candidates": [
+      "retired_status_raw",
+      "alcohol_heavy_occasion_frequency_raw",
+      "self_memory_change_raw",
+      "moderate_activity_frequency_raw",
+      "moderate_activity_unit_raw",
+      "time_since_physical_exam_raw",
+      "family_structure_age14_raw",
+      "urban_rural_age14_raw",
+      "south_residence_age14_raw",
+      "childhood_foreign_language_raw",
+      "employer01_occupation_census2000_raw"
+    ],
+    "continuous_and_counts": "all remaining columns require domain-specific modelling; no full-data standardization fitted",
+    "not_predictors": [
+      "person_id",
+      "household_id",
+      "survey weights",
+      "target scores",
+      "pair flags",
+      "review flags"
+    ]
+  },
+  "lineage": {
+    "04_audit_nlsy79.py": {
+      "sha256": "dad6b28c456b9c6acf8c1ee65b05f98231324ba8c1f09fbcac4333e44df1d448"
+    },
+    "11_harmonize_core.py": {
+      "sha256": "93d00d50701f917872f7a6e8f732e7c56cb418bc5f04b8f064497750060a20d1"
+    },
+    "16_process_complete.py": {
+      "sha256": "fe3f9c01dd8b674b177a0b20f6ee3bc0bb2d486b7388e255d26de62d3e3c3135"
+    },
+    "22_complete_hrs_alignment_v3.py": {
+      "sha256": "cad3672067b32af03ef020d8bd7195442b00dab0ef648ffe80b3810a9f324c53"
+    },
+    "23_build_analysis_v3.py": {
+      "sha256": "2b211980d14390932c52f5a194b27aff8437b7ab482af830f9b934e47e66683c"
+    },
+    "31_prepare_variable_followup.py": {
+      "sha256": "52b61b071ab59bfd70542d70fbf0bc5f9e903ca8eb093d77bd7c46df8658b551"
+    }
+  },
+  "supplemental": {
+    "actual_followup4_8": {
+      "description": "Actual interview interval between 4 and 8 years inclusive",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "actual_followup8_16": {
+      "description": "Actual interview interval between 8 and 16 years inclusive",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "age48_55": {
+      "description": "Baseline age between 48 and 55 completed years inclusive",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "baseline2012_2016": {
+      "description": "Baseline source survey year between 2012 and 2016 inclusive",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "baseline2014": {
+      "description": "Baseline cognition source survey year equals 2014",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "bmi_review_flag": {
+      "description": "Derived BMI outside the review range 10 to 70; original measurement retained",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "common_age48_55_actual4_8": {
+      "description": "Strict27 eligible pair with baseline age 48-55 and actual interval 4-8 years",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "nominal6": {
+      "description": "Outcome survey year minus baseline survey year equals 6",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "operational_score_le11_NOT_validated_diagnosis": {
+      "description": "Observed follow-up cognition score at most 11, an operational score group",
+      "role": "secondary_outcome",
+      "data_type": "binary"
+    },
+    "operational_score_le6_NOT_validated_diagnosis": {
+      "description": "Observed follow-up cognition score at most 6, an operational score group",
+      "role": "secondary_outcome",
+      "data_type": "binary"
+    },
+    "outcome_age56_64": {
+      "description": "Age at outcome interview between 56 and 64 completed years",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "outcome_score_le11_operational": {
+      "description": "Observed follow-up cognition score at most 11, an operational score group",
+      "role": "secondary_outcome",
+      "data_type": "binary"
+    },
+    "outcome_score_le6_operational": {
+      "description": "Observed follow-up cognition score at most 6, an operational score group",
+      "role": "secondary_outcome",
+      "data_type": "binary"
+    },
+    "outcome_telephone": {
+      "description": "Outcome interview telephone indicator derived from provider interview-mode codes",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "pair_baseline3": {
+      "description": "Eligible three-component observed baseline with strictly observed 27-point follow-up",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "pair_official27": {
+      "description": "Eligible official CogImp 27-point scores at both ends of an HRS pair",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "pair_strict27": {
+      "description": "Strict observed27 eligibility at both ends of an HRS pair",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "paired_baseline3_to_outcome27": {
+      "description": "NLSY79 observed baseline immediate, serial7 and backward20 with observed 2020 total27",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "paired_total27_strict": {
+      "description": "NLSY79 strictly observed 27-point totals at baseline and 2020",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "strict27_age48_55": {
+      "description": "NLSY79 strict27 pair with baseline age 48-55",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "three_component_age48_55": {
+      "description": "NLSY79 three-component baseline pair with baseline age 48-55",
+      "role": "selection",
+      "data_type": "binary"
+    },
+    "nominal_followup_years": {
+      "description": "Outcome survey year minus baseline survey year",
+      "role": "timing",
+      "data_type": "integer"
+    },
+    "outcome_age_years": {
+      "description": "Completed age at outcome interview midpoint",
+      "role": "outcome_metadata",
+      "data_type": "integer"
+    },
+    "outcome_interview_mode_raw": {
+      "description": "NLSY79 raw outcome interview mode, 71/74 personal and 72/75 telephone",
+      "role": "outcome_metadata",
+      "data_type": "category"
+    }
+  },
+  "conventions": {
+    "missing": "Empty CSV cell. Missing categories propagate to all corresponding indicators. Source refusal, unknown, skip and noninterview codes are handled by field-specific rules.",
+    "source_dates": "NLSY79 source-year columns are survey years or aggregate observation bounds. Follow-up uses actual interview ending months.",
+    "binary": "Numeric 0/1, or True/False in intermediate eligibility fields.",
+    "weights": "Provider cross-sectional weights and repeated-pair balancing weights have separate meanings.",
+    "units": "Age and durations in years, height in meters, weight in kilograms, BMI in kg/m^2. Monetary real values use CPI-U 2020 dollars.",
+    "source_context": "Row-level source tables include both observed and provider-imputed cognition. Analysis variants are identified by table name.",
+    "model_inputs": "Use explicit feature lists. Table membership alone does not imply predictor status.",
+    "education_timing": "RAND RAEDYRS uses first available education across waves with Tracker fallback. Its exact source wave is unavailable per person in this export. Use the prespecified education-excluded sensitivity when strict temporal availability cannot be established."
+  },
+  "codebook_categories": {
+    "MARSTAT-KEY@2006": {
+      "reference": "T09885.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2006",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2006": {
+      "reference": "T09890.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2006",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2006": {
+      "reference": "T09890.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2006",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2006": {
+      "reference": "T09890.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "2006",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@2006": {
+      "reference": "T09890.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "2006",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "MARSTAT-KEY@2008": {
+      "reference": "T22105.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2008",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2008": {
+      "reference": "T22108.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2008",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2008": {
+      "reference": "T22108.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2008",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2008": {
+      "reference": "T22108.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "2008",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@2008": {
+      "reference": "T22108.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "2008",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "MARSTAT-KEY@2010": {
+      "reference": "T31084.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2010",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2010": {
+      "reference": "T31087.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2010",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2010": {
+      "reference": "T31087.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2010",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2010": {
+      "reference": "T31087.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "2010",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@2010": {
+      "reference": "T31087.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "2010",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "MARSTAT-KEY@2012": {
+      "reference": "T41129.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2012",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2012": {
+      "reference": "T41132.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2012",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2012": {
+      "reference": "T41132.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2012",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2012": {
+      "reference": "T41132.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "2012",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@2012": {
+      "reference": "T41132.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "2012",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "MARSTAT-KEY@2014": {
+      "reference": "T50233.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2014",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2014": {
+      "reference": "T50237.00",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2014",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2014": {
+      "reference": "T50238.00",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2014",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2014": {
+      "reference": "T50239.00",
+      "question": "DOI_RETIRED",
+      "survey_year": "2014",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_DISABLED@2014": {
+      "reference": "T50240.00",
+      "question": "DOI_DISABLED",
+      "survey_year": "2014",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "MARSTAT-KEY@2016": {
+      "reference": "T57712.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2016",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2016": {
+      "reference": "T57716.00",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2016",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2016": {
+      "reference": "T57717.00",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2016",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2016": {
+      "reference": "T57718.00",
+      "question": "DOI_RETIRED",
+      "survey_year": "2016",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_DISABLED@2016": {
+      "reference": "T57719.00",
+      "question": "DOI_DISABLED",
+      "survey_year": "2016",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "MARSTAT-KEY@2020": {
+      "reference": "T87885.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2020",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2020": {
+      "reference": "T87887.00",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2020",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2020": {
+      "reference": "T87888.00",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2020",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2020": {
+      "reference": "T87889.00",
+      "question": "DOI_RETIRED",
+      "survey_year": "2020",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_DISABLED@2020": {
+      "reference": "T87890.00",
+      "question": "DOI_DISABLED",
+      "survey_year": "2020",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "MARSTAT-KEY@2022": {
+      "reference": "T93003.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2022",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2022": {
+      "reference": "T93005.00",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2022",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2022": {
+      "reference": "T93006.00",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2022",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2022": {
+      "reference": "T93007.00",
+      "question": "DOI_RETIRED",
+      "survey_year": "2022",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_DISABLED@2022": {
+      "reference": "T93008.00",
+      "question": "DOI_DISABLED",
+      "survey_year": "2022",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1980": {
+      "reference": "R04065.11",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1980",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1980": {
+      "reference": "R04065.12",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1980",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1980": {
+      "reference": "R04065.13",
+      "question": "DOI_RETIRED",
+      "survey_year": "1980",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1980": {
+      "reference": "R04065.14",
+      "question": "DOI_DISABLED",
+      "survey_year": "1980",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "NUMCH@1981": {
+      "reference": "R05337.00",
+      "question": "NUMCH",
+      "survey_year": "1981",
+      "labels": {
+        "0": "< 1"
+      }
+    },
+    "DOI_EMPLOYED@1981": {
+      "reference": "R06456.80",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1981",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1981": {
+      "reference": "R06456.81",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1981",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1981": {
+      "reference": "R06456.82",
+      "question": "DOI_RETIRED",
+      "survey_year": "1981",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1981": {
+      "reference": "R06456.83",
+      "question": "DOI_DISABLED",
+      "survey_year": "1981",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1982": {
+      "reference": "R08967.11",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1982",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1982": {
+      "reference": "R08967.12",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1982",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1982": {
+      "reference": "R08967.13",
+      "question": "DOI_RETIRED",
+      "survey_year": "1982",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1982": {
+      "reference": "R08967.14",
+      "question": "DOI_DISABLED",
+      "survey_year": "1982",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1983": {
+      "reference": "R11451.11",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1983",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1983": {
+      "reference": "R11451.12",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1983",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1983": {
+      "reference": "R11451.13",
+      "question": "DOI_RETIRED",
+      "survey_year": "1983",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1983": {
+      "reference": "R11451.14",
+      "question": "DOI_DISABLED",
+      "survey_year": "1983",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1984": {
+      "reference": "R15203.11",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1984",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1984": {
+      "reference": "R15203.12",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1984",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1984": {
+      "reference": "R15203.13",
+      "question": "DOI_RETIRED",
+      "survey_year": "1984",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1984": {
+      "reference": "R15203.14",
+      "question": "DOI_DISABLED",
+      "survey_year": "1984",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1985": {
+      "reference": "R18910.11",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1985",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1985": {
+      "reference": "R18910.12",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1985",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1985": {
+      "reference": "R18910.13",
+      "question": "DOI_RETIRED",
+      "survey_year": "1985",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1985": {
+      "reference": "R18910.14",
+      "question": "DOI_DISABLED",
+      "survey_year": "1985",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1986": {
+      "reference": "R22581.11",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1986",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1986": {
+      "reference": "R22581.12",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1986",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1986": {
+      "reference": "R22581.13",
+      "question": "DOI_RETIRED",
+      "survey_year": "1986",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1986": {
+      "reference": "R22581.14",
+      "question": "DOI_DISABLED",
+      "survey_year": "1986",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1987": {
+      "reference": "R24455.11",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1987",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1987": {
+      "reference": "R24455.12",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1987",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1987": {
+      "reference": "R24455.13",
+      "question": "DOI_RETIRED",
+      "survey_year": "1987",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1987": {
+      "reference": "R24455.14",
+      "question": "DOI_DISABLED",
+      "survey_year": "1987",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1988": {
+      "reference": "R28713.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1988",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1988": {
+      "reference": "R28713.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1988",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1988": {
+      "reference": "R28713.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "1988",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1988": {
+      "reference": "R28713.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "1988",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1989": {
+      "reference": "R30750.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1989",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1989": {
+      "reference": "R30750.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1989",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1989": {
+      "reference": "R30750.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "1989",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1989": {
+      "reference": "R30750.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "1989",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1990": {
+      "reference": "R34017.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1990",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1990": {
+      "reference": "R34017.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1990",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1990": {
+      "reference": "R34017.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "1990",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1990": {
+      "reference": "R34017.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "1990",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1991": {
+      "reference": "R36571.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1991",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1991": {
+      "reference": "R36571.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1991",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1991": {
+      "reference": "R36571.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "1991",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1991": {
+      "reference": "R36571.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "1991",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1992": {
+      "reference": "R40076.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1992",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1992": {
+      "reference": "R40076.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1992",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1992": {
+      "reference": "R40076.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "1992",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1992": {
+      "reference": "R40076.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "1992",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_EMPLOYED@1993": {
+      "reference": "R44187.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1993",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1993": {
+      "reference": "R44187.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1993",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1993": {
+      "reference": "R44187.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "1993",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1993": {
+      "reference": "R44187.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "1993",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "POVSTATUS@1994": {
+      "reference": "R50808.00",
+      "question": "POVSTATUS",
+      "survey_year": "1994",
+      "labels": {
+        "1": "1  IN POVERTY",
+        "0": "0  NOT IN POVERTY"
+      }
+    },
+    "REGION@1994": {
+      "reference": "R50812.00",
+      "question": "REGION",
+      "survey_year": "1994",
+      "labels": {
+        "1": "1  NORTHEAST",
+        "2": "2  NORTH CENTRAL",
+        "3": "3  SOUTH",
+        "4": "4  WEST"
+      }
+    },
+    "MARSTAT-KEY@1994": {
+      "reference": "R50814.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "1994",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@1994": {
+      "reference": "R50817.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1994",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1994": {
+      "reference": "R50817.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1994",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1994": {
+      "reference": "R50817.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "1994",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "POVSTATUS@1996": {
+      "reference": "R51661.00",
+      "question": "POVSTATUS",
+      "survey_year": "1996",
+      "labels": {
+        "1": "IN POVERTY",
+        "0": "NOT IN POVERTY"
+      }
+    },
+    "REGION@1996": {
+      "reference": "R51665.00",
+      "question": "REGION",
+      "survey_year": "1996",
+      "labels": {
+        "1": "NORTHEAST",
+        "2": "NORTH CENTRAL",
+        "3": "SOUTH",
+        "4": "WEST"
+      }
+    },
+    "MARSTAT-KEY@1996": {
+      "reference": "R51667.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "1996",
+      "labels": {
+        "0": "NEVER MARRIED",
+        "1": "MARRIED",
+        "2": "SEPARATED",
+        "3": "DIVORCED",
+        "6": "WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@1996": {
+      "reference": "R51670.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1996",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1996": {
+      "reference": "R51670.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1996",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1996": {
+      "reference": "R51670.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "1996",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1996": {
+      "reference": "R51670.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "1996",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "POVSTATUS@1998": {
+      "reference": "R64788.00",
+      "question": "POVSTATUS",
+      "survey_year": "1998",
+      "labels": {
+        "1": "1  IN POVERTY",
+        "0": "0  NOT IN POVERTY"
+      }
+    },
+    "REGION@1998": {
+      "reference": "R64791.00",
+      "question": "REGION",
+      "survey_year": "1998",
+      "labels": {
+        "1": "1  NORTHEAST",
+        "2": "2  NORTH CENTRAL",
+        "3": "3  SOUTH",
+        "4": "4  WEST"
+      }
+    },
+    "DOI_EMPLOYED@1998": {
+      "reference": "R64798.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "1998",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@1998": {
+      "reference": "R64798.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "1998",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@1998": {
+      "reference": "R64798.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "1998",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@1998": {
+      "reference": "R64798.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "1998",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "POVSTATUS@2000": {
+      "reference": "R70066.00",
+      "question": "POVSTATUS",
+      "survey_year": "2000",
+      "labels": {
+        "0": "0  NOT IN POVERTY",
+        "1": "1  IN POVERTY"
+      }
+    },
+    "REGION@2000": {
+      "reference": "R70068.00",
+      "question": "REGION",
+      "survey_year": "2000",
+      "labels": {
+        "1": "1  NORTHEAST",
+        "2": "2  NORTH CENTRAL",
+        "3": "3  SOUTH",
+        "4": "4  WEST"
+      }
+    },
+    "DOI_EMPLOYED@2000": {
+      "reference": "R70075.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2000",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2000": {
+      "reference": "R70075.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2000",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2000": {
+      "reference": "R70075.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "2000",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@2000": {
+      "reference": "R70075.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "2000",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "POVSTATUS@2002": {
+      "reference": "R77039.00",
+      "question": "POVSTATUS",
+      "survey_year": "2002",
+      "labels": {
+        "0": "0  NOT IN POVERTY",
+        "1": "1  IN POVERTY"
+      }
+    },
+    "REGION@2002": {
+      "reference": "R77041.00",
+      "question": "REGION",
+      "survey_year": "2002",
+      "labels": {
+        "1": "1  NORTHEAST",
+        "2": "2  NORTH CENTRAL",
+        "3": "3  SOUTH",
+        "4": "4  WEST"
+      }
+    },
+    "MARSTAT-KEY@2002": {
+      "reference": "R77043.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2002",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2002": {
+      "reference": "R77048.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2002",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2002": {
+      "reference": "R77048.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2002",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2002": {
+      "reference": "R77048.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "2002",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@2002": {
+      "reference": "R77048.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "2002",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "POVSTATUS@2004": {
+      "reference": "R84963.00",
+      "question": "POVSTATUS",
+      "survey_year": "2004",
+      "labels": {
+        "0": "0  NOT IN POVERTY",
+        "1": "1  IN POVERTY"
+      }
+    },
+    "REGION@2004": {
+      "reference": "R84965.00",
+      "question": "REGION",
+      "survey_year": "2004",
+      "labels": {
+        "1": "1  NORTHEAST",
+        "2": "2  NORTH CENTRAL",
+        "3": "3  SOUTH",
+        "4": "4  WEST"
+      }
+    },
+    "MARSTAT-KEY@2004": {
+      "reference": "R84967.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2004",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2004": {
+      "reference": "R84972.01",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2004",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2004": {
+      "reference": "R84972.02",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2004",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2004": {
+      "reference": "R84972.03",
+      "question": "DOI_RETIRED",
+      "survey_year": "2004",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO",
+        "2": "2  RETIRED MILITARY"
+      }
+    },
+    "DOI_DISABLED@2004": {
+      "reference": "R84972.04",
+      "question": "DOI_DISABLED",
+      "survey_year": "2004",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "POVSTATUS@2006": {
+      "reference": "T09879.00",
+      "question": "POVSTATUS",
+      "survey_year": "2006",
+      "labels": {
+        "0": "0  NOT IN POVERTY",
+        "1": "1  IN POVERTY"
+      }
+    },
+    "REGION@2006": {
+      "reference": "T09883.00",
+      "question": "REGION",
+      "survey_year": "2006",
+      "labels": {
+        "1": "1  NORTHEAST",
+        "2": "2  NORTH CENTRAL",
+        "3": "3  SOUTH",
+        "4": "4  WEST"
+      }
+    },
+    "POVSTATUS@2008": {
+      "reference": "T22101.00",
+      "question": "POVSTATUS",
+      "survey_year": "2008",
+      "labels": {
+        "0": "NOT IN POVERTY",
+        "1": "IN POVERTY"
+      }
+    },
+    "REGION@2008": {
+      "reference": "T22103.00",
+      "question": "REGION",
+      "survey_year": "2008",
+      "labels": {
+        "1": "NORTHEAST",
+        "2": "NORTH CENTRAL",
+        "3": "SOUTH",
+        "4": "WEST"
+      }
+    },
+    "POVSTATUS@2010": {
+      "reference": "T31080.00",
+      "question": "POVSTATUS",
+      "survey_year": "2010",
+      "labels": {
+        "0": "NOT IN POVERTY",
+        "1": "IN POVERTY"
+      }
+    },
+    "REGION@2010": {
+      "reference": "T31082.00",
+      "question": "REGION",
+      "survey_year": "2010",
+      "labels": {
+        "1": "NORTHEAST",
+        "2": "NORTH CENTRAL",
+        "3": "SOUTH",
+        "4": "WEST"
+      }
+    },
+    "POVSTATUS@2012": {
+      "reference": "T41125.00",
+      "question": "POVSTATUS",
+      "survey_year": "2012",
+      "labels": {
+        "0": "NOT IN POVERTY",
+        "1": "IN POVERTY"
+      }
+    },
+    "REGION@2012": {
+      "reference": "T41127.00",
+      "question": "REGION",
+      "survey_year": "2012",
+      "labels": {
+        "1": "NORTHEAST",
+        "2": "NORTH CENTRAL",
+        "3": "SOUTH",
+        "4": "WEST"
+      }
+    },
+    "POVSTATUS@2014": {
+      "reference": "T50228.00",
+      "question": "POVSTATUS",
+      "survey_year": "2014",
+      "labels": {
+        "0": "NOT IN POVERTY",
+        "1": "IN POVERTY"
+      }
+    },
+    "REGION@2014": {
+      "reference": "T50231.00",
+      "question": "REGION",
+      "survey_year": "2014",
+      "labels": {
+        "1": "NORTHEAST",
+        "2": "NORTH CENTRAL",
+        "3": "SOUTH",
+        "4": "WEST"
+      }
+    },
+    "POVSTATUS@2016": {
+      "reference": "T57709.00",
+      "question": "POVSTATUS",
+      "survey_year": "2016",
+      "labels": {
+        "0": "NOT IN POVERTY",
+        "1": "IN POVERTY"
+      }
+    },
+    "REGION@2016": {
+      "reference": "T57710.00",
+      "question": "REGION",
+      "survey_year": "2016",
+      "labels": {
+        "1": "NORTHEAST",
+        "2": "NORTH CENTRAL",
+        "3": "SOUTH",
+        "4": "WEST"
+      }
+    },
+    "POVSTATUS@2018": {
+      "reference": "T82189.00",
+      "question": "POVSTATUS",
+      "survey_year": "2018",
+      "labels": {
+        "0": "NOT IN POVERTY",
+        "1": "IN POVERTY"
+      }
+    },
+    "REGION@2018": {
+      "reference": "T82191.00",
+      "question": "REGION",
+      "survey_year": "2018",
+      "labels": {
+        "1": "NORTHEAST",
+        "2": "NORTH CENTRAL",
+        "3": "SOUTH",
+        "4": "WEST"
+      }
+    },
+    "MARSTAT-KEY@2018": {
+      "reference": "T82193.00",
+      "question": "MARSTAT-KEY",
+      "survey_year": "2018",
+      "labels": {
+        "0": "0  NEVER MARRIED",
+        "1": "1  MARRIED",
+        "2": "2  SEPARATED",
+        "3": "3  DIVORCED",
+        "6": "6  WIDOWED"
+      }
+    },
+    "DOI_EMPLOYED@2018": {
+      "reference": "T82195.00",
+      "question": "DOI_EMPLOYED",
+      "survey_year": "2018",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_HOURS_WORKED@2018": {
+      "reference": "T82196.00",
+      "question": "DOI_HOURS_WORKED",
+      "survey_year": "2018",
+      "labels": {
+        "0": "LESS THAN 30 HOURS",
+        "1": "30 HOURS OR MORE"
+      }
+    },
+    "DOI_RETIRED@2018": {
+      "reference": "T82197.00",
+      "question": "DOI_RETIRED",
+      "survey_year": "2018",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "DOI_DISABLED@2018": {
+      "reference": "T82198.00",
+      "question": "DOI_DISABLED",
+      "survey_year": "2018",
+      "labels": {
+        "1": "1  YES",
+        "0": "0  NO"
+      }
+    },
+    "POVSTATUS@2020": {
+      "reference": "T87881.00",
+      "question": "POVSTATUS",
+      "survey_year": "2020",
+      "labels": {
+        "0": "NOT IN POVERTY",
+        "1": "IN POVERTY"
+      }
+    },
+    "REGION@2020": {
+      "reference": "T87883.00",
+      "question": "REGION",
+      "survey_year": "2020",
+      "labels": {
+        "1": "NORTHEAST",
+        "2": "NORTH CENTRAL",
+        "3": "SOUTH",
+        "4": "WEST"
+      }
+    },
+    "POVSTATUS@2022": {
+      "reference": "T92999.00",
+      "question": "POVSTATUS",
+      "survey_year": "2022",
+      "labels": {
+        "0": "NOT IN POVERTY",
+        "1": "IN POVERTY"
+      }
+    },
+    "REGION@2022": {
+      "reference": "T93001.00",
+      "question": "REGION",
+      "survey_year": "2022",
+      "labels": {
+        "1": "NORTHEAST",
+        "2": "NORTH CENTRAL",
+        "3": "SOUTH",
+        "4": "WEST"
+      }
+    },
+    "OCCALL-EMP.01@1980": {
+      "reference": "R03383.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1980",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1981": {
+      "reference": "R05460.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1981",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1982": {
+      "reference": "R08405.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1982",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1983": {
+      "reference": "R10877.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1983",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1984": {
+      "reference": "R14634.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1984",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1985": {
+      "reference": "R18102.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1985",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1986": {
+      "reference": "R21719.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1986",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1987": {
+      "reference": "R23767.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1987",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1988": {
+      "reference": "R27715.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1988",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1989": {
+      "reference": "R30133.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1989",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1990": {
+      "reference": "R33407.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1990",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1991": {
+      "reference": "R36050.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1991",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "OCCALL-EMP.01@1992": {
+      "reference": "R39552.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1992",
+      "labels": {
+        "0": "00      NONE",
+        "990": "990     SAME AS PRESENT JOB",
+        "995": "995     DID NOT WORK",
+        "996": "996     NEVER WORKED"
+      }
+    },
+    "HH5-2@1994": {
+      "reference": "R45014.00",
+      "question": "HH5-2",
+      "survey_year": "1994",
+      "labels": {
+        "1": "1  CONDITION APPLIES   (Go To R45024.00)",
+        "0": "0  CONDITION DOES NOT APPLY"
+      }
+    },
+    "HH5-2A@1994": {
+      "reference": "R45015.00",
+      "question": "HH5-2A",
+      "survey_year": "1994",
+      "labels": {
+        "1": "1  CONDITION APPLIES   (Go To R45016.00)",
+        "0": "0  CONDITION DOES NOT APPLY"
+      }
+    },
+    "OCCSP-A@1994": {
+      "reference": "R45073.00",
+      "question": "OCCSP-A",
+      "survey_year": "1994",
+      "labels": {
+        "1": "1  CONDITION APPLIES   (Go To R45080.00)",
+        "0": "0  CONDITION DOES NOT APPLY"
+      }
+    },
+    "OCCALL-EMP.01@1994": {
+      "reference": "R45879.04",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1994",
+      "labels": {
+        "0": "000     NONE",
+        "995": "995 OCCUPATION NOT REPORTED"
+      }
+    },
+    "HH5-2@1996": {
+      "reference": "R52013.00",
+      "question": "HH5-2",
+      "survey_year": "1996",
+      "labels": {
+        "1": "CONDITION APPLIES   (Go To R52023.00)",
+        "0": "CONDITION DOES NOT APPLY"
+      }
+    },
+    "HH5-2A@1996": {
+      "reference": "R52014.00",
+      "question": "HH5-2A",
+      "survey_year": "1996",
+      "labels": {
+        "1": "CONDITION APPLIES   (Go To R52015.00)",
+        "0": "CONDITION DOES NOT APPLY"
+      }
+    },
+    "OCCSP-A@1996": {
+      "reference": "R52072.00",
+      "question": "OCCSP-A",
+      "survey_year": "1996",
+      "labels": {
+        "1": "CONDITION APPLIES",
+        "0": "CONDITION DOES NOT APPLY"
+      }
+    },
+    "OCCALL-EMP.01@1996": {
+      "reference": "R52706.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1996",
+      "labels": {
+        "0": "NONE",
+        "990": "OCCUPATION NOT REPORTED"
+      }
+    },
+    "OCCALL-EMP.01@1998": {
+      "reference": "R64726.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "1998",
+      "labels": {
+        "0": "000     NONE",
+        "995": "995 OCCUPATION NOT REPORTED"
+      }
+    },
+    "OCCALL-EMP.01@2000": {
+      "reference": "R65918.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2000",
+      "labels": {
+        "0": "000     NONE",
+        "995": "995 OCCUPATION NOT REPORTED"
+      }
+    },
+    "SYMBOL_PAFLAG@2000": {
+      "reference": "R70359.00",
+      "question": "SYMBOL_PAFLAG",
+      "survey_year": "2000",
+      "labels": {
+        "1": "1  CONDITION APPLIES",
+        "0": "0  CONDITION DOES NOT APPLY"
+      }
+    },
+    "HH5-2@2002": {
+      "reference": "R70910.00",
+      "question": "HH5-2",
+      "survey_year": "2002",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To R70915.00)"
+      }
+    },
+    "HH5-2A@2002": {
+      "reference": "R70911.00",
+      "question": "HH5-2A",
+      "survey_year": "2002",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To R70915.00)"
+      }
+    },
+    "OCCSP-A@2002": {
+      "reference": "R73854.00",
+      "question": "OCCSP-A",
+      "survey_year": "2002",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To R73856.00)"
+      }
+    },
+    "SYMBOL_PAFLAG@2002": {
+      "reference": "R77004.00",
+      "question": "SYMBOL_PAFLAG",
+      "survey_year": "2002",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES"
+      }
+    },
+    "HH5-2@2004": {
+      "reference": "R78009.00",
+      "question": "HH5-2",
+      "survey_year": "2004",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To R78014.00)"
+      }
+    },
+    "HH5-2A@2004": {
+      "reference": "R78010.00",
+      "question": "HH5-2A",
+      "survey_year": "2004",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To R78014.00)"
+      }
+    },
+    "OCCALL-EMP.01@2004": {
+      "reference": "R78980.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2004",
+      "labels": {
+        "4460": "Funeral Related Occupations",
+        "9840": "Armed Forces",
+        "9950": "Not in Labor Force (ACS Code)",
+        "9990": "Uncodeable"
+      }
+    },
+    "OCCSP-A@2004": {
+      "reference": "R80777.00",
+      "question": "OCCSP-A",
+      "survey_year": "2004",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To R80779.00)"
+      }
+    },
+    "SYMBOL_PAFLAG@2004": {
+      "reference": "R84946.00",
+      "question": "SYMBOL_PAFLAG",
+      "survey_year": "2004",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES"
+      }
+    },
+    "HH5-2@2006": {
+      "reference": "T00013.00",
+      "question": "HH5-2",
+      "survey_year": "2006",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T00018.00)"
+      }
+    },
+    "HH5-2A@2006": {
+      "reference": "T00014.00",
+      "question": "HH5-2A",
+      "survey_year": "2006",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T00018.00)"
+      }
+    },
+    "OCCALL-EMP.01@2006": {
+      "reference": "T01384.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2006",
+      "labels": {
+        "4460": "Funeral Related Occupations",
+        "9840": "Armed Forces",
+        "9950": "Not in Labor Force (ACS Code)",
+        "9990": "Uncodeable"
+      }
+    },
+    "OCCSP-A@2006": {
+      "reference": "T03097.00",
+      "question": "OCCSP-A",
+      "survey_year": "2006",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T03099.00)"
+      }
+    },
+    "SYMBOL_PAFLAG@2006": {
+      "reference": "T09862.00",
+      "question": "SYMBOL_PAFLAG",
+      "survey_year": "2006",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES"
+      }
+    },
+    "HH5-2@2008": {
+      "reference": "T12010.00",
+      "question": "HH5-2",
+      "survey_year": "2008",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T12015.00)"
+      }
+    },
+    "HH5-2A@2008": {
+      "reference": "T12011.00",
+      "question": "HH5-2A",
+      "survey_year": "2008",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T12015.00)"
+      }
+    },
+    "OCCALL-EMP.01@2008": {
+      "reference": "T12980.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2008",
+      "labels": {
+        "9840": "Armed Forces",
+        "9990": "Uncodeable"
+      }
+    },
+    "OCCSP-A@2008": {
+      "reference": "T14596.00",
+      "question": "OCCSP-A",
+      "survey_year": "2008",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T14598.00)"
+      }
+    },
+    "SYMBOL_PAFLAG@2008": {
+      "reference": "T22085.00",
+      "question": "SYMBOL_PAFLAG",
+      "survey_year": "2008",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES"
+      }
+    },
+    "HH5-2@2010": {
+      "reference": "T22609.00",
+      "question": "HH5-2",
+      "survey_year": "2010",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T22614.00)"
+      }
+    },
+    "HH5-2A@2010": {
+      "reference": "T22610.00",
+      "question": "HH5-2A",
+      "survey_year": "2010",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T22614.00)"
+      }
+    },
+    "OCCALL-EMP.01@2010": {
+      "reference": "T23265.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2010",
+      "labels": {
+        "9840": "Armed Forces",
+        "9990": "Uncodeable"
+      }
+    },
+    "OCCSP-A@2010": {
+      "reference": "T25082.00",
+      "question": "OCCSP-A",
+      "survey_year": "2010",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T25084.00)"
+      }
+    },
+    "HH5-2@2012": {
+      "reference": "T31959.00",
+      "question": "HH5-2",
+      "survey_year": "2012",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T31964.00)"
+      }
+    },
+    "HH5-2A@2012": {
+      "reference": "T31960.00",
+      "question": "HH5-2A",
+      "survey_year": "2012",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T31964.00)"
+      }
+    },
+    "OCCALL-EMP.01@2012": {
+      "reference": "T33087.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2012",
+      "labels": {
+        "4460": "Funeral Related Occupations",
+        "9840": "Armed Forces",
+        "9950": "Not in Labor Force (ACS Code)",
+        "9990": "Uncodeable"
+      }
+    },
+    "OCCSP-A@2012": {
+      "reference": "T34946.00",
+      "question": "OCCSP-A",
+      "survey_year": "2012",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T34948.00)"
+      }
+    },
+    "HH5-2@2014": {
+      "reference": "T41829.00",
+      "question": "HH5-2",
+      "survey_year": "2014",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T41834.00)"
+      }
+    },
+    "HH5-2A@2014": {
+      "reference": "T41830.00",
+      "question": "HH5-2A",
+      "survey_year": "2014",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T41834.00)"
+      }
+    },
+    "OCCALL-EMP.01@2014": {
+      "reference": "T42828.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2014",
+      "labels": {
+        "9840": "Armed Forces",
+        "9990": "Uncodeable"
+      }
+    },
+    "OCCSP-A@2014": {
+      "reference": "T44661.00",
+      "question": "OCCSP-A",
+      "survey_year": "2014",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T44663.00)"
+      }
+    },
+    "HH5-2@2016": {
+      "reference": "T51608.00",
+      "question": "HH5-2",
+      "survey_year": "2016",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES"
+      }
+    },
+    "OCCALL-EMP.01@2016": {
+      "reference": "T52569.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2016",
+      "labels": {
+        "9840": "Armed Forces"
+      }
+    },
+    "OCCSP-A@2016": {
+      "reference": "T54224.00",
+      "question": "OCCSP-A",
+      "survey_year": "2016",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T54226.00)"
+      }
+    },
+    "HH5-2@2018": {
+      "reference": "T77295.00",
+      "question": "HH5-2",
+      "survey_year": "2018",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES"
+      }
+    },
+    "OCCALL-EMP.01@2018": {
+      "reference": "T78186.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2018",
+      "labels": {
+        "9840": "Armed Forces",
+        "9990": "Uncodeable"
+      }
+    },
+    "OCCSP-A@2018": {
+      "reference": "T79781.00",
+      "question": "OCCSP-A",
+      "survey_year": "2018",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T79783.00)"
+      }
+    },
+    "HH5-2@2020": {
+      "reference": "T83402.00",
+      "question": "HH5-2",
+      "survey_year": "2020",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES"
+      }
+    },
+    "OCCALL-EMP.01@2020": {
+      "reference": "T84283.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2020",
+      "labels": {
+        "9840": "Armed Forces",
+        "9990": "Uncodeable"
+      }
+    },
+    "OCCSP-A@2020": {
+      "reference": "T85844.00",
+      "question": "OCCSP-A",
+      "survey_year": "2020",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T85845.00)"
+      }
+    },
+    "HH5-2@2022": {
+      "reference": "T88898.00",
+      "question": "HH5-2",
+      "survey_year": "2022",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES"
+      }
+    },
+    "OCCALL-EMP.01@2022": {
+      "reference": "T89824.00",
+      "question": "OCCALL-EMP.01",
+      "survey_year": "2022",
+      "labels": {
+        "9840": "Armed Forces",
+        "9990": "Uncodeable"
+      }
+    },
+    "OCCSP-A@2022": {
+      "reference": "T91372.00",
+      "question": "OCCSP-A",
+      "survey_year": "2022",
+      "labels": {
+        "0": "0  CONDITION DOES NOT APPLY",
+        "1": "1  CONDITION APPLIES   (Go To T91373.00)"
+      }
+    }
+  },
+  "stage1_table_sha256": {
+    "hrs_all_candidate_pairs.csv.gz": "c8b6647c4accb7f3bea80a7b56dcdd0593796f207d31df431d92846d830eecb6",
+    "hrs_analysis_allpairs_baseline3_matched_age_actual4_16.csv.gz": "b4abff14105843d9549947572b2845eaacf5896f62078c0a4336414803bec776",
+    "hrs_analysis_allpairs_baseline3_matched_age_actual4_8.csv.gz": "a7a65fa706286c61d14d5c4a9417f759602e4a7ca434a21297a7b832720781cd",
+    "hrs_analysis_allpairs_official27_sensitivity_matched_age_actual4_16.csv.gz": "2eab193ca97dff22a5e47358a9e762ffbf9ca18e3e28d9479e197dbf1ba1d178",
+    "hrs_analysis_allpairs_strict27_matched_age_actual4_16.csv.gz": "e21a31cdb7f6d00b0e8922118833f27ed15c37c7ecd8d6fade2fd3fce51c1f5e",
+    "hrs_analysis_allpairs_strict27_matched_age_actual4_8.csv.gz": "8ef179cbb784fcfb5effe35160a54a63c378d45f6301e3025a84b75878562cc2",
+    "hrs_analysis_allpairs_strict27_matched_age_nominal6.csv.gz": "295fb4919faed6ae7104458215123cb468c6ceb1242f7488cf57a571d248d79e",
+    "hrs_analysis_baseline3_matched_age_actual4_16.csv.gz": "5f476bfbee2b516344db1ae535eeee508fc7ba03a2a0f74afaae81adb9f812b7",
+    "hrs_analysis_baseline3_matched_age_actual4_8.csv.gz": "313361403d0b26d49b1367c96a59ac8d5de7d992c4208a3b8cf1391b205ca068",
+    "hrs_analysis_official27_sensitivity_matched_age_actual4_16.csv.gz": "590344dfb93558d6d936c517fad2ddfd2ef42d832595c0e64d2408134fe9f3b9",
+    "hrs_analysis_strict27_matched_age_actual4_16.csv.gz": "1c84d591cf4d21bd2b048564abcb51bc766147e74079b335d0691635eb54db20",
+    "hrs_analysis_strict27_matched_age_actual4_8.csv.gz": "5544e6021e9567d2845cf78641b921ac61f6001976f471bb33ad9167aaa6d7f8",
+    "hrs_analysis_strict27_matched_age_nominal6.csv.gz": "a92ae4722ed6811099d16673b332b08a732cc867a0aa2e2ad134b9d257382822",
+    "hrs_cognition_person_wave.csv.gz": "6f7f4872925500a0440498922979b44f7bb877bbe7b3d21b64c97b3de83fcf30",
+    "hrs_common_encoded.csv.gz": "462d0c0323ace5054011972feede5713ad495423c8d1f29c9eb5749251a79969",
+    "hrs_common_person_wave.csv.gz": "e273627eedd90948be34cb3a57b615ab12e0c61ac88107e5af6a4c111eb3424f",
+    "hrs_design_and_source_metadata.csv.gz": "00e0747c5f778a904ec20f349c64c0485a5caffa258bdad2eae78c66533bfb9b",
+    "hrs_household_fold5.csv": "3ef2ea623053498c8797795c466c9d5cebe7abca06c7182df2e83d863c731708",
+    "nlsy_analysis_baseline3_matched_age_actual4_16.csv.gz": "ccdff68081fe4f2dd4172088e5fb1469fd47b2e4abbf27e728430649f733aa40",
+    "nlsy_analysis_baseline3_matched_age_actual4_8.csv.gz": "9cb3658ebac4cd1bef2db5414844fa9e3f59283cfd0661999ad9f8486a8a9f32",
+    "nlsy_analysis_official27_sensitivity_matched_age_actual4_16.csv.gz": "7c047bd65d57939872e11d5c25c8c92240cefbff42cf92703154deced6c78011",
+    "nlsy_analysis_strict27_matched_age_actual4_16.csv.gz": "0d279e798dce733019a3155f589e1f90f61c10a502fbd0f86172b1a974e4bf7f",
+    "nlsy_analysis_strict27_matched_age_actual4_8.csv.gz": "3a6cbacda31c978a5dbcf1bbb337892058b2fc612c335adbb145a5a22ce12bf6",
+    "nlsy_analysis_strict27_matched_age_nominal6.csv.gz": "551f3dc2bc79cac7dc8e5fb743852f2887c3d26d1ee48dcb1e371b122bf60750",
+    "nlsy_common_baseline.csv.gz": "2f135a7c7e4061d6866efb06a1520df7481321d2de40d9acb028c66a0d698f52",
+    "nlsy_common_encoded.csv.gz": "757e6f6d3bd1f32b5fe3459771afc47454e21b226933669fc6bee90a26f59b62",
+    "nlsy_external_full_baseline3_DOMAIN_SHIFT.csv.gz": "5fdb0688596bd85dea9ae8d60d6619a417befaceab95d03c8db6939142725ede",
+    "nlsy_external_full_strict27_DOMAIN_SHIFT.csv.gz": "102a6f7a8114e0961375472595fa9fc16fc5cc97d613c53476fc4f725dfe24c5",
+    "nlsy_feature_measurement_years.csv.gz": "006b056a62302f541f6993a117248c6a2fb2938451b28729449a110ca7448ec9",
+    "nlsy_household_fold5.csv": "6c55db261d8d8a8ee0eccef656708553044b132a08211d58279410429fdc2582",
+    "nlsy_lifecourse_extensions.csv.gz": "2bec7b873606a20c1c016afc023df26e9a65d78477f8b74a1f7fb6b4a889df1c",
+    "nlsy_outcomes_and_sample_flags.csv": "26fd9e9f69cdc9da1e2a9698e1eb37de210d046f7b8fc26563cbece6b85d86d4"
+  }
+}

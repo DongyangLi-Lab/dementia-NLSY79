@@ -1,0 +1,11 @@
+/local_data/
+*.zip
+*.csv
+!metadata/*.csv
+*.csv.gz
+__pycache__/
+/runs/
+/.venv/
+*.joblib
+*.pkl
+*.cbm

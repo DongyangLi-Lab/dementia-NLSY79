@@ -1,0 +1,22 @@
+{
+  "version": "part2_pilot_v1",
+  "seed": 42,
+  "threads": 2,
+  "source_feature_set": "common_primary29",
+  "exclude_education": false,
+  "first_pair_only": false,
+  "pilot_households_per_fold": 15,
+  "endpoint_grids": {
+    "elasticnet": {"alpha": [0.1], "l1_ratio": [0.5]},
+    "catboost": {"iterations": [15], "depth": [3], "learning_rate": [0.1]},
+    "lightgbm": {"n_estimators": [15], "num_leaves": [7], "learning_rate": [0.1]}
+  },
+  "trajectory_grid": {"alpha": [10.0]},
+  "target_grids": {
+    "catboost": {"iterations": [15], "depth": [3], "learning_rate": [0.1]},
+    "elasticnet": {"alpha": [0.1], "l1_ratio": [0.5]}
+  },
+  "primary_target_learner": "catboost",
+  "primary_increment": "B_change",
+  "bootstrap_repeats": 2000
+}

@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-09",
+  "status": "PASS",
+  "unit_tests": 8,
+  "unit_test_fixtures": "Synthetic engineering observations, never used as study results",
+  "real_data_pilot": {
+    "source_learners": [
+      "elasticnet",
+      "catboost",
+      "lightgbm",
+      "trajectory",
+      "ridge"
+    ],
+    "target_learners": [
+      "catboost",
+      "elasticnet"
+    ],
+    "target_variants": [
+      "C",
+      "A",
+      "B_score",
+      "B_change"
+    ],
+    "saved_pipelines": 13,
+    "max_save_reload_prediction_difference": 0.0,
+    "standalone_target_replay_difference": 0.0,
+    "transfer_rows": 2305,
+    "locked_prediction_rows": 460,
+    "locked_outcomes_scored": false,
+    "target_training_excludes_fold4": true,
+    "stage_reuse_verified": true,
+    "pilot_evaluation_rejection_verified": true
+  },
+  "model_code_sha256": {
+    "metadata/source_rules.json": "53ad9174eb3ad3fb4bfa76ad7963cdab6f894ed2d208b02168d8c9d25c19cef8",
+    "part2_models/__init__.py": "b68881ad03ac8feba3dc34b0ba07fb4b30bbe7ba8b030e6f3672857f95624aa4",
+    "part2_models/__main__.py": "5fbe577a7137c262827b9ef37eb38d0a5e017ceb83b624fe90bba241b6b07bc2",
+    "part2_models/data.py": "ccd296b0d0d9fb8c32db6653daa5262f377eebfb2c1f4253b91d94fa19148b5e",
+    "part2_models/estimators.py": "19a4187e378eb1e848245e212389f488d94afae077e05db4678c5a8df402f129",
+    "part2_models/evaluation.py": "801e500e4e139873eaebe608d4216260301ed8ea849d66900c98512c1f351cdf",
+    "part2_models/store.py": "12b32e74800b5eed8cf8919d381a387265acea460ca7e440e8a3fe3befe2f233",
+    "part2_models/workflow.py": "0090aed02e4e58fff0b9deb54861584f5734e6fd77a59a6302b437b87b1735bd",
+    "stage2_config.json": "7b2a16f1dfffa657960173417895b0105ed97df9c15b01b3bd7d43d518e030f8"
+  },
+  "environment": {
+    "python": "3.9.7",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.6.1",
+    "joblib": "1.4.2",
+    "catboost": "1.2.8",
+    "lightgbm": "4.5.0"
+  },
+  "data": {
+    "stage1_tables": 32,
+    "stage2_tables": 2,
+    "metadata_unique_fields": 497,
+    "stage2_column_entries": 288,
+    "archives_unchanged": true,
+    "stage2_rebuild_all_four_members_byte_identical": true
+  },
+  "full_experiments_run": false
+}

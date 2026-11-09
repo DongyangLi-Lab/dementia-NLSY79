@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "stage1_tables": 32,
+  "stage2_tables": 2,
+  "unique_fields": 497,
+  "model_table_columns": 288,
+  "model_unique_fields": 186,
+  "missing_definitions": 0,
+  "nlsy_nonmissing_predictor_source_year_checks": 217072,
+  "primary_keys_validated": 34,
+  "stage1_source_hashes_verified": 32,
+  "model_csv_hashes_verified": 2,
+  "household_folds_verified": true,
+  "model_samples": {
+    "HRS": {
+      "rows": 52023,
+      "people": 8299,
+      "households": 6543,
+      "roles": {}
+    },
+    "NLSY79": {
+      "rows": 2305,
+      "people": 2305,
+      "households": 2028,
+      "roles": {
+        "development": 1845,
+        "locked_test": 460
+      }
+    }
+  },
+  "nlsy_postbaseline_source_years": 0,
+  "current_scope": "48-55 baseline, 4-16 actual follow-up, strict27",
+  "documented_source_limitation": "RAND RAEDYRS source wave is unavailable per person in this export",
+  "models_fitted": false
+}

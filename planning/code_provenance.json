@@ -1,0 +1,32 @@
+{
+  "base_commit": "9d34fe46270862a7b867ab3b919bb6971714cd49",
+  "base_sources": [
+    {
+      "path": "benchmark.py",
+      "sha256": "9543297ff4dc3b5821918e23392b874d8f246d5e6c65dfecb942328333029970",
+      "adapted_into": [
+        "part2_models/estimators.py",
+        "part2_models/workflow.py"
+      ]
+    }
+  ],
+  "local_sources": [
+    {
+      "path": "output/fitted_models_review_v1/model_store.py",
+      "sha256": "11d84e31b6cb8b12f2efd3cfe06b613a63e40667faae35ddf8ccd31f5ea8ddca",
+      "adapted_into": [
+        "part2_models/store.py",
+        "part2_models/estimators.py"
+      ]
+    },
+    {
+      "path": "output/fitted_models_review_v1/train_and_save.py",
+      "sha256": "af5aa246cb2c324d001f1fafc615747f3617c28967713c908b3eda48406a40dd",
+      "adapted_into": [
+        "part2_models/store.py",
+        "part2_models/estimators.py"
+      ]
+    }
+  ],
+  "legacy_artifacts": "Existing 6-year and 8-year classifiers remain in the original local project. Their weights and imputers are not reused for Part 2 continuous cognition regression."
+}
