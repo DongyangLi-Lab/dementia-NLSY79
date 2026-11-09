@@ -1,7 +1,0 @@
-data/2000-2006/** filter=lfs diff=lfs merge=lfs -text
-data/** filter=lfs diff=lfs merge=lfs -text
-*.csv filter=lfs diff=lfs merge=lfs -text
-*.dta filter=lfs diff=lfs merge=lfs -text
-*.sav filter=lfs diff=lfs merge=lfs -text
-*.rda filter=lfs diff=lfs merge=lfs -text
-*.parquet filter=lfs diff=lfs merge=lfs -text
