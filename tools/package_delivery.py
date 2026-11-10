@@ -15,7 +15,7 @@ def main():
         if not name:continue
         p=ROOT/name;parts=Path(name).parts
         if parts[0] in {'data','results','figures','outputs','tmp','packages'}:continue
-        if parts[0]=='delivery' or p.suffix in CODE or p.name in {'.gitattributes','.gitignore'}:
+        if parts[0]=='delivery' or p.suffix in CODE or p.name in {'.gitattributes','.gitignore','build_evidence.json'}:
             if p.is_file():paths.append(p)
     target=ROOT/'packages/HRS_code_and_delivery_20261110.zip';target.parent.mkdir(exist_ok=True)
     manifest=[]

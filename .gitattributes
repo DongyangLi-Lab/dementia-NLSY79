@@ -14,3 +14,5 @@ delivery/**/*.csv -filter diff -merge -text
 *.cc -text
 *.cu -text
 *.slurm -text
+*.sh -text
+artifacts/unc/guarded_l40s_8756544/production_build/** -text
