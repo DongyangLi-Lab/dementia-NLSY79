@@ -34,7 +34,9 @@ PREAMBLE = r'''\documentclass[10pt]{article}
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--source', type=Path, default=ROOT/'artifacts/tables/supplementary/S1.csv')
+    default_source=ROOT/'artifacts/tables/supplementary/S1.csv'
+    if not default_source.is_file():default_source=ROOT/'delivery/tables/audited_sources/supplementary/S1.csv'
+    parser.add_argument('--source', type=Path, default=default_source)
     parser.add_argument('--output', type=Path, default=ROOT/'delivery/tables/outcome_flow')
     parser.add_argument('--tex-only', action='store_true')
     args = parser.parse_args()

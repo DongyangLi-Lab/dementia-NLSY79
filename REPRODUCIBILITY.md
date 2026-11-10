@@ -34,7 +34,7 @@ python artifacts/finish_verified_sources.py
 python artifacts/audit_final_completion.py
 ```
 
-These commands validate and write results. For release inspection without rerunning scientific stages, use `python tools/verify_delivery.py`. Original full-audit evidence is in `delivery/verification/`.
+These commands validate and write results. For release inspection without rerunning scientific stages, use `python tools/verify_delivery.py`; it also works from the extracted code/delivery ZIP without a Git checkout or private result archive. In that case it verifies the copied audited sources and saved evidence, rather than accessing participant-level records. Original full-audit evidence is in `delivery/verification/`.
 
 ## Presentation and packaging
 

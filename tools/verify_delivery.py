@@ -13,23 +13,28 @@ def require(ok,message):
     if not ok:raise ValueError(message)
 
 def main():
-    status=json.loads((ROOT/'artifacts/source_status.json').read_text())
+    source_tables=ROOT/'artifacts/tables'
+    source_status=ROOT/'artifacts/source_status.json'
+    if not source_status.is_file():
+        source_tables=D/'tables/audited_sources'
+        source_status=D/'verification/source_status.json'
+    status=json.loads(source_status.read_text(encoding='utf-8'))
     require(status['state']=='complete','Final source status is incomplete')
     for name,record in status['final_tables'].items():
-        src=ROOT/'artifacts/tables/supplementary'/f'{name}.csv'
+        src=source_tables/'supplementary'/f'{name}.csv'
         require(sha(src)==record['sha256'],f'Audited source changed: {name}')
         require(sha(src)==sha(D/'tables/audited_sources/supplementary'/src.name),f'Delivery differs: {name}')
     manifest=json.loads((D/'MANIFEST.json').read_text(encoding='utf-8'))
     for rec in manifest['files']:
         require(sha(D/rec['path'])==rec['sha256'],f'Delivery hash mismatch: {rec["path"]}')
-    original=list(csv.DictReader((ROOT/'artifacts/tables/supplementary/S1.csv').open(encoding='utf-8-sig')))
+    original=list(csv.DictReader((source_tables/'supplementary/S1.csv').open(encoding='utf-8-sig')))
     displayed=list(csv.DictReader((D/'tables/outcome_flow/Supplementary_Table_S1_English_status.csv').open(encoding='utf-8-sig')))
     for a,b in zip(original,displayed,strict=True):
         require(all(a[k]==b[k] for k in ['Category','Row type','2000-2006','2000-2008','2010-2016','2010-2018']),'S1 numeric/subset information changed')
         require(b['Classification'] in ['Baseline','Positive or negative','Positive','Negative','Excluded'],'Non-English status')
     measured=[]
     for name in ['runtime.csv','sensitivity_any_runtime.csv']:
-        measured+=list(csv.DictReader((ROOT/'artifacts/tables'/name).open(encoding='utf-8')))
+        measured+=list(csv.DictReader((source_tables/name).open(encoding='utf-8')))
     summary=list(csv.DictReader((D/'tables/runtime/runtime_summary.csv').open(encoding='utf-8')))
     totals=[0.,0.,0.]
     for row in summary[:-1]:
@@ -42,7 +47,12 @@ def main():
     for col,want in zip(['Measured_fit_min','Measured_prediction_min','Measured_total_min'],totals):
         require(abs(float(summary[-1][col])-want)<1e-9,'Runtime total mismatch')
     require(not list((D/'tables/runtime').glob('*.py')) and not list((D/'tables/runtime').glob('*.tex')),'Runtime render code in delivery')
-    tracked=subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode().split('\0')
+    if (ROOT/'.git').exists():
+        tracked=subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode().split('\0')
+    else:
+        tracked=[str(p.relative_to(ROOT)) for p in ROOT.glob('*.py')]
+        for folder in ['model','train','inference','cluster','artifacts','tools']:
+            tracked.extend(str(p.relative_to(ROOT)) for p in (ROOT/folder).rglob('*.py'))
     source_count=0
     for name in tracked:
         p=ROOT/name
