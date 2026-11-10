@@ -1,0 +1,72 @@
+{
+  "cohorts": [
+    {
+      "window": "2000-2006",
+      "outcome": "final",
+      "eligible": 17336,
+      "n": 13246,
+      "cases": 1181,
+      "deaths_excluded": 2877
+    },
+    {
+      "window": "2000-2006",
+      "outcome": "any",
+      "eligible": 17336,
+      "n": 13939,
+      "cases": 1181,
+      "deaths_excluded": 2877
+    },
+    {
+      "window": "2000-2008",
+      "outcome": "final",
+      "eligible": 17336,
+      "n": 12236,
+      "cases": 1309,
+      "deaths_excluded": 3876
+    },
+    {
+      "window": "2000-2008",
+      "outcome": "any",
+      "eligible": 17336,
+      "n": 13023,
+      "cases": 1309,
+      "deaths_excluded": 3876
+    },
+    {
+      "window": "2010-2016",
+      "outcome": "final",
+      "eligible": 19243,
+      "n": 14123,
+      "cases": 1163,
+      "deaths_excluded": 2826
+    },
+    {
+      "window": "2010-2016",
+      "outcome": "any",
+      "eligible": 19243,
+      "n": 14127,
+      "cases": 1163,
+      "deaths_excluded": 2826
+    },
+    {
+      "window": "2010-2018",
+      "outcome": "final",
+      "eligible": 19243,
+      "n": 11603,
+      "cases": 1039,
+      "deaths_excluded": 3820
+    },
+    {
+      "window": "2010-2018",
+      "outcome": "any",
+      "eligible": 19243,
+      "n": 11605,
+      "cases": 1039,
+      "deaths_excluded": 3820
+    }
+  ],
+  "imputations": 44,
+  "model_runs": 32,
+  "predictors": 60,
+  "model_inputs": 94
+}

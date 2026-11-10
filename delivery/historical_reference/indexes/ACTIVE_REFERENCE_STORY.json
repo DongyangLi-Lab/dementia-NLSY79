@@ -1,0 +1,15 @@
+{
+  "updated": "2026-10-21",
+  "user_selected_groups": [["G032", "G044"], ["G080", "G099"]],
+  "withdrawn": {"G026": "User removed from current candidate set; preserve historical files"},
+  "G044_version": "G044_response_svd_v2",
+  "G044_rejected_version": "G044_followup_density_waterfalls",
+  "status": "Two composite graphics and a seven-page bilingual Word review document produced; awaiting user review",
+  "word_document": "E:/yjx/output/reference_pairs_word_v1/HRS_组合图_中英图注与论文叙事.docx",
+  "population_composite": "E:/yjx/output/reference_pairs_word_v1/figures/Figure_P_population.png",
+  "model_composite": "E:/yjx/output/reference_pairs_word_v1/figures/Figure_M_model.png",
+  "proposed_reading_order": [["G080", "G099"], ["G032", "G044"]],
+  "story_plan": "E:/yjx/output/reference_pair_story_v1/story_plan_zh.txt",
+  "historical_five_figure_archive": "E:/yjx/output/selected_reference_results_organized_v1",
+  "approved_manuscript_component_unchanged": "violin_box_overlay_v3"
+}

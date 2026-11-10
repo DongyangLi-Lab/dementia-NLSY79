@@ -1,0 +1,24 @@
+{
+  "directory": "E:\\yjx\\output\\manuscript_bundle_v2_no_ci\\figures",
+  "status": "Unchanged approved Fig5; only figure retaining graphical CI in revised bundle",
+  "full_pdf": "E:\\yjx\\output\\manuscript_bundle_v2_no_ci\\figures\\Fig5_probability_reliability.pdf",
+  "full_png": "E:\\yjx\\output\\manuscript_bundle_v2_no_ci\\figures\\Fig5_probability_reliability.png",
+  "original_panels": [
+    "A",
+    "B",
+    "E",
+    "F"
+  ],
+  "approved_replacement_panels": [
+    "C",
+    "D"
+  ],
+  "colors": {
+    "TabICL_minus_LR": "#174A8B",
+    "TabICL_minus_CatBoost": "#B53A24"
+  },
+  "band_opacity": 0.24,
+  "confidence_level": 0.95,
+  "ci_numbers_unchanged": true,
+  "previous_full_ci_revision": "E:\\yjx\\output\\figure5_contrast_v10\\Fig5_probability_reliability.pdf"
+}

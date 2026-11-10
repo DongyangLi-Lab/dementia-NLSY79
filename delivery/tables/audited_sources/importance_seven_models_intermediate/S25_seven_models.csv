@@ -1,0 +1,86 @@
+Model,Predictor,Permutation rank,"Permutation importance, AUPRC drop (95% CI), points",SHAP rank,Mean |SHAP|
+CatBoost,Age,1,13.6 (11.5 to 15.7),1,0.663
+CatBoost,Education,2,4.1 (3.2 to 5.2),2,0.305
+CatBoost,Race/ethnicity,3,2.4 (1.5 to 3.2),3,0.195
+CatBoost,Difficulty using a map,4,0.7 (0.1 to 1.3),4,0.136
+CatBoost,Doctor visits (2 y),5,0.7 (0.3 to 1.0),9,0.052
+CatBoost,Self-rated memory,6,0.5 (-0.1 to 1.1),8,0.080
+CatBoost,Proxy interview,7,0.4 (-0.0 to 0.8),10,0.046
+CatBoost,Ever drinks alcohol,8,0.4 (0.1 to 0.7),7,0.082
+CatBoost,CES-D: everything an effort,9,0.3 (0.0 to 0.6),6,0.090
+CatBoost,Self-rated health,10,0.3 (-0.1 to 0.7),5,0.101
+LightGBM,Age,1,13.3 (11.3 to 15.5),1,0.728
+LightGBM,Education,2,5.4 (4.2 to 6.7),2,0.342
+LightGBM,Race/ethnicity,3,1.9 (1.1 to 2.7),3,0.181
+LightGBM,Doctor visits (2 y),4,1.2 (0.7 to 1.7),8,0.064
+LightGBM,Ever drinks alcohol,5,1.0 (0.5 to 1.5),7,0.078
+LightGBM,Weight,6,0.6 (0.1 to 1.1),11,0.050
+LightGBM,Difficulty using a map,7,0.5 (-0.2 to 1.1),5,0.123
+LightGBM,CES-D: everything an effort,8,0.4 (-0.0 to 0.9),6,0.103
+LightGBM,Labor force status,9,0.4 (0.1 to 0.7),9,0.061
+LightGBM,Proxy interview,10,0.3 (-0.1 to 0.7),12,0.041
+LightGBM,Self-rated health,11,0.3 (-0.2 to 0.8),4,0.124
+LightGBM,Self-rated memory,19,0.1 (-0.6 to 0.8),10,0.059
+Penalized LR,Age,1,12.6 (10.6 to 14.7),1,0.731
+Penalized LR,Education,2,5.6 (4.4 to 6.8),2,0.356
+Penalized LR,Race/ethnicity,3,2.6 (1.6 to 3.4),3,0.214
+Penalized LR,Difficulty using a map,4,1.0 (0.4 to 1.6),5,0.147
+Penalized LR,Labor force status,5,0.9 (0.5 to 1.2),4,0.164
+Penalized LR,Sex,6,0.6 (0.3 to 1.0),6,0.143
+Penalized LR,CES-D: everything an effort,7,0.6 (0.1 to 1.0),8,0.114
+Penalized LR,Marital status,8,0.5 (0.2 to 0.9),11,0.092
+Penalized LR,CES-D: felt lonely,9,0.4 (0.2 to 0.7),19,0.061
+Penalized LR,ADL difficulties (0-5),10,0.4 (0.1 to 0.7),23,0.041
+Penalized LR,Ever drinks alcohol,11,0.4 (0.2 to 0.7),7,0.118
+Penalized LR,Height,24,0.1 (-0.2 to 0.4),10,0.092
+Penalized LR,Self-rated memory,45,0.0 (-0.4 to 0.4),9,0.111
+RealMLP,Age,1,12.1 (10.2 to 14.0),1,0.344
+RealMLP,Education,2,5.2 (4.1 to 6.2),2,0.172
+RealMLP,Race/ethnicity,3,2.7 (1.7 to 3.7),3,0.143
+RealMLP,Difficulty using a map,4,1.2 (0.6 to 1.8),5,0.072
+RealMLP,Self-rated memory,5,1.1 (0.4 to 1.8),6,0.066
+RealMLP,Doctor visits (2 y),6,1.0 (0.5 to 1.5),4,0.078
+RealMLP,Labor force status,7,0.6 (0.2 to 1.0),12,0.045
+RealMLP,Living siblings,8,0.5 (0.1 to 1.0),16,0.032
+RealMLP,CES-D: felt lonely,9,0.5 (0.2 to 0.9),18,0.030
+RealMLP,Self-rated health,10,0.5 (-0.0 to 1.0),8,0.049
+RealMLP,Marital status,12,0.4 (0.1 to 0.8),10,0.047
+RealMLP,Ever drinks alcohol,14,0.3 (0.1 to 0.5),9,0.049
+RealMLP,Census division,23,0.1 (-0.4 to 0.6),7,0.049
+GAT,Age,1,11.6 (9.9 to 13.4),1,0.878
+GAT,Education,2,3.7 (2.9 to 4.6),3,0.253
+GAT,Race/ethnicity,3,2.2 (1.4 to 2.9),2,0.276
+GAT,Nursing-home nights (2 y),4,1.4 (0.5 to 2.4),34,0.026
+GAT,Difficulty using a map,5,0.8 (0.3 to 1.3),10,0.106
+GAT,Weight,6,0.7 (0.4 to 1.1),27,0.036
+GAT,CES-D: felt depressed,7,0.6 (0.3 to 0.9),12,0.090
+GAT,CES-D: everything an effort,8,0.6 (0.2 to 0.9),8,0.108
+GAT,Labor force status,9,0.4 (0.2 to 0.6),11,0.099
+GAT,Ever drinks alcohol,10,0.4 (0.2 to 0.6),5,0.127
+GAT,Sex,11,0.3 (0.1 to 0.5),6,0.119
+GAT,Self-rated health,13,0.3 (0.0 to 0.5),7,0.109
+GAT,Census division,19,0.1 (-0.1 to 0.3),9,0.107
+GAT,Mother's age,58,-0.1 (-0.6 to 0.4),4,0.155
+Decision tree,Age,1,8.5 (6.9 to 10.1),1,0.053
+Decision tree,Race/ethnicity,2,1.6 (0.8 to 2.4),3,0.019
+Decision tree,Education,3,1.2 (0.7 to 1.7),4,0.012
+Decision tree,Doctor visits (2 y),4,1.1 (0.7 to 1.6),8,0.003
+Decision tree,Self-rated health,5,1.0 (0.4 to 1.7),2,0.023
+Decision tree,Difficulty using a map,6,1.0 (0.3 to 1.6),5,0.010
+Decision tree,CES-D: everything an effort,7,0.7 (0.2 to 1.4),6,0.008
+Decision tree,Weight,8,0.4 (0.1 to 0.6),10,0.002
+Decision tree,Gross-motor difficulties (0-5),9,0.3 (-0.0 to 0.8),11,0.001
+Decision tree,ADL difficulties (0-5),10,0.3 (0.0 to 0.6),9,0.002
+Decision tree,Self-rated memory,11,0.2 (-0.4 to 0.9),7,0.004
+Gaussian NB,Age,1,0.8 (0.7 to 1.0),4,0.784
+Gaussian NB,Education,2,0.5 (0.4 to 0.6),6,0.686
+Gaussian NB,Living parents,3,0.4 (0.3 to 0.5),3,0.989
+Gaussian NB,Nursing-home nights (2 y),4,0.3 (0.1 to 0.6),1,1.612
+Gaussian NB,Difficulty using a map,5,0.3 (0.2 to 0.4),10,0.535
+Gaussian NB,Race/ethnicity,6,0.2 (0.1 to 0.3),9,0.563
+Gaussian NB,Labor force status,7,0.2 (0.1 to 0.3),8,0.589
+Gaussian NB,Marital status,8,0.2 (0.1 to 0.3),13,0.429
+Gaussian NB,Nursing-home stays (2 y),9,0.1 (0.0 to 0.3),41,0.178
+Gaussian NB,ADL difficulties (0-5),10,0.1 (-0.2 to 0.4),5,0.713
+Gaussian NB,Gross-motor difficulties (0-5),42,-0.0 (-0.2 to 0.1),7,0.617
+Gaussian NB,Doctor visits (2 y),58,-0.2 (-0.6 to 0.2),2,1.079

@@ -1,0 +1,77 @@
+{
+  "status": "accepted_for_guarded_production",
+  "observed_at": "2026-11-10T01:40:55.249843-05:00",
+  "user_basis": "那个不是只差0.03%吗，差不多吧",
+  "scope": "TabICL final/h6 KernelSHAP, fixed local CPU transformed inputs, L40S, original 500/800/10 design",
+  "original_strict_gate": "failed; preserved as failed, not relabelled",
+  "evidence": {
+    "impact_json_sha256": "bfeb2fc72dbf20b57ccc18a03fd02d546c67842411567b241e48651a2036cde9",
+    "impact_csv_sha256": "a446073b938c8cad9fa080be100fc64a5b38d0cfac683322581b3757f460e1f0",
+    "local_phi_independent_recomputation": "matches CSV at rtol=1e-12 atol=1e-12; all report transfer hashes checked",
+    "two_subject_L1_relative": [
+      0.0008843588082031777,
+      0.0010751636634960056
+    ],
+    "core_stamp": {
+      "model": "984e31e6332d224894fea10ad8abfe0425394472c4ad1a2dec6a0e7634b93de9",
+      "inference": "b81a55605080e68679d957383c59291c123ece5bb21f655f44d6dea56304fe79",
+      "importance": "d7065270ff65258f38a38ae0752cd615671b81d7c7230282234cc4f04134dd1c",
+      "design": "9efec925c55481d5d568e8913a662ef471d36aaad085b39cb642e842fbe32523",
+      "worker": "3c12a2bba758ea60b24b8a34436b39dfb8e4e5c2fd8520ca710b34b8f28c78ee",
+      "exclusive_guard": "b02415d391ea41a97d6f387ba24aef0edac0cf99d2ef57866fa4e517adeda368"
+    },
+    "execution": {
+      "job": 8754716,
+      "gpu": "L40S g181103",
+      "transform": "fixed local CPU preprocess",
+      "algorithm": "3 column linear2 chunk 2048, ICL splitK4 algorithm21",
+      "batch_8000": {
+        "col": 112,
+        "row": 16330,
+        "icl": 22,
+        "col_offload": true
+      },
+      "dtype": "reference and remote prediction arrays preserved during original mean/logit; constrained lstsq float64",
+      "seed": 2026,
+      "n_coalitions": 800,
+      "background": 10,
+      "shap_unit": "log-odds"
+    }
+  },
+  "production_input_manifest_sha256": "5882c8db11e85538e033a54f8ddf3f4507a09e10dcff1e3078cd5094154a6280",
+  "startup_checks": {
+    "control_subject_indices": [
+      0,
+      1
+    ],
+    "shap_probability_max_abs": 0.0005,
+    "full_cohort_probability_max_abs": 0.001,
+    "individual_phi_max_abs_log_odds": 0.001,
+    "individual_phi_relative_L1_max": 0.01,
+    "individual_signed_spearman_min": 0.99,
+    "mean_abs_spearman_min": 0.99,
+    "mean_abs_top10_overlap_min": 9,
+    "local_top10_direction_agreement_required": 10,
+    "finite_probabilities_in_unit_interval": true
+  },
+  "interpretation": "Operational portability guardrails under the user acceptance of small hardware differences; not a statistical equivalence test or proof of 500-person ranking stability. Preserve per-job control reports and reject failures.",
+  "provenance_requirements": [
+    "frozen model, inference, design and scientific implementation hashes",
+    "fixed CPU input/transform hashes and raw input identity",
+    "actual device, batch/offload route and worker/patch/library source hashes",
+    "individual probability arrays and own execution p0/p1; no relabelling as exact local reproduction",
+    "subject indices and complete output file hashes"
+  ],
+  "aggregation": "Solve original constrained least squares per subject using p0/p1 from that same execution; retain source environment. Do not silently substitute local warmups or fabricate local-worker receipts.",
+  "ownership": {
+    "local": [
+      0,
+      24
+    ],
+    "unc": [
+      25,
+      499
+    ]
+  },
+  "formal_status": "worker still requires implementation and startup validation; this decision authorizes guarded production on the specified route"
+}

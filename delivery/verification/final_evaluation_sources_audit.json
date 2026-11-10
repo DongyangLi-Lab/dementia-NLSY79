@@ -1,0 +1,173 @@
+{
+  "status": "validated",
+  "observed_at": "2026-11-10T02:32:29.901761-05:00",
+  "scope": "Primary and sensitivity, both horizons, all/complete populations, 2000-bootstrap fragment provenance and exact table reconstruction; no new bootstrap sampling",
+  "outcomes": {
+    "final": {
+      "stamp": {
+        "outcome": "final",
+        "evaluation_sha256": "0dec3319384c9924bebc484152da65a9fa760e39fd9a222b4641ef8802d6c33c",
+        "worker_sha256": "69690ae2dddf79190e0fc541e432b385b962990b1a0065bdf519f709d9e2c284",
+        "inputs": {
+          "predictions\\final\\h6\\LR\\inference.done.json": "4f8903538e5ca86a76e912ee930f12546b677f41c9d8d9962b62d400c3982b11",
+          "checkpoints\\final\\h6\\LR\\selection.json": "17554b15f31c95ffae6ac95519cfa7733de95fb2acf5439214c3f092c9801aab",
+          "predictions\\final\\h6\\GNB\\inference.done.json": "52f6c9f7d68fe69e512ccf59230b2021c4c49d0b0309f72850c3f72dad0694da",
+          "checkpoints\\final\\h6\\GNB\\selection.json": "0035a09e7bf1a39cf6c5617b0889471c6e74c22702dccace5ccc8b4a21949a69",
+          "predictions\\final\\h6\\DT\\inference.done.json": "1db9856fe62176b4d95a7cfa295f174d5d2afa6f3b8a0304efa87a3f63e9d742",
+          "checkpoints\\final\\h6\\DT\\selection.json": "b0ff1b8e92874d2c7b904bdae77c29a59602e2782a0248d38e70a6042363bd03",
+          "predictions\\final\\h6\\LightGBM\\inference.done.json": "9a121a6973b2cc67e087cdc40c452d660b88f4096b65ba19165953e845361748",
+          "checkpoints\\final\\h6\\LightGBM\\selection.json": "c274958e5867ae432091eb6ec46868d8598fadd69238f22ccac08d24c01b19f4",
+          "predictions\\final\\h6\\CatBoost\\inference.done.json": "b026596162a2ab4f62c5213b8a26e8c65a3f7a4f83dc40d7aabbebbace260ac8",
+          "checkpoints\\final\\h6\\CatBoost\\selection.json": "464d586f032dba57bce8e3b8fd2bc5a7b450b19c5da2316582569a966101af00",
+          "predictions\\final\\h6\\RealMLP\\inference.done.json": "a0569433cb1c6c2730893317386102d4dc83dd1c2df77063024bae7949d0344d",
+          "checkpoints\\final\\h6\\RealMLP\\selection.json": "2a92cf7dca7a0a16ffa1d401f670c5064e275490ddd3b3e06dbed482f706a5e8",
+          "predictions\\final\\h6\\TabICL\\inference.done.json": "b81a55605080e68679d957383c59291c123ece5bb21f655f44d6dea56304fe79",
+          "checkpoints\\final\\h6\\TabICL\\selection.json": "3ea45a8c9549403062f03755c615506ca6e3908235ea25d8e5f09ebd2cffe492",
+          "predictions\\final\\h6\\GAT\\inference.done.json": "2c4803a6bd8642b86371b136d21855fbcfd7b2a67f5a40ee4819bb93bf232982",
+          "checkpoints\\final\\h6\\GAT\\selection.json": "49af91cb60c6a37e9b878fcae48b09e9290419a339a84f3972892d9374d53a7a",
+          "predictions\\final\\h8\\LR\\inference.done.json": "8a4332dfbae6a0998d07fc5ca21f7db9a30a472156805a19a161a67f9c082101",
+          "checkpoints\\final\\h8\\LR\\selection.json": "9ac9b2938f9971df4972daaee223621109a81d78186107d3f497123cec340b67",
+          "predictions\\final\\h8\\GNB\\inference.done.json": "0843e445cb0dc590dc2cf98568743479eb3c36744b44be599f5cef2dd2fd0847",
+          "checkpoints\\final\\h8\\GNB\\selection.json": "4a68e880666ee18dd8fed26b1dcaa9cd78d636e82d89cb99f4c32455759f9033",
+          "predictions\\final\\h8\\DT\\inference.done.json": "6722c5dd2d269275f49745752a6907632bbb3f6d4a10e6be2dfa1e2112135e2d",
+          "checkpoints\\final\\h8\\DT\\selection.json": "1bf2b82cf8cd45d74e8958820565be81f90249fa0ec98bdfb81673b4b82bbc07",
+          "predictions\\final\\h8\\LightGBM\\inference.done.json": "0f9b4c57fac9989323d33c3c5ee7619e17987840e1a1485840bf26f8ef55d1af",
+          "checkpoints\\final\\h8\\LightGBM\\selection.json": "d3a53d7dce8abf1f270d6209c126ae38d01c823c9735d275af90a2fe776905f8",
+          "predictions\\final\\h8\\CatBoost\\inference.done.json": "47fea0f317f7745725899a77458cb42cb01b347c6d8239634c2abf3315182b66",
+          "checkpoints\\final\\h8\\CatBoost\\selection.json": "d73bf744910b6a9a1791fd249218475032d7c941d5ccbf48663795cbad75b0d0",
+          "predictions\\final\\h8\\RealMLP\\inference.done.json": "45ba9d6c1cbc8330e0a1439daaad7951c9c81b38f61d70236dad50cd34763359",
+          "checkpoints\\final\\h8\\RealMLP\\selection.json": "650d5e679d097b74b3af9b44d84cd0ee69fd9856d3d0850c2d8c89148232182a",
+          "predictions\\final\\h8\\TabICL\\inference.done.json": "6d8eb425756654e7f6f2ac60abdafdf5e9eb7d36d0bd590bba7160ecdf62a581",
+          "checkpoints\\final\\h8\\TabICL\\selection.json": "b77b9cbaa1e968e93543b83ffbca9c0cb86f24defe63d406d3497e2229b36148",
+          "predictions\\final\\h8\\GAT\\inference.done.json": "603b5418b829e257e6dd454869d7f905d3a909f343c4986e31529d3bd86541fe",
+          "checkpoints\\final\\h8\\GAT\\selection.json": "33b66f36d0833e196ad73d07b725ed3f1c9fa45d97d7a0a3c2d62814c633af1b"
+        },
+        "bootstrap_replicates": 2000
+      },
+      "outputs": {
+        "tables\\internal_metrics.csv": {
+          "rows": 320,
+          "sha256": "0396857add144eaa4f19b10cab42ecf0b9b9738d825c8d4667a6fa09ad66472c"
+        },
+        "tables\\internal_pairwise.csv": {
+          "rows": 448,
+          "sha256": "8791adfcde15b8505a2cf778f04369d79a0635fc9ad4852869176c4db7afbae9"
+        },
+        "tables\\temporal_metrics.csv": {
+          "rows": 320,
+          "sha256": "214b55ab34b5f580e8f976e8646621913bd4f8efbe329cd03e13446ac2131c91"
+        },
+        "tables\\temporal_pairwise.csv": {
+          "rows": 448,
+          "sha256": "894d89189e3bd39b37f117e7ab444113331a040e6ad60aee3a9e5f842474711a"
+        },
+        "tables\\calibration_curves.csv": {
+          "rows": 630,
+          "sha256": "dfce4dafe45107f457448327b3492b5666cb712d383a1b885e96e24f0aeab8fc"
+        },
+        "tables\\decision_curves.csv": {
+          "rows": 1152,
+          "sha256": "9fb166bda13b88266a4ac1d52040090adefc1d25fc65b35918c2cac327b14dac"
+        },
+        "tables\\horizon_comparison.csv": {
+          "rows": 64,
+          "sha256": "35ba5411a4006e455ab387c79ff40a4ddb8fd248a15815157cee0928a53afb9b"
+        },
+        "tables\\runtime.csv": {
+          "rows": 16,
+          "sha256": "1b31124c05b5cce249544a5bc20611bbc582f2cce0ab27436220100f4256ee38"
+        }
+      },
+      "fragment_sha256": {
+        "h6_all": "e01cb375fc747fa27419e7b5b547a2df74f718ec16ee814b9b92999b47835cb5",
+        "h6_complete": "5b9860e06a6ce7ef1eb5bba564f48f3c2964cfffd8b88e1a1b33130943d89869",
+        "h8_all": "8e1cbefeaf12cf24d6dee48b6cc050c353b903c7a91bbb8a9d81a1bd5e62f0a4",
+        "h8_complete": "c418ac00805d422331a9fe706b042e8ef96d228089edbb27865b2e15e83a64e4",
+        "horizon": "77796c0e0942409e3c54d8e6cf5c818143e9f568c7e43a91610b08a06aff47dd"
+      }
+    },
+    "any": {
+      "stamp": {
+        "outcome": "any",
+        "evaluation_sha256": "0dec3319384c9924bebc484152da65a9fa760e39fd9a222b4641ef8802d6c33c",
+        "worker_sha256": "69690ae2dddf79190e0fc541e432b385b962990b1a0065bdf519f709d9e2c284",
+        "inputs": {
+          "predictions\\any\\h6\\LR\\inference.done.json": "eb79386bdb34d5db24660a060d42b3c86def8bdf9de1c02fedf9127bd2b6e318",
+          "checkpoints\\any\\h6\\LR\\selection.json": "fe7f3d1184f3da8e63e61752d97bc317c94f476f3e16efeb6e93c0bb7a15692f",
+          "predictions\\any\\h6\\GNB\\inference.done.json": "a9bc508f22d1ab83fa70bdd00fa01c172b17d137f46336a6a0e3d39a8f91adc6",
+          "checkpoints\\any\\h6\\GNB\\selection.json": "9d99af0a1c0eef3017868143b58b816076e45787eba889affdee6e3724a2f3f0",
+          "predictions\\any\\h6\\DT\\inference.done.json": "b7a0513c6653757e7d074a1a572299c721f0238d8f9410b1e6e2f7d96a28346e",
+          "checkpoints\\any\\h6\\DT\\selection.json": "f2d4a5878adcc56d5a0a777275b9c54bf3e5d80c8102021af53d213e1864ac71",
+          "predictions\\any\\h6\\LightGBM\\inference.done.json": "c472268f6d8be1a4fbadf3cf09c4e9637d6d5c59e582d0306381d19f6b4b7109",
+          "checkpoints\\any\\h6\\LightGBM\\selection.json": "aa3b4c2f0f0db10168eb5edd8571dd07a180dd00fd98c6e37a16864e611fc853",
+          "predictions\\any\\h6\\CatBoost\\inference.done.json": "709ebeff4a3e735ba00202b6f2eec26b6e8ff123a723a5f0b718b598ae725774",
+          "checkpoints\\any\\h6\\CatBoost\\selection.json": "543d674a6971512092f3bc75ac591a66e374e93c269da2a24d30f9e76608f285",
+          "predictions\\any\\h6\\RealMLP\\inference.done.json": "97472d99bbb5f71062a82cacd7b1d6e94d7b82773a4713c9325ad8484b304a60",
+          "checkpoints\\any\\h6\\RealMLP\\selection.json": "81282482b37acc2ce6e297d3ea23d69dc266e665de521ef34e1486d691549a75",
+          "predictions\\any\\h6\\TabICL\\inference.done.json": "006653ab8e3baf42089968abab5aadc181370ff4db3b4f86882ca06ee01071a4",
+          "checkpoints\\any\\h6\\TabICL\\selection.json": "d160fd87f7fd5a8e72d2e32c45333f902a53c0c6fab29a4df2b992ad7cf98a8f",
+          "predictions\\any\\h6\\GAT\\inference.done.json": "42908b1239d11c96e08fe55f21b1912fc32f2ab3e56eb0d79813703fd99d7ed8",
+          "checkpoints\\any\\h6\\GAT\\selection.json": "8b05bf17daee9ac977e535c59c4010a50101e3eba62fc7a7941d964f997584dd",
+          "predictions\\any\\h8\\LR\\inference.done.json": "c769c47ac48e0d7272a255dba0e3b8005a1d3a93cae6b987511114fba2a6184b",
+          "checkpoints\\any\\h8\\LR\\selection.json": "656d10a11af2482126619e0c5e41424f54f03a983379f14bfe831b3f1f0c7fcf",
+          "predictions\\any\\h8\\GNB\\inference.done.json": "c14354fca3aa44f799cd640bfb8687fdcab7c96089886e195702412c5a184aa2",
+          "checkpoints\\any\\h8\\GNB\\selection.json": "6af5b85f29da8059c97c1b73ce4cdd1fdadead8a2f049a0e2e95e4d2ae0e9725",
+          "predictions\\any\\h8\\DT\\inference.done.json": "11752718406bf9ea0b1bb31f8ad71fa83fe2cd099302f524e5e6f767d07515b9",
+          "checkpoints\\any\\h8\\DT\\selection.json": "53ab071bc8f14c25412d8d9963f9ceae786e82a54f11a7e0781d4f20a61a3ea8",
+          "predictions\\any\\h8\\LightGBM\\inference.done.json": "97bd52dab08f576a790856bc9aa753ce69251fa7d95a614e703a3afb7c140cc8",
+          "checkpoints\\any\\h8\\LightGBM\\selection.json": "ed6f503dedae8faf4d395d285288c63a08cc28d8d6eae53e11aa896fa5cdbdb8",
+          "predictions\\any\\h8\\CatBoost\\inference.done.json": "cfee8788ec8e76d043f5bfe9100d85ff60e378da88056712a4236394dbeeb293",
+          "checkpoints\\any\\h8\\CatBoost\\selection.json": "57f8f7111a11d883da0f3cf1b611de37662dbe8ea07b53cec89aeba2afe9e765",
+          "predictions\\any\\h8\\RealMLP\\inference.done.json": "b6e96536897f1b1c5dffcc3ab836b00377e21944c567d4fb2b87e7830be0a0d6",
+          "checkpoints\\any\\h8\\RealMLP\\selection.json": "b079e265c73fa3b27a091d26f5dcdec424a6d680353a33633d07311087193d53",
+          "predictions\\any\\h8\\TabICL\\inference.done.json": "a056b7868b4dd3115e2e8a571165d1dcf18a0939eba436fc8f1e4e7bf5eba0d1",
+          "checkpoints\\any\\h8\\TabICL\\selection.json": "559889cdde940c1572683c881467b66067ffa78d7ec880151ee35677eb3e3eef",
+          "predictions\\any\\h8\\GAT\\inference.done.json": "e7700844c8391ecf1bc2841c4dc61220f9feb81e81252ead22694aa2c363e969",
+          "checkpoints\\any\\h8\\GAT\\selection.json": "ead417a0ecb3746596300606dc2b394178e8e8f42fbdcc1c6c36ebacf1d4a7b0"
+        },
+        "bootstrap_replicates": 2000
+      },
+      "outputs": {
+        "tables\\sensitivity_any_internal_metrics.csv": {
+          "rows": 320,
+          "sha256": "bae439a1bf29f3c5f8019738df6eaa523094186a4f933c34d4ace1626f18f560"
+        },
+        "tables\\sensitivity_any_internal_pairwise.csv": {
+          "rows": 448,
+          "sha256": "dea516ff673e98083adc38a6eef862fd0a2511c2753950caa0aca2130cb16732"
+        },
+        "tables\\sensitivity_any_temporal_metrics.csv": {
+          "rows": 320,
+          "sha256": "ef8261f1d369320ac18421fc0ac0d321d7e7682c7cadb0d02067c07b40546d9a"
+        },
+        "tables\\sensitivity_any_temporal_pairwise.csv": {
+          "rows": 448,
+          "sha256": "68444d20137a2231b3c3a824574884635ec976a894ac5ab56f5fc8380b83edc0"
+        },
+        "tables\\sensitivity_any_calibration_curves.csv": {
+          "rows": 628,
+          "sha256": "b4780d15381343eb181b114e3fb543b4eb895455d64bdc9a9a4dac5e1f40d684"
+        },
+        "tables\\sensitivity_any_decision_curves.csv": {
+          "rows": 1152,
+          "sha256": "7fb37e1723390d62f8c684d747c76df5e45891271ca49d734eaa9cf98318cb4c"
+        },
+        "tables\\sensitivity_any_horizon_comparison.csv": {
+          "rows": 64,
+          "sha256": "ac55a0580ea41e44cda502abc30b6d891d5b375cd8c01faac4e0b6764f9c10bf"
+        },
+        "tables\\sensitivity_any_runtime.csv": {
+          "rows": 16,
+          "sha256": "4b149b7ffef9dfd99833ca39eb65b94706296faa0acbd8e86da751fe3ff4ca81"
+        }
+      },
+      "fragment_sha256": {
+        "h6_all": "0bf972ec14001efda87d8ee385caa5c19bd5850a3e855db140d5a9ac8f9bbba3",
+        "h6_complete": "500f6ea69fa9fd00e612d073cd2583dd8ef20abdb6da1ea574f5fd19c0c14f2c",
+        "h8_all": "ad0084570053f8daf6464b12c12e8992f0eb5d469f57a102456848e351c8b6bd",
+        "h8_complete": "f31c3348a5b4e85b1bec918b287d447c200142ad7b4011bcb23978b2e5b1f042",
+        "horizon": "9e67b611a2e6d38d188bd355af2e8699d02c8b00fd103765933125d9b31c0124"
+      }
+    }
+  }
+}

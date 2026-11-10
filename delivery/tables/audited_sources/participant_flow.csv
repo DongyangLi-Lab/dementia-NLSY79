@@ -1,0 +1,5 @@
+cohort,horizon (years),interviewed at baseline,excluded: age <= 50,excluded: dementia at baseline,excluded: baseline dementia status unknown,eligible,analytic cohort,incident dementia,confirmed non-dementia,excluded: loss to follow-up,excluded: unresolved after final interview,excluded: died by final wave,excluded: death with observed dementia,excluded: death without observed dementia,complete predictors,"incident dementia, complete predictors",sensitivity analytic cohort
+2000 baseline,6,19578,707,1512,23,17336,13246,1181,12065,1212,1,2877,403,2474,11228,859,13939
+2000 baseline,8,19578,707,1512,23,17336,12236,1309,10927,1223,1,3876,702,3174,10396,960,13023
+2010 baseline,6,22034,1340,1445,6,19243,14123,1163,12960,2291,3,2826,427,2399,11535,806,14127
+2010 baseline,8,22034,1340,1445,6,19243,11603,1039,10564,3818,2,3820,690,3130,9624,762,11605

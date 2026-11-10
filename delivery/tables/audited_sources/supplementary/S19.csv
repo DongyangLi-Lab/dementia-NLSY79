@@ -1,0 +1,33 @@
+Metric,Model,6-year,8-year,"Difference, 8-year - 6-year (95% CI)",p
+AUROC (%),TabICL,82.2,82.9,0.6 (-0.3 to 1.6) points,0.212
+AUROC (%),CatBoost,81.7,82.2,0.6 (-0.4 to 1.6) points,0.274
+AUROC (%),LightGBM,81.5,82.1,0.6 (-0.4 to 1.7) points,0.257
+AUROC (%),Penalized LR,80.7,81.4,0.7 (-0.4 to 1.8) points,0.206
+AUROC (%),RealMLP,81.5,80.5,-1.0 (-2.1 to 0.2) points,0.093
+AUROC (%),GAT,80.2,80.1,-0.1 (-1.3 to 1.1) points,0.949
+AUROC (%),Decision tree,75.6,76.5,0.9 (-0.6 to 2.5) points,0.221
+AUROC (%),Gaussian NB,74.5,75.0,0.5 (-0.7 to 1.7) points,0.368
+AUPRC (%),TabICL,33.1,37.2,4.0 (1.5 to 6.7) points,0.005
+AUPRC (%),CatBoost,31.9,35.1,3.3 (0.6 to 5.9) points,0.015
+AUPRC (%),LightGBM,31.8,34.5,2.7 (0.0 to 5.4) points,0.049
+AUPRC (%),Penalized LR,31.2,34.6,3.3 (0.7 to 5.9) points,0.015
+AUPRC (%),RealMLP,32.3,34.2,2.0 (-0.6 to 4.7) points,0.130
+AUPRC (%),GAT,28.7,32.1,3.4 (0.8 to 6.1) points,0.014
+AUPRC (%),Decision tree,21.1,23.6,2.5 (0.3 to 4.7) points,0.022
+AUPRC (%),Gaussian NB,18.4,19.9,1.5 (0.1 to 2.9) points,0.040
+F1 (%),TabICL,37.2,39.2,2.1 (-0.1 to 4.3) points,0.065
+F1 (%),CatBoost,36.0,38.2,2.3 (0.0 to 4.7) points,0.048
+F1 (%),LightGBM,36.1,38.7,2.7 (0.4 to 4.9) points,0.020
+F1 (%),Penalized LR,36.7,38.6,2.0 (-0.4 to 4.4) points,0.104
+F1 (%),RealMLP,35.7,37.5,1.8 (-0.4 to 4.0) points,0.111
+F1 (%),GAT,34.3,36.5,2.2 (0.1 to 4.4) points,0.046
+F1 (%),Decision tree,29.8,32.4,2.6 (0.6 to 4.7) points,0.011
+F1 (%),Gaussian NB,25.6,28.5,2.9 (1.2 to 4.6) points,<0.001
+Brier score,TabICL,0.065,0.068,0.0030 (0.0002 to 0.0058),0.028
+Brier score,CatBoost,0.065,0.069,0.0037 (0.0009 to 0.0064),0.007
+Brier score,LightGBM,0.065,0.069,0.0039 (0.0011 to 0.0066),0.005
+Brier score,Penalized LR,0.066,0.069,0.0034 (0.0006 to 0.0062),0.009
+Brier score,RealMLP,0.067,0.072,0.0049 (0.0023 to 0.0074),<0.001
+Brier score,GAT,0.321,0.236,-0.0852 (-0.0885 to -0.0820),<0.001
+Brier score,Decision tree,0.072,0.076,0.0038 (0.0009 to 0.0068),0.009
+Brier score,Gaussian NB,0.156,0.160,0.0042 (-0.0002 to 0.0087),0.063

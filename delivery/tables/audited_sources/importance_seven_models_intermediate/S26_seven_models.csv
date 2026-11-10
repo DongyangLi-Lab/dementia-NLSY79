@@ -1,0 +1,8 @@
+Model,SHAP method,SHAP scale,Spearman rank correlation (60 predictors),Shared top-10 predictors
+CatBoost,exact (tree SHAP),log-odds,0.66,10
+LightGBM,exact (tree SHAP),log-odds,0.70,8
+Penalized LR,exact (linear),log-odds,0.77,7
+RealMLP,KernelSHAP (approximate; 500 participants),log-odds,0.67,7
+GAT,KernelSHAP (approximate; 500 participants),log-odds,0.47,6
+Decision tree,exact (tree SHAP),probability,0.63,9
+Gaussian NB,exact (additive log-odds),log-odds,0.19,8

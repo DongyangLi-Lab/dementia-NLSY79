@@ -1,0 +1,481 @@
+horizon,model,variable,mean_abs_SHAP,rank,method
+6,LR,ageym,0.7310756440940335,1,exact
+6,LR,edstg,0.3560137877524014,2,exact
+6,LR,raceeth,0.2143494047336192,3,exact
+6,LR,lbrf,0.1637690430699687,4,exact
+6,LR,mapa,0.1465867424535762,5,exact
+6,LR,gender,0.142687867281383,6,exact
+6,LR,drink,0.1175940984111954,7,exact
+6,LR,effort,0.1141407815252063,8,exact
+6,LR,slfmem,0.1114023635030335,9,exact
+6,LR,height,0.09168298287416,10,exact
+6,LR,mstat,0.0916698995155605,11,exact
+6,LR,lgmusa,0.0787530762009529,12,exact
+6,LR,pusha,0.0755680842599711,13,exact
+6,LR,clim1a,0.074868602488887,14,exact
+6,LR,cendiv,0.0695728788465738,15,exact
+6,LR,vigact,0.0648745232824465,16,exact
+6,LR,shlt,0.0645297361807307,17,exact
+6,LR,cancre,0.0618330957714676,18,exact
+6,LR,flone,0.0614585835928713,19,exact
+6,LR,proxy,0.0530177878947083,20,exact
+6,LR,weight,0.0510427529242337,21,exact
+6,LR,lunge,0.0464819753216005,22,exact
+6,LR,adl5a,0.040559109170269,23,exact
+6,LR,hearte,0.0394336514913616,24,exact
+6,LR,climsa,0.0373767151251713,25,exact
+6,LR,armsa,0.0363435114648228,26,exact
+6,LR,arthre,0.0347400785069547,27,exact
+6,LR,depres,0.0324714541346007,28,exact
+6,LR,stroke,0.0317669299983712,29,exact
+6,LR,sleepr,0.0305021084742653,30,exact
+6,LR,doctim,0.0302658366067318,31,exact
+6,LR,smokev,0.029757162279383,32,exact
+6,LR,diabe,0.028417901002558,33,exact
+6,LR,hibpe,0.025650219982601,34,exact
+6,LR,toilta,0.0215276261438538,35,exact
+6,LR,hosp,0.0209388926157713,36,exact
+6,LR,going,0.0202798922078297,37,exact
+6,LR,walksa,0.0200996498482668,38,exact
+6,LR,dimea,0.0179631340217841,39,exact
+6,LR,child,0.0179412656472106,40,exact
+6,LR,finea,0.0168485607548376,41,exact
+6,LR,livsib,0.0164946525063884,42,exact
+6,LR,momage,0.0163900812497068,43,exact
+6,LR,enlife,0.0158451847090666,44,exact
+6,LR,whappy,0.0154100372394071,45,exact
+6,LR,livpar,0.015156503771238,46,exact
+6,LR,walk1a,0.0125525963497771,47,exact
+6,LR,hlthlm,0.0095870478239609,48,exact
+6,LR,lifta,0.0084588155969903,49,exact
+6,LR,stoopa,0.0083592962831448,50,exact
+6,LR,fsad,0.0068393094738189,51,exact
+6,LR,dadage,0.0063802606238558,52,exact
+6,LR,nrstim,0.0043735403073636,53,exact
+6,LR,nrsnit,0.0029540203975247,54,exact
+6,LR,chaira,0.0009080084698231,55,exact
+6,LR,smoken,0.0,56,exact
+6,LR,nrshom,0.0,56,exact
+6,LR,mobila,0.0,56,exact
+6,LR,sita,0.0,56,exact
+6,LR,grossa,0.0,56,exact
+6,GNB,nrsnit,1.6121304230127764,1,exact
+6,GNB,doctim,1.0786000214010636,2,exact
+6,GNB,livpar,0.9889089615886346,3,exact
+6,GNB,ageym,0.7838444450003632,4,exact
+6,GNB,adl5a,0.713068827231921,5,exact
+6,GNB,edstg,0.6860312705172609,6,exact
+6,GNB,grossa,0.6167791534569897,7,exact
+6,GNB,lbrf,0.5889653351871507,8,exact
+6,GNB,raceeth,0.5628931058571031,9,exact
+6,GNB,mapa,0.5350283044322377,10,exact
+6,GNB,mobila,0.4582824163966545,11,exact
+6,GNB,finea,0.4403087416587639,12,exact
+6,GNB,mstat,0.4292263945239808,13,exact
+6,GNB,shlt,0.4041487864172519,14,exact
+6,GNB,drink,0.3920009116595325,15,exact
+6,GNB,clim1a,0.3889093347218444,16,exact
+6,GNB,effort,0.37815232779873,17,exact
+6,GNB,pusha,0.3596962928274813,18,exact
+6,GNB,lifta,0.3477198479483638,19,exact
+6,GNB,walksa,0.3301928132691306,20,exact
+6,GNB,flone,0.3097998838124674,21,exact
+6,GNB,hlthlm,0.2965268719446042,22,exact
+6,GNB,depres,0.2928726720730285,23,exact
+6,GNB,cendiv,0.2908956539571486,24,exact
+6,GNB,lgmusa,0.2819165434940163,25,exact
+6,GNB,walk1a,0.2806487203340485,26,exact
+6,GNB,slfmem,0.2704774541434324,27,exact
+6,GNB,vigact,0.2606235547424638,28,exact
+6,GNB,armsa,0.2277904560525668,29,exact
+6,GNB,diabe,0.2266405324921011,30,exact
+6,GNB,hearte,0.226064870001511,31,exact
+6,GNB,climsa,0.2256999574606662,32,exact
+6,GNB,hibpe,0.2120444844403763,33,exact
+6,GNB,hosp,0.2119879780523787,34,exact
+6,GNB,stroke,0.2092404874364738,35,exact
+6,GNB,child,0.2023726797344739,36,exact
+6,GNB,fsad,0.2019612765835696,37,exact
+6,GNB,going,0.1984328074148073,38,exact
+6,GNB,whappy,0.1914955727582872,39,exact
+6,GNB,stoopa,0.1810624296655982,40,exact
+6,GNB,nrstim,0.177501077407582,41,exact
+6,GNB,enlife,0.1749102562879889,42,exact
+6,GNB,chaira,0.1722236828959102,43,exact
+6,GNB,arthre,0.165950028357142,44,exact
+6,GNB,weight,0.1538795736228387,45,exact
+6,GNB,momage,0.1520827952325147,46,exact
+6,GNB,dimea,0.1508442272369588,47,exact
+6,GNB,proxy,0.1434064691107703,48,exact
+6,GNB,sleepr,0.1358369503614538,49,exact
+6,GNB,livsib,0.1316032407416621,50,exact
+6,GNB,sita,0.1261781469690203,51,exact
+6,GNB,smoken,0.1060520995588221,52,exact
+6,GNB,toilta,0.1038679389318754,53,exact
+6,GNB,gender,0.0904156751749529,54,exact
+6,GNB,smokev,0.0431642007227424,55,exact
+6,GNB,nrshom,0.0394607811783366,56,exact
+6,GNB,cancre,0.0346947305651928,57,exact
+6,GNB,dadage,0.0311967305206951,58,exact
+6,GNB,height,0.0310416864644889,59,exact
+6,GNB,lunge,0.0030967433309882,60,exact
+6,DT,ageym,0.0526369137694723,1,exact
+6,DT,shlt,0.0228753948007099,2,exact
+6,DT,raceeth,0.0194661181149273,3,exact
+6,DT,edstg,0.0117211664842048,4,exact
+6,DT,mapa,0.009761667237415,5,exact
+6,DT,effort,0.0082738584170275,6,exact
+6,DT,slfmem,0.0039130390588323,7,exact
+6,DT,doctim,0.0029786325440389,8,exact
+6,DT,adl5a,0.0017560597224365,9,exact
+6,DT,weight,0.001721132214161,10,exact
+6,DT,grossa,0.0009220944864926,11,exact
+6,DT,flone,0.000843633678301,12,exact
+6,DT,height,0.0007993328953679,13,exact
+6,DT,pusha,0.0005535301905377,14,exact
+6,DT,mstat,0.0005285209056014,15,exact
+6,DT,child,0.000484451428571,16,exact
+6,DT,stoopa,0.0004843090786347,17,exact
+6,DT,cancre,0.0,18,exact
+6,DT,lgmusa,0.0,18,exact
+6,DT,depres,0.0,18,exact
+6,DT,sleepr,0.0,18,exact
+6,DT,whappy,0.0,18,exact
+6,DT,mobila,0.0,18,exact
+6,DT,toilta,0.0,18,exact
+6,DT,fsad,0.0,18,exact
+6,DT,going,0.0,18,exact
+6,DT,arthre,0.0,18,exact
+6,DT,enlife,0.0,18,exact
+6,DT,drink,0.0,18,exact
+6,DT,stroke,0.0,18,exact
+6,DT,hearte,0.0,18,exact
+6,DT,lunge,0.0,18,exact
+6,DT,nrsnit,0.0,18,exact
+6,DT,smoken,0.0,18,exact
+6,DT,nrstim,0.0,18,exact
+6,DT,livpar,0.0,18,exact
+6,DT,hosp,0.0,18,exact
+6,DT,cendiv,0.0,18,exact
+6,DT,lbrf,0.0,18,exact
+6,DT,walksa,0.0,18,exact
+6,DT,walk1a,0.0,18,exact
+6,DT,sita,0.0,18,exact
+6,DT,chaira,0.0,18,exact
+6,DT,climsa,0.0,18,exact
+6,DT,clim1a,0.0,18,exact
+6,DT,armsa,0.0,18,exact
+6,DT,lifta,0.0,18,exact
+6,DT,dimea,0.0,18,exact
+6,DT,smokev,0.0,18,exact
+6,DT,proxy,0.0,18,exact
+6,DT,hibpe,0.0,18,exact
+6,DT,diabe,0.0,18,exact
+6,DT,vigact,0.0,18,exact
+6,DT,finea,0.0,18,exact
+6,DT,momage,0.0,18,exact
+6,DT,dadage,0.0,18,exact
+6,DT,livsib,0.0,18,exact
+6,DT,hlthlm,0.0,18,exact
+6,DT,nrshom,0.0,18,exact
+6,DT,gender,0.0,18,exact
+6,LightGBM,ageym,0.728129182418122,1,exact
+6,LightGBM,edstg,0.3415446982286199,2,exact
+6,LightGBM,raceeth,0.1805180768130414,3,exact
+6,LightGBM,shlt,0.1235094880058954,4,exact
+6,LightGBM,mapa,0.1233938285177194,5,exact
+6,LightGBM,effort,0.1030410929385983,6,exact
+6,LightGBM,drink,0.0778750147653653,7,exact
+6,LightGBM,doctim,0.0636780224084397,8,exact
+6,LightGBM,lbrf,0.0607485625552159,9,exact
+6,LightGBM,slfmem,0.0588001455211881,10,exact
+6,LightGBM,weight,0.0498872152752425,11,exact
+6,LightGBM,proxy,0.0406650549783745,12,exact
+6,LightGBM,mstat,0.0373856961834218,13,exact
+6,LightGBM,depres,0.0264161352061821,14,exact
+6,LightGBM,child,0.024724867523594,15,exact
+6,LightGBM,gender,0.0242211302162137,16,exact
+6,LightGBM,cancre,0.0229814862691996,17,exact
+6,LightGBM,height,0.0220672387274358,18,exact
+6,LightGBM,diabe,0.021713971468025,19,exact
+6,LightGBM,cendiv,0.0216944857806794,20,exact
+6,LightGBM,flone,0.0212840058838013,21,exact
+6,LightGBM,dadage,0.0207963614853794,22,exact
+6,LightGBM,livsib,0.0196698377439558,23,exact
+6,LightGBM,clim1a,0.018940322548005,24,exact
+6,LightGBM,hearte,0.0187877035772438,25,exact
+6,LightGBM,momage,0.0186354162503394,26,exact
+6,LightGBM,lgmusa,0.0186119128265113,27,exact
+6,LightGBM,hibpe,0.0180016200996647,28,exact
+6,LightGBM,adl5a,0.0171383402108118,29,exact
+6,LightGBM,livpar,0.0160939744241633,30,exact
+6,LightGBM,hlthlm,0.0150123663708059,31,exact
+6,LightGBM,lunge,0.0141198049501434,32,exact
+6,LightGBM,stroke,0.0136748683999551,33,exact
+6,LightGBM,vigact,0.0117374338053888,34,exact
+6,LightGBM,mobila,0.0099053492596612,35,exact
+6,LightGBM,climsa,0.0091996766616265,36,exact
+6,LightGBM,grossa,0.0088897278855866,37,exact
+6,LightGBM,pusha,0.0088510891764466,38,exact
+6,LightGBM,hosp,0.0087325760905881,39,exact
+6,LightGBM,smoken,0.0081252901688634,40,exact
+6,LightGBM,smokev,0.0081055233457569,41,exact
+6,LightGBM,enlife,0.0078468133207155,42,exact
+6,LightGBM,whappy,0.0041228771758052,43,exact
+6,LightGBM,stoopa,0.0040141674022002,44,exact
+6,LightGBM,chaira,0.0039644084662224,45,exact
+6,LightGBM,walk1a,0.0036814442477701,46,exact
+6,LightGBM,lifta,0.0035815647612491,47,exact
+6,LightGBM,walksa,0.0028788574842405,48,exact
+6,LightGBM,sleepr,0.0023425022710485,49,exact
+6,LightGBM,arthre,0.0020249315968583,50,exact
+6,LightGBM,going,0.001966194147787,51,exact
+6,LightGBM,nrsnit,0.0019079787063184,52,exact
+6,LightGBM,finea,0.0019074196817442,53,exact
+6,LightGBM,toilta,0.0019041135929617,54,exact
+6,LightGBM,fsad,0.0016314625654258,55,exact
+6,LightGBM,armsa,0.0003703704508876,56,exact
+6,LightGBM,dimea,0.0002787294455073,57,exact
+6,LightGBM,sita,0.0001277150954238,58,exact
+6,LightGBM,nrstim,0.0,59,exact
+6,LightGBM,nrshom,0.0,59,exact
+6,CatBoost,ageym,0.6632892706435324,1,exact
+6,CatBoost,edstg,0.3051274281209062,2,exact
+6,CatBoost,raceeth,0.1945512742029085,3,exact
+6,CatBoost,mapa,0.1356209705720632,4,exact
+6,CatBoost,shlt,0.1005414994668987,5,exact
+6,CatBoost,effort,0.0897072275861541,6,exact
+6,CatBoost,drink,0.0819349180900885,7,exact
+6,CatBoost,slfmem,0.0800217736486911,8,exact
+6,CatBoost,doctim,0.0522765778404462,9,exact
+6,CatBoost,proxy,0.046151037856828,10,exact
+6,CatBoost,flone,0.0402481130103337,11,exact
+6,CatBoost,mstat,0.0400298837977461,12,exact
+6,CatBoost,lbrf,0.0346109226914689,13,exact
+6,CatBoost,depres,0.0308485405509841,14,exact
+6,CatBoost,grossa,0.0279454095244149,15,exact
+6,CatBoost,weight,0.0266236708212548,16,exact
+6,CatBoost,hibpe,0.0226133774325511,17,exact
+6,CatBoost,height,0.0222832671656515,18,exact
+6,CatBoost,stroke,0.0202459591615317,19,exact
+6,CatBoost,clim1a,0.0171497572874873,20,exact
+6,CatBoost,livsib,0.0163424343039962,21,exact
+6,CatBoost,child,0.0161864941292462,22,exact
+6,CatBoost,adl5a,0.0150868550095144,23,exact
+6,CatBoost,livpar,0.0148642184175187,24,exact
+6,CatBoost,dadage,0.0133978258157213,25,exact
+6,CatBoost,mobila,0.0124022433156164,26,exact
+6,CatBoost,lgmusa,0.0116751130527897,27,exact
+6,CatBoost,cendiv,0.0109198781643738,28,exact
+6,CatBoost,vigact,0.010039729177247,29,exact
+6,CatBoost,lunge,0.0097239918959932,30,exact
+6,CatBoost,cancre,0.0093837489728754,31,exact
+6,CatBoost,hearte,0.0093310785656693,32,exact
+6,CatBoost,momage,0.0091555233748963,33,exact
+6,CatBoost,diabe,0.0083598559004325,34,exact
+6,CatBoost,stoopa,0.0069238611204329,35,exact
+6,CatBoost,lifta,0.005493300111609,36,exact
+6,CatBoost,climsa,0.0052390763493394,37,exact
+6,CatBoost,gender,0.0043564393663354,38,exact
+6,CatBoost,finea,0.0042960127977981,39,exact
+6,CatBoost,walksa,0.0042553892285041,40,exact
+6,CatBoost,chaira,0.0040023724433278,41,exact
+6,CatBoost,arthre,0.0026713288151308,42,exact
+6,CatBoost,smokev,0.0026065371209225,43,exact
+6,CatBoost,going,0.0023265134910685,44,exact
+6,CatBoost,enlife,0.0022745623941187,45,exact
+6,CatBoost,walk1a,0.0022617433220392,46,exact
+6,CatBoost,nrsnit,0.0021093281230296,47,exact
+6,CatBoost,hlthlm,0.0019780107620858,48,exact
+6,CatBoost,hosp,0.0019521375108912,49,exact
+6,CatBoost,sita,0.001855013324776,50,exact
+6,CatBoost,pusha,0.0011907164169242,51,exact
+6,CatBoost,sleepr,0.001131769098781,52,exact
+6,CatBoost,whappy,0.0007491153764391,53,exact
+6,CatBoost,dimea,0.0006109779073812,54,exact
+6,CatBoost,toilta,0.0,55,exact
+6,CatBoost,fsad,0.0,55,exact
+6,CatBoost,nrstim,0.0,55,exact
+6,CatBoost,nrshom,0.0,55,exact
+6,CatBoost,armsa,0.0,55,exact
+6,CatBoost,smoken,0.0,55,exact
+6,RealMLP,ageym,0.3440893691566278,1,KernelSHAP (approximate)
+6,RealMLP,edstg,0.171716005116596,2,KernelSHAP (approximate)
+6,RealMLP,raceeth,0.1426004029235081,3,KernelSHAP (approximate)
+6,RealMLP,doctim,0.078296328357669,4,KernelSHAP (approximate)
+6,RealMLP,mapa,0.0715181151672336,5,KernelSHAP (approximate)
+6,RealMLP,slfmem,0.0659750120093065,6,KernelSHAP (approximate)
+6,RealMLP,cendiv,0.0492163735933859,7,KernelSHAP (approximate)
+6,RealMLP,shlt,0.0491285891232182,8,KernelSHAP (approximate)
+6,RealMLP,drink,0.0489015257238129,9,KernelSHAP (approximate)
+6,RealMLP,mstat,0.0466956639772774,10,KernelSHAP (approximate)
+6,RealMLP,hibpe,0.0455330274355981,11,KernelSHAP (approximate)
+6,RealMLP,lbrf,0.0452315336879351,12,KernelSHAP (approximate)
+6,RealMLP,vigact,0.0418937942589507,13,KernelSHAP (approximate)
+6,RealMLP,depres,0.0325183064849702,14,KernelSHAP (approximate)
+6,RealMLP,diabe,0.0325122276626331,15,KernelSHAP (approximate)
+6,RealMLP,livsib,0.0322739051553119,16,KernelSHAP (approximate)
+6,RealMLP,child,0.0304157167394054,17,KernelSHAP (approximate)
+6,RealMLP,flone,0.0299753783158446,18,KernelSHAP (approximate)
+6,RealMLP,effort,0.0267824916711475,19,KernelSHAP (approximate)
+6,RealMLP,gender,0.0267595696148501,20,KernelSHAP (approximate)
+6,RealMLP,chaira,0.0232446690101855,21,KernelSHAP (approximate)
+6,RealMLP,cancre,0.0216586191081919,22,KernelSHAP (approximate)
+6,RealMLP,dadage,0.0212347658152391,23,KernelSHAP (approximate)
+6,RealMLP,weight,0.019499636231996,24,KernelSHAP (approximate)
+6,RealMLP,momage,0.0194794451882308,25,KernelSHAP (approximate)
+6,RealMLP,height,0.0191862530509725,26,KernelSHAP (approximate)
+6,RealMLP,sita,0.0176271309156888,27,KernelSHAP (approximate)
+6,RealMLP,stoopa,0.0162343019377305,28,KernelSHAP (approximate)
+6,RealMLP,adl5a,0.0153578075928936,29,KernelSHAP (approximate)
+6,RealMLP,lunge,0.0151140245133733,30,KernelSHAP (approximate)
+6,RealMLP,stroke,0.0141607878204106,31,KernelSHAP (approximate)
+6,RealMLP,clim1a,0.0134106338843536,32,KernelSHAP (approximate)
+6,RealMLP,pusha,0.0129629597108035,33,KernelSHAP (approximate)
+6,RealMLP,whappy,0.0106950414873072,34,KernelSHAP (approximate)
+6,RealMLP,toilta,0.0104239139252986,35,KernelSHAP (approximate)
+6,RealMLP,arthre,0.0090452059734034,36,KernelSHAP (approximate)
+6,RealMLP,hearte,0.0087875329703334,37,KernelSHAP (approximate)
+6,RealMLP,smoken,0.0077020869300327,38,KernelSHAP (approximate)
+6,RealMLP,lifta,0.0076203178140564,39,KernelSHAP (approximate)
+6,RealMLP,walksa,0.0069806344257345,40,KernelSHAP (approximate)
+6,RealMLP,proxy,0.0068353869691023,41,KernelSHAP (approximate)
+6,RealMLP,dimea,0.0066728658606359,42,KernelSHAP (approximate)
+6,RealMLP,walk1a,0.0060289947481259,43,KernelSHAP (approximate)
+6,RealMLP,livpar,0.0058430685588953,44,KernelSHAP (approximate)
+6,RealMLP,climsa,0.0057198522468139,45,KernelSHAP (approximate)
+6,RealMLP,sleepr,0.0054798115697306,46,KernelSHAP (approximate)
+6,RealMLP,armsa,0.0044058736119198,47,KernelSHAP (approximate)
+6,RealMLP,hosp,0.0042419744550672,48,KernelSHAP (approximate)
+6,RealMLP,enlife,0.0041631698175104,49,KernelSHAP (approximate)
+6,RealMLP,lgmusa,0.0034852344059036,50,KernelSHAP (approximate)
+6,RealMLP,mobila,0.0031553974202402,51,KernelSHAP (approximate)
+6,RealMLP,fsad,0.0030821319811847,52,KernelSHAP (approximate)
+6,RealMLP,smokev,0.0030220655123633,53,KernelSHAP (approximate)
+6,RealMLP,going,0.0029238700057209,54,KernelSHAP (approximate)
+6,RealMLP,finea,0.0026566972573067,55,KernelSHAP (approximate)
+6,RealMLP,hlthlm,0.0025879045265502,56,KernelSHAP (approximate)
+6,RealMLP,nrstim,0.002423447380226,57,KernelSHAP (approximate)
+6,RealMLP,nrshom,0.002333875564628,58,KernelSHAP (approximate)
+6,RealMLP,nrsnit,0.0020695791464697,59,KernelSHAP (approximate)
+6,RealMLP,grossa,0.0019610572847137,60,KernelSHAP (approximate)
+6,TabICL,ageym,0.8985039336101523,1,KernelSHAP (approximate)
+6,TabICL,raceeth,0.3794803230395722,2,KernelSHAP (approximate)
+6,TabICL,edstg,0.2490172698343949,3,KernelSHAP (approximate)
+6,TabICL,doctim,0.1658957885437709,4,KernelSHAP (approximate)
+6,TabICL,slfmem,0.1331036706918421,5,KernelSHAP (approximate)
+6,TabICL,shlt,0.1320519166084061,6,KernelSHAP (approximate)
+6,TabICL,drink,0.1229064616054014,7,KernelSHAP (approximate)
+6,TabICL,mapa,0.1173804027537648,8,KernelSHAP (approximate)
+6,TabICL,effort,0.1131500778124464,9,KernelSHAP (approximate)
+6,TabICL,gender,0.1005215055530627,10,KernelSHAP (approximate)
+6,TabICL,cendiv,0.0961658756053031,11,KernelSHAP (approximate)
+6,TabICL,child,0.0910164237363855,12,KernelSHAP (approximate)
+6,TabICL,depres,0.0846234507565491,13,KernelSHAP (approximate)
+6,TabICL,lbrf,0.0771344147053479,14,KernelSHAP (approximate)
+6,TabICL,mstat,0.0744187733689166,15,KernelSHAP (approximate)
+6,TabICL,diabe,0.0717881828145544,16,KernelSHAP (approximate)
+6,TabICL,flone,0.0706479451228794,17,KernelSHAP (approximate)
+6,TabICL,lgmusa,0.0695733613151907,18,KernelSHAP (approximate)
+6,TabICL,height,0.0682167470090853,19,KernelSHAP (approximate)
+6,TabICL,hibpe,0.0632072898508794,20,KernelSHAP (approximate)
+6,TabICL,pusha,0.0593378195137968,21,KernelSHAP (approximate)
+6,TabICL,vigact,0.0569718555930172,22,KernelSHAP (approximate)
+6,TabICL,weight,0.0569490136444346,23,KernelSHAP (approximate)
+6,TabICL,grossa,0.0523067794076587,24,KernelSHAP (approximate)
+6,TabICL,momage,0.0500013237173863,25,KernelSHAP (approximate)
+6,TabICL,livsib,0.0484789813901021,26,KernelSHAP (approximate)
+6,TabICL,adl5a,0.0434400137478255,27,KernelSHAP (approximate)
+6,TabICL,hosp,0.0402133138725121,28,KernelSHAP (approximate)
+6,TabICL,clim1a,0.0328956241798167,29,KernelSHAP (approximate)
+6,TabICL,hearte,0.0326873707645734,30,KernelSHAP (approximate)
+6,TabICL,stroke,0.0314417568555405,31,KernelSHAP (approximate)
+6,TabICL,stoopa,0.0299889433081055,32,KernelSHAP (approximate)
+6,TabICL,lunge,0.0298550633051118,33,KernelSHAP (approximate)
+6,TabICL,smokev,0.0295740875019561,34,KernelSHAP (approximate)
+6,TabICL,mobila,0.0292721979365522,35,KernelSHAP (approximate)
+6,TabICL,armsa,0.0274080111472306,36,KernelSHAP (approximate)
+6,TabICL,livpar,0.0263302508196522,37,KernelSHAP (approximate)
+6,TabICL,finea,0.0254781542425123,38,KernelSHAP (approximate)
+6,TabICL,dadage,0.0248757048306197,39,KernelSHAP (approximate)
+6,TabICL,climsa,0.0240848444621823,40,KernelSHAP (approximate)
+6,TabICL,going,0.0235705331472043,41,KernelSHAP (approximate)
+6,TabICL,lifta,0.0230433781368811,42,KernelSHAP (approximate)
+6,TabICL,chaira,0.0225372493002428,43,KernelSHAP (approximate)
+6,TabICL,smoken,0.0220825979147916,44,KernelSHAP (approximate)
+6,TabICL,walksa,0.0213316978382333,45,KernelSHAP (approximate)
+6,TabICL,proxy,0.0212474722104906,46,KernelSHAP (approximate)
+6,TabICL,whappy,0.0201775323542254,47,KernelSHAP (approximate)
+6,TabICL,cancre,0.0199862185626245,48,KernelSHAP (approximate)
+6,TabICL,enlife,0.0189038334634213,49,KernelSHAP (approximate)
+6,TabICL,sita,0.0185304937217675,50,KernelSHAP (approximate)
+6,TabICL,arthre,0.0182367886306249,51,KernelSHAP (approximate)
+6,TabICL,sleepr,0.0176033375745259,52,KernelSHAP (approximate)
+6,TabICL,fsad,0.0174594636907602,53,KernelSHAP (approximate)
+6,TabICL,toilta,0.0155788213722111,54,KernelSHAP (approximate)
+6,TabICL,hlthlm,0.0154291211203291,55,KernelSHAP (approximate)
+6,TabICL,walk1a,0.0149639143118003,56,KernelSHAP (approximate)
+6,TabICL,nrsnit,0.0095323811794602,57,KernelSHAP (approximate)
+6,TabICL,dimea,0.008403105768704,58,KernelSHAP (approximate)
+6,TabICL,nrstim,0.0076304864142366,59,KernelSHAP (approximate)
+6,TabICL,nrshom,0.0062757278226675,60,KernelSHAP (approximate)
+6,GAT,ageym,0.8781673816176171,1,KernelSHAP (approximate)
+6,GAT,raceeth,0.2762686949089852,2,KernelSHAP (approximate)
+6,GAT,edstg,0.2532450622437358,3,KernelSHAP (approximate)
+6,GAT,momage,0.1554251248111101,4,KernelSHAP (approximate)
+6,GAT,drink,0.1266879528277865,5,KernelSHAP (approximate)
+6,GAT,gender,0.1191090308989489,6,KernelSHAP (approximate)
+6,GAT,shlt,0.1086879852799662,7,KernelSHAP (approximate)
+6,GAT,effort,0.1080052460680001,8,KernelSHAP (approximate)
+6,GAT,cendiv,0.106736116723146,9,KernelSHAP (approximate)
+6,GAT,mapa,0.1064628064774343,10,KernelSHAP (approximate)
+6,GAT,lbrf,0.0993706093205161,11,KernelSHAP (approximate)
+6,GAT,depres,0.0899770345578773,12,KernelSHAP (approximate)
+6,GAT,slfmem,0.0692739568941551,13,KernelSHAP (approximate)
+6,GAT,hibpe,0.0649018768958628,14,KernelSHAP (approximate)
+6,GAT,diabe,0.0639212115048118,15,KernelSHAP (approximate)
+6,GAT,dadage,0.0610556256827804,16,KernelSHAP (approximate)
+6,GAT,pusha,0.059041076315985,17,KernelSHAP (approximate)
+6,GAT,flone,0.053404519143583,18,KernelSHAP (approximate)
+6,GAT,sleepr,0.0495879275373526,19,KernelSHAP (approximate)
+6,GAT,mstat,0.0476954465407826,20,KernelSHAP (approximate)
+6,GAT,stoopa,0.047299277593647,21,KernelSHAP (approximate)
+6,GAT,climsa,0.0422745437168768,22,KernelSHAP (approximate)
+6,GAT,vigact,0.0415293231222705,23,KernelSHAP (approximate)
+6,GAT,clim1a,0.038480442358208,24,KernelSHAP (approximate)
+6,GAT,doctim,0.0383954242743251,25,KernelSHAP (approximate)
+6,GAT,lunge,0.0367369756078411,26,KernelSHAP (approximate)
+6,GAT,weight,0.0357680220648654,27,KernelSHAP (approximate)
+6,GAT,arthre,0.0354383401862286,28,KernelSHAP (approximate)
+6,GAT,armsa,0.0340151646523758,29,KernelSHAP (approximate)
+6,GAT,child,0.032225069215953,30,KernelSHAP (approximate)
+6,GAT,cancre,0.0321418484694952,31,KernelSHAP (approximate)
+6,GAT,fsad,0.0313791649443191,32,KernelSHAP (approximate)
+6,GAT,going,0.0259779408891539,33,KernelSHAP (approximate)
+6,GAT,nrsnit,0.0259560315617724,34,KernelSHAP (approximate)
+6,GAT,sita,0.0211879892013663,35,KernelSHAP (approximate)
+6,GAT,hlthlm,0.0197865276278446,36,KernelSHAP (approximate)
+6,GAT,grossa,0.0195766719646042,37,KernelSHAP (approximate)
+6,GAT,lgmusa,0.0192005721272534,38,KernelSHAP (approximate)
+6,GAT,walk1a,0.0190096930854375,39,KernelSHAP (approximate)
+6,GAT,finea,0.017800793590677,40,KernelSHAP (approximate)
+6,GAT,livsib,0.0170165063237827,41,KernelSHAP (approximate)
+6,GAT,smoken,0.0162145388105826,42,KernelSHAP (approximate)
+6,GAT,toilta,0.0162102563309704,43,KernelSHAP (approximate)
+6,GAT,livpar,0.0152888985421198,44,KernelSHAP (approximate)
+6,GAT,height,0.0144710240074326,45,KernelSHAP (approximate)
+6,GAT,proxy,0.0142469027438625,46,KernelSHAP (approximate)
+6,GAT,stroke,0.0140891629212147,47,KernelSHAP (approximate)
+6,GAT,dimea,0.0135817578026801,48,KernelSHAP (approximate)
+6,GAT,hosp,0.0109997138131155,49,KernelSHAP (approximate)
+6,GAT,hearte,0.0107865623505138,50,KernelSHAP (approximate)
+6,GAT,whappy,0.0103298789717174,51,KernelSHAP (approximate)
+6,GAT,chaira,0.0102221487450039,52,KernelSHAP (approximate)
+6,GAT,smokev,0.0101075838663406,53,KernelSHAP (approximate)
+6,GAT,adl5a,0.0093107549076062,54,KernelSHAP (approximate)
+6,GAT,lifta,0.0088042957465156,55,KernelSHAP (approximate)
+6,GAT,enlife,0.0067629262877642,56,KernelSHAP (approximate)
+6,GAT,walksa,0.0067355332459814,57,KernelSHAP (approximate)
+6,GAT,mobila,0.006444727760367,58,KernelSHAP (approximate)
+6,GAT,nrshom,0.0048917806510944,59,KernelSHAP (approximate)
+6,GAT,nrstim,0.0046602910074237,60,KernelSHAP (approximate)

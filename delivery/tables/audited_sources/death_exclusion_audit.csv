@@ -1,0 +1,9 @@
+window,outcome,eligible,included,deaths_excluded,deaths_with_observed_dementia,deaths_without_dementia_with_prior_negative,accepted_with_wave_death_flag,accepted_with_prior_death_year,accepted_with_death_month_before_final_interview,accepted_same_interview_and_death_month_tracker_alive
+2000-2006,final,17336,13246,2877,403,1431,0,0,0,10
+2000-2006,any,17336,13939,2877,403,1431,0,0,0,10
+2000-2008,final,17336,12236,3876,702,2115,0,0,0,7
+2000-2008,any,17336,13023,3876,702,2115,0,0,0,8
+2010-2016,final,19243,14123,2826,427,1621,0,0,0,6
+2010-2016,any,19243,14127,2826,427,1621,0,0,0,6
+2010-2018,final,19243,11603,3820,690,2337,0,0,0,11
+2010-2018,any,19243,11605,3820,690,2337,0,0,0,11

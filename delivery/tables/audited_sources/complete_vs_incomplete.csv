@@ -1,0 +1,53 @@
+cohort,horizon (years),characteristic,complete predictors,incomplete predictors,standardized difference,n complete,n incomplete
+2000 baseline,6,incident dementia (%),7.65,15.96,0.26,11228,2018
+2000 baseline,6,age (years),65.57,65.73,0.018,11228,2018
+2000 baseline,6,female (%),61.13,46.58,-0.295,11228,2018
+2000 baseline,6,proxy interview (%),0.0,40.63,1.17,11228,2018
+2000 baseline,6,non-Hispanic Black (%),10.99,17.8,0.195,11228,2018
+2000 baseline,6,Hispanic (%),6.75,12.39,0.193,11228,2018
+2000 baseline,6,education 13+ years (%),41.57,30.97,-0.222,11228,2018
+2000 baseline,6,fair or poor self-rated health (%),20.0,29.71,0.226,11228,2018
+2000 baseline,6,any ADL difficulty (%),10.79,14.37,0.108,11228,2018
+2000 baseline,6,number of mobility difficulties (0-5),0.78,1.0,0.166,11228,2018
+2000 baseline,6,ever stroke (%),4.6,5.75,0.052,11228,2018
+2000 baseline,6,ever diabetes (%),11.88,14.72,0.084,11228,2018
+2000 baseline,6,"hospital stay, previous 2 years (%)",20.31,24.81,0.108,11228,2018
+2010 baseline,6,incident dementia (%),6.99,13.79,0.224,11535,2588
+2010 baseline,6,age (years),64.21,66.16,0.194,11535,2588
+2010 baseline,6,female (%),58.42,58.66,0.005,11535,2588
+2010 baseline,6,proxy interview (%),0.0,13.29,0.554,11535,2588
+2010 baseline,6,non-Hispanic Black (%),18.08,21.84,0.094,11535,2588
+2010 baseline,6,Hispanic (%),12.16,20.75,0.233,11535,2588
+2010 baseline,6,education 13+ years (%),52.22,39.98,-0.248,11535,2588
+2010 baseline,6,fair or poor self-rated health (%),22.15,33.73,0.26,11535,2588
+2010 baseline,6,any ADL difficulty (%),11.78,18.66,0.192,11535,2588
+2010 baseline,6,number of mobility difficulties (0-5),0.89,1.21,0.232,11535,2588
+2010 baseline,6,ever stroke (%),5.22,6.99,0.074,11535,2588
+2010 baseline,6,ever diabetes (%),19.12,23.07,0.097,11535,2588
+2010 baseline,6,"hospital stay, previous 2 years (%)",23.09,27.33,0.098,11535,2588
+2000 baseline,8,incident dementia (%),9.23,18.97,0.282,10396,1840
+2000 baseline,8,age (years),65.01,65.08,0.009,10396,1840
+2000 baseline,8,female (%),61.64,46.68,-0.304,10396,1840
+2000 baseline,8,proxy interview (%),0.0,40.16,1.158,10396,1840
+2000 baseline,8,non-Hispanic Black (%),11.38,18.05,0.189,10396,1840
+2000 baseline,8,Hispanic (%),6.98,12.62,0.19,10396,1840
+2000 baseline,8,education 13+ years (%),41.99,32.23,-0.203,10396,1840
+2000 baseline,8,fair or poor self-rated health (%),18.96,28.32,0.222,10396,1840
+2000 baseline,8,any ADL difficulty (%),10.17,13.33,0.098,10396,1840
+2000 baseline,8,number of mobility difficulties (0-5),0.74,0.93,0.151,10396,1840
+2000 baseline,8,ever stroke (%),4.34,5.0,0.031,10396,1840
+2000 baseline,8,ever diabetes (%),11.3,14.46,0.094,10396,1840
+2000 baseline,8,"hospital stay, previous 2 years (%)",19.59,23.12,0.086,10396,1840
+2010 baseline,8,incident dementia (%),7.92,14.0,0.196,9624,1979
+2010 baseline,8,age (years),63.81,65.18,0.144,9624,1979
+2010 baseline,8,female (%),58.81,59.47,0.013,9624,1979
+2010 baseline,8,proxy interview (%),0.0,11.77,0.516,9624,1979
+2010 baseline,8,non-Hispanic Black (%),18.38,22.94,0.113,9624,1979
+2010 baseline,8,Hispanic (%),12.57,22.18,0.256,9624,1979
+2010 baseline,8,education 13+ years (%),53.39,40.19,-0.267,9624,1979
+2010 baseline,8,fair or poor self-rated health (%),21.11,34.02,0.292,9624,1979
+2010 baseline,8,any ADL difficulty (%),11.33,18.76,0.209,9624,1979
+2010 baseline,8,number of mobility difficulties (0-5),0.85,1.2,0.25,9624,1979
+2010 baseline,8,ever stroke (%),4.78,6.57,0.077,9624,1979
+2010 baseline,8,ever diabetes (%),18.83,23.29,0.11,9624,1979
+2010 baseline,8,"hospital stay, previous 2 years (%)",22.3,27.2,0.114,9624,1979

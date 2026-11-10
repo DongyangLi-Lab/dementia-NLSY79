@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage[landscape,a4paper,margin=20mm]{geometry}
+\usepackage{booktabs,array,tabularx}
+\usepackage{newtxtext,newtxmath}
+\pagestyle{empty}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{24mm}}
+\begin{document}
+\begin{center}
+{\normalsize TABLE S1\par}
+\vspace{2pt}
+{\small\scshape Outcome classification by interview year and prediction horizon. Counts are mutually exclusive at the main category level. Indented rows are subsets, not additional participants. Death before the final wave excludes a participant regardless of prior dementia. Unknown dementia or vital status is excluded. Positive and negative correspond to outcome Y equal to 1 and 0, respectively.\par}
+\end{center}
+\vspace{6pt}
+\footnotesize
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{5pt}
+\noindent\begin{tabularx}{\textwidth}{@{}L >{\raggedright\arraybackslash}p{30mm} R R R R@{}}
+\toprule
+\textbf{Classification / outcome rule} & \textbf{Outcome status} & \textbf{2000: 6-year} \newline \textbf{(2000--2006)} & \textbf{2000: 8-year} \newline \textbf{(2000--2008)} & \textbf{2010: 6-year} \newline \textbf{(2010--2016)} & \textbf{2010: 8-year} \newline \textbf{(2010--2018)} \\
+\midrule
+Eligible sample size at baseline & Baseline & 17,336 & 17,336 & 19,243 & 19,243 \\
+Incident dementia: dementia at any follow-up assessment and alive & Positive & 1,190 & 1,313 & 1,267 & 1,304 \\
+\hspace*{1em}Missing intermediate assessment, dementia identified later & Positive & 55 & 113 & 67 & 90 \\
+Adequately observed non-dementia: confirmed dementia-free at final wave & Negative & 12,065 & 10,927 & 12,960 & 10,564 \\
+\hspace*{1em}Missing assessments, subsequently confirmed dementia-free at final assessment & Negative & 407 & 580 & 464 & 478 \\
+Loss to follow-up: alive or vital status unknown, not assessed at final wave & Excluded & 1,212 & 1,228 & 2,191 & 3,578 \\
+Death: died before final wave, any dementia history & Excluded & 2,869 & 3,868 & 2,825 & 3,797 \\
+\hspace*{1em}Died, no dementia observed & Excluded & 2,467 & 3,167 & 2,398 & 3,112 \\
+\hspace*{1em}Died, dementia observed & Excluded & 402 & 701 & 427 & 685 \\
+Analytic sample size & Positive or negative & 13,255 & 12,240 & 14,227 & 11,868 \\
+\bottomrule
+\end{tabularx}
+\end{document}
+
+

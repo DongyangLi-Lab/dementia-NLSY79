@@ -42,6 +42,7 @@ These commands validate and write results. For release inspection without rerunn
 python tools/build_outcome_flow_table.py
 python tools/prepare_delivery.py
 python tools/verify_delivery.py
+python tools/package_delivery.py
 python tools/package_outputs.py revised
 python tools/package_outputs.py history
 ```

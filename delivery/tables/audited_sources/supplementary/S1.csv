@@ -1,0 +1,12 @@
+Category,Classification,Row type,2000-2006,2000-2008,2010-2016,2010-2018
+Eligible at baseline,,total,17336,17336,19243,19243
+Analytic cohort,,total,13246,12236,14123,11603
+Incident dementia,Y = 1,,1181,1309,1163,1039
+  First dementia observation after a missing intermediate assessment,Y = 1,subset,51,98,53,52
+Confirmed non-dementia at the final wave,Y = 0,,12065,10927,12960,10564
+  Confirmed at final assessment after a missing intermediate assessment,Y = 0,subset,407,580,464,478
+Loss to follow-up (no final interview and no assignable outcome),Excluded,,1212,1223,2291,3818
+Unresolved after final interview,Excluded,,1,1,3,2
+Died by the final wave,Excluded,,2877,3876,2826,3820
+  With observed dementia,Excluded,subset,403,702,427,690
+  Without observed dementia,Excluded,subset,2474,3174,2399,3130

@@ -1,0 +1,2809 @@
+{
+  "status": "validated",
+  "observed_at": "2026-11-10T02:22:44.086078-05:00",
+  "scope": "160 saved mean/complete-case held-out outputs, receipts, split identities and recomputed metrics; no refitting or GPU replay",
+  "implementation_sha256": "9c52b9d1700ef6b5f390ff8238943f952cec6f9f9eb9c9c7832adf4c986919f1",
+  "runs": [
+    {
+      "model": "LR",
+      "strategy": "mean",
+      "repeat": 0,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\mean-rep0.done.json",
+      "receipt_sha256": "99d6f09c434b528ad564b6f45f5db9669352e816be578c024ae48ac3da566991",
+      "prediction_sha256": "b66283c4886a27cc81d2b16c64839464468b46146734980d88435aecee21ce54",
+      "result_sha256": "25d53ef6e141cad6cbc99f5343645d89890d3a5f2fd0dc95f22e38eede53103e",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "mean",
+      "repeat": 1,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\mean-rep1.done.json",
+      "receipt_sha256": "949f98d0e5c97912f85432e14344e57e33a640a726503b9d9ff4716e177daff0",
+      "prediction_sha256": "519de12268be3e769aa1b941d839a75c55b1e3b082d9681573e87990e69c42e9",
+      "result_sha256": "da3e5b21f8b707ad9334ab90563fa7e0d8ceb1d50c80e07511ed76f4beb136a0",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "mean",
+      "repeat": 2,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\mean-rep2.done.json",
+      "receipt_sha256": "ab322d5e1102711c394b1e4133cecc9df02eea697063859549a309b0ac879772",
+      "prediction_sha256": "3d6147f8596356a6e5a67fca9d7b7d31684196d3bc63202be6b1009f4686336b",
+      "result_sha256": "846009349a4b3ad2bd487f02a2d110a109760e8da0442369de984cebfdabcdbb",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "mean",
+      "repeat": 3,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\mean-rep3.done.json",
+      "receipt_sha256": "ba13dfb2ff5d5ab24160c27c161924e677a75959c21fa34f3ffaa17325698cf9",
+      "prediction_sha256": "f0fe4e53743041f1ebe123ee023c9161659ed8f8acf0936c7b78737224e78176",
+      "result_sha256": "1fae708c9bfa1bbd898a916c9e9f8090517d876ded50084309cbc0d9a5b4edc0",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "mean",
+      "repeat": 4,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\mean-rep4.done.json",
+      "receipt_sha256": "79a53e3c817acc18ca8e983e631fa529788c3122eb6d79335c52b00f7c5c55d2",
+      "prediction_sha256": "3942d1a8cfe992e6cb92b61acff77fe8390b56378dd989f3d679d0158821d9b9",
+      "result_sha256": "d8e580fc08fcedeff75c8c7db670debc87c419a76c493effc47a31b184f03d38",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "mean",
+      "repeat": 5,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\mean-rep5.done.json",
+      "receipt_sha256": "0e707f9e8b128af0b5182e6a0ae2cd288c369d7c231e0bdc29c46159c41419fc",
+      "prediction_sha256": "9ad59014ba8fe2f7b46dafedd2d24a9a43800c3df8fc325e2660f5eeb036f173",
+      "result_sha256": "e4316b7f6027a03e0d7a980248a9ee0a5818644bdbe672c5bb760f8caa4c9a8b",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "mean",
+      "repeat": 6,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\mean-rep6.done.json",
+      "receipt_sha256": "706166b684e5f00f019bcb56a5ccf12d69169fab7f7f1035e5a52458600f0979",
+      "prediction_sha256": "87abde0110b5c10118a76d8fa95014d4755ed7f3d7ae80258989490ee93b5c59",
+      "result_sha256": "26912e91c92206d910a49cc6e66e8dffc00424bfd9507ae4398d84aceed6f40b",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "mean",
+      "repeat": 7,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\mean-rep7.done.json",
+      "receipt_sha256": "ce748fbaf9a5864d61fca04aeb3f7dc1a7c12e815428d873eda5d49b2ac6715f",
+      "prediction_sha256": "b184cb322bc917ad28564c67735c3aa7ae5f0936f6caf6eb1d38282bab338bf5",
+      "result_sha256": "304ce6c1949d45c979911d26bf8a1bb592b018610dbeacc243c3bced4dd46fd6",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "mean",
+      "repeat": 8,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\mean-rep8.done.json",
+      "receipt_sha256": "a6b38b2191a136a7372a6c83e8466e189f6a143dda82706ea18b9dbb04e59493",
+      "prediction_sha256": "f5e421edb0add85e0359e75e4355072c7af138e899f43602d95ed78f00f4fa13",
+      "result_sha256": "2a9234527aa89635a996a87c50b23d99b33f0c8c919b3fceaee8240c367f0fd4",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "mean",
+      "repeat": 9,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\mean-rep9.done.json",
+      "receipt_sha256": "9e94a489fbbddc6b61fa7d495640092d50187310ff4912ed274e298c3c16ac82",
+      "prediction_sha256": "a02820aa10b7408002bd721924814fc1b949621e8aee72d14dcf99ee1526780c",
+      "result_sha256": "17206e3269f96e40cf2fabdd93f2eda012196e7ba6d16bd9ed49d7715933176c",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "complete_case",
+      "repeat": 0,
+      "rows": 2246,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\complete_case-rep0.done.json",
+      "receipt_sha256": "42f7aa97f7e65ee41cfeb2d180d364e76301349dd632bbac604569a444bffb00",
+      "prediction_sha256": "6373e1b872ecc570bf9536e55913d36cebceb6c3177b9bb0e168bbe7ca09e056",
+      "result_sha256": "de35d16212f1b580ca88852972b992547c8c2a43c73f7bd90543822f0ca3c118",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "complete_case",
+      "repeat": 1,
+      "rows": 2210,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\complete_case-rep1.done.json",
+      "receipt_sha256": "4ca40d9090f22b313d4c450aff5d833a77e519b2c748f1b3b0f6b114194d4ec1",
+      "prediction_sha256": "8b3ae44d2ada5a1495068d430e1497c22e8b5653fbe8e26f4e3473eb1b2f4a1b",
+      "result_sha256": "113458b36cf426a2ae08bfa6dbdc1c326cc99bcf4768ee00e54be94f6ead34d7",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "complete_case",
+      "repeat": 2,
+      "rows": 2231,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\complete_case-rep2.done.json",
+      "receipt_sha256": "bf4166b17daa4be97e8292c8c13cfb6e9de212f2e6e93c2686d24a3413c6f298",
+      "prediction_sha256": "60d90a7d1748269503a69e6c2caa9f5adf7a23396e4ce8dc24472da02957dbda",
+      "result_sha256": "6f4af83df2528e5ffd82d9074b687cb8834b74b846c3bc9e7560fcda2979b561",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "complete_case",
+      "repeat": 3,
+      "rows": 2233,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\complete_case-rep3.done.json",
+      "receipt_sha256": "bcf59181e2404876298ad80569205434f458fdecfc1e03c412ae3323c850575b",
+      "prediction_sha256": "250f1d3436a73d8bd43368826351ba3faa4af1819ac6d63c91ab3dde9fd78578",
+      "result_sha256": "bcfb52801ce6098faf4153539ecffc727b0a59b9c889de6c538c9fc451d1cf9e",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "complete_case",
+      "repeat": 4,
+      "rows": 2199,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\complete_case-rep4.done.json",
+      "receipt_sha256": "37b925bd86e269ce3a2d8191e0d0b240103c2c257b5da3ac03084d50b15fbc43",
+      "prediction_sha256": "a00c739a161c41e9e23795cc754a5f060ffbc2649c907e74a324549c8687daec",
+      "result_sha256": "10ef7a8585b72baf8508452ed66da89a49c1cbd39a84ab7a6434702792450286",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "complete_case",
+      "repeat": 5,
+      "rows": 2237,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\complete_case-rep5.done.json",
+      "receipt_sha256": "d0d9a390a39a8c2963238fd3c891d674a6e4f6fad09018f7aed4227895790625",
+      "prediction_sha256": "408e966dd74fa0c18fc1fe8193c8952dd49aef434ed4ffe9ccb39e6e8aa26f7b",
+      "result_sha256": "ffc2dea8ea8635595b0a565804e6674cdb003a845575ef27f938f72d913bda94",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "complete_case",
+      "repeat": 6,
+      "rows": 2241,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\complete_case-rep6.done.json",
+      "receipt_sha256": "2fdc366dc1d2fe116158e8fbb522b995cf5442324974f1e24de34a7f5325ddc1",
+      "prediction_sha256": "10b9f002b9305b3c046f8979b390933678c69c007c385f7a35473336b1789e02",
+      "result_sha256": "56aa7f42752b208743e13747fd2bcb372f233d0cb1d942ed887c93b476a24b82",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "complete_case",
+      "repeat": 7,
+      "rows": 2230,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\complete_case-rep7.done.json",
+      "receipt_sha256": "7159bfdafdd75d90bcc072f1cb0864d14cc6f3387222f501d6dc83de2cb9c7ca",
+      "prediction_sha256": "e0c6228a6d55ad7a0ef956855a90fb9c57d0cb975a3f62357b4261817619addc",
+      "result_sha256": "aa4bb911f05ac78fd35f186f9ca87b210d91db0c8ec6cdfc191f8aa927581f92",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "complete_case",
+      "repeat": 8,
+      "rows": 2234,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\complete_case-rep8.done.json",
+      "receipt_sha256": "8ff8a3bd92e5d5ea66fd0d3c4b4e23dcd66fb6687261c2e0c31fff1ecc7b886f",
+      "prediction_sha256": "730439a84dcf42a5098f68858164866dc384db288394d761007510d1eb23a27f",
+      "result_sha256": "2636290ad446aff2e8073e2e97e8fb9c766e2e3725e5fbab2c3ed3ecb3423fee",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LR",
+      "strategy": "complete_case",
+      "repeat": 9,
+      "rows": 2211,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LR\\complete_case-rep9.done.json",
+      "receipt_sha256": "1ffc465ad5e27fbd8c8a209ca97669c571292e30ba8a054d2e4d0f2aaf1123bd",
+      "prediction_sha256": "c37897fea7d369bcddff5a4960065aa1a257b6ce83afc67d7c830631e69b4a94",
+      "result_sha256": "382e87780fcd009be5196364c0db2a2e1066d62d35af1124221cbb825c576e21",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "mean",
+      "repeat": 0,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\mean-rep0.done.json",
+      "receipt_sha256": "ff2a9d1305d96ee2c81bc3cad5a609c680ed15c9738eff952f4f62ab57acc9e2",
+      "prediction_sha256": "389e268a0f16e1ab2333b37eda368567e12d355ee5265f877aef3341870aad59",
+      "result_sha256": "85b706ad5c033b9c0b43a25d69fc087d5f206f29e0160bd9356d7f8243d451b7",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "mean",
+      "repeat": 1,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\mean-rep1.done.json",
+      "receipt_sha256": "969dc6d5f2521ecc14a118324cfd4b9390e1dadd487f6b5f88c0e6cd80349ff4",
+      "prediction_sha256": "836ecea6039f448c8f09631f41c45355c5a6ec6abb7c55efddf9176b664cd221",
+      "result_sha256": "6468827ceb32c9e2ba1be0c64983ebee6f77fc0b9644375f377482f6e2cce08a",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "mean",
+      "repeat": 2,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\mean-rep2.done.json",
+      "receipt_sha256": "8b02f74370d4eb0fdbb9388f6e96a8c8e331e3c4fb5ad35797bf6aa4b0c628f0",
+      "prediction_sha256": "f2eab61e31d50b08f8ea8e55091d6e0692ede5b21455a60f41a3e7ef234790ef",
+      "result_sha256": "dca37700a229414029d4cf60cd902bb77eb1585ae6f1ab6f7a26afb9d156b2f3",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "mean",
+      "repeat": 3,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\mean-rep3.done.json",
+      "receipt_sha256": "cb8b6abad058e7f15f7aeb5ecd7f345c24f6e4438f4088fedfcf496ee0d1ea1d",
+      "prediction_sha256": "c97f10a714acbceee2d999dc9f3a6079a0aad71c054064a95a8856787a950d4e",
+      "result_sha256": "17b8642a3e0feadb26f4a2dbcb15b3a11dc48e47b9d8f05fd9ee7a6bed36261f",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "mean",
+      "repeat": 4,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\mean-rep4.done.json",
+      "receipt_sha256": "53c6142e7e7d092c245d09a14eae01d9580a288319b1ad837c6512b4511e0d3e",
+      "prediction_sha256": "d993e41944e9e91c89a265274bf34928b0e6e8f4de957241238a432eb55bf0b1",
+      "result_sha256": "c90118d0defce2d6712e9726cf990b7de00198d0f44c011b97addba14a4094a6",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "mean",
+      "repeat": 5,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\mean-rep5.done.json",
+      "receipt_sha256": "1000b890503c26f1d08707ace3a856a17e07539db15db0e091a058a537a4f018",
+      "prediction_sha256": "d40bfbbb166e860200d11ae476089aacc5a7107b43842dc2616fdd757d1d7284",
+      "result_sha256": "271721d995b1265f24570ab0a311cc5e915da43c88771dda97f13c8a776916d8",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "mean",
+      "repeat": 6,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\mean-rep6.done.json",
+      "receipt_sha256": "3cd4c7d700c4f8f572265e72933ee708c5e5f6fc907005dccf4e247141b5dd0d",
+      "prediction_sha256": "2e4a4cc21d2fbe013b3eca215861a026e0bf0e6ee892fa03bd34141520b963cd",
+      "result_sha256": "a76c27ff8ab3e52eb67dfee56c7a12881e3386ea67201488ea16a9b2f4facc7d",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "mean",
+      "repeat": 7,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\mean-rep7.done.json",
+      "receipt_sha256": "4cbd0c222a82bcc847c0724dc231a172259940dabcfba324147b23c8caf478f4",
+      "prediction_sha256": "c27b752e7f262e2279c79c3ac1d7963571c12b8bcce6ce35a417b0f09ddb03b4",
+      "result_sha256": "8a4ffee0ddc762526aca4b8467a0604e66f449d8ebc8c66a65c1f1b679a38573",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "mean",
+      "repeat": 8,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\mean-rep8.done.json",
+      "receipt_sha256": "fb6b8da8e0541f246794bbc98b1d7f633894cf66375bbea6c8e74820aee4a655",
+      "prediction_sha256": "b2c87ffb6b348664a9884224bb53bfe78edb026a5e45b839ae39a47a84eb348e",
+      "result_sha256": "d2a9c27430820a24953fe5803ba44d4e1d594f2cb4a926caa10803adfe90a0c4",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "mean",
+      "repeat": 9,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\mean-rep9.done.json",
+      "receipt_sha256": "b4a8ea3b62df3a6223f855db1cdbfadb0f440af9e1d4ecbad03144a1b3557995",
+      "prediction_sha256": "d1739adb577de4b3a5e61fde002fe0df6065714686347dfe4c22f257eb9e6b1b",
+      "result_sha256": "879af26514c9b8bd232247d4decd8b4b703ffccd3231a325739595f7650a8f03",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "complete_case",
+      "repeat": 0,
+      "rows": 2246,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\complete_case-rep0.done.json",
+      "receipt_sha256": "e254cd3410096a49a8b2af122bfa7d8058897c65cf017323de165225fb8d6b7c",
+      "prediction_sha256": "da193d695cdd23ca9ae218d4fca00064c09a6e028510e8f1ccf43b4af1f76e43",
+      "result_sha256": "5e4f246b5c681cc0f59bb8d76b2d84ad7fa7a568e2467bf3a8412b24a4a631be",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "complete_case",
+      "repeat": 1,
+      "rows": 2210,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\complete_case-rep1.done.json",
+      "receipt_sha256": "0dde873e823ec908af50311b5361a35a6e725cb566832d555c2107045167cd8a",
+      "prediction_sha256": "d8470c2c021e9b2b23699717be6f33670540aaf6b87e96a5497e3adfcd7d0b1b",
+      "result_sha256": "1bbd88bf35e23775f6bcdbd65095ba95a362cbdc041470b4caa299d28c1ad06c",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "complete_case",
+      "repeat": 2,
+      "rows": 2231,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\complete_case-rep2.done.json",
+      "receipt_sha256": "9e8a9b3b7ae82b113b274199ce816fb3b68666a6509520be0af00594b668ad28",
+      "prediction_sha256": "794e32b129c72e6969f9412fb845f712079d6eef08dcf5e71fccdcfb9f3768f4",
+      "result_sha256": "4d7e962c25ea69846dd205e4d7675a230cfd7c3230344e11cdb204380d507f97",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "complete_case",
+      "repeat": 3,
+      "rows": 2233,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\complete_case-rep3.done.json",
+      "receipt_sha256": "92d4fb43b5a83cc6234f4002de861916010d450ebc3d9664493002c07f7cff67",
+      "prediction_sha256": "fb4d3c986b7b49a3bcb081f209b6536dd88637d1e617e65c6c2d6f0bb898caca",
+      "result_sha256": "b8076e098e7cbed94e7bf32ed97737a109ba5971866513de6fde47e4c6914014",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "complete_case",
+      "repeat": 4,
+      "rows": 2199,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\complete_case-rep4.done.json",
+      "receipt_sha256": "9f7498c202b5a27cdf714c7492334a6ce45022558ae4291380e714eac8e042e0",
+      "prediction_sha256": "b58926f9576c0c9bdc50b4ed9c0d5c11fb0727081d5ed789430f21c57b51e2f1",
+      "result_sha256": "3f0d4fabc983be6be1c8a9327f5b8f749748f86244ad6bd7f9f808631184e077",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "complete_case",
+      "repeat": 5,
+      "rows": 2237,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\complete_case-rep5.done.json",
+      "receipt_sha256": "6559fdb03912631d6f16363d0cb0f51ebe78748bd631dc38cf994c84ea0fd7c0",
+      "prediction_sha256": "b85676c5294d8c07840abd6eca95fa912221681f6e2629098f2c6674e7349bb9",
+      "result_sha256": "a806f513e11816f355f2f07001dca59b86497343af9f43d4e3ae4f5043d92c10",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "complete_case",
+      "repeat": 6,
+      "rows": 2241,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\complete_case-rep6.done.json",
+      "receipt_sha256": "0628dd4ba15bef303a35a2470b41688d63b79a1e672caefef936d874dad4f8fa",
+      "prediction_sha256": "649bf3c3be8bfd635977363ae8f87d2d888bf31896a3e3d507368099b84d35bf",
+      "result_sha256": "d183d4de45e6e2be17e5e38e8e32076dd7752a8d50ce5fd11a880ee3b93c53ed",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "complete_case",
+      "repeat": 7,
+      "rows": 2230,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\complete_case-rep7.done.json",
+      "receipt_sha256": "dedd386a71347de909fe8fe26027b0d1dea16bb2346b80dbe4bf995a508f6d5e",
+      "prediction_sha256": "ef64c7367ea00166390b78aba400cdb04e0cc227ae86662aba89af0bf1ac4ee7",
+      "result_sha256": "ad6b792e4862e3190a52e487f2be8ffd3c55bcfaae9a01324e8d7c44c621088e",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "complete_case",
+      "repeat": 8,
+      "rows": 2234,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\complete_case-rep8.done.json",
+      "receipt_sha256": "5be376f446ed0489bc7aa43012ff478493e76604d63327e53e43d6a763792f12",
+      "prediction_sha256": "f5f359439b3398124d844c72bbc86b94fdb7f2a8a963d4c9844053e1fdd1e0e3",
+      "result_sha256": "1bfb21bcaf9d2fab73e32ff81f757b43c02978aaab2c0caa32753309a30b2250",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "GNB",
+      "strategy": "complete_case",
+      "repeat": 9,
+      "rows": 2211,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GNB\\complete_case-rep9.done.json",
+      "receipt_sha256": "8ad7fd9f47ae3a8309e90bccfdb1cfc1a521a8e0257244b772b9eaa26df7ccb2",
+      "prediction_sha256": "cbd16c3a459644f62cd816b8829ac4640630f40ed4839f78bc4a34700f003a16",
+      "result_sha256": "12b336b42e43c2714df1923fb956842ed4f36ff5d70fb866ecc8cd07e278db8c",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "mean",
+      "repeat": 0,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\mean-rep0.done.json",
+      "receipt_sha256": "b70112e043fa8b9aaae6c830479462d0ab590652248e429b493195c24b837ca6",
+      "prediction_sha256": "c274ffaccfcc1882ca30f63915359dd5df0601790c3eda2c21e6f0ccc6319b7d",
+      "result_sha256": "ccfcaa14f2a377e727f6e12955f6ed79072d9f5f6de33045fedc0753c26a2530",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "mean",
+      "repeat": 1,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\mean-rep1.done.json",
+      "receipt_sha256": "d51984e63f03eba5f87093e191947ed95ba594b6184a0d9cd615c2646e7fb7d0",
+      "prediction_sha256": "facd85130831555c72c5b7cb025963d5a94a53270a26db2a6c9feeed897616ed",
+      "result_sha256": "2934571515bc2518d62ca49d4114f47d01da90a97fba2552bbb1cc25b0d94948",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "mean",
+      "repeat": 2,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\mean-rep2.done.json",
+      "receipt_sha256": "c775b5a24e3a23891d22df94820d3772aa2744505204225eab752223ad79edeb",
+      "prediction_sha256": "e6a2c8623e6f0071b0010ff77efb6cc15ddcc2e7f3270a30b8c99440cff01ffe",
+      "result_sha256": "bdd606bd1d92dea8471e1ed4207d129ff5335f11f7da35834a5367c9982cdf30",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "mean",
+      "repeat": 3,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\mean-rep3.done.json",
+      "receipt_sha256": "9460a7a3c262608b2b994bfea625f79abed5cebe4bea9ae55843b71fc41f9583",
+      "prediction_sha256": "473e2375b9c921ddd362370abb26e4bd14655b5d94fb50da81a47af653361b73",
+      "result_sha256": "d660021443178a8f5f939c05f57ea439f8ef87f2255dd5c3f0453fc6f5acf49c",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "mean",
+      "repeat": 4,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\mean-rep4.done.json",
+      "receipt_sha256": "8b37405734e8f21c389754d32450ecef3c23a958717e91e9cb979bf8eebf5784",
+      "prediction_sha256": "05205f077fdad0e5a4c02c449dc40c9df99732031aa30bc5b7a019ba2bd352b3",
+      "result_sha256": "1538ed0fbb9e67e9cc98d4ca859c201b2e073d48bf902bb653351a46c9707914",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "mean",
+      "repeat": 5,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\mean-rep5.done.json",
+      "receipt_sha256": "8920de25f63253279e5de00b73565c3db5920de617df0b513db180ebc3da5313",
+      "prediction_sha256": "063c6f198d06d96e6eba57abb98280009d4020feb50e2e24f91019667189d707",
+      "result_sha256": "cff397a6a80d95ba0484c1254c4e05146b032fab977f253765006b70bca7c0cf",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "mean",
+      "repeat": 6,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\mean-rep6.done.json",
+      "receipt_sha256": "c6cc86516fd1e4b1959c0d63bdcca2c599930baec7134a0a56a061f8af2541ca",
+      "prediction_sha256": "f2f6d9f92cce681e084beb9f2d61728ff6983f96b764a662c40703b55fce8722",
+      "result_sha256": "6fc0bb6e878bc900f194a06786caff67b0a29e607d611dbc265ab1961d3e8dff",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "mean",
+      "repeat": 7,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\mean-rep7.done.json",
+      "receipt_sha256": "d33a8468024bc61a6db3fab64233fd131add730449dd52a4889f9d72a3882fb6",
+      "prediction_sha256": "196bd9829d283bdbbb4ceae955756a21a7d5a678fd243928b6d7be32dcd23cd8",
+      "result_sha256": "af00ea476812e3b3ec4a00e1cef37e3fb9897e1c8ab5253f7f1b13198bef097b",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "mean",
+      "repeat": 8,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\mean-rep8.done.json",
+      "receipt_sha256": "bf7f96bbbc66e9aafa84709f729505cd3e84841aa7abf362d25e1a791d7cae7d",
+      "prediction_sha256": "17c7b87a7726c931d703926a84a3c01dd757a47ab0bab7771aef36e5f981328e",
+      "result_sha256": "81a4a53b0f3161fe351592854d9d7c73db4d8d53a3009029927cea19b13d45ac",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "mean",
+      "repeat": 9,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\mean-rep9.done.json",
+      "receipt_sha256": "998897cf6478962a10c94cff53511228b488bcc2202fbce51a4a621d5dadc07e",
+      "prediction_sha256": "aeaa88dac25fd72adc89fdc44cfa97b9ef990022f4c8ad5f5a363be83b2b0b33",
+      "result_sha256": "5cd00174017dc46310ad61ce1f6921887315c3c1618e4645115dd5aafc054965",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "complete_case",
+      "repeat": 0,
+      "rows": 2246,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\complete_case-rep0.done.json",
+      "receipt_sha256": "e00e46f813ceca11c2f2043dbf644bcaaa36132c577e6532c678d6622ecf2ac4",
+      "prediction_sha256": "23d849fc2d20258737013e9fb4ed7cb9a331956ea7c618eae24adac2c454e7cc",
+      "result_sha256": "18a89ef498dcf65550b54fb519516a1e63140bfd9586acda3c4ff95bce2bda7c",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "complete_case",
+      "repeat": 1,
+      "rows": 2210,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\complete_case-rep1.done.json",
+      "receipt_sha256": "85814cf0af92d439f4a6289f20159abfe201223dd4650abbc6c5e9fd9544a13b",
+      "prediction_sha256": "07416d96861f29d5d025c00742792260f2927ab3e0eeb51ebeefe0e18a8b2fe5",
+      "result_sha256": "1ddddec211d51bee42e5f8c13b26a0ee606fff40b0a462536b170a8597a965d2",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "complete_case",
+      "repeat": 2,
+      "rows": 2231,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\complete_case-rep2.done.json",
+      "receipt_sha256": "36f3dc8968e12ba12021392b2bd4a1dbe546fee60f473038fdcf01c8dbb60d5b",
+      "prediction_sha256": "d62a3a1402815b524ba9f65dae7718d98c606d0c7eb2f32343a4bc350e168007",
+      "result_sha256": "c708f585c89166dfafe638dee970787a78828e6f039638262575da8f27cfe3c8",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "complete_case",
+      "repeat": 3,
+      "rows": 2233,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\complete_case-rep3.done.json",
+      "receipt_sha256": "6e22f50cfe744959547553f69e7d30148d3968ba1d07b9f1261b295c1ccc5153",
+      "prediction_sha256": "00b5efb0a107227bd2a76dea51c0907644a31b280724efd9adff58ac9884f67f",
+      "result_sha256": "c7b866937e2608249301154b9b91bf2564d09da86a2d82d3b907a340767d593b",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "complete_case",
+      "repeat": 4,
+      "rows": 2199,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\complete_case-rep4.done.json",
+      "receipt_sha256": "6fe3670cabea19972db3c3e081151013443b3d7c2284c1ebc0276c98dc9e15aa",
+      "prediction_sha256": "959202b53638165edd22752a7e4af1a2b591e2d8681bdf25fec1a872e52333e9",
+      "result_sha256": "5dc5bb3dbc75675ee425c3dd54195fd30ac199036f105f0023142851881750f6",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "complete_case",
+      "repeat": 5,
+      "rows": 2237,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\complete_case-rep5.done.json",
+      "receipt_sha256": "609507e14981c198b96dcc83992a94a877f5f372f5715a2d6138cdc739781342",
+      "prediction_sha256": "8f8e4d2dddb248cdea4c9630d9d86cc53c2bab86c9494d245cff950d2b44e7fa",
+      "result_sha256": "c56ff4b1b11aa80a722e1ebb608bc80803f9e8b37e685cdaef9a2bf1dbdf9ec8",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "complete_case",
+      "repeat": 6,
+      "rows": 2241,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\complete_case-rep6.done.json",
+      "receipt_sha256": "771f5ab337f543400f8fceebc8776f3b294a0db73031c581d34ac87ffa68b899",
+      "prediction_sha256": "4062220ac7185648053329533e52754c0a32429ec8553b7e40c9feee14a18fbe",
+      "result_sha256": "e57a8e8d5461bef40b612da773651fdf7ee83173100fb446159fbb80ec0e57ab",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "complete_case",
+      "repeat": 7,
+      "rows": 2230,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\complete_case-rep7.done.json",
+      "receipt_sha256": "64f646afea317e832bb1adca9a88c0271e935401dfc0456fb8b947814bc663b6",
+      "prediction_sha256": "3feb374f7381aacb6d85a59d7f02e9d4493fbf5c0e46fb13c3e05da8a727ff8d",
+      "result_sha256": "061fed25d657c68055723311f6703f16b07394baac538efa714d57eb605cdab0",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "complete_case",
+      "repeat": 8,
+      "rows": 2234,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\complete_case-rep8.done.json",
+      "receipt_sha256": "d2e0f8395d6e496025c44228fd6fca96529bce32c190313f0eef46e5f831c367",
+      "prediction_sha256": "77af3f64a1181c5ac3f68d6960652ac2d7436a98bab11ad37280c87e93861363",
+      "result_sha256": "e6193161662be467a7c89179a05043a11a0a2a2aac7ecf9290ab125c98032a99",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "DT",
+      "strategy": "complete_case",
+      "repeat": 9,
+      "rows": 2211,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\DT\\complete_case-rep9.done.json",
+      "receipt_sha256": "a6ea4a57bef1cb4e85bb7754efd933e5ff2f7d9689af40edc7c12c9d2449fe0b",
+      "prediction_sha256": "16f99d21aee46d30f242c098d16d7126486e2b3766e0069374bce8fc9bd7174e",
+      "result_sha256": "c9e6d0fca79f79bbd30ac158e70037015ffed53ad39034096919f4e9e3210e16",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CPU"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "mean",
+      "repeat": 0,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\mean-rep0.done.json",
+      "receipt_sha256": "41a495866d8eb5b25a9a18e5e19b13d120ba0757532e165c4682b663bf3d9c21",
+      "prediction_sha256": "5e0569f8c9882349b500612c00bec8ee39b91af472fb8319b46319e687600af2",
+      "result_sha256": "31d33b6b1b7091b375671f37730aa549c2364ba8b96222fc049f7eaa3a5af6f6",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "mean",
+      "repeat": 1,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\mean-rep1.done.json",
+      "receipt_sha256": "7d0e06751d0ca5a139c69f10992cfdced31661a96d7f41ee0b5405749c09780a",
+      "prediction_sha256": "73bd46ff7f1f5a01487118ba6051aae079d1fe65b02baf18840c1317a89d292c",
+      "result_sha256": "2ba43a329a7e7d9874200b64ac081f2403e99fd7f2022a5c26c108ab10be992d",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "mean",
+      "repeat": 2,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\mean-rep2.done.json",
+      "receipt_sha256": "9394e0988eaa38a1672a58375123e7bb261346406c61efb76a6724a454121169",
+      "prediction_sha256": "bb0b0f8288b352b69875556d5e28920592e892f56eb72ee4d7e7a80948b14a18",
+      "result_sha256": "ac4a49c179972b00a8dcb9eec26da927b5c38976034f44d1685e8d2e5c4a58f9",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "mean",
+      "repeat": 3,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\mean-rep3.done.json",
+      "receipt_sha256": "e024c24d943bcdd69623493d2c550d0e87dfbedeb3ed81fc9f635de6d503f56e",
+      "prediction_sha256": "f25d9e3ee875772e30e03a16de295e352d2e15b30ada743b552b7f3481654e97",
+      "result_sha256": "76e87fb946a202afd727d86333f2bbfaf7824606640ee547a23272b5fb5890c7",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "mean",
+      "repeat": 4,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\mean-rep4.done.json",
+      "receipt_sha256": "229cc03e6ed617de6260845bace5abc5eb0868e5d15298db1b0e9cb5e7953982",
+      "prediction_sha256": "8e5724d8e6bbcc320faeac2e4b722c7c06f5a0e0f729ed34d612570cad58a984",
+      "result_sha256": "0a947fe6f2eebd360be54f4ff815c10b0b0473781b46c99d7dda338a90e753f5",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "mean",
+      "repeat": 5,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\mean-rep5.done.json",
+      "receipt_sha256": "89d28401b4faaa6d73ae6952604a7b98207844ac40fafb7d5daaf2d0f35b591c",
+      "prediction_sha256": "6a2f9e5fa8616ff63986259870a97481b5c6f01c88b25aa5d71a0833e67bc263",
+      "result_sha256": "d262b5fbca8e4308213b13f86b6467aaaf7a2a819230bc25a444268bd8ec1f35",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "mean",
+      "repeat": 6,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\mean-rep6.done.json",
+      "receipt_sha256": "dea14d1f62a062059756841e6278ead7c3d6120e8c680b938e0272e2bd166855",
+      "prediction_sha256": "8daa651daadb1ac2eedabbef00f56ea475e379ec3f887da995e2e02ab1fba2d7",
+      "result_sha256": "ffeec9dacac89ffce4c194dd2301aef7edd67b996ff290296ee4940bcc217fe6",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "mean",
+      "repeat": 7,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\mean-rep7.done.json",
+      "receipt_sha256": "69ae8c68395e1d6a9664d3210803e59d1a8a9f9ed8b86c4bf5c840e4e45a6a18",
+      "prediction_sha256": "a641e2c629fe32bc7c14f815c0c4424ca6c0d30a803ce51caefc75692334fa5a",
+      "result_sha256": "e05513b406c4d129ca01aa7daec64d3444dffb1af803b60937fdf561832e07c8",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "mean",
+      "repeat": 8,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\mean-rep8.done.json",
+      "receipt_sha256": "9bf371a913c9ac452584208d79e6baf3d86b0e7b557ada6063cee515c0093033",
+      "prediction_sha256": "c3bf5fb3ee6e8be02435999a4d2b13c1b3496e8190c1ebdac1ca3e049a8b1b6e",
+      "result_sha256": "2d7fa26d58015093c4b0dfa357fd7bbf99f65e266f206f0000e265221883ce75",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "mean",
+      "repeat": 9,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\mean-rep9.done.json",
+      "receipt_sha256": "9b445719405ed64db73e771bc398b0d16ab66a50e29268d0a056dbd526ab081a",
+      "prediction_sha256": "4dcb0df52b675e0e9689631408485c5774e1823ea1c178d84619fd7804be9023",
+      "result_sha256": "0d39f4a0277569dfa83ab1db2e03d65c59ef98d0708090b26f45790b52fb4107",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "complete_case",
+      "repeat": 0,
+      "rows": 2246,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\complete_case-rep0.done.json",
+      "receipt_sha256": "06531bd4da134ff2261a523b05030848d19f25b22c55e1b5334c68b746bc9b6e",
+      "prediction_sha256": "a9e422c13a10b5ae3548b87d1fd5f81d15808181467c78eacba369a1179843d9",
+      "result_sha256": "a33b08f5eb86da793963dd44aaaf0608787d9d73e660ef9bfdf525f95019deb8",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "complete_case",
+      "repeat": 1,
+      "rows": 2210,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\complete_case-rep1.done.json",
+      "receipt_sha256": "bd7de4d36ad31a2fa4df8843738e136e0c25930699ee9575497edd6f19f2b351",
+      "prediction_sha256": "f92a199dfc75d24047b62b9013d086efad14ccf472ef07e8231ff0035cf75146",
+      "result_sha256": "b7885849b3ac7bec4a85dd42e9d3530317d7d637327d29cd86c654c563a3dac3",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "complete_case",
+      "repeat": 2,
+      "rows": 2231,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\complete_case-rep2.done.json",
+      "receipt_sha256": "5624f023485bf62f9921abe370128d106a207bbde6964997580cbc886948d2d2",
+      "prediction_sha256": "c8bcec1d1607037c486ec428c3dab901851dbbc2fa1cd3af713482348759dd7d",
+      "result_sha256": "dd8229140e8983d363cd8e80cb1d1fc069e35974ac9976c81ec80df62375c18c",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "complete_case",
+      "repeat": 3,
+      "rows": 2233,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\complete_case-rep3.done.json",
+      "receipt_sha256": "909437f4620146e6b2e9918a953d434e7041bb89bd72e8159d53b586d76bec4b",
+      "prediction_sha256": "56405d7a0ab3b588f7482aaf3e406b1cea6a4fb5049e08419660b14bd6192b9b",
+      "result_sha256": "c7b422e9bce1cbd1de907458e9e24e59044259d06204713b180f0d9bb4d5232e",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "complete_case",
+      "repeat": 4,
+      "rows": 2199,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\complete_case-rep4.done.json",
+      "receipt_sha256": "1231f415ee327369dbdd565a0da797771b4a225e16080261749eeae264857e50",
+      "prediction_sha256": "65e0915a70948dd99ab2da87162f0c8ff75fafdb186ee4d5838ef53c8e027820",
+      "result_sha256": "e24c0a7404509e0ca62796a7ee09083d07e67ec1a3c82d2c24915282fd1da4c8",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "complete_case",
+      "repeat": 5,
+      "rows": 2237,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\complete_case-rep5.done.json",
+      "receipt_sha256": "ec9b266dd66d0ebf13f7671e6b204337978b66313076f544981e1cc2e0634bd0",
+      "prediction_sha256": "069eeba60c6775faa780fd499301cfc8dde8b3e2ccbd0808f993d7a21184e864",
+      "result_sha256": "ff73d0fabc095687b632b73808590bf6bfd7dcc93edc69b537810323cf05cf11",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "complete_case",
+      "repeat": 6,
+      "rows": 2241,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\complete_case-rep6.done.json",
+      "receipt_sha256": "b18c751df1e2dd770d74d810cc7117efac12723db0ce8d85aa151bcc9ee43d24",
+      "prediction_sha256": "e4afdfa4e9718859239c57c784729fb3d728882c89dca9c902c7355b526cdb32",
+      "result_sha256": "f05bea9bede6bbf335fe442320fb8c03009fdd477ea45b9dd703d142328e63b2",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "complete_case",
+      "repeat": 7,
+      "rows": 2230,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\complete_case-rep7.done.json",
+      "receipt_sha256": "144d8611cbce88d2884685f3590083c765148675df8b50f8990b4375f7ad5e06",
+      "prediction_sha256": "a0aa488d91d66aed4ae586e6cc84cb6aa86a339fdcaaf7aa615ca6681e7024f9",
+      "result_sha256": "a9a5e29a112d5369861ab6e36b58aba1502d9b3156e7a956fda1422e33663b0d",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "complete_case",
+      "repeat": 8,
+      "rows": 2234,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\complete_case-rep8.done.json",
+      "receipt_sha256": "cf8133aaa26b63bd473ea6a4071dc4d7b65e76bfcac5b6486f963279869f52dd",
+      "prediction_sha256": "0993f5d8eb04351152df5d8d24dbb57f64013c6a668b732e9161622bf325821b",
+      "result_sha256": "1cc2ad833c01a07a72cd7f3c78145e2c258c7961c1e64fdef506835d13a68f87",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "LightGBM",
+      "strategy": "complete_case",
+      "repeat": 9,
+      "rows": 2211,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\LightGBM\\complete_case-rep9.done.json",
+      "receipt_sha256": "d7b0a3d26628c44e306d3bd0ada9b5310050fd9643738710184d3a602837d661",
+      "prediction_sha256": "37de7ab88f20487ba6ef673fe8ff65ba1db95d3418d534bdd74c21c1eaf1b19c",
+      "result_sha256": "3b996c66cb32cf056b422043a05c96d6d5f2960950d94d9bc10c172d375634cf",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "OpenCL",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": "0"
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "mean",
+      "repeat": 0,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\mean-rep0.done.json",
+      "receipt_sha256": "d3967b88f4e5e1e418a13703a0ea8c27bca4840ad25edaa176237d3249445557",
+      "prediction_sha256": "5cd9b77c9404b371548655514ccea76ac9f91b8e58890bf404ae8280115efdae",
+      "result_sha256": "c55609cc01412dee83f0a0047bb828cd72b2287cea6abb524cc93543ec8f1f13",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "mean",
+      "repeat": 1,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\mean-rep1.done.json",
+      "receipt_sha256": "070746f5b643f9339e2369605a81b0c0cc9574499f3743c8988d6fabc8ea161a",
+      "prediction_sha256": "6b99dcf634daf5eceb0f83c8e0eefc6588faf9df1f279117f3638ffe2fdb4939",
+      "result_sha256": "d4853042e59c08e8818cb06168a937fdbbb2d54f1e9391b023fd87186c74519f",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "mean",
+      "repeat": 2,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\mean-rep2.done.json",
+      "receipt_sha256": "1564de0a8f8f1a5b1b080fc52fcd890d58f7800b60768e09ad108118e8f3a459",
+      "prediction_sha256": "8f599c406cb6c12f354de9a6420b2472dee09cb9dd6568055d1197f0a588aa64",
+      "result_sha256": "913b09ec8fdd73f3d8f25830c0991ad03860eaf344fdf4030eec2a31eb3936b8",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "mean",
+      "repeat": 3,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\mean-rep3.done.json",
+      "receipt_sha256": "87e23795bb6567ba1bc23d79def527c8e5c098e880f55dd9647e7e1f3d2399e5",
+      "prediction_sha256": "04690a1bec2ee871a364c5719f30f13c8d1b652eb9519d93e726ee286701a3f3",
+      "result_sha256": "9d4a2df9b2798837d1ca083c73d6f52d3a518721dfcabf506e366e5d988e4b48",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "mean",
+      "repeat": 4,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\mean-rep4.done.json",
+      "receipt_sha256": "ba244af1fcf739bfe124457f0195fdfffafc67dd19e2ea09ecb321c9a43c95c3",
+      "prediction_sha256": "3dd975e34affe2c6bb67a16b847933fa751ed34d75bf0eb7d66b958c7014ade7",
+      "result_sha256": "859b53bcb3ae101269b6aea4c29135641783a435245c77eddde122afa38c516a",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "mean",
+      "repeat": 5,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\mean-rep5.done.json",
+      "receipt_sha256": "13c9cb7d31b11e6ac665eeea45e47cf5c8fdc22526d099aad81c3b16c427b2d2",
+      "prediction_sha256": "49e0c16e933c91fe6aa0da674e2ac2df855ad38a00c535d6c93d55ab64bfa588",
+      "result_sha256": "4662f0c323ad247bd23d4697b725d887d865095ab2b5e60c387ab9a7cdd24cf4",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "mean",
+      "repeat": 6,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\mean-rep6.done.json",
+      "receipt_sha256": "3825f50bb4e2ff955d0614b9dd97487e531d937f4106214954e31d7bb4a9a05c",
+      "prediction_sha256": "1825ce726cb583a9f56c09a0d23cb37c639d3afb83a116a8e4579cf30102945b",
+      "result_sha256": "780e0e59e4efbb88c19b22c2425e4a3aab3443b257f4936fde9af95cfd239548",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "mean",
+      "repeat": 7,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\mean-rep7.done.json",
+      "receipt_sha256": "b2f83cf12f7ca69f5755f380bc58b53a50bf29f5e1ea347cf57573358dad002a",
+      "prediction_sha256": "c258f72ab7c15da61ad17ecd4f4468e2367f660a1f2c3a7de443477dfbc6bb55",
+      "result_sha256": "0d382113384dd55fd69a634fcf6d0cd7fe1501f4d395df6e283308f32cdc2b35",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "mean",
+      "repeat": 8,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\mean-rep8.done.json",
+      "receipt_sha256": "a67485d52a497ea55f32cccfa26dcaf362d92582611ad83443ce2288dd14318f",
+      "prediction_sha256": "0dd0e0a806caca429451face5cbc50c9b00c55d0ec5726ac441e24ceae55dfed",
+      "result_sha256": "9ad3a9301166b5e46f11c88b88b852e8082d69f5155a329822b3d26a1fb2fdb4",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "mean",
+      "repeat": 9,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\mean-rep9.done.json",
+      "receipt_sha256": "8262e9137a13f9e24edd9c1b34bedb0019002e79a0d6c96080ebbd83b6d7fd07",
+      "prediction_sha256": "c6ee08a242a3a391a88ef8ac36dfcdea2c6e6dd3bf160cbba1291a5fa3e1f4e3",
+      "result_sha256": "71d7312e2216f770c6bef21fb04dc9c269694b6b9b8c382173921ee78e33d109",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "complete_case",
+      "repeat": 0,
+      "rows": 2246,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\complete_case-rep0.done.json",
+      "receipt_sha256": "84c1b172f63456ceb28589760db22b3ddf6a1fda38e9fbda3ddb6c8f74d8209a",
+      "prediction_sha256": "41711c09c778770d1479d1aaeb98185a9cc6bf74062c0cec92ecaf5b861660e6",
+      "result_sha256": "85bcacd95020085aba1abda8538e395b822d6ed8202eab3f58f63d41ec07d19a",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "complete_case",
+      "repeat": 1,
+      "rows": 2210,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\complete_case-rep1.done.json",
+      "receipt_sha256": "0846e9d8de4afcd215db44098d3feb7e8e46713440ecf0b332788f9af847ebea",
+      "prediction_sha256": "9782d36c4ce109f18c2b9c00be163f53e54aa6bcae71026fdf04226491e82571",
+      "result_sha256": "64d62ffcd8357710e6a2f2b4ddfc3a5f0f945d6cf03c6650cf618fb62ca8de77",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "complete_case",
+      "repeat": 2,
+      "rows": 2231,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\complete_case-rep2.done.json",
+      "receipt_sha256": "371e41a400811ce0b83dd44d915299fb594009c64e038c41fc58f59e1a059dfa",
+      "prediction_sha256": "3d855e74d8720c01de8ce5fe49888fc6f90d76d59e14ee646d419ba789ba14fe",
+      "result_sha256": "2d9861e74d116ce9f3355183976ed0f138da066f882338a67809c399fca0ed10",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "complete_case",
+      "repeat": 3,
+      "rows": 2233,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\complete_case-rep3.done.json",
+      "receipt_sha256": "01d8ed997c434f2c614708e42bac99d2790b5de008f6437b75d26c1a107f5d23",
+      "prediction_sha256": "e4e6532efdaac0d0d2d7e8cec1880b7ffd65693f272673caeeae0bd08942edd2",
+      "result_sha256": "2622f83ba35e17106f7982d1082cfa0fb323ca257f38c876d6f6d125e5413e9a",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "complete_case",
+      "repeat": 4,
+      "rows": 2199,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\complete_case-rep4.done.json",
+      "receipt_sha256": "27b08f94ccb6d1e42acc3b21f9bfd9c5f2f575699b25b393f62988f2254e029f",
+      "prediction_sha256": "5894a92e6580fa0b8e029413aa266e1e739c40eb62728acaa858484130534fad",
+      "result_sha256": "ef568dd87c695ff45cd76253aaeb9d0b0fb9bb931c834b092bd16352a60d3990",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "complete_case",
+      "repeat": 5,
+      "rows": 2237,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\complete_case-rep5.done.json",
+      "receipt_sha256": "18770ea82edb5f18e494c08467123f073ac77c49d656910d7a8d4e3470eed01b",
+      "prediction_sha256": "b029e3661d07dbc8be0908dddd0a8046bdd167266aca37f0474f728538f96ac2",
+      "result_sha256": "f54f7189e3c0026bacc8579a709bc57af152972c0c23d949c8495877463b892b",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "complete_case",
+      "repeat": 6,
+      "rows": 2241,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\complete_case-rep6.done.json",
+      "receipt_sha256": "81851bd27cea9eb1125a0b1d11088307563c26e063271f88eaa7eceefa514a0c",
+      "prediction_sha256": "f80911faf788a34d3139df2bac4ed82812a6e339a4db6648382b1af2ddcddb60",
+      "result_sha256": "f815789e8250a31477db9de4fc368b36927888e8fa5acef4e2bfb097d18cda26",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "complete_case",
+      "repeat": 7,
+      "rows": 2230,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\complete_case-rep7.done.json",
+      "receipt_sha256": "07ddd9ae3b78b4806d14e82a8c0076cf20dd78c552579f070970a368fd39c061",
+      "prediction_sha256": "a0f300cb60decd52bdf4b4e519265e072475bb0a2410769f0aa4f806acc8c474",
+      "result_sha256": "74896b78acf7347c42d758e49783f7b2a956f3345237543b490ec9f329462b07",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "complete_case",
+      "repeat": 8,
+      "rows": 2234,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\complete_case-rep8.done.json",
+      "receipt_sha256": "b482e3ae9c2ed49209466959474344b576490db13a336214dcbfc770890541cc",
+      "prediction_sha256": "94d08257e9c100c8ed80cebed228c4f31077ed47ddf71e83cdd2dd01e8d3cd8e",
+      "result_sha256": "c076629a699ffb75da468385e02cd6bea52c2670569f9d9274545a86f08727a9",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "CatBoost",
+      "strategy": "complete_case",
+      "repeat": 9,
+      "rows": 2211,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\CatBoost\\complete_case-rep9.done.json",
+      "receipt_sha256": "d80bde0d5dd9ad26a3be92d3ff7c191fb1e7f99af660a3bca846f509e750e3a1",
+      "prediction_sha256": "340129ea24f0ca0886bac986ebb4bbb93d098777bdce2c10369aa05d5fb774b1",
+      "result_sha256": "e23d590a7b594d173704ea0039d7927631c380df8031b8497d5e61daa642b35a",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "mean",
+      "repeat": 0,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\mean-rep0.done.json",
+      "receipt_sha256": "b64752ea28a543f099e1f5c4e5c93d824454b733b4a423beefeb8a67a422d1cf",
+      "prediction_sha256": "7c6347c467b185302f5872bde28128adf4ba899d13309132a7484352f41592fe",
+      "result_sha256": "af7cbe5aa6bddd469a13f5222c92aab9bc2615405272a4d543b3b8a456b32f99",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "mean",
+      "repeat": 1,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\mean-rep1.done.json",
+      "receipt_sha256": "f5cae648b895605108cdf9e89fb67d6df60c6d32aec419fbe680f0d0ca0b1da5",
+      "prediction_sha256": "a00808ec1e85ce13ec1e6a400f270b0e676c6699d1427b6dcd36232d356c69ed",
+      "result_sha256": "84a79d9d649bcbe6760a860a383a434f5cafcd4720aa695d8511ceb1c1534aca",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "mean",
+      "repeat": 2,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\mean-rep2.done.json",
+      "receipt_sha256": "f48540dc258c604ce0f94a18c46ad9b3f7e9cf4d24dca6cc2859fa17249f927b",
+      "prediction_sha256": "c4c8bd86045ee03883f8df0fe7f3791f6bb60a9ec2719343e044988785cd2523",
+      "result_sha256": "12f3a1ab47d2bdbc8f7cac98622350503f76f0c55473bc41b65ccf3250cbdab8",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "mean",
+      "repeat": 3,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\mean-rep3.done.json",
+      "receipt_sha256": "b930a92dde78852253983495e389cd7d0d70abe697622720dae12f5aaff3db98",
+      "prediction_sha256": "2cc3850a30e74229bcc6eb3b7bb31d25307cb3bfb4d58acff8a90d6de5b2805b",
+      "result_sha256": "82e9f67072fd94fc206f67a312cbf555b150876e230b3c3ae1f37e6294ff052b",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "mean",
+      "repeat": 4,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\mean-rep4.done.json",
+      "receipt_sha256": "814e819e266b057a54df793c0b56f49c3d7b41f094c271ba04398dc6c7a6e603",
+      "prediction_sha256": "93c97a4f8eb2a3f5e2056a74b209007c7875d25625a0853ff82eac61139c444f",
+      "result_sha256": "dc6806fcdf6a7e612e5c1328ffff6130443822a81f9c9ea21e70eacd7441df52",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "mean",
+      "repeat": 5,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\mean-rep5.done.json",
+      "receipt_sha256": "fd5f492e4d7c1ff3c81ec73c02ba8d07920447afc80b821b816dd81e15a68920",
+      "prediction_sha256": "342fe2a5f7d06a086ed4c3668d9baf30fa8adc2e4363f5f0fb0e4f3a34df4027",
+      "result_sha256": "082c4320746ad5c47cdd59f54342cc9b01be2a2eb21bbaea58ebd5832e02cf2c",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "mean",
+      "repeat": 6,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\mean-rep6.done.json",
+      "receipt_sha256": "12ed6fd232b03322c1307ec6d86b765e3da737b92d52b9c21adaafe9dd585649",
+      "prediction_sha256": "adb585fe06f99670bf3a41019b6005ea1758d539d1692b6d174ff6063f94339d",
+      "result_sha256": "2add6250078a1f5dc13decbf5e0ffb2e74d1b33b3ddacb56935418ad5675403d",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "mean",
+      "repeat": 7,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\mean-rep7.done.json",
+      "receipt_sha256": "c3d6b1fcb451ee94958fab0c471186d041b0c587c79ed4e061fb699263d10a11",
+      "prediction_sha256": "e1361aae817fc16ed7568f35ec722447be4dfd5772208b6b7d482183186e909e",
+      "result_sha256": "e7699d788154cabfb5873c244538cbceecaca8c0a11466b5a28220e0596f98a1",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "mean",
+      "repeat": 8,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\mean-rep8.done.json",
+      "receipt_sha256": "56a6d90f213df9ed89eeb5f52006d5bf5f9d701caf960929f030994a597ca592",
+      "prediction_sha256": "211587d8617485ed2753f04be3bcb1ec80fe36357401d7b4db33678d2146cb11",
+      "result_sha256": "27a0840278b8756fd61a7bcf5a3e5ee83c395670f2898561e131319fcbb14e9a",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "mean",
+      "repeat": 9,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\mean-rep9.done.json",
+      "receipt_sha256": "f91c68329bbfedd7346eac7634185388fc0052afe4062c85c6887f8511952009",
+      "prediction_sha256": "953a0230cd21529fac68a1eec02c9b9f80c00823b175fcc6b27b2afe4c87c5cc",
+      "result_sha256": "ad7bcfb239ac4c91553ff5a4ad05b472c28ea70488c3af918ed36b27767701ee",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "complete_case",
+      "repeat": 0,
+      "rows": 2246,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\complete_case-rep0.done.json",
+      "receipt_sha256": "62c7a1e55ccd01734da71d0f9db71316bd65b1d10e33695725f118fd924cb98a",
+      "prediction_sha256": "53f7b087944caf5e6a317c40f3b3ae62109e9e7ed38f9b1358b14b2a718b2857",
+      "result_sha256": "ca1f2ab5e42064600ba585a17905135493b931fb980ab000bb74383986e1c31a",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "complete_case",
+      "repeat": 1,
+      "rows": 2210,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\complete_case-rep1.done.json",
+      "receipt_sha256": "d342e39baefbb8a82055d34b30b0a52fc249e4d7ba07052fc4aa0599a27b96be",
+      "prediction_sha256": "b1b783a52b67a4594707c83d50c19c64e84c0820967686a7b30adaffe0f014f6",
+      "result_sha256": "0069d8e7d7f3f1439ba8d6c11e9e2bafa40300301daa9ff32e3696af215907f7",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "complete_case",
+      "repeat": 2,
+      "rows": 2231,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\complete_case-rep2.done.json",
+      "receipt_sha256": "446b5395456233321ef3959c3527197dfb5117e98429c66a2f7074972ed511f1",
+      "prediction_sha256": "4ef3111f44312c2e60055e45a15fa311b5e14afd4071e9e514c3f572903d759b",
+      "result_sha256": "0948691f9d81fcfc0299d84453546844fa84322cb8fe3a25c7095f469c644a9f",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "complete_case",
+      "repeat": 3,
+      "rows": 2233,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\complete_case-rep3.done.json",
+      "receipt_sha256": "61a54fc5bfc70b1afee585b8ba46ea2f87b042ed7400e5b2ba39581079efc27b",
+      "prediction_sha256": "7db370c4ef73442a646e5c6446467807f21f51bb8d918bd9789e56dd6db1f93d",
+      "result_sha256": "f5eef115ea1ad363b2dd50c242d854a223e9766da99f336e83c373e37ca36b28",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "complete_case",
+      "repeat": 4,
+      "rows": 2199,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\complete_case-rep4.done.json",
+      "receipt_sha256": "43b8b3343eb210d890669103f7d826b01c8dd0efb91397bc9a09d7171241a89b",
+      "prediction_sha256": "dd7de1479707b6277dc9311e9535954c085a15fb94b5342d0993655d5ee39ca7",
+      "result_sha256": "48359f5fb2f5bcfc47dd9078b1755049c999a471e16519f43f4b9b18d1f63373",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "complete_case",
+      "repeat": 5,
+      "rows": 2237,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\complete_case-rep5.done.json",
+      "receipt_sha256": "c27d4c6072f01e48da759ba739a0e8186a17aed95e98bf7021260c1486f5c1e2",
+      "prediction_sha256": "29a3d28a834775a8b09bcd027ec7f980ef9a8f0d8e7c369873542822396fbedb",
+      "result_sha256": "9dc359dd6c21a9840038f87fa12f6ac333b80992f27e0a18fb3e22917278ff8f",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "complete_case",
+      "repeat": 6,
+      "rows": 2241,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\complete_case-rep6.done.json",
+      "receipt_sha256": "28e251bd2dbca15b8a8ff680e2cb55e31b2e74de2b6ddb3112f6d7f76f6191cd",
+      "prediction_sha256": "e9a65d2f7fd63d4ddabeb2cece001a89289f244a2cc94fbe970e98c723fd3717",
+      "result_sha256": "cfab62ddea3078e1e4335a322fe2fc3eeea1f4dc554314b7c0379de5aaa78f67",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "complete_case",
+      "repeat": 7,
+      "rows": 2230,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\complete_case-rep7.done.json",
+      "receipt_sha256": "5d2639285b82d40200d0911040f8128074b8a6082055765ccad68bd0106073ae",
+      "prediction_sha256": "8f7003f2c360b547273413f7fa0f8045c5c37fce137b7c2164775369a2a7faf7",
+      "result_sha256": "21c222ebe49acbf999b88c2ba72d0f01d22d98d5b784ed8dee5c51a05cb5a509",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "complete_case",
+      "repeat": 8,
+      "rows": 2234,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\complete_case-rep8.done.json",
+      "receipt_sha256": "a8ebe50e0207ff977be54552bf2bd828de5127658b01fb69787453bfac95a4cd",
+      "prediction_sha256": "fba2ef43eeef2a6fa9abf4fe2e171738777bf1b873967d9f22dee7b646c3b3db",
+      "result_sha256": "12d63287d88b4af2ba77b16725bfced931b579c5b8931422ee0e11a848d44f50",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "RealMLP",
+      "strategy": "complete_case",
+      "repeat": 9,
+      "rows": 2211,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\RealMLP\\complete_case-rep9.done.json",
+      "receipt_sha256": "a91c891d75ee16dc0a7859a5a179397f49f537b83c89a9e57c30fe16a0c3b05c",
+      "prediction_sha256": "71cedc5a6d3b9e25824093684a1f77a2fe090f78d7b0a4e8666acc5f2c6e79be",
+      "result_sha256": "4034fc5db443d2ef47d695a96088681d5c1fb033eea992c8851cf88bda2e70b9",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "mean",
+      "repeat": 0,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\mean-rep0.done.json",
+      "receipt_sha256": "b5d2a7ad95fa18e63837aa71e36c33e16ce62a03b5efee7c5b593638f45b0361",
+      "prediction_sha256": "f5dd4fb19ebae8e40fb7f639bdcbeab847b65190d189923cc261e1d0a17b2f00",
+      "result_sha256": "e68cf88c4d8c846aa5be6af6e47b7bbf528af58d2b1d3172135d74db834af89f",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "mean",
+      "repeat": 1,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\mean-rep1.done.json",
+      "receipt_sha256": "9d28d372bdd0f9e54aa3bbe92629c87d0889aa0f3a0cc7c6b04d7c2fb53739ee",
+      "prediction_sha256": "43bd9547204e894700bf8e23ca19eb282785e6e6bbcedc2b7fb4db3756c9d4a8",
+      "result_sha256": "6a363fc8cef82967de984e6d5a47a46671c2b57019f88d7cedc88cd38b669720",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "mean",
+      "repeat": 2,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\mean-rep2.done.json",
+      "receipt_sha256": "ad61a422c36a6e9eb5cc864938d76b3b7cf7006abd1fcd9081d5bd9cfaa9ebc3",
+      "prediction_sha256": "97d4764c4c5ce3f659afb504b4051229ae218ca7231cf279f9bc8af00b7a5f38",
+      "result_sha256": "4104a10787e52c305177b950387e9e7fbdc532918f61cdbbc03336678f282a93",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "mean",
+      "repeat": 3,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\mean-rep3.done.json",
+      "receipt_sha256": "220bc18d0ec7bc806d63011a1452ddfabef778601105df83adfa8111cc0ce224",
+      "prediction_sha256": "7495d94fd70b51788695856ccc0896f5d2bb4fe1f72765c1168a09245bb28d80",
+      "result_sha256": "19e471a5a2fa16c2fc71e942e7eb4624d50b38eb515e896cd010abd0fafea38f",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "mean",
+      "repeat": 4,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\mean-rep4.done.json",
+      "receipt_sha256": "541b1aa27c3b540c5fc3269990d353e77519f3df6f2b35ebf825b98c00a21862",
+      "prediction_sha256": "b34708d478451c18f34f8b0537dbeb56fa78b13ea61943eb18caf6c7f5f1a306",
+      "result_sha256": "d81f51524debaef3c55f4ddd7d5cc82038dd780339683d4ab2fe1a8b42230eeb",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "mean",
+      "repeat": 5,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\mean-rep5.done.json",
+      "receipt_sha256": "95076280d552a58da574b43ee015a4024d7771355a1b47941470bf39d6f5251f",
+      "prediction_sha256": "794cd43abd60c69dfae5309ae1576351df9bd3bdc125e4adfe7e5cc01b48433a",
+      "result_sha256": "30743f66891f6ad2eaa27c9c668c0fbd222942fe75c5609cf138397f1d66ee84",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "mean",
+      "repeat": 6,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\mean-rep6.done.json",
+      "receipt_sha256": "42e03e722e5929a0e193c57b36df7fe994b1bc01ada9ae3267bd3b89079674b8",
+      "prediction_sha256": "b9d819aed4b5b0af9b112653a443c08f6d2f708849d5d97590d299234d6fa2a4",
+      "result_sha256": "ace9c1314277c67931aa94b62c9a1836d6d74d2e85aa11a5dfad9f39ed430659",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "mean",
+      "repeat": 7,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\mean-rep7.done.json",
+      "receipt_sha256": "d14e2f09e32cd9575c3271b5bc2bbedaf7019fdf76b8b4d49bc36a6e66a95ffb",
+      "prediction_sha256": "6692e2bfd65874964982fd2e1fc86e87fc1966d2510829a055f67dc8073921b4",
+      "result_sha256": "6677d9b0e365901fde21a1570796e7f08ebee9319926313e2567ce57c9c20377",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "mean",
+      "repeat": 8,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\mean-rep8.done.json",
+      "receipt_sha256": "27dcef7c99084126d6f602220f0d505ddee5d87c0996d5776daaefe64d07f505",
+      "prediction_sha256": "50216755276ed3d9d967c1d5d90eb5e99b6b3831dfb8a5d7d31ef633ce69afeb",
+      "result_sha256": "763919a154699993554b5f19353fb76144d4360609a7abc666b8af2bf125971c",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "mean",
+      "repeat": 9,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\mean-rep9.done.json",
+      "receipt_sha256": "ccea0e8aaddbbe137101b4a945cf1fdc26337e3032dc814c6a2d97d2807ded6d",
+      "prediction_sha256": "0f2bd7c237a7a83f4ac4d7f47838ff2fb54534f043ba9d4459eb3dedae5d870f",
+      "result_sha256": "765b605e5effc141a0ac235ab1d3fbe6ae79dde304f1199a6f1378f45ba29703",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "complete_case",
+      "repeat": 0,
+      "rows": 2246,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\complete_case-rep0.done.json",
+      "receipt_sha256": "858ba385e4e0048a6297cd3cdc823c87d17ff9894a82deb9d4d067f0ad9242e8",
+      "prediction_sha256": "58886aaaab1683449696208bf51352bf990e2d807252a5bfd5dfaa63979caf59",
+      "result_sha256": "b5ca46199b41ed2ad9f144d9fefc44dd56d5fca4069eed3c4f81526fc274235a",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "complete_case",
+      "repeat": 1,
+      "rows": 2210,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\complete_case-rep1.done.json",
+      "receipt_sha256": "acb7942530004773aef9702e39a9f111a0d00174c40de3144b63a9b2960b8d19",
+      "prediction_sha256": "30f47dc15a20be18a199df50d443ecab844d5f3d6e8a848c02a50920b1fc42b1",
+      "result_sha256": "e93b323d59ca9f56376294e4dacb6c59574291e82b1c0155c19b2177151652b3",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "complete_case",
+      "repeat": 2,
+      "rows": 2231,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\complete_case-rep2.done.json",
+      "receipt_sha256": "9424bb531f224e697d3c290eda585ca8acbd37591466857b031ad4d9e7ea35af",
+      "prediction_sha256": "45f9a7a7f4dc6859862a5b1e52fdc4a3dde9b0ad62c69fb86f2d6ab017721233",
+      "result_sha256": "ab672145975e7b764fe058907a223bc7963680053ff2d1a9a5372cad65705d8b",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "complete_case",
+      "repeat": 3,
+      "rows": 2233,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\complete_case-rep3.done.json",
+      "receipt_sha256": "9c9717f8fc5ccb25da06580ffadcdd98d5b7b5c9ce9687216c8028ee93ee2651",
+      "prediction_sha256": "326c4e9e0e174c1c46cb9a7c5ab888dd2a281d815d5b952b73704092e935a510",
+      "result_sha256": "8a43b32927c1bf62aa9be69d7bfcc492996cf1078e06cd29a2aa8e31f3b6445d",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "complete_case",
+      "repeat": 4,
+      "rows": 2199,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\complete_case-rep4.done.json",
+      "receipt_sha256": "0ab4469bfbf2ddddf07750db55f1117394ed72b8a86cc9210588cacbcdb91e4c",
+      "prediction_sha256": "1a388de7769bacc18da56b13d6cfa9c2ceee01c8c5ea3d5cd5c3ffb54b118b5e",
+      "result_sha256": "bd834894c3a8363f8a4346b5ccb32de73b006f9cba0b2ecdbcbae2a848878cf3",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "complete_case",
+      "repeat": 5,
+      "rows": 2237,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\complete_case-rep5.done.json",
+      "receipt_sha256": "8d83f2d9fb2b6a6f7f4213122f92cd092e95f6daf89e339da92d931e60a8fe67",
+      "prediction_sha256": "8e96aff4468271eae5dd1d17ea100b719a84e5a84921b806ff8dfc9070bed6f1",
+      "result_sha256": "633e3e16d7177452641262349a175cf6c746e9498c5a2e66b7e3172ab4d252e7",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "complete_case",
+      "repeat": 6,
+      "rows": 2241,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\complete_case-rep6.done.json",
+      "receipt_sha256": "599297a7d26808a58337f3f1095a81fddff06a11f22b2c00ea5b9be636c03cb5",
+      "prediction_sha256": "7b7ffa01785f5a7380326ef127a8eb2677769f988f7552627a6ef23c250b59ec",
+      "result_sha256": "288437999bd7de1508fba19596add48d6dfe1034802fd58c62cdb7a106390ee5",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "complete_case",
+      "repeat": 7,
+      "rows": 2230,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\complete_case-rep7.done.json",
+      "receipt_sha256": "5e2690bb68a3ed926eb04113b615fdf5f400dcfd345ae8c7ee9148505fa77985",
+      "prediction_sha256": "a9f63a9909269b44dd22ea14ff3a2e7227643d136781f6195402e101218de199",
+      "result_sha256": "b24bf7200627c6fdb419843bda416ac3b2aff46e88f41971b5a6d74d5768e43e",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "complete_case",
+      "repeat": 8,
+      "rows": 2234,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\complete_case-rep8.done.json",
+      "receipt_sha256": "7a52180336a3ab3ab8d3a5b0c257b537e4812963817d362f6e6b074f3460e764",
+      "prediction_sha256": "a25d506ca5af5740e17c181a9f29cfa5f692eba6c8ca56577ff979501d48266c",
+      "result_sha256": "58a7d7035cb1780b0a7bf484633749831b0ca5d36fcd17e5971b30c13cb01c88",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "TabICL",
+      "strategy": "complete_case",
+      "repeat": 9,
+      "rows": 2211,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\TabICL\\complete_case-rep9.done.json",
+      "receipt_sha256": "d5ac0c00ebd1d3fa7805c31e36582b4b615950cd49f2b36b4a7affa6d7621dbe",
+      "prediction_sha256": "720bfdea0082f95462a57f31b3a45bf2c238e1ad8230e2ae9d1ca688efec20cf",
+      "result_sha256": "5001a8a8c058ed88edf2653b4da90aaba93baf6caf735104b7cb3ff367e1df9d",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float32",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "mean",
+      "repeat": 0,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\mean-rep0.done.json",
+      "receipt_sha256": "4a809274d5cfe320554320cf207cfd59a92896a604449f07653c335baa2eba8d",
+      "prediction_sha256": "59755081d657480c52ae8930601b9155695e8f0f9c86cfdb1f3c8fa78f72d905",
+      "result_sha256": "6bfe5ddba1364e19ad567f65e6cc4f2350db4236e93a4c2524c82006b35e697d",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "mean",
+      "repeat": 1,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\mean-rep1.done.json",
+      "receipt_sha256": "10ec3c98d97b432bcc8709e0c967ed7d18a72b2fd757bc8b0b4e2655c13aa7b7",
+      "prediction_sha256": "b886a641b0772eb2ed507d662c8257a209396a1ffebce866083ef98d74ae822c",
+      "result_sha256": "55f3a2deca49a2ce7c98e502d3466a5c4b6faa0b803b23d6aae6f48cec34e9af",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "mean",
+      "repeat": 2,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\mean-rep2.done.json",
+      "receipt_sha256": "2722300b24ff90dee1f0e9ba17beaec2c5c0920ff78a23d2fecdc9957807ac2d",
+      "prediction_sha256": "208507d68fa658647caaadb4aa04659397d5beb172938a86c03d89f0763db50c",
+      "result_sha256": "7d0784365c6a6864a3d4095b7d97a85eb97973dbf261ba7975d16a3fb889f4bf",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "mean",
+      "repeat": 3,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\mean-rep3.done.json",
+      "receipt_sha256": "1e67a1eeeae6dfb38de301a32f00d1deb04ab23afd6a83acc11711eaca4ec9e5",
+      "prediction_sha256": "7a8d3ca9d64645c202af78d04846c913eefc9f3531c96403eb6aa6d54a159d61",
+      "result_sha256": "fbb70215ff333d14ac90eb075ae9fe20cf5e4ec2e834a833e4199a59544f4d54",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "mean",
+      "repeat": 4,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\mean-rep4.done.json",
+      "receipt_sha256": "9ba0940cf85febabfc8856d4553120725cf6f904225376f10ddaa8495d2a89ae",
+      "prediction_sha256": "86ce67720fd1adc5340f3ab972f9def38edf9c242f7a5424487466760fa018f6",
+      "result_sha256": "4e8934cf70bb3b9c332246f57748910e52dfa079e245c3202d054447fffe43f4",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "mean",
+      "repeat": 5,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\mean-rep5.done.json",
+      "receipt_sha256": "fcf5be2fb3ebe16198f1ed3e85f93b4891fe0ba791638acb432ecd3c05becae5",
+      "prediction_sha256": "fbfcd5160d5ca359bd50a2003076995349ff7bfd8434b506bc03d51860dce421",
+      "result_sha256": "e30c3df3fcc497337b6a615649a89af2ca748f41e5623f21131b53d75a7e343c",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "mean",
+      "repeat": 6,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\mean-rep6.done.json",
+      "receipt_sha256": "112040039635b2c3e103ca03d93a584a00f1a141e4ceaf85b5efa1d3837ef682",
+      "prediction_sha256": "c376739df177fc09310354e7acf30abad65e5354497d09a730e3797ffeaaec47",
+      "result_sha256": "5e981259847ea36783adb868b33d6bc7f05755179bd0817f87047c723982cd78",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "mean",
+      "repeat": 7,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\mean-rep7.done.json",
+      "receipt_sha256": "dd67c1141fa039e35d1a51de4043c952f570f8f368eae76f419bd1ea297947ae",
+      "prediction_sha256": "02048627b0e41a8fe1d6b4284575a357a3af031c3fff99567035eb506090866d",
+      "result_sha256": "23f04a9eec74fd199afac5d710c157676216c8e82844ee2d696936b7f50a29d7",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "mean",
+      "repeat": 8,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\mean-rep8.done.json",
+      "receipt_sha256": "e5aedb0bec07ff9ca4d2b59e1aa2dc191dcd3c490b60d6e8967d3225762f149c",
+      "prediction_sha256": "267822fdc5205bbbf0d48c1973779abc7a982c971b9b2fe004308e38370e4a86",
+      "result_sha256": "605c4c8ec84058ebb39d4a5104cbafc2e1dc26fbda97c7c02979d0cc943ec49e",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "mean",
+      "repeat": 9,
+      "rows": 2650,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\mean-rep9.done.json",
+      "receipt_sha256": "70f55acfec2fee585a22b1a709f902b5050836b7de46ca5044cc47a2b73e9389",
+      "prediction_sha256": "594719ba44866082062e86b3511b9f3ed9751d8414024c21a96abef64137a5e8",
+      "result_sha256": "69c291efd6c30ac35e1290a05a1d0c81a900a1a1a63214f7704182cd20ac3759",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "complete_case",
+      "repeat": 0,
+      "rows": 2246,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\complete_case-rep0.done.json",
+      "receipt_sha256": "f6e61bcc242c2a855b87eda2e1182934ba4bd2cd07c82dea72e97f95614c4b09",
+      "prediction_sha256": "7295970fa0c8a77c1f3a9665202f4e6d89236d6ddcaf1a56bb0aa03d519fc8b8",
+      "result_sha256": "989f8b46bcd841e7e2562f6eb3f0a700c27450506ac8154f120d3691f1cc1c32",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "complete_case",
+      "repeat": 1,
+      "rows": 2210,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\complete_case-rep1.done.json",
+      "receipt_sha256": "8257a67ff5d9ea387206ca8a3444fbba54caba72de837fac7bd295c9f7670c93",
+      "prediction_sha256": "7a2c1c794af8ec296937b2af26effa84254fde47c4a4a48cbd798280b7756f2e",
+      "result_sha256": "b7c5880f5db7d6e61e2580a604c9122e76130fa5bd71890372eb470921a14927",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "complete_case",
+      "repeat": 2,
+      "rows": 2231,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\complete_case-rep2.done.json",
+      "receipt_sha256": "ca92d6ce1151c723ebadc3c21a688d6c11e2562385f08cc7a28c2d626da13839",
+      "prediction_sha256": "d5ec0eea45639cd85876a484213d2f54c56b1d52f12dd726d33bbb9febf5760c",
+      "result_sha256": "66eb7d703685517191e252bcc80a25b57f5f88d3ddcb81f951b8ebc08fd5426d",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA GeForce RTX 5070 Ti",
+        "gpu_uuid": "GPU-c71ad67d-ba1b-b47e-f12d-491431d030eb",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "complete_case",
+      "repeat": 3,
+      "rows": 2233,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\complete_case-rep3.done.json",
+      "receipt_sha256": "11e2365160482793615951af5b956e0c75fd8f9f87eeff6355497bf99b1fde7d",
+      "prediction_sha256": "22ecc79e2e986d36f9ba8703bb4af6f418e01efa517c1de0bdb5258687487282",
+      "result_sha256": "a1871051b98c675e5649c7375040d031d77e50a798de0f6596c58cf38ac3e41e",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "complete_case",
+      "repeat": 4,
+      "rows": 2199,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\complete_case-rep4.done.json",
+      "receipt_sha256": "295109361c695ebd8039eb94cd8cacbfc8a1f9ec9e5753f6765cb2b7aff15e81",
+      "prediction_sha256": "42559d6f08cda899d24988d447ccc2925ff65aa0d4ae4bc1c9ec04b9567ea5dd",
+      "result_sha256": "88bbf688d3fec07032ea6f8c21b75fb9321dd2ef6eb96b0902b9c90ecb5aa2f4",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "complete_case",
+      "repeat": 5,
+      "rows": 2237,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\complete_case-rep5.done.json",
+      "receipt_sha256": "28ccfb2822062619262251b2a9c27b881d414b1c2bbcac347630618445760477",
+      "prediction_sha256": "683a6cf4d9acc1c8d24455cbf708b001adb96d6c5bf01a3af9af14e5b067e121",
+      "result_sha256": "eb0f28075069610683874624d1f1673eeeacd7cb589bb2d82fe6c12dc175db54",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "complete_case",
+      "repeat": 6,
+      "rows": 2241,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\complete_case-rep6.done.json",
+      "receipt_sha256": "c003823fefeed578a23c93d0750dfc7a54de4e33256cb7eec61c9e8431e056c9",
+      "prediction_sha256": "1441cde5f889507b450f9320fc48508126fea3a3c92f129d1a3191e0af969d73",
+      "result_sha256": "2226bc0d8405ae6509805b7f0f25947ab36c6f56b7855c6c0c48d104092ed878",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "complete_case",
+      "repeat": 7,
+      "rows": 2230,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\complete_case-rep7.done.json",
+      "receipt_sha256": "6c5c778fb25af9c7d41c55f6ef6199f911dc742d4c347ffd4ad5bab7e19cb8c1",
+      "prediction_sha256": "7863d88232c07c08009803e8b77100c1358be0baa36fc28c201fdbd1fd42e612",
+      "result_sha256": "a76e69593af07e81943f538b1a469b8e5729db359d35d62d87d831ead1ed4789",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "complete_case",
+      "repeat": 8,
+      "rows": 2234,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\complete_case-rep8.done.json",
+      "receipt_sha256": "ff0bd29de36e09708e75d448f62ff086189d41d64aa85ac92495f28e88852c93",
+      "prediction_sha256": "afe27a9959d511f43acace4882135e404dd74972dea2a3f1e2407480b02f2e5e",
+      "result_sha256": "49ed507baa022761c7b13febbb20d991343cb185e3901395e5dc26248348635f",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 3070 Ti",
+        "gpu_uuid": "GPU-416d8681-6744-9abf-6293-56e74cc5f200",
+        "opencl_device": null
+      }
+    },
+    {
+      "model": "GAT",
+      "strategy": "complete_case",
+      "repeat": 9,
+      "rows": 2211,
+      "receipt": "E:\\yjx\\revised\\artifacts\\imputation_comparison\\final\\h6\\GAT\\complete_case-rep9.done.json",
+      "receipt_sha256": "e933171c41ebcb6577abda775bb310f74fa2a6c5a8309493502dace800a11e0a",
+      "prediction_sha256": "edf0dd081b7bc0b2b61e5cdcf423bcdf713508aa7e42e25dfbb2df0e539848bc",
+      "result_sha256": "ea6b2083d6fe95216f81e18a5ed36b92d71736de55de598ee9060d617f84b7cf",
+      "max_metric_difference": 0.0,
+      "probability_dtype": "float64",
+      "device": {
+        "backend": "CUDA",
+        "gpu_index": 0,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "gpu_uuid": "0",
+        "opencl_device": null
+      }
+    }
+  ],
+  "run_count": 160
+}

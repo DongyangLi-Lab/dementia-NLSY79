@@ -1,0 +1,33 @@
+Outcome,Horizon,Model,Site,Hardware,Backend,Fits,Median seconds per fit,Measured fitting minutes,Measured prediction minutes
+Primary,6-year,TabICL,local,NVIDIA GeForce RTX 5070 Ti,CUDA,51,1.17,1.11,8.42
+Sensitivity,6-year,TabICL,local,NVIDIA GeForce RTX 5070 Ti,CUDA,51,1.27,1.17,9.22
+Primary,6-year,CatBoost,local,NVIDIA GeForce RTX 3070 Ti,CUDA,191,1.03,3.58,0.02
+Sensitivity,6-year,CatBoost,local,NVIDIA GeForce RTX 3070 Ti,CUDA,191,0.97,3.26,0.01
+Primary,6-year,LightGBM,local,NVIDIA GeForce RTX 5070 Ti,OpenCL,131,0.51,1.26,0.02
+Sensitivity,6-year,LightGBM,local,NVIDIA GeForce RTX 5070 Ti,OpenCL,131,0.48,1.21,0.03
+Primary,6-year,Penalized LR,local,CPU,CPU,131,0.71,1.45,0.01
+Sensitivity,6-year,Penalized LR,local,CPU,CPU,131,0.62,1.23,0.01
+Primary,6-year,RealMLP,local,NVIDIA GeForce RTX 3070 Ti,CUDA,51,19.27,20.20,0.02
+Sensitivity,6-year,RealMLP,local,NVIDIA GeForce RTX 3070 Ti,CUDA,51,15.89,16.00,0.02
+Primary,6-year,GAT,local,NVIDIA GeForce RTX 5070 Ti,CUDA,51,58.37,62.50,0.80
+Sensitivity,6-year,GAT,UNC,NVIDIA L40S,CUDA,51,95.75,102.01,0.49
+Primary,6-year,Decision tree,local,CPU,CPU,281,0.05,0.25,0.01
+Sensitivity,6-year,Decision tree,local,CPU,CPU,281,0.05,0.25,0.02
+Primary,6-year,Gaussian NB,local,CPU,CPU,101,0.01,0.02,0.01
+Sensitivity,6-year,Gaussian NB,local,CPU,CPU,101,0.01,0.02,0.01
+Primary,8-year,TabICL,local,NVIDIA GeForce RTX 5070 Ti,CUDA,51,1.21,1.06,7.36
+Sensitivity,8-year,TabICL,local,NVIDIA GeForce RTX 5070 Ti,CUDA,51,1.24,1.15,37.66
+Primary,8-year,CatBoost,local,NVIDIA GeForce RTX 3070 Ti,CUDA,191,1.07,3.63,0.02
+Sensitivity,8-year,CatBoost,local,NVIDIA GeForce RTX 3070 Ti,CUDA,191,0.97,3.26,0.01
+Primary,8-year,LightGBM,local,NVIDIA GeForce RTX 5070 Ti,OpenCL,131,0.43,1.12,0.02
+Sensitivity,8-year,LightGBM,local,NVIDIA GeForce RTX 5070 Ti,OpenCL,131,0.48,1.26,0.02
+Primary,8-year,Penalized LR,local,CPU,CPU,131,0.51,1.12,0.01
+Sensitivity,8-year,Penalized LR,local,CPU,CPU,131,0.61,1.22,0.01
+Primary,8-year,RealMLP,local,NVIDIA GeForce RTX 3070 Ti,CUDA,51,14.10,16.71,0.02
+Sensitivity,8-year,RealMLP,local,NVIDIA GeForce RTX 3070 Ti,CUDA,51,14.95,14.88,0.02
+Primary,8-year,GAT,UNC,NVIDIA L40S,CUDA,51,83.80,98.21,0.43
+Sensitivity,8-year,GAT,UNC,NVIDIA L40S,CUDA,51,88.22,96.65,0.46
+Primary,8-year,Decision tree,local,CPU,CPU,281,0.05,0.24,0.02
+Sensitivity,8-year,Decision tree,local,CPU,CPU,281,0.05,0.24,0.01
+Primary,8-year,Gaussian NB,local,CPU,CPU,101,0.01,0.02,0.01
+Sensitivity,8-year,Gaussian NB,local,CPU,CPU,101,0.01,0.02,0.01

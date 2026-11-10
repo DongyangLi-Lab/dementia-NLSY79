@@ -1,0 +1,9 @@
+horizon,model,method,spearman_rank_correlation,shared_top10
+6,LR,exact,0.7666388657214344,7
+6,GNB,exact,0.1922200611280911,8
+6,DT,exact,0.6295612415369733,9
+6,LightGBM,exact,0.698852427130512,8
+6,CatBoost,exact,0.6579057154776806,10
+6,RealMLP,KernelSHAP (approximate),0.6696860238955267,7
+6,TabICL,KernelSHAP (approximate),0.6382884134481802,8
+6,GAT,KernelSHAP (approximate),0.4653514865240346,6

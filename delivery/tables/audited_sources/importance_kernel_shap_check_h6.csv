@@ -1,0 +1,3 @@
+horizon,model,spearman_rank_correlation,shared_top10
+6,LR,0.965202927773897,10
+6,LightGBM,0.932410842141138,9

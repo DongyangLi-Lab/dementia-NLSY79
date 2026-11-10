@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "observed_at": "2026-11-10T02:53:48.634789-05:00",
+  "scope": "All revised training, held-out verification, evaluation, importance, imputation comparisons and final numerical sources. Figure/document rendering excluded by README.",
+  "counts": {
+    "imputation_caches": 44,
+    "model_runs": 32,
+    "fitted_checkpoints": 352,
+    "comparison_outputs": 160,
+    "importance_models": 8,
+    "tabicl_shap_participants": 500,
+    "shap_groups": 60,
+    "final_tables": 23
+  },
+  "max_shap_additivity_error": 2.6645352591003757e-15,
+  "cross_device_qualification": "Original strict gate failed; original 500/800/10 computation accepted under recorded per-job engineering checks.",
+  "implementation_sha256": "8d46ee316152baaca2aecdc09d931648e44755b24c70f43612c9356b42e0f22c",
+  "evidence_sha256": {
+    "verification.json": "d4e68cd1d4303d0ba4a28c5012d1a067e34fd4bac4b48bb3b714373720e6c46a",
+    "prepared_inputs.json": "b4ba6d3471f2a2302d2746e6be3d75753854a4e8e3e0520da6fa89d989c863c3",
+    "frozen_checkpoint_integrity.json": "aca9f6aa4bcb65bb4e72287fca05459f62eb487affbbb7e81b42d137b1b3307a",
+    "final_evaluation_sources_audit.json": "43ad102265e13eb5d48d3afa1e7f630e6558f3755cbb2428054f7b70c0c108f7",
+    "comparison_sources_audit.json": "bc0dc65579f4d13e5a48419795c69e2a56679db3635c2e4268f3fe9bec259ced",
+    "tabicl_permutation_execution_audit.json": "3eab9355667fc4186ce128d901a5230a1a24e2a3524eac5cd4e6edf03a030be3",
+    "tabicl_cross_device_acceptance.json": "fe13eadbe68dbd5ae491cfedd814fcd1a179c707e7c64a61c6a7a54ffd3667d4",
+    "tabicl_shap_run_inventory.json": "77255e3579b3dcc0e7ee1fe3d289835480a0259bb933fa322b081c29d6206d90",
+    "source_status.json": "896c7b857c1c9c2c0bca4d0fc09d3bddf3029ece8f3d147cdd1e25d577e80db5"
+  }
+}

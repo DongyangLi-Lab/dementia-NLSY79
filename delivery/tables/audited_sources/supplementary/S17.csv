@@ -1,0 +1,225 @@
+Horizon,Model A,Model B,Metric,"Absolute difference, A - B (95% CI)",Relative difference (%),p
+6-year,TabICL,CatBoost,AUROC,0.6 (0.2 to 1.0) points,0.7,0.007
+6-year,TabICL,LightGBM,AUROC,0.7 (0.2 to 1.2) points,0.9,0.003
+6-year,TabICL,Penalized LR,AUROC,1.5 (1.0 to 1.9) points,1.9,<0.001
+6-year,TabICL,RealMLP,AUROC,0.7 (0.2 to 1.1) points,0.8,0.005
+6-year,TabICL,GAT,AUROC,2.1 (1.5 to 2.6) points,2.6,<0.001
+6-year,TabICL,Decision tree,AUROC,6.6 (5.6 to 7.7) points,8.8,<0.001
+6-year,TabICL,Gaussian NB,AUROC,7.7 (6.8 to 8.7) points,10.4,<0.001
+6-year,CatBoost,LightGBM,AUROC,0.1 (-0.3 to 0.6) points,0.2,0.545
+6-year,CatBoost,Penalized LR,AUROC,0.9 (0.4 to 1.4) points,1.2,0.001
+6-year,CatBoost,RealMLP,AUROC,0.1 (-0.4 to 0.6) points,0.1,0.669
+6-year,CatBoost,GAT,AUROC,1.5 (0.9 to 2.1) points,1.9,<0.001
+6-year,CatBoost,Decision tree,AUROC,6.1 (5.1 to 7.1) points,8.0,<0.001
+6-year,CatBoost,Gaussian NB,AUROC,7.2 (6.1 to 8.2) points,9.6,<0.001
+6-year,LightGBM,Penalized LR,AUROC,0.8 (0.2 to 1.4) points,1.0,0.008
+6-year,LightGBM,RealMLP,AUROC,-0.0 (-0.6 to 0.6) points,-0.0,0.932
+6-year,LightGBM,GAT,AUROC,1.4 (0.7 to 2.0) points,1.7,<0.001
+6-year,LightGBM,Decision tree,AUROC,5.9 (4.9 to 6.9) points,7.8,<0.001
+6-year,LightGBM,Gaussian NB,AUROC,7.0 (5.9 to 8.1) points,9.4,<0.001
+6-year,Penalized LR,RealMLP,AUROC,-0.8 (-1.4 to -0.3) points,-1.0,0.002
+6-year,Penalized LR,GAT,AUROC,0.6 (0.1 to 1.1) points,0.7,0.031
+6-year,Penalized LR,Decision tree,AUROC,5.1 (4.0 to 6.3) points,6.8,<0.001
+6-year,Penalized LR,Gaussian NB,AUROC,6.2 (5.1 to 7.3) points,8.4,<0.001
+6-year,RealMLP,GAT,AUROC,1.4 (0.7 to 2.0) points,1.7,<0.001
+6-year,RealMLP,Decision tree,AUROC,5.9 (4.9 to 7.1) points,7.9,<0.001
+6-year,RealMLP,Gaussian NB,AUROC,7.1 (5.9 to 8.2) points,9.5,<0.001
+6-year,GAT,Decision tree,AUROC,4.6 (3.5 to 5.7) points,6.0,<0.001
+6-year,GAT,Gaussian NB,AUROC,5.7 (4.6 to 6.7) points,7.6,<0.001
+6-year,Decision tree,Gaussian NB,AUROC,1.1 (-0.3 to 2.5) points,1.5,0.127
+6-year,TabICL,CatBoost,AUPRC,1.3 (0.3 to 2.2) points,4.0,0.012
+6-year,TabICL,LightGBM,AUPRC,1.3 (0.1 to 2.5) points,4.2,0.037
+6-year,TabICL,Penalized LR,AUPRC,1.9 (0.9 to 3.0) points,6.1,<0.001
+6-year,TabICL,RealMLP,AUPRC,0.9 (-0.4 to 2.1) points,2.7,0.179
+6-year,TabICL,GAT,AUPRC,4.4 (2.9 to 6.0) points,15.5,<0.001
+6-year,TabICL,Decision tree,AUPRC,12.0 (9.9 to 14.1) points,56.7,<0.001
+6-year,TabICL,Gaussian NB,AUPRC,14.7 (12.5 to 17.1) points,80.0,<0.001
+6-year,CatBoost,LightGBM,AUPRC,0.1 (-0.9 to 1.1) points,0.2,0.900
+6-year,CatBoost,Penalized LR,AUPRC,0.7 (-0.5 to 1.8) points,2.1,0.263
+6-year,CatBoost,RealMLP,AUPRC,-0.4 (-1.7 to 1.0) points,-1.2,0.592
+6-year,CatBoost,GAT,AUPRC,3.2 (1.5 to 4.7) points,11.1,<0.001
+6-year,CatBoost,Decision tree,AUPRC,10.7 (8.7 to 12.7) points,50.7,<0.001
+6-year,CatBoost,Gaussian NB,AUPRC,13.5 (11.3 to 15.8) points,73.1,<0.001
+6-year,LightGBM,Penalized LR,AUPRC,0.6 (-0.8 to 1.9) points,1.9,0.420
+6-year,LightGBM,RealMLP,AUPRC,-0.5 (-1.9 to 1.0) points,-1.4,0.554
+6-year,LightGBM,GAT,AUPRC,3.1 (1.3 to 4.8) points,10.8,0.001
+6-year,LightGBM,Decision tree,AUPRC,10.7 (8.7 to 12.6) points,50.4,<0.001
+6-year,LightGBM,Gaussian NB,AUPRC,13.4 (11.2 to 15.7) points,72.8,<0.001
+6-year,Penalized LR,RealMLP,AUPRC,-1.0 (-2.3 to 0.3) points,-3.2,0.125
+6-year,Penalized LR,GAT,AUPRC,2.5 (1.3 to 3.8) points,8.8,<0.001
+6-year,Penalized LR,Decision tree,AUPRC,10.1 (8.0 to 12.2) points,47.6,<0.001
+6-year,Penalized LR,Gaussian NB,AUPRC,12.8 (10.6 to 15.2) points,69.6,<0.001
+6-year,RealMLP,GAT,AUPRC,3.6 (1.8 to 5.2) points,12.4,<0.001
+6-year,RealMLP,Decision tree,AUPRC,11.1 (8.9 to 13.2) points,52.6,<0.001
+6-year,RealMLP,Gaussian NB,AUPRC,13.9 (11.6 to 16.3) points,75.3,<0.001
+6-year,GAT,Decision tree,AUPRC,7.6 (5.5 to 9.5) points,35.7,<0.001
+6-year,GAT,Gaussian NB,AUPRC,10.3 (8.4 to 12.4) points,55.9,<0.001
+6-year,Decision tree,Gaussian NB,AUPRC,2.7 (1.0 to 4.5) points,14.9,0.003
+6-year,TabICL,CatBoost,F1,1.2 (-0.1 to 2.6) points,3.3,0.069
+6-year,TabICL,LightGBM,F1,1.1 (-0.4 to 2.5) points,3.0,0.137
+6-year,TabICL,Penalized LR,F1,0.5 (-1.0 to 1.9) points,1.3,0.511
+6-year,TabICL,RealMLP,F1,1.5 (0.1 to 2.8) points,4.1,0.041
+6-year,TabICL,GAT,F1,2.9 (1.3 to 4.3) points,8.3,0.001
+6-year,TabICL,Decision tree,F1,7.4 (5.3 to 9.4) points,24.7,<0.001
+6-year,TabICL,Gaussian NB,F1,11.6 (9.4 to 13.6) points,45.2,<0.001
+6-year,CatBoost,LightGBM,F1,-0.1 (-1.6 to 1.3) points,-0.4,0.862
+6-year,CatBoost,Penalized LR,F1,-0.7 (-2.3 to 0.7) points,-2.0,0.356
+6-year,CatBoost,RealMLP,F1,0.3 (-1.4 to 1.8) points,0.7,0.732
+6-year,CatBoost,GAT,F1,1.7 (-0.1 to 3.4) points,4.8,0.066
+6-year,CatBoost,Decision tree,F1,6.2 (4.2 to 8.3) points,20.7,<0.001
+6-year,CatBoost,Gaussian NB,F1,10.4 (8.2 to 12.5) points,40.5,<0.001
+6-year,LightGBM,Penalized LR,F1,-0.6 (-2.3 to 1.2) points,-1.6,0.488
+6-year,LightGBM,RealMLP,F1,0.4 (-1.1 to 2.0) points,1.1,0.643
+6-year,LightGBM,GAT,F1,1.8 (0.2 to 3.4) points,5.2,0.029
+6-year,LightGBM,Decision tree,F1,6.3 (4.4 to 8.1) points,21.1,<0.001
+6-year,LightGBM,Gaussian NB,F1,10.5 (8.4 to 12.5) points,41.0,<0.001
+6-year,Penalized LR,RealMLP,F1,1.0 (-0.6 to 2.5) points,2.7,0.225
+6-year,Penalized LR,GAT,F1,2.4 (0.5 to 4.1) points,6.9,0.012
+6-year,Penalized LR,Decision tree,F1,6.9 (4.7 to 9.1) points,23.1,<0.001
+6-year,Penalized LR,Gaussian NB,F1,11.1 (8.9 to 13.3) points,43.3,<0.001
+6-year,RealMLP,GAT,F1,1.4 (-0.1 to 2.9) points,4.1,0.068
+6-year,RealMLP,Decision tree,F1,5.9 (4.1 to 7.7) points,19.8,<0.001
+6-year,RealMLP,Gaussian NB,F1,10.1 (8.1 to 12.1) points,39.5,<0.001
+6-year,GAT,Decision tree,F1,4.5 (2.7 to 6.3) points,15.1,<0.001
+6-year,GAT,Gaussian NB,F1,8.7 (6.9 to 10.5) points,34.0,<0.001
+6-year,Decision tree,Gaussian NB,F1,4.2 (2.3 to 6.1) points,16.4,<0.001
+6-year,TabICL,CatBoost,Brier score,-0.0003 (-0.0008 to 0.0001),-0.5,0.116
+6-year,TabICL,LightGBM,Brier score,-0.0005 (-0.0010 to 0.0001),-0.7,0.088
+6-year,TabICL,Penalized LR,Brier score,-0.0011 (-0.0016 to -0.0006),-1.6,<0.001
+6-year,TabICL,RealMLP,Brier score,-0.0019 (-0.0026 to -0.0012),-2.8,<0.001
+6-year,TabICL,GAT,Brier score,-0.2563 (-0.2625 to -0.2504),-79.8,<0.001
+6-year,TabICL,Decision tree,Brier score,-0.0072 (-0.0084 to -0.0059),-9.9,<0.001
+6-year,TabICL,Gaussian NB,Brier score,-0.0915 (-0.0967 to -0.0863),-58.5,<0.001
+6-year,CatBoost,LightGBM,Brier score,-0.0001 (-0.0006 to 0.0003),-0.2,0.607
+6-year,CatBoost,Penalized LR,Brier score,-0.0007 (-0.0013 to -0.0002),-1.1,0.009
+6-year,CatBoost,RealMLP,Brier score,-0.0015 (-0.0023 to -0.0008),-2.3,<0.001
+6-year,CatBoost,GAT,Brier score,-0.2560 (-0.2621 to -0.2502),-79.7,<0.001
+6-year,CatBoost,Decision tree,Brier score,-0.0068 (-0.0079 to -0.0056),-9.5,<0.001
+6-year,CatBoost,Gaussian NB,Brier score,-0.0911 (-0.0964 to -0.0861),-58.3,<0.001
+6-year,LightGBM,Penalized LR,Brier score,-0.0006 (-0.0013 to 0.0000),-0.9,0.074
+6-year,LightGBM,RealMLP,Brier score,-0.0014 (-0.0022 to -0.0007),-2.1,<0.001
+6-year,LightGBM,GAT,Brier score,-0.2558 (-0.2619 to -0.2500),-79.7,<0.001
+6-year,LightGBM,Decision tree,Brier score,-0.0067 (-0.0078 to -0.0055),-9.3,<0.001
+6-year,LightGBM,Gaussian NB,Brier score,-0.0910 (-0.0963 to -0.0860),-58.2,<0.001
+6-year,Penalized LR,RealMLP,Brier score,-0.0008 (-0.0016 to -0.0001),-1.2,0.026
+6-year,Penalized LR,GAT,Brier score,-0.2552 (-0.2613 to -0.2493),-79.5,<0.001
+6-year,Penalized LR,Decision tree,Brier score,-0.0061 (-0.0074 to -0.0048),-8.5,<0.001
+6-year,Penalized LR,Gaussian NB,Brier score,-0.0904 (-0.0957 to -0.0854),-57.8,<0.001
+6-year,RealMLP,GAT,Brier score,-0.2544 (-0.2604 to -0.2487),-79.2,<0.001
+6-year,RealMLP,Decision tree,Brier score,-0.0053 (-0.0066 to -0.0039),-7.3,<0.001
+6-year,RealMLP,Gaussian NB,Brier score,-0.0896 (-0.0949 to -0.0845),-57.3,<0.001
+6-year,GAT,Decision tree,Brier score,0.2491 (0.2433 to 0.2554),346.2,<0.001
+6-year,GAT,Gaussian NB,Brier score,0.1648 (0.1579 to 0.1714),105.4,<0.001
+6-year,Decision tree,Gaussian NB,Brier score,-0.0843 (-0.0897 to -0.0791),-54.0,<0.001
+8-year,TabICL,CatBoost,AUROC,0.6 (0.2 to 1.1) points,0.8,0.005
+8-year,TabICL,LightGBM,AUROC,0.7 (0.2 to 1.3) points,0.9,0.002
+8-year,TabICL,Penalized LR,AUROC,1.5 (1.0 to 2.0) points,1.8,<0.001
+8-year,TabICL,RealMLP,AUROC,2.4 (1.8 to 3.0) points,2.9,<0.001
+8-year,TabICL,GAT,AUROC,2.8 (2.1 to 3.5) points,3.5,<0.001
+8-year,TabICL,Decision tree,AUROC,6.4 (5.3 to 7.4) points,8.3,<0.001
+8-year,TabICL,Gaussian NB,AUROC,7.9 (6.8 to 8.9) points,10.5,<0.001
+8-year,CatBoost,LightGBM,AUROC,0.1 (-0.3 to 0.5) points,0.1,0.627
+8-year,CatBoost,Penalized LR,AUROC,0.8 (0.4 to 1.3) points,1.0,<0.001
+8-year,CatBoost,RealMLP,AUROC,1.7 (1.1 to 2.3) points,2.2,<0.001
+8-year,CatBoost,GAT,AUROC,2.2 (1.5 to 2.9) points,2.7,<0.001
+8-year,CatBoost,Decision tree,AUROC,5.7 (4.7 to 6.7) points,7.5,<0.001
+8-year,CatBoost,Gaussian NB,AUROC,7.2 (6.2 to 8.3) points,9.7,<0.001
+8-year,LightGBM,Penalized LR,AUROC,0.7 (0.1 to 1.3) points,0.9,0.015
+8-year,LightGBM,RealMLP,AUROC,1.6 (0.9 to 2.3) points,2.0,<0.001
+8-year,LightGBM,GAT,AUROC,2.0 (1.2 to 2.9) points,2.5,<0.001
+8-year,LightGBM,Decision tree,AUROC,5.6 (4.7 to 6.7) points,7.3,<0.001
+8-year,LightGBM,Gaussian NB,AUROC,7.1 (6.0 to 8.2) points,9.5,<0.001
+8-year,Penalized LR,RealMLP,AUROC,0.9 (0.4 to 1.4) points,1.1,<0.001
+8-year,Penalized LR,GAT,AUROC,1.3 (0.7 to 2.0) points,1.6,<0.001
+8-year,Penalized LR,Decision tree,AUROC,4.9 (3.8 to 6.0) points,6.4,<0.001
+8-year,Penalized LR,Gaussian NB,AUROC,6.4 (5.3 to 7.5) points,8.6,<0.001
+8-year,RealMLP,GAT,AUROC,0.4 (-0.4 to 1.3) points,0.5,0.307
+8-year,RealMLP,Decision tree,AUROC,4.0 (2.9 to 5.2) points,5.2,<0.001
+8-year,RealMLP,Gaussian NB,AUROC,5.5 (4.3 to 6.7) points,7.4,<0.001
+8-year,GAT,Decision tree,AUROC,3.6 (2.4 to 4.8) points,4.7,<0.001
+8-year,GAT,Gaussian NB,AUROC,5.1 (3.9 to 6.2) points,6.8,<0.001
+8-year,Decision tree,Gaussian NB,AUROC,1.5 (0.1 to 2.9) points,2.0,0.037
+8-year,TabICL,CatBoost,AUPRC,2.0 (0.8 to 3.2) points,5.8,<0.001
+8-year,TabICL,LightGBM,AUPRC,2.6 (1.3 to 4.1) points,7.7,0.001
+8-year,TabICL,Penalized LR,AUPRC,2.6 (1.4 to 3.9) points,7.6,<0.001
+8-year,TabICL,RealMLP,AUPRC,2.9 (1.7 to 4.1) points,8.5,<0.001
+8-year,TabICL,GAT,AUPRC,5.1 (3.3 to 7.0) points,15.8,<0.001
+8-year,TabICL,Decision tree,AUPRC,13.5 (11.3 to 16.0) points,57.2,<0.001
+8-year,TabICL,Gaussian NB,AUPRC,17.3 (14.7 to 20.0) points,86.8,<0.001
+8-year,CatBoost,LightGBM,AUPRC,0.6 (-0.6 to 1.8) points,1.8,0.334
+8-year,CatBoost,Penalized LR,AUPRC,0.6 (-0.7 to 1.9) points,1.7,0.362
+8-year,CatBoost,RealMLP,AUPRC,0.9 (-0.5 to 2.2) points,2.6,0.208
+8-year,CatBoost,GAT,AUPRC,3.0 (1.3 to 5.0) points,9.5,0.001
+8-year,CatBoost,Decision tree,AUPRC,11.5 (9.5 to 13.8) points,48.6,<0.001
+8-year,CatBoost,Gaussian NB,AUPRC,15.2 (13.0 to 17.9) points,76.6,<0.001
+8-year,LightGBM,Penalized LR,AUPRC,-0.0 (-1.6 to 1.6) points,-0.1,0.988
+8-year,LightGBM,RealMLP,AUPRC,0.3 (-1.3 to 1.9) points,0.8,0.746
+8-year,LightGBM,GAT,AUPRC,2.4 (0.4 to 4.7) points,7.6,0.016
+8-year,LightGBM,Decision tree,AUPRC,10.9 (9.0 to 13.1) points,46.0,<0.001
+8-year,LightGBM,Gaussian NB,AUPRC,14.6 (12.3 to 17.2) points,73.5,<0.001
+8-year,Penalized LR,RealMLP,AUPRC,0.3 (-1.0 to 1.5) points,0.9,0.683
+8-year,Penalized LR,GAT,AUPRC,2.5 (0.7 to 4.3) points,7.7,0.006
+8-year,Penalized LR,Decision tree,AUPRC,10.9 (8.7 to 13.2) points,46.2,<0.001
+8-year,Penalized LR,Gaussian NB,AUPRC,14.7 (12.4 to 17.2) points,73.7,<0.001
+8-year,RealMLP,GAT,AUPRC,2.2 (0.3 to 4.2) points,6.7,0.025
+8-year,RealMLP,Decision tree,AUPRC,10.6 (8.4 to 13.1) points,44.9,<0.001
+8-year,RealMLP,Gaussian NB,AUPRC,14.3 (11.8 to 17.2) points,72.1,<0.001
+8-year,GAT,Decision tree,AUPRC,8.5 (6.3 to 10.7) points,35.8,<0.001
+8-year,GAT,Gaussian NB,AUPRC,12.2 (9.7 to 14.8) points,61.3,<0.001
+8-year,Decision tree,Gaussian NB,AUPRC,3.7 (1.8 to 5.7) points,18.8,<0.001
+8-year,TabICL,CatBoost,F1,1.0 (-0.2 to 2.3) points,2.6,0.117
+8-year,TabICL,LightGBM,F1,0.5 (-0.9 to 1.9) points,1.3,0.527
+8-year,TabICL,Penalized LR,F1,0.6 (-0.7 to 1.9) points,1.6,0.361
+8-year,TabICL,RealMLP,F1,1.7 (0.2 to 3.3) points,4.6,0.030
+8-year,TabICL,GAT,F1,2.8 (1.0 to 4.5) points,7.6,0.003
+8-year,TabICL,Decision tree,F1,6.8 (4.9 to 8.7) points,21.0,<0.001
+8-year,TabICL,Gaussian NB,F1,10.7 (8.9 to 12.6) points,37.6,<0.001
+8-year,CatBoost,LightGBM,F1,-0.5 (-1.8 to 0.7) points,-1.3,0.439
+8-year,CatBoost,Penalized LR,F1,-0.4 (-1.8 to 1.0) points,-1.0,0.576
+8-year,CatBoost,RealMLP,F1,0.7 (-0.8 to 2.4) points,1.9,0.393
+8-year,CatBoost,GAT,F1,1.8 (0.1 to 3.6) points,4.8,0.045
+8-year,CatBoost,Decision tree,F1,5.8 (4.1 to 7.5) points,17.9,<0.001
+8-year,CatBoost,Gaussian NB,F1,9.7 (8.1 to 11.5) points,34.1,<0.001
+8-year,LightGBM,Penalized LR,F1,0.1 (-1.4 to 1.7) points,0.3,0.848
+8-year,LightGBM,RealMLP,F1,1.2 (-0.4 to 3.1) points,3.3,0.150
+8-year,LightGBM,GAT,F1,2.3 (0.4 to 4.3) points,6.2,0.020
+8-year,LightGBM,Decision tree,F1,6.3 (4.5 to 8.2) points,19.5,<0.001
+8-year,LightGBM,Gaussian NB,F1,10.2 (8.3 to 12.1) points,35.9,<0.001
+8-year,Penalized LR,RealMLP,F1,1.1 (-0.4 to 2.7) points,3.0,0.162
+8-year,Penalized LR,GAT,F1,2.2 (0.5 to 3.8) points,5.9,0.016
+8-year,Penalized LR,Decision tree,F1,6.2 (4.3 to 8.1) points,19.1,<0.001
+8-year,Penalized LR,Gaussian NB,F1,10.1 (8.2 to 12.0) points,35.5,<0.001
+8-year,RealMLP,GAT,F1,1.0 (-0.9 to 3.0) points,2.8,0.270
+8-year,RealMLP,Decision tree,F1,5.1 (2.9 to 7.3) points,15.7,<0.001
+8-year,RealMLP,Gaussian NB,F1,9.0 (6.9 to 11.1) points,31.6,<0.001
+8-year,GAT,Decision tree,F1,4.1 (1.8 to 6.2) points,12.5,<0.001
+8-year,GAT,Gaussian NB,F1,8.0 (5.8 to 10.0) points,27.9,<0.001
+8-year,Decision tree,Gaussian NB,F1,3.9 (2.2 to 5.5) points,13.7,<0.001
+8-year,TabICL,CatBoost,Brier score,-0.0010 (-0.0015 to -0.0004),-1.4,<0.001
+8-year,TabICL,LightGBM,Brier score,-0.0013 (-0.0020 to -0.0007),-1.9,0.001
+8-year,TabICL,Penalized LR,Brier score,-0.0015 (-0.0021 to -0.0009),-2.1,<0.001
+8-year,TabICL,RealMLP,Brier score,-0.0038 (-0.0044 to -0.0031),-5.3,<0.001
+8-year,TabICL,GAT,Brier score,-0.1680 (-0.1737 to -0.1627),-71.2,<0.001
+8-year,TabICL,Decision tree,Brier score,-0.0079 (-0.0092 to -0.0066),-10.4,<0.001
+8-year,TabICL,Gaussian NB,Brier score,-0.0927 (-0.0984 to -0.0869),-57.7,<0.001
+8-year,CatBoost,LightGBM,Brier score,-0.0003 (-0.0009 to 0.0003),-0.5,0.273
+8-year,CatBoost,Penalized LR,Brier score,-0.0005 (-0.0012 to 0.0002),-0.7,0.160
+8-year,CatBoost,RealMLP,Brier score,-0.0028 (-0.0035 to -0.0021),-3.9,<0.001
+8-year,CatBoost,GAT,Brier score,-0.1671 (-0.1726 to -0.1618),-70.8,<0.001
+8-year,CatBoost,Decision tree,Brier score,-0.0069 (-0.0082 to -0.0057),-9.1,<0.001
+8-year,CatBoost,Gaussian NB,Brier score,-0.0917 (-0.0974 to -0.0861),-57.1,<0.001
+8-year,LightGBM,Penalized LR,Brier score,-0.0001 (-0.0010 to 0.0007),-0.2,0.685
+8-year,LightGBM,RealMLP,Brier score,-0.0025 (-0.0033 to -0.0017),-3.4,<0.001
+8-year,LightGBM,GAT,Brier score,-0.1667 (-0.1723 to -0.1614),-70.7,<0.001
+8-year,LightGBM,Decision tree,Brier score,-0.0066 (-0.0079 to -0.0053),-8.7,<0.001
+8-year,LightGBM,Gaussian NB,Brier score,-0.0913 (-0.0971 to -0.0855),-56.9,<0.001
+8-year,Penalized LR,RealMLP,Brier score,-0.0023 (-0.0031 to -0.0016),-3.2,<0.001
+8-year,Penalized LR,GAT,Brier score,-0.1666 (-0.1721 to -0.1612),-70.6,<0.001
+8-year,Penalized LR,Decision tree,Brier score,-0.0064 (-0.0078 to -0.0050),-8.5,<0.001
+8-year,Penalized LR,Gaussian NB,Brier score,-0.0912 (-0.0968 to -0.0855),-56.8,<0.001
+8-year,RealMLP,GAT,Brier score,-0.1643 (-0.1697 to -0.1591),-69.6,<0.001
+8-year,RealMLP,Decision tree,Brier score,-0.0041 (-0.0055 to -0.0028),-5.4,<0.001
+8-year,RealMLP,Gaussian NB,Brier score,-0.0889 (-0.0947 to -0.0831),-55.4,<0.001
+8-year,GAT,Decision tree,Brier score,0.1602 (0.1548 to 0.1661),211.5,<0.001
+8-year,GAT,Gaussian NB,Brier score,0.0754 (0.0688 to 0.0825),47.0,<0.001
+8-year,Decision tree,Gaussian NB,Brier score,-0.0848 (-0.0905 to -0.0790),-52.8,<0.001

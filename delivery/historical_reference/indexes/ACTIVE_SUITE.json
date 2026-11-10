@@ -1,0 +1,25 @@
+{
+  "current_review_draft": "manuscript_bundle_v2_no_ci",
+  "status": "Revised Word ready; graphical CI only in Fig5 C/D",
+  "word_document": "E:\\yjx\\output\\manuscript_bundle_v2_no_ci\\HRS_主表与组图汇总_仅Fig5保留置信区间.docx",
+  "five_figure_directory": "E:\\yjx\\output\\manuscript_bundle_v2_no_ci\\figures",
+  "main_figure_count": 5,
+  "additional_reference_composites": 2,
+  "core_composites": 1,
+  "selected_component": "violin_box_overlay_v3",
+  "selected_component_position": "Figure 3G unchanged",
+  "figures_with_violin_constructions": [
+    "Figure 3"
+  ],
+  "heat_maps": false,
+  "upset_plots": false,
+  "overall_model_metrics": "Numerical tables, performance with CIs now Table 1",
+  "figure5": "Pre-extension A/B/E/F with approved C/D pointwise 95% CI bands, cobalt/vermilion alpha 0.24",
+  "previous_review_draft": "cell_story_rebuild_v7",
+  "shap_alternative_figures": 2,
+  "confidence_interval_policy": "Only Fig5 C/D graphical CI; numerical table CI preserved",
+  "core_figure": "E:\\yjx\\output\\manuscript_bundle_v2_no_ci\\figures\\core\\combined_story.png",
+  "reference_model_figure": "E:\\yjx\\output\\manuscript_bundle_v2_no_ci\\figures\\Figure_M_model.png",
+  "page_count": 39,
+  "previous_integrated_delivery": "manuscript_bundle_v1"
+}

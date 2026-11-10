@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "scientific_source_changes": 0,
+  "original_production_python_sources_compared": 27,
+  "numbered_tables_checked": 23,
+  "runtime_combinations": 32,
+  "S1_source_rows": 11,
+  "runtime_workbook_cached_values": "passed",
+  "pdf_checks": {
+    "tables/runtime/HRS_runtime.pdf": {
+      "pages": 1,
+      "required_numbers_and_labels": "passed",
+      "visual_review": "passed"
+    },
+    "tables/outcome_flow/Supplementary_Table_S1_English_status.pdf": {
+      "pages": 1,
+      "required_numbers_and_labels": "passed",
+      "visual_review": "passed"
+    }
+  },
+  "runtime_authoring_material": "Excluded from Git and archives; quarantined in ignored tmp after deletion commands were denied by automatic policy."
+}

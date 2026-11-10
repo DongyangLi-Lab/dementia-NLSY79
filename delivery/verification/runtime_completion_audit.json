@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "observed_at": "2026-11-10T02:55:48.078205-05:00",
+  "scheduler_observed_at": "2026-11-10T02:50:48-05:00",
+  "scheduler_evidence": "E:\\yjx\\revised\\artifacts\\unc\\guarded_l40s_8756544\\final-scheduler-evidence.txt",
+  "scheduler_evidence_sha256": "2019e3a0cfd9dc22b607fbd931eea19bc32f3c5737e7fe2ca216058de47ae9ce",
+  "array": 8756544,
+  "completed_task_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "all_exit_codes": "0:0",
+  "related_remote_queue_empty": true,
+  "local_active_workers": [],
+  "scope": "Current production queue completion and absence of local benchmark workers; historical cancelled diagnostics are retained as history."
+}

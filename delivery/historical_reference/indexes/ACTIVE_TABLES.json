@@ -1,0 +1,23 @@
+{
+  "main_document": "E:\\yjx\\output\\research_tables_main_ci_v3\\HRS_Main_Tables_with_95CI.docx",
+  "main_tables": 7,
+  "core_main_tables": 6,
+  "optional_main_tables": 1,
+  "pages": 16,
+  "performance_table": "Table 3",
+  "confidence_level": 0.95,
+  "supplement_document": "E:\\yjx\\output\\research_tables_main_supp_v2\\HRS_Supplementary_Tables.docx",
+  "figure_ci_plan": "E:\\yjx\\output\\research_tables_main_ci_v3\\图表置信区间安排.txt",
+  "figures_modified": false,
+  "combined_document": "E:\\yjx\\output\\manuscript_bundle_v1\\HRS_主表与组图完整汇总.docx",
+  "performance_table_in_combined": "Table 1",
+  "combined_table_order_original_ids": [
+    3,
+    1,
+    2,
+    4,
+    5,
+    6,
+    7
+  ]
+}
