@@ -1,31 +1,54 @@
 # Revised HRS dementia benchmark
 
-This worktree is based on branch `BASE` at `9d34fe46270862a7b867ab3b919bb6971714cd49`. The revised pipeline reads the baseline predictor exports and per-wave cognitive classifications in `data/preprocessed data/`, together with the local HRS 2022 Tracker. It derives labels again for 2000¨C2006, 2000¨C2008, 2010¨C2016, and 2010¨C2018.
+This branch contains the completed revised computation based on `BASE` commit `9d34fe46270862a7b867ab3b919bb6971714cd49`. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for inputs, environments, entry points and the distributed execution map.
+
+**Latest delivery:** [formatted tables and structured results](delivery/README.md). The runtime table and English-status S1 use matching black three-rule typography. The earlier English-status S1 is preserved as a historical reference; the current S1 uses final audited counts.
 
 | Directory | Responsibility |
 | --- | --- |
-| `model/` | Eight Part 1 model definitions, tuning grids, and device settings |
+| `model/` | Eight model definitions, tuning grids, and device settings |
 | `train/` | Cohort assembly, predictor-only imputation, validation tuning, and checkpoint writing |
-| `inference/` | Checkpoint replay on held-out data, verification, metrics, importance, and tabular sources |
-| `artifacts/` | New cohort ledgers, imputation caches, checkpoints, predictions, logs, and figure/table data |
+| `inference/` | Checkpoint replay, verification, metrics, importance, and tabular sources |
+| `cluster/` | Optional recorded local/UNC dispatch and verified receiving |
+| `artifacts/` | Local calculation outputs and frozen execution/verification scripts |
+| `tools/` | English-status S1 rendering, delivery verification and archive packaging |
+| `delivery/` | Final aggregate tables, runtime estimates, completion evidence and labelled historical presentations |
+| `packages/` | Local archives, ignored by Git; includes participant-level outputs |
 
-The primary outcome requires Tracker confirmation of survival at the final wave. Death codes 5/6 in any follow-up wave and documented death years earlier than the final wave override every cognitive observation. A documented incident case is positive if the participant is alive at the final wave. A non-case must have a dementia-free final assessment. The sensitivity analysis allows any dementia-free follow-up assessment for confirmed survivors without an observed case. `inference.death_audit` independently compares retained labels with Tracker death flags and death/interview months. When death and a completed final interview share a month, the month alone cannot establish ordering and the Tracker vital classification applies.
+## Scientific scope
 
-A stratified 60/20/20 split is made ten times per horizon and outcome. Each split fits one miceforest kernel on the 94 model inputs from training participants, with 20 iterations. The same kernel imputes validation and test. The final internal model is refitted on the concatenated imputed train and validation matrices. Temporal imputation and model fitting use the full 2000 development cohort. Validation AUPRC selects configurations and validation F1 selects thresholds. The 60 predictor groups are checked against the 94-column schema. Baseline dementia status, ID, and Y are outside the imputation input. The split is stratified on Y before imputation.
+The four windows are 2000â€“2006, 2000â€“2008, 2010â€“2016 and 2010â€“2018. Primary outcomes require confirmation of survival at the final wave. Death flags and death dates override earlier cognitive observations. An incident case must have observed dementia during follow-up and survive to the final wave. A non-case must be dementia-free at the final assessment. Unresolved outcomes, loss to follow-up and deaths are excluded. The sensitivity analysis retains death exclusion but allows any dementia-free follow-up assessment for confirmed survivors with no observed dementia.
 
-GPU 0 (RTX 5070 Ti) runs LightGBM via OpenCL and TabICL via CUDA. GPU 1 (RTX 3070 Ti) runs CatBoost, RealMLP, and GAT via CUDA. LR, GNB, DT, and miceforest use CPU. The four CPU preprocessing jobs run in parallel. Once all 44 caches pass cohort, split, predictor and hash checks, the CPU and GPU model workers start and read the same verified inputs. TabICL retains the Part 1 v1.1 checkpoint, ensemble grid, and automatic memory sizing. The GAT reuses the fixed reference graph's similarity block across query graphs.
+The 60 predictor groups yield 94 model inputs. ID, baseline dementia status and outcome Y are excluded from imputation. Each of ten stratified 60/20/20 development splits fits miceforest once on training predictors and applies that fitted imputer to validation and test. Internal final models refit on the already-imputed train and validation data; no second train-plus-validation imputer is fitted. Temporal imputation and model fitting use the full 2000 cohort; the 2010 cohort is reserved for evaluation.
 
-## Reproduce or resume
+The completed run includes **44 imputation caches, 32 model/outcome/horizon combinations, 352 saved fitted checkpoints, 160 missing-data comparison outputs, eight-model importance and 23 final numbered tables**. Formal TabICL KernelSHAP uses 500 participants, 800 coalitions and 10 background participants over 60 predictor groups. See [completion evidence](delivery/verification/completion_audit.json).
 
-Use the local `.venv-cu128` (Python 3.12, PyTorch 2.8.0 + CUDA 12.8, reused from PET_MIL). The local TabICL v1.1 `tabicl-classifier-v1.1-0506.ckpt` must be in the Hugging Face cache. On another machine, install a PyTorch build compatible with both GPUs and the packages listed in `requirements-revised.txt`.
+Actual hardware is recorded per run. GAT ran on both RTX 5070 Ti and UNC L40S across different combinations; CatBoost and RealMLP used RTX 3070 Ti. The runtime workbook preserves measured time and marks normalized columns as idealized estimates, not same-device measurements. The original strict cross-device TabICL check remains failed; final distributed SHAP passed separately recorded engineering acceptance checks. This is not a claim of strict numerical equivalence.
+
+## Reproduce or inspect
+
+Install the recorded dependencies and a compatible PyTorch/CUDA build. Obtain authorized HRS inputs and the TabICL v1.1 checkpoint separately. From the repository root:
 
 ```powershell
-$python = ".venv-cu128/Scripts/python.exe"
-& $python run_benchmark.py --tracker "E:/yjx/Part2/data/interim/hrs_official_2022/trk2022tr_r.dta"
-& $python run_table_sources.py
-& $python -m inference.death_audit
+python run_benchmark.py --tracker /path/to/trk2022tr_r.dta --prepare-only
+python run_benchmark.py --tracker /path/to/trk2022tr_r.dta
+python run_table_sources.py
 ```
 
-Use `run_benchmark.py --prepare-only` to run and verify preprocessing as a separate stage. The benchmark reuses checkpoints and caches only when their receipts match. Training workers require the shared `artifacts/prepared_inputs.json` receipt and reject changed cache files. If an existing run is active, inspect `artifacts/run_status.json`, `artifacts/source_status.json`, and the per-device logs. Start a resume only after the previous coordinator has exited. `run_table_sources.py` calculates the separate mean-imputation and complete-case retraining comparison for submitted Figure S2 and Table S12. The comparison uses the same split indices and restricts each subset to complete predictors for complete-case training and evaluation. The final source manifest is written after all required source files exist.
+The coordinator reproduces the recorded two-GPU lane plan. On another hardware layout, use the explicit module interfaces described in [HRS_REVISION.md](HRS_REVISION.md) and [REPRODUCIBILITY.md](REPRODUCIBILITY.md). Check `--help` before starting. Do not duplicate an active coordinator or bypass receipt failures. Completed checkpoints are reused only when their source receipts match.
 
-The tracked BASE results, figures and notebooks are historical. Use `artifacts/` for revised results. The submitted figure renderers and manuscript documents are outside this computation pass.
+For the saved delivery, no training is needed:
+
+```powershell
+python tools/build_outcome_flow_table.py
+python tools/prepare_delivery.py
+python tools/verify_delivery.py
+```
+
+Runtime rendering scripts and temporary assets are intentionally omitted at the user's request. Runtime outputs, their assumptions and original measured timing records are retained.
+
+## Historical outputs and data access
+
+The tracked BASE `results/`, `figures/`, notebooks and predictor dictionary retain historical provenance. The historical dictionary's missing-count/complete-case description is not the revised imputation protocol; use the description above and current predictor tables. Selected earlier Word/figure outputs are separated in `delivery/historical_reference/`; they have not been regenerated from the completed revised computation. In particular, the old 128-person SHAP figure is not the formal 500-person result. Manuscript, supplement, reviewer-response and full figure revisions remain a separate publication task.
+
+Raw HRS inputs, participant-level predictions, imputation caches and model checkpoints are not added to this public release. They remain in local result archives for authorized use. Obtain original data through [HRS](https://hrs.isr.umich.edu/).
