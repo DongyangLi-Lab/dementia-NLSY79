@@ -1,5 +1,9 @@
 # Revised calculation outputs
 
+## Post-completion retention update
+
+The user requested permanent cleanup after final verification. UNC scratch files, transfer packages, calibration/replay tensors, temporary logs and the old mixed archives have been removed from the current working tree. Final cohorts, predictions, importance/SHAP, comparison results and tables remain intact. Checkpoints and preprocessing caches are retained separately in `packages/model.zip`; outputs are in `packages/result.zip`. Compact saved audit reports describe the completed pre-cleanup run. The historical distributed details below do not imply that deleted input/control files can still be replayed.
+
 | Path | Contents |
 | --- | --- |
 | `cohorts/` | Four primary and four sensitivity cohorts, per-person label audit ledgers, input and output hashes |

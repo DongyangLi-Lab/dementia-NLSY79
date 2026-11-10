@@ -1,5 +1,9 @@
 # Completed revised analysis: code and execution map
 
+## Latest retention decision: outputs and models separated
+
+The user requested permanent deletion of local UNC working directories, diagnostic tensors, transfer bundles, temporary replay/control material and the former mixed archives after completion. Final predictions, 500-by-60 TabICL SHAP, importance tables, cohorts, 352 model checkpoints and 44 preprocessing caches remain intact. Use `packages/result.zip` for outputs and `packages/model.zip` for model/preprocessing files. The saved completion reports describe the successful audit before cleanup; deleted diagnostics can no longer be replayed. No experiment was rerun for cleanup. The distributed execution description below is historical provenance, not a set of currently available scratch files.
+
 ## Entry points and inputs
 
 The current pipeline is `model/` → `train/` → `inference/`. The root legacy notebooks, `results/` and `figures/` belong to BASE and are retained for historical reference. The current numerical results are in `delivery/tables/audited_sources/` and the local `artifacts/` tree.
@@ -25,7 +29,7 @@ Actual devices differed from the initial lane plan: LR/GNB/DT used CPU; CatBoost
 
 The UNC production worker and submission script are in `artifacts/unc/guarded_l40s_8756544/`. The matching dynamic-row cuBLASLt source, recorded build command and source/ABI evidence are in its `production_build/` subfolder (`try_split_rows`, not the older fixed-row `try_split` diagnostic). They were retrieved read-only from the original cluster; no rebuild or new GPU execution was performed for this release. The wrapper depends on the recorded CUDA/cuBLASLt ABI and frozen CPU-transformed inputs. The local private output archive preserves the exact compiled `.so`, inputs, controls and receipts. A newly compiled binary requires fresh controls; never change an expected hash merely to bypass a failed check. Frozen input paths identify this completed run, not a generic promise of portability.
 
-For the already verified result tree, the finalization sequence is:
+The completed run originally used the following finalization sequence. After cleanup these historical commands require deleted diagnostics and should not be rerun against the retained tree:
 
 ```powershell
 python artifacts/register_guarded_tabicl_shap.py
@@ -42,11 +46,10 @@ These commands validate and write results. For release inspection without rerunn
 python tools/build_outcome_flow_table.py
 python tools/prepare_delivery.py
 python tools/verify_delivery.py
-python tools/package_delivery.py
-python tools/package_outputs.py revised
-python tools/package_outputs.py history
+python tools/package_result_model.py result
+python tools/package_result_model.py model
 ```
 
 The S1 renderer needs `pdflatex`, `booktabs`, `tabularx`, `newtxtext` and `newtxmath`. Runtime tables are intentionally output-only, per the delivery request; no runtime rendering code or temporary material is included. The original runtime measurements and audited S20 remain reproducible through `inference/evaluation.py` and `inference/supplementary_tables.py`.
 
-Historical document/figure builders and their existing inputs are preserved in the local historical archive, with their original relative layout. They may refer to local paths and older cohorts; they are not the current revised manuscript renderer.
+Selected historical presentation outputs are included in result.zip and labelled historical. Their original source directories outside revised/ remain in the project, but the former historical ZIP is removed. They are not the current revised manuscript renderer.

@@ -18,5 +18,6 @@
       "visual_review": "passed"
     }
   },
-  "runtime_authoring_material": "Excluded from Git and archives; quarantined in ignored tmp after deletion commands were denied by automatic policy."
+  "runtime_authoring_material": "Permanently removed after explicit user request; absent from output archives and current working tree.",
+  "post_completion_cleanup": "UNC diagnostics and mixed archives removed; final results and model/preprocessing files retained."
 }

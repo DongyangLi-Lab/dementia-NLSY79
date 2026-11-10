@@ -227,8 +227,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4281,
-      "sha256": "6c134c31bfd1a0e51e65a4d900a18a6bcb42f3df5ee1ce005a1e52d366a9f35d"
+      "bytes": 4462,
+      "sha256": "83de013faa56f06a9f8499b4052f42dd4625ecc8958fc27b5ee82608dea68a18"
     },
     {
       "path": "tables/audited_sources/calibration_curves.csv",
@@ -567,8 +567,8 @@
     },
     {
       "path": "verification/release_checks.json",
-      "bytes": 757,
-      "sha256": "7993216ff13d3f24e1efb17e1d4544354ed4248ad62ee1a21d55cd26009c8824"
+      "bytes": 875,
+      "sha256": "58225b8cc1aecbc67bdb040d86ace7baa9480b3e83a2b011c0f2eda279ca3013"
     },
     {
       "path": "verification/runtime_completion_audit.json",

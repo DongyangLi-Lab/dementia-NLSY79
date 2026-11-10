@@ -24,7 +24,7 @@ RTX 5070 Ti is the reference for two separate idealized estimates: source/refere
 
 ### Source and history boundaries
 
-`MANIFEST.json` records SHA-256 values for delivered files. Numerical source files are copied without changing the audited originals. The saved strict cross-device TabICL check remains failed; accepted production used the recorded per-job engineering controls. Original results, device metadata and reconciliation evidence are retained.
+`MANIFEST.json` records SHA-256 values for delivered files. Numerical source files are copied without changing the audited originals. The saved strict cross-device TabICL check remains failed; accepted production used the recorded per-job engineering controls. Final results, device metadata and saved audit reports are retained. At the user's subsequent cleanup request, UNC working files, diagnostic tensors, transfer archives and replay intermediates are removed; the old full diagnostic replay is no longer available.
 
 Earlier selected figures/Word documents still contain historical analyses, including the 128-person SHAP preview; they must not be presented as figures regenerated from the final 500-person result. Historical archives also contain rejected designs, which remain historical only. The current user choices and CI restrictions are recorded in the historical indexes.
 
@@ -32,8 +32,7 @@ Earlier selected figures/Word documents still contain historical analyses, inclu
 
 The ignored `packages/` folder contains:
 
-- `HRS_code_and_delivery_20261110.zip`: necessary code, environment requirements, final aggregate tables, formatted runtime/S1, selected historical presentation references and file checksums.
-- `HRS_revised_private_outputs_20261110.zip`: full saved revised calculation outputs, preserving the `artifacts/` hierarchy, including checkpoints, imputation, predictions, SHAP and execution evidence. This archive contains HRS-derived individual data and is not uploaded to the public repository.
-- `HRS_historical_outputs_20261110.zip`: complete earlier `output/` archive under `historical_outputs_NOT_CURRENT/`, retaining source code, intermediate artifacts and superseded designs.
+- `result.zip`: output-only package with final tables, formatted runtime and English-status S1, predictions, importance/SHAP, missing-data comparisons and cohort outputs. Selected historical figures/documents and the earlier English-status S1 are clearly separated. No model checkpoints, runtime rendering scripts or UNC working files are included.
+- `model.zip`: 352 fitted model checkpoints, configuration/tuning records and receipts, plus 44 preprocessing caches. No diagnostic tensors or cluster transfer packages are included.
 
-Each archive has a per-file SHA-256 manifest and a CRC-tested verification sidecar. Raw HRS input files and Python environments are not outputs and are not redistributed. Obtain inputs through the project's existing HRS access process.
+Each archive has a per-file SHA-256 manifest and a CRC-tested verification sidecar. The former three mixed archives are superseded and removed. Code remains in the repository. Both new archives contain HRS-derived individual data or models and remain local rather than being uploaded to the public repository. Raw HRS input files and Python environments are not redistributed.

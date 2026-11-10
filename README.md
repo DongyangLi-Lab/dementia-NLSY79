@@ -2,7 +2,7 @@
 
 This branch contains the completed revised computation based on `BASE` commit `9d34fe46270862a7b867ab3b919bb6971714cd49`. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for inputs, environments, entry points and the distributed execution map.
 
-**Latest delivery:** [formatted tables and structured results](delivery/README.md). The runtime table and English-status S1 use matching black three-rule typography. The earlier English-status S1 is preserved as a historical reference; the current S1 uses final audited counts.
+**Latest delivery:** [formatted tables and structured results](delivery/README.md). Local output archives are now separated into `packages/result.zip` and `packages/model.zip`; the former mixed archives and UNC working/diagnostic materials were removed at the user's request. The runtime table and English-status S1 use matching black three-rule typography. The earlier English-status S1 is preserved as a historical reference; the current S1 uses final audited counts.
 
 | Directory | Responsibility |
 | --- | --- |
@@ -51,4 +51,4 @@ Runtime rendering scripts and temporary assets are intentionally omitted at the 
 
 The tracked BASE `results/`, `figures/`, notebooks and predictor dictionary retain historical provenance. The historical dictionary's missing-count/complete-case description is not the revised imputation protocol; use the description above and current predictor tables. Selected earlier Word/figure outputs are separated in `delivery/historical_reference/`; they have not been regenerated from the completed revised computation. In particular, the old 128-person SHAP figure is not the formal 500-person result. Manuscript, supplement, reviewer-response and full figure revisions remain a separate publication task.
 
-Raw HRS inputs, participant-level predictions, imputation caches and model checkpoints are not added to this public release. They remain in local result archives for authorized use. Obtain original data through [HRS](https://hrs.isr.umich.edu/).
+Raw HRS inputs, participant-level predictions, imputation caches and model checkpoints are not added to this public release. Predictions are in local `result.zip`; checkpoints and preprocessing caches are in `model.zip`. Saved verification reports describe the completed run before cleanup; deleting diagnostic tensors means the original full cross-device replay cannot be repeated from the retained files alone. Obtain original data through [HRS](https://hrs.isr.umich.edu/).

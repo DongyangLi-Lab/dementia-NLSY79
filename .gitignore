@@ -16,6 +16,7 @@ artifacts/*
 # Local packages, temporary authoring material and superseded runtime previews
 packages/
 tmp/
+cleanup/
 outputs/
 *.inspect.ndjson
 delivery/**/__pycache__/
