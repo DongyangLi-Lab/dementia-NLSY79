@@ -4,6 +4,8 @@ This branch contains the completed revised computation based on `BASE` commit `9
 
 **Latest delivery:** [formatted tables and structured results](delivery/README.md). Local output archives are now separated into `packages/result.zip` and `packages/model.zip`; the former mixed archives and UNC working/diagnostic materials were removed at the user's request. The runtime table and English-status S1 use matching black three-rule typography. The earlier English-status S1 is preserved as a historical reference; the current S1 uses final audited counts.
 
+**Result-only plotting:** `python run_figures.py --result packages/result.zip --output outputs/result_figures` rebuilds the current five main figures, three supporting figures and all 23 numbered tables without checkpoints or training. `make_figures.py` is now an alias for this entry point. See [FIGURES.md](FIGURES.md) for input validation, stage selection, the historical figures that require additional sources, and the exact completion boundary.
+
 | Directory | Responsibility |
 | --- | --- |
 | `model/` | Eight model definitions, tuning grids, and device settings |

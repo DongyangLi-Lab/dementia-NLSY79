@@ -23,8 +23,15 @@ def selected(scope):
     if scope=='result':
         tree(ROOT/'delivery/tables','tables')
         tree(ROOT/'delivery/historical_reference','historical_figures_and_documents')
-        for folder in ['predictions','importance','imputation_comparison','cohorts']:
+        for folder in ['predictions','importance','imputation_comparison','cohorts','figure_inputs']:
             tree(ROOT/'artifacts'/folder,folder)
+        rendered=ROOT/'outputs/result_figures'
+        report=rendered/'run_report.json'
+        if report.exists():
+            status=json.loads(report.read_text(encoding='utf-8'))
+            required={'tables','fig1','fig2','fig3','fig4','fig5','supplement'}
+            if status.get('status')=='complete' and required.issubset(status.get('requested_stages',[])):
+                tree(rendered,'figures')
         for name in ['completion_audit.json','source_status.json','verification.json','cohort_verification.json',
                      'comparison_sources_audit.json','final_evaluation_sources_audit.json']:
             entries.append((ROOT/'artifacts'/name,f'result/verification/{name}'))
@@ -41,6 +48,9 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('scope',choices=['result','model'])
     args=parser.parse_args();scope=args.scope
+    if scope=='result':
+        from prepare_figure_inputs import prepare
+        prepare()
     entries=selected(scope);dest=ROOT/'packages'/f'{scope}.zip'
     dest.parent.mkdir(exist_ok=True)
     if scope=='model':
@@ -58,6 +68,9 @@ def main():
         note=(
             'RESULTS ONLY\nTables include the final three-rule runtime estimates and English-status S1.\n'
             'Predictions, importance/SHAP, imputation comparisons and cohort outputs are retained.\n'
+            'figure_inputs contains lightweight saved validation timing and threshold selections, not checkpoints.\n'
+            'Rebuild current figures/tables with repository code: python run_figures.py --result result.zip --output generated\n'
+            'figures/ (when present) contains the verified result-only regenerated suite and its explicit scope report.\n'
             'historical_figures_and_documents contains earlier presentation outputs, not regenerated revised figures.\n'
             'No model checkpoints, UNC working directories, transfer archives, diagnostic tensors or code are included.\n'
             'Saved verification reports describe the completed pre-cleanup run. UNC diagnostics were subsequently deleted at user request; their replay is no longer available.\n'
@@ -75,6 +88,13 @@ def main():
         assert len(z.infolist())==len(records)+2
     report={'archive':dest.name,'files':len(records),'bytes':dest.stat().st_size,'sha256':digest(dest),'zip_crc':'passed'}
     (dest.with_suffix('.verification.json')).write_text(json.dumps(report,indent=2),encoding='utf-8')
+    index_path=dest.parent/'INDEX.json'
+    index=json.loads(index_path.read_text(encoding='utf-8')) if index_path.exists() else {}
+    previous={entry['archive']:entry for entry in index.get('archives',[])}
+    previous[dest.name]=report
+    index['archives']=[previous[name] for name in ['result.zip','model.zip'] if name in previous]
+    index['figure_entry']='python run_figures.py --result packages/result.zip --output outputs/result_figures'
+    index_path.write_text(json.dumps(index,indent=2,ensure_ascii=False),encoding='utf-8')
     print(json.dumps(report),flush=True)
 
 if __name__=='__main__':main()

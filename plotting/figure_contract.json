@@ -1,0 +1,22 @@
+{
+  "backend": "Python / Matplotlib; Python PDF and SVG composition for Fig3",
+  "adaptation": "Structural adaptation of the approved five-figure suite; original files remain historical.",
+  "data_contract": {
+    "cohort": "result/cohorts/*_final.csv: one row per hhidpn; final-wave survivors only; y=0/1",
+    "audit": "result/cohorts/*_audit.csv: per-wave dementia observations and vital-state exclusions",
+    "predictors": "94 encoded inputs grouped into 60 predictors, no hhidpn/demcls/y in missingness inputs",
+    "predictions": "Saved revised prediction probabilities; no prediction or model training at render time",
+    "explanations": "60 predictors per model; formal 500-person TabICL KernelSHAP matrix",
+    "fit_diagnostics": "32 saved validation-grid / selection files exported as figure_inputs; no checkpoints"
+  },
+  "figures": {
+    "Fig1": {"question": "How are observed dementia paths and first observations distributed among eligible survivors?", "archetype": "asymmetric mixed-modality figure", "panels": "A/B observed paths; C/D first observation age; E full pattern frequencies; F age concentration", "exclusion_flow": "Four-window exclusions are shown separately in Supplement_outcome_flow."},
+    "Fig2": {"question": "How does interview coverage relate to predictor availability and observed distributions?", "archetype": "asymmetric mixed-modality figure", "panels": "A joint matrix; B missingness; C visits; D ADL/outcome composition; E all 60 grouped predictors"},
+    "Fig3": {"question": "How do age, body measurements and education distributions differ by map-use state?", "archetype": "asymmetric mixed-modality figure", "panels": "A-C pooled-bandwidth KDE surfaces; D-F complete coordinate observations; G selected v3 layout refreshed with revised data", "missingness": "Record all missing coordinate/education/map-state exclusions; no aesthetic downsampling."},
+    "Fig4": {"question": "Which predictor rankings persist across the eight fitted models and explanation methods?", "archetype": "quantitative grid", "panels": "A all 60 rank profiles; B rank dispersion; C 480 paired ranks; D importance point estimates", "caution": "SHAP output scales differ by model; no cross-model magnitude or causal claim."},
+    "Fig5": {"question": "How do revised predictions calibrate and differ across fixed decision thresholds?", "archetype": "quantitative grid", "panels": "A/B saved calibration residuals; C/D paired net benefit; E validation fit durations; F selected thresholds", "uncertainty": "Only C/D: 2,000 shared household-cluster bootstrap draws; pointwise 95% intervals; fixed fitted models; no simultaneous coverage or training variability."}
+  },
+  "export": "Editable PDF/SVG, default 300-dpi PNG or --dpi 600, >=5 pt glyph floor, rendered comparable-panel alignment and PDF collision audit.",
+  "style": "Purple/wine/ochre baseline; approved blue/orange/violet Fig2; cobalt/vermilion Fig5 C/D bands at alpha .24; no heatmap, UpSet or additional violin figure.",
+  "prohibited": "No historical cohort fallback, model pickle loading, synthetic prediction/SHAP values, or runtime-estimate re-authoring."
+}
