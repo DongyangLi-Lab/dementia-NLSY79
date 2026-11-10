@@ -12,3 +12,10 @@ REVISION_LOG.md
 artifacts/*
 !artifacts/README.md
 .venv-cu128/
+
+# Local packages, temporary authoring material and superseded runtime previews
+packages/
+tmp/
+outputs/
+*.inspect.ndjson
+delivery/**/__pycache__/

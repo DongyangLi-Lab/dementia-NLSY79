@@ -176,10 +176,19 @@ def t16_selection():
 
 
 def t17_runtime():
-    d = ordered(read('runtime.csv'))
-    return pd.DataFrame({'Horizon': d['horizon'].map(lambda h: f'{h}-year'), 'Model': d['model'].map(NAMES),
-                         'Fits': d['fits'], 'Median seconds per fit': d['median_seconds_per_fit'].map(lambda v: f'{v:.2f}'),
-                         'Total minutes': d['total_minutes'].map(lambda v: f'{v:.1f}')})
+    d = ordered(pd.concat([read("runtime.csv"), read("sensitivity_any_runtime.csv")], ignore_index=True))
+    return pd.DataFrame({
+        "Outcome": d["outcome"].map({"final": "Primary", "any": "Sensitivity"}),
+        "Horizon": d["horizon"].map(lambda h: f"{h}-year"),
+        "Model": d["model"].map(NAMES),
+        "Site": d["site"],
+        "Hardware": d["gpu"].fillna("").where(d["device"].ne("CPU"), "CPU"),
+        "Backend": d["device"],
+        "Fits": d["fits"],
+        "Median seconds per fit": d["median_seconds_per_fit"].map(lambda v: f"{v:.2f}"),
+        "Measured fitting minutes": d["total_minutes"].map(lambda v: f"{v:.2f}"),
+        "Measured prediction minutes": d["total_prediction_minutes"].map(lambda v: f"{v:.2f}"),
+    })
 
 
 def t18_shap():

@@ -279,12 +279,26 @@ def runtime_table(horizon):
         d = job_dir("checkpoints", horizon, OUTCOME, m)
         grid = pd.read_csv(os.path.join(d, 'validation_grid.csv'))
         met = load(horizon, m, 'metrics').drop_duplicates(['setting', 'repeat'])
-        rows.append({'horizon': horizon, 'model': m, 'fits': len(grid) + len(met),
-                     'median_seconds_per_fit': float(np.median(np.r_[grid['fit_seconds'], met['fit_seconds']])),
-                     'total_minutes': (grid['fit_seconds'].sum() + met['fit_seconds'].sum()) / 60,
-                     'total_prediction_minutes': (grid['prediction_seconds'].sum() + met['prediction_seconds'].sum()) / 60,
-                     'device': load(horizon, m, 'selection')['device']['backend'],
-                     'gpu': load(horizon, m, 'selection')['device'].get('gpu_name', '')})
+        internal = met[met["setting"].eq("internal")]
+        temporal = met[met["setting"].eq("temporal")]
+        device = load(horizon, m, "selection")["device"]
+        unc = ARTIFACTS / "unc" / f"received-benchmark-{OUTCOME}-h{horizon}-{m}.json"
+        rows.append({
+            "outcome": OUTCOME, "horizon": horizon, "model": m,
+            "fits": len(grid) + len(met),
+            "validation_fits": len(grid), "internal_refits": len(internal), "temporal_refits": len(temporal),
+            "median_seconds_per_fit": float(np.median(np.r_[grid["fit_seconds"], met["fit_seconds"]])),
+            "validation_fit_seconds": grid["fit_seconds"].sum(),
+            "validation_prediction_seconds": grid["prediction_seconds"].sum(),
+            "internal_refit_seconds": internal["fit_seconds"].sum(),
+            "internal_prediction_seconds": internal["prediction_seconds"].sum(),
+            "temporal_fit_seconds": temporal["fit_seconds"].sum(),
+            "temporal_prediction_seconds": temporal["prediction_seconds"].sum(),
+            "total_minutes": (grid["fit_seconds"].sum() + met["fit_seconds"].sum()) / 60,
+            "total_prediction_minutes": (grid["prediction_seconds"].sum() + met["prediction_seconds"].sum()) / 60,
+            "site": "UNC" if unc.is_file() else "local",
+            "device": device["backend"], "gpu": device.get("gpu_name", ""),
+        })
     return pd.DataFrame(rows)
 
 

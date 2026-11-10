@@ -5,3 +5,11 @@ data/** filter=lfs diff=lfs merge=lfs -text
 *.sav filter=lfs diff=lfs merge=lfs -text
 *.rda filter=lfs diff=lfs merge=lfs -text
 *.parquet filter=lfs diff=lfs merge=lfs -text
+
+# Small publication tables should be directly readable on GitHub.
+delivery/**/*.csv -filter -diff -merge text eol=lf
+# Frozen scientific source hashes must survive Windows/Linux checkouts.
+*.py -text
+*.cc -text
+*.cu -text
+*.slurm -text
