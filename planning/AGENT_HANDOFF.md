@@ -137,3 +137,8 @@ Produce a sample-flow table, baseline/missingness table, direct-transfer table, 
 ## Copyable continuation instruction
 
 > Work from this branch root. Read planning/README.md, planning/NEXT_PHASE_GUIDE.md, planning/CODE_ADAPTATION.md, and this handoff. Locate the two frozen archives without editing them. Validate the data and run tests. Run the engineering pilot, verify persisted pipelines and absence of test-outcome scoring, then execute the prespecified full source, transfer, and downstream training stages. Preserve household folds and immutable run manifests. Complete planned prediction files before final evaluation. Report the actual locked-test comparisons and saved artifact paths, with the education provenance limitation. Implement any additional cohort or trajectory extension as a separately versioned, validated analysis; never silently change the primary sample or use held-out outcomes for model selection.
+
+
+## Survival rule update - 2026-11-16
+
+See [SURVIVAL_POLICY.md](SURVIVAL_POLICY.md) before rebuilding cohorts or fitting models. The pair-specific death-first rule now applies to primary and sensitivity HRS cohorts. All 12 existing HRS analysis tables and the model-ready export pass the Tracker audit; no rows or frozen archive members changed. Stage 02 construction and model data loading require the checksum-bound survival certificate. The observed 27-point target and feature lists are unchanged. No new training or locked-test evaluation was performed.

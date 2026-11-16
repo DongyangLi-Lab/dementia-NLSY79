@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-16",
+  "status": "pass",
+  "engineering_tests_passed": 15,
+  "harmonized_local_files_byte_identical_to_archive": 32,
+  "rebuilt_stage2_members_byte_identical": 4,
+  "daily_use_csv_payloads_match_frozen_stage2": true,
+  "frozen_archive_sha256": [
+    "639e5985a3f72ec1c982f1ac6208fb192bbae64c655141a73eae74dff06a6058",
+    "c9d7c62bc284b56d49982e1ebba151b621501da6b2cb78e531c5720ec5d57f20"
+  ],
+  "candidate_rows": 61286,
+  "candidate_survival_reasons": {
+    "eligible": 61286
+  },
+  "previously_eligible_pairs_newly_excluded": {
+    "pair_strict27": 0,
+    "pair_baseline3": 0,
+    "pair_official27": 0
+  },
+  "new_model_training": false,
+  "locked_test_evaluation": false,
+  "unc_updated": false
+}

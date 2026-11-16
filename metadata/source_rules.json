@@ -3957,5 +3957,12 @@
     "nlsy_household_fold5.csv": "6c55db261d8d8a8ee0eccef656708553044b132a08211d58279410429fdc2582",
     "nlsy_lifecourse_extensions.csv.gz": "2bec7b873606a20c1c016afc023df26e9a65d78477f8b74a1f7fb6b4a889df1c",
     "nlsy_outcomes_and_sample_flags.csv": "26fd9e9f69cdc9da1e2a9698e1eb37de210d046f7b8fc26563cbece6b85d86d4"
+  },
+  "hrs_survival_eligibility": {
+    "policy": "hrs_pair_endpoint_survival_v1",
+    "certificate": "metadata/survival_audit.json",
+    "documentation": "planning/SURVIVAL_POLICY.md",
+    "use": "Eligibility only; never a predictor or binary outcome recoding",
+    "scope": "Primary and sensitivity HRS pairs; NLSY mortality not independently audited"
   }
 }

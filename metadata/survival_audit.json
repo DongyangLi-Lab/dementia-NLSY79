@@ -1,0 +1,287 @@
+{
+  "policy": "hrs_pair_endpoint_survival_v1",
+  "status": "pass",
+  "tracker_sha256": "69b49e3511d7005b17f6534538649afe70494e661ffcf4db493d42adce690a9a",
+  "stage1_archive_sha256": "639e5985a3f72ec1c982f1ac6208fb192bbae64c655141a73eae74dff06a6058",
+  "stage2_archive_sha256": "c9d7c62bc284b56d49982e1ebba151b621501da6b2cb78e531c5720ec5d57f20",
+  "rule": "Require endpoint ALIVE=1; exclude any death flag 5/6 within the pair window or death known before its endpoint/interview. Retain eligible earlier pairs despite later death.",
+  "scope": "All six HRS analysis branches, all-pair and first-pair tables, including official27 sensitivity. NLSY79 unchanged; no independent NLSY mortality registry audit.",
+  "branches": [
+    {
+      "table": "hrs_analysis_allpairs_baseline3_matched_age_actual4_16.csv.gz",
+      "csv_sha256": "46ee2b9844b184493ef6f5d62588ccc255def6b5d88104e6933251182251b19b",
+      "rows": 52342,
+      "people": 8342,
+      "retained": 52342,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 52342
+      },
+      "endpoint_wave_counts": {
+        "2008": 1063,
+        "2010": 3782,
+        "2012": 5150,
+        "2014": 6215,
+        "2016": 10068,
+        "2018": 8916,
+        "2020": 8761,
+        "2022": 8387
+      }
+    },
+    {
+      "table": "hrs_analysis_allpairs_baseline3_matched_age_actual4_8.csv.gz",
+      "csv_sha256": "f4d9a18e99e7d312c1e0af650f19d95d841cdef85b361d04ff978c505e351fec",
+      "rows": 27440,
+      "people": 8194,
+      "retained": 27440,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 27440
+      },
+      "endpoint_wave_counts": {
+        "2008": 1063,
+        "2010": 3782,
+        "2012": 3982,
+        "2014": 3317,
+        "2016": 5537,
+        "2018": 4493,
+        "2020": 2845,
+        "2022": 2421
+      }
+    },
+    {
+      "table": "hrs_analysis_allpairs_official27_sensitivity_matched_age_actual4_16.csv.gz",
+      "csv_sha256": "f8cca5c4a43622942d3735e2f577a6b6a1c1e9aa8c29435cba237d95e38f1385",
+      "rows": 58676,
+      "people": 8608,
+      "retained": 58676,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 58676
+      },
+      "endpoint_wave_counts": {
+        "2008": 1113,
+        "2010": 3978,
+        "2012": 5421,
+        "2014": 6509,
+        "2016": 10562,
+        "2018": 10787,
+        "2020": 10876,
+        "2022": 9430
+      }
+    },
+    {
+      "table": "hrs_analysis_allpairs_strict27_matched_age_actual4_16.csv.gz",
+      "csv_sha256": "07b4aa208e098b92afff79cc2124d3bed064535ecf419155857c9ab73e73985c",
+      "rows": 52023,
+      "people": 8299,
+      "retained": 52023,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 52023
+      },
+      "endpoint_wave_counts": {
+        "2008": 1059,
+        "2010": 3770,
+        "2012": 5134,
+        "2014": 6192,
+        "2016": 10001,
+        "2018": 8856,
+        "2020": 8701,
+        "2022": 8310
+      }
+    },
+    {
+      "table": "hrs_analysis_allpairs_strict27_matched_age_actual4_8.csv.gz",
+      "csv_sha256": "d4e3739bbc2a808463437290e2f684c7ca744d388ab56f1b5d0c66bb6024d44d",
+      "rows": 27247,
+      "people": 8152,
+      "retained": 27247,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 27247
+      },
+      "endpoint_wave_counts": {
+        "2008": 1059,
+        "2010": 3770,
+        "2012": 3970,
+        "2014": 3304,
+        "2016": 5486,
+        "2018": 4451,
+        "2020": 2817,
+        "2022": 2390
+      }
+    },
+    {
+      "table": "hrs_analysis_allpairs_strict27_matched_age_nominal6.csv.gz",
+      "csv_sha256": "b610e93d0dc9ef4dfa1dd271345d4b13989a6f03bed0fdcba898d4942ef21bb0",
+      "rows": 13333,
+      "people": 7608,
+      "retained": 13333,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 13333
+      },
+      "endpoint_wave_counts": {
+        "2010": 2551,
+        "2012": 1777,
+        "2014": 1127,
+        "2016": 3415,
+        "2018": 1855,
+        "2020": 1110,
+        "2022": 1498
+      }
+    },
+    {
+      "table": "hrs_analysis_baseline3_matched_age_actual4_16.csv.gz",
+      "csv_sha256": "2c85cf6534f9bdb6fbe60f6aef8ef379d128fb07e6e022bea7b9c178250b74bf",
+      "rows": 8342,
+      "people": 8342,
+      "retained": 8342,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 8342
+      },
+      "endpoint_wave_counts": {
+        "2008": 1063,
+        "2010": 1778,
+        "2012": 299,
+        "2014": 945,
+        "2016": 2518,
+        "2018": 184,
+        "2020": 685,
+        "2022": 870
+      }
+    },
+    {
+      "table": "hrs_analysis_baseline3_matched_age_actual4_8.csv.gz",
+      "csv_sha256": "dee0058eb4bdcca5e30fe7f42fa612fe8233c5168b3dda2a5a84542e49285c22",
+      "rows": 8194,
+      "people": 8194,
+      "retained": 8194,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 8194
+      },
+      "endpoint_wave_counts": {
+        "2008": 1063,
+        "2010": 1778,
+        "2012": 269,
+        "2014": 916,
+        "2016": 2506,
+        "2018": 169,
+        "2020": 643,
+        "2022": 850
+      }
+    },
+    {
+      "table": "hrs_analysis_official27_sensitivity_matched_age_actual4_16.csv.gz",
+      "csv_sha256": "a0eb5bc2eb13a107fef634972afdd319020a336073f48c4a6c0f88e8c530fb89",
+      "rows": 8608,
+      "people": 8608,
+      "retained": 8608,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 8608
+      },
+      "endpoint_wave_counts": {
+        "2008": 1113,
+        "2010": 1835,
+        "2012": 263,
+        "2014": 973,
+        "2016": 2573,
+        "2018": 170,
+        "2020": 757,
+        "2022": 924
+      }
+    },
+    {
+      "table": "hrs_analysis_strict27_matched_age_actual4_16.csv.gz",
+      "csv_sha256": "33f502197682a3fa5b49ab4e923dc05560988b57a181ff79a4601fd1b58f79af",
+      "rows": 8299,
+      "people": 8299,
+      "retained": 8299,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 8299
+      },
+      "endpoint_wave_counts": {
+        "2008": 1059,
+        "2010": 1776,
+        "2012": 300,
+        "2014": 942,
+        "2016": 2499,
+        "2018": 188,
+        "2020": 680,
+        "2022": 855
+      }
+    },
+    {
+      "table": "hrs_analysis_strict27_matched_age_actual4_8.csv.gz",
+      "csv_sha256": "13f4b83d7d5f61b14262ba75cecc0c4394fe3c8a2c29d5ccdc13ce260581c0ac",
+      "rows": 8152,
+      "people": 8152,
+      "retained": 8152,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 8152
+      },
+      "endpoint_wave_counts": {
+        "2008": 1059,
+        "2010": 1776,
+        "2012": 270,
+        "2014": 914,
+        "2016": 2487,
+        "2018": 173,
+        "2020": 638,
+        "2022": 835
+      }
+    },
+    {
+      "table": "hrs_analysis_strict27_matched_age_nominal6.csv.gz",
+      "csv_sha256": "ce4580c9fd819c8bb87215f09e1cba9dee2f185a6bd382c0e9a89826a7b6cc6b",
+      "rows": 7608,
+      "people": 7608,
+      "retained": 7608,
+      "excluded": 0,
+      "reasons": {
+        "eligible": 7608
+      },
+      "endpoint_wave_counts": {
+        "2010": 2551,
+        "2012": 319,
+        "2014": 164,
+        "2016": 3004,
+        "2018": 270,
+        "2020": 122,
+        "2022": 1178
+      }
+    }
+  ],
+  "stage2_hrs_csv_sha256": "5ca7d2013e9d657020382a69571d6ff6db3aac85d67f01dfd7938a6463623e8e",
+  "stage2": {
+    "rows": 52023,
+    "people": 8299,
+    "retained": 52023,
+    "excluded": 0,
+    "reasons": {
+      "eligible": 52023
+    },
+    "endpoint_wave_counts": {
+      "2008": 1059,
+      "2010": 3770,
+      "2012": 5134,
+      "2014": 6192,
+      "2016": 10001,
+      "2018": 8856,
+      "2020": 8701,
+      "2022": 8310
+    }
+  },
+  "nlsy79": {
+    "rows": 2305,
+    "csv_sha256": "c90ca4abdcf4c495b870cd66bdfc8fa4cee2f3bffa696d84a4cc7c7bf74757bf",
+    "observed_outcomes": 2305,
+    "independent_mortality_audit": false
+  }
+}

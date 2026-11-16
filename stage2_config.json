@@ -372,5 +372,10 @@
       }
     },
     "version": "model_ready_cohort_pairs_v1"
+  },
+  "survival_policy": {
+    "version": "hrs_pair_endpoint_survival_v1",
+    "certificate": "metadata/survival_audit.json",
+    "certificate_sha256": "bed71a5ae34088b70e038ba7606b94ede68269a7e0eafdfabdecb94d64386568"
   }
 }

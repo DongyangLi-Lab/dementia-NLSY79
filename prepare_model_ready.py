@@ -10,6 +10,8 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 from zipfile import ZIP_DEFLATED, ZipFile
 
+from part2_models.survival import verify_certificate
+
 
 HERE = Path(__file__).resolve().parent
 TABLES = 'data/processed/hrs_complete_v3/'
@@ -63,12 +65,16 @@ def write_table(archive, name, columns, rows, expected_hash):
     if hashlib.sha256(payload).hexdigest() != expected_hash:
         raise ValueError(f'Generated CSV differs from the validated export: {name}')
     compressed = gzip.compress(payload, compresslevel=9, mtime=0)
+    # Python 3.11/3.12 may emit zlib's platform byte; the frozen format uses
+    # the portable "unknown OS" marker, as Python 3.9 and 3.13+ do.
+    compressed = compressed[:9] + b'\xff' + compressed[10:]
     archive.writestr(name, compressed)
     return hashlib.sha256(compressed).hexdigest()
 
 
 def build(source, destination):
     spec = json.loads((HERE / 'stage2_config.json').read_text(encoding='utf-8'))
+    verify_certificate(spec, HERE, spec['output_csv_sha256']['HRS.csv.gz'])
     hashes = spec['input_sha256']
     with ZipFile(source) as archive:
         hrs_name = 'hrs_analysis_allpairs_' + BRANCH

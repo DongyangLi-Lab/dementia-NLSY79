@@ -47,3 +47,8 @@ The endpoint prediction minus baseline (`endpoint_delta`) is also exported. It d
 ## Boundaries
 
 Both distributed ZIP archives remain byte-for-byte unchanged. Unified metadata lives in the repository and refers to those fixed payloads. The project contains source code and aggregate metadata; participant tables and newly fitted artifacts remain in the designated local/cluster data and run directories. Full experiments have not been run as part of this code delivery.
+
+
+## Survival rule update - 2026-11-16
+
+See [SURVIVAL_POLICY.md](SURVIVAL_POLICY.md) before rebuilding cohorts or fitting models. The pair-specific death-first rule now applies to primary and sensitivity HRS cohorts. All 12 existing HRS analysis tables and the model-ready export pass the Tracker audit; no rows or frozen archive members changed. Stage 02 construction and model data loading require the checksum-bound survival certificate. The observed 27-point target and feature lists are unchanged. No new training or locked-test evaluation was performed.

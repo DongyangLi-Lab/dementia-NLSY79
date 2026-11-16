@@ -9,6 +9,8 @@ from zipfile import ZipFile
 import numpy as np
 import pandas as pd
 
+from .survival import verify_certificate
+
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = 'outcome_cognition27'
 
@@ -31,6 +33,8 @@ def load_data(path):
             raw = gzip.decompress(archive.read(name))
             require(hashlib.sha256(raw).hexdigest() == specification['output_csv_sha256'][name],
                     'Frozen table checksum mismatch: ' + name)
+            if cohort == 'HRS':
+                verify_certificate(specification, ROOT, hashlib.sha256(raw).hexdigest())
             frame = pd.read_csv(io.BytesIO(raw))
             require(frame.pair_id.is_unique, 'Duplicate pair identifier')
             require(frame.groupby('household_id').cv_fold5.nunique().eq(1).all(), 'Household split across folds')

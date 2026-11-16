@@ -13,5 +13,6 @@ The current analysis uses baseline ages 48-55, actual follow-up of 4-16 years, a
 - [Step-by-step AI agent handoff](planning/AGENT_HANDOFF.md)
 - [Unified metadata](metadata/README.md)
 - [Model code and persistence changes](planning/CODE_ADAPTATION.md)
+- [Pair-specific survival rule and verified mortality audit](planning/SURVIVAL_POLICY.md)
 
 Data preparation and software pilot checks are complete for this scope. Full modeling and locked-test evaluation are the next stage.

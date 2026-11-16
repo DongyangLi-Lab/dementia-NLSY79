@@ -79,3 +79,8 @@ Run the small household pilot to measure runtime and memory, then select local o
 Save fitted preprocessing and models, configuration and environment versions, fold assignments, training weights, validation search results, prediction files, and evaluation tables. Predictions should carry person ID, household ID, pair ID when applicable, cohort, model version, and actual follow-up duration. Keep row-level outputs in the project's data location.
 
 Prepare a sample-flow table, a baseline/missingness table, a direct-transfer performance table, an A/B improvement table, and a sensitivity table. Use the project figure preferences when plotting observed results. Training and S generation are the next phase following this preparation release.
+
+
+## Survival rule update - 2026-11-16
+
+See [SURVIVAL_POLICY.md](SURVIVAL_POLICY.md) before rebuilding cohorts or fitting models. The pair-specific death-first rule now applies to primary and sensitivity HRS cohorts. All 12 existing HRS analysis tables and the model-ready export pass the Tracker audit; no rows or frozen archive members changed. Stage 02 construction and model data loading require the checksum-bound survival certificate. The observed 27-point target and feature lists are unchanged. No new training or locked-test evaluation was performed.
