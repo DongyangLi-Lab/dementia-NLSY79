@@ -377,5 +377,10 @@
     "version": "hrs_pair_endpoint_survival_v1",
     "certificate": "metadata/survival_audit.json",
     "certificate_sha256": "bed71a5ae34088b70e038ba7606b94ede68269a7e0eafdfabdecb94d64386568"
+  },
+  "nlsy_survival_policy": {
+    "version": "nlsy79_endpoint_survival_v1",
+    "certificate": "metadata/nlsy_survival_audit.json",
+    "certificate_sha256": "08f0c87a1f491fbc35336a1f37d334fce7d1606128ae6e7158af25430d9c1e96"
   }
 }

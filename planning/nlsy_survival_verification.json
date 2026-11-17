@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-16",
+  "status": "pass",
+  "engineering_tests_passed": 23,
+  "nlsy_tables_audited": 8,
+  "hrs_tables_already_audited": 12,
+  "source_population": 12686,
+  "rni_deceased_through_2020": 1211,
+  "main_cohort_deceased_through_2020": 0,
+  "main_cohort_rows": 2305,
+  "main_cohort_deaths_first_reported_2022": 32,
+  "previously_eligible_nlsy_pairs_newly_excluded": {
+    "paired_total27_strict": 0,
+    "paired_baseline3_to_outcome27": 0
+  },
+  "all_32_harmonized_files_unchanged": true,
+  "frozen_archives_unchanged": true,
+  "rebuilt_stage2_members_byte_identical": 4,
+  "daily_use_csv_payloads_match_stage2": true,
+  "new_training": false,
+  "locked_test_evaluation": false,
+  "unc_updated": false
+}

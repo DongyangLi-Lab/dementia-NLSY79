@@ -30,11 +30,11 @@ remain byte-identical. The certificate records source and table SHA-256
 digests and aggregate counts; it contains no participant identifiers.
 
 NLSY79 remains 2,305 participants with observed 2020 cognitive outcomes.
-HRS Tracker cannot establish NLSY79 mortality: no independent NLSY mortality
-registry audit is claimed. Its 1,845 development / 460 locked-test split and
-all predictor lists remain unchanged. Mortality information is used only for
-eligibility, never as an input feature. No model refit or locked-test evaluation
-was performed for this change.
+It now has a separate official mortality audit described below; HRS Tracker
+is not used to establish NLSY79 survival. Its 1,845 development / 460 locked-test
+split and all predictor lists remain unchanged. Mortality information is used
+only for eligibility, never as an input feature. No model refit or locked-test
+evaluation was performed for this change.
 
 ## Reproduce the audit
 
@@ -54,3 +54,42 @@ exact HRS CSV hash through `stage2_config.json`. Any future data change requires
 a fresh mortality audit and deliberate contract update; it cannot silently
 reuse this certificate. Historical artifacts remain historical; the certificate
 does not assert that an uninspected UNC copy has been updated.
+
+## NLSY79 mortality verification - 2026-11-16 follow-up
+
+The official 1979-2022 release supplies respondent-specific Reason for
+Noninterview (RNI) fields for 1980-2022 and the cross-round NDI_DECEASED_FLAG.
+RNI=65 means deceased; RNI=75 means deceased in a dropped special sample.
+Both exclude a participant whenever reported through the 2020 endpoint wave,
+even if a contradictory cognitive score is present. The endpoint also requires
+RNI=-4 (no noninterview disposition), a matching valid interview month/year,
+and observed cognition with an interviewed mode code. The official codebook
+counts six interviewed respondents with mode=-3 (invalid skip); two occur in
+the main cohort and are confirmed by their dated, observed outcome interview.
+Mode missingness alone is not mortality, and sampling weights are not vital
+status indicators. The local analysis builder applies this rule to strict27,
+baseline3, official27 sensitivity, and the wider-age external exports.
+
+Among all 12,686 original respondents, 1,211 have a death RNI through 2020.
+None is in the 2,305-person primary sample. All six NLSY analysis branches and
+both wider-age external tables pass; zero rows require removal. Thirty-two
+primary participants have a latest deceased flag and a death RNI first reported
+in 2022, while retaining a completed 2020-wave cognitive interview. Their
+observed endpoint remains eligible. The public cross-round flag has no death
+date; it is not evidence that they died before that completed interview.
+Do not describe this audit as survival through December 31 or all later waves,
+or as a linkage to restricted, dated NDI death records.
+
+The new certificate `metadata/nlsy_survival_audit.json` supersedes the earlier
+NLSY-not-audited statement for the project. The separate HRS certificate's NLSY
+note describes that HRS-only audit, not the new NLSY audit. Both certificates
+are required by Stage 02 preparation and model loading.
+
+```powershell
+python extract_nlsy_survival.py --source ../data/raw/nlsy79/nlsy79_all_1979-2022.zip --catalog ../data/interim/nlsy79_full_variable_catalog.csv --output ../data/interim/nlsy79_survival_raw.csv.gz --reports ../reports/survival_sync_20261116
+python audit_nlsy_survival.py --stage1 ../upload/01_harmonized_cohort_data_v3.zip --stage2 ../upload/02_model_ready_cohort_pairs_v1.zip --status ../data/interim/nlsy79_survival_raw.csv.gz --provenance ../reports/survival_sync_20261116/nlsy_survival_extract.json --output metadata/nlsy_survival_audit.json
+```
+
+Re-extraction may change compressed extract bytes and therefore its provenance
+digest. After a fresh audited extraction, deliberately refresh the certificate
+SHA-256 in `stage2_config.json`; never bypass a mismatched certificate.

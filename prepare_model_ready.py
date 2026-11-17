@@ -11,6 +11,7 @@ from tempfile import TemporaryDirectory
 from zipfile import ZIP_DEFLATED, ZipFile
 
 from part2_models.survival import verify_certificate
+from part2_models.nlsy_survival import verify_nlsy_certificate
 
 
 HERE = Path(__file__).resolve().parent
@@ -75,6 +76,7 @@ def write_table(archive, name, columns, rows, expected_hash):
 def build(source, destination):
     spec = json.loads((HERE / 'stage2_config.json').read_text(encoding='utf-8'))
     verify_certificate(spec, HERE, spec['output_csv_sha256']['HRS.csv.gz'])
+    verify_nlsy_certificate(spec, HERE, spec['output_csv_sha256']['NLSY79.csv.gz'])
     hashes = spec['input_sha256']
     with ZipFile(source) as archive:
         hrs_name = 'hrs_analysis_allpairs_' + BRANCH

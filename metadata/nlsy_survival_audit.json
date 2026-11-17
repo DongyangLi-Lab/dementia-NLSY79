@@ -1,0 +1,230 @@
+{
+  "policy": "nlsy79_endpoint_survival_v1",
+  "status": "pass",
+  "source": {
+    "source_zip_sha256": "efb3bbd17ed602abf100be44802778ef88fad68aa80913cd07dce778ebda72d7",
+    "extract_sha256": "a41a8529a72bf20aa43a9ebe3653d1f4fbf28f9534a6a5ff9869e3b48051e3ce",
+    "rows": 12686,
+    "columns": [
+      "N0022000",
+      "R0000100",
+      "R0406310",
+      "R0618810",
+      "R0898510",
+      "R1144710",
+      "R1519910",
+      "R1890300",
+      "R2257400",
+      "R2444600",
+      "R2870100",
+      "R3073900",
+      "R3400500",
+      "R3655900",
+      "R4006400",
+      "R4417500",
+      "R5080500",
+      "R5165800",
+      "R6478500",
+      "R7006300",
+      "R7703500",
+      "R8495900",
+      "T0987500",
+      "T2209800",
+      "T3107600",
+      "T4112100",
+      "T5022300",
+      "T5770600",
+      "T8218500",
+      "T8330001",
+      "T8330002",
+      "T8780600",
+      "T8787500",
+      "T8787600",
+      "T9299500"
+    ],
+    "rni_by_year": {
+      "1980": "R0406310",
+      "1981": "R0618810",
+      "1982": "R0898510",
+      "1983": "R1144710",
+      "1984": "R1519910",
+      "1985": "R1890300",
+      "1986": "R2257400",
+      "1987": "R2444600",
+      "1988": "R2870100",
+      "1989": "R3073900",
+      "1990": "R3400500",
+      "1991": "R3655900",
+      "1992": "R4006400",
+      "1993": "R4417500",
+      "1994": "R5080500",
+      "1996": "R5165800",
+      "1998": "R6478500",
+      "2000": "R7006300",
+      "2002": "R7703500",
+      "2004": "R8495900",
+      "2006": "T0987500",
+      "2008": "T2209800",
+      "2010": "T3107600",
+      "2012": "T4112100",
+      "2014": "T5022300",
+      "2016": "T5770600",
+      "2018": "T8218500",
+      "2020": "T8787600",
+      "2022": "T9299500"
+    },
+    "source_csv_read_to_eof_crc_checked": true,
+    "codebook_sha256": "cb4f9d6db2f6236d3793fada2d7a7e993e96ef50122f84fc366e786bc4ffe1b7"
+  },
+  "stage1_archive_sha256": "639e5985a3f72ec1c982f1ac6208fb192bbae64c655141a73eae74dff06a6058",
+  "stage2_archive_sha256": "c9d7c62bc284b56d49982e1ebba151b621501da6b2cb78e531c5720ec5d57f20",
+  "rule": "Exclude any RNI=65/75 through the 2020 outcome wave; require a confirmed respondent interview at the observed outcome date. Later reported death does not invalidate an earlier completed endpoint.",
+  "limitation": "The public cross-round NDI deceased flag has no date. It is cross-checked, never treated as death before 2020 solely because it is positive. Survival refers to the observed endpoint interview, not December 31 or the end of all future follow-up.",
+  "source_population": {
+    "people": 12686,
+    "rni_deaths_2020": 1211,
+    "any_rni_death_through_2020": 1211,
+    "latest_deceased_flag": 1374
+  },
+  "branches": [
+    {
+      "table": "nlsy_analysis_baseline3_matched_age_actual4_16.csv.gz",
+      "csv_sha256": "6560c1c767b12515eee65f09b20e80dbb022fe1ca7215d55f30c0131f2ebf95b",
+      "rows": 3088,
+      "people": 3088,
+      "excluded": 0,
+      "retained": 3088,
+      "reasons": {
+        "eligible": 3088
+      },
+      "death_reported_by_2020": 0,
+      "latest_deceased_flag": 48,
+      "death_reported_2022_only": 48,
+      "retained_2022_death_with_observed_2020_endpoint": 48
+    },
+    {
+      "table": "nlsy_analysis_baseline3_matched_age_actual4_8.csv.gz",
+      "csv_sha256": "cad8c789c4eda30b264d2a8acbf9a02b5f30f9d5898b66d0194e166456975c84",
+      "rows": 618,
+      "people": 618,
+      "excluded": 0,
+      "retained": 618,
+      "reasons": {
+        "eligible": 618
+      },
+      "death_reported_by_2020": 0,
+      "latest_deceased_flag": 7,
+      "death_reported_2022_only": 7,
+      "retained_2022_death_with_observed_2020_endpoint": 7
+    },
+    {
+      "table": "nlsy_analysis_official27_sensitivity_matched_age_actual4_16.csv.gz",
+      "csv_sha256": "7dad4d070d03cd31c26f87baa3b398489f5d0d84ed6181ca7b1862f2b8204660",
+      "rows": 2305,
+      "people": 2305,
+      "excluded": 0,
+      "retained": 2305,
+      "reasons": {
+        "eligible": 2305
+      },
+      "death_reported_by_2020": 0,
+      "latest_deceased_flag": 32,
+      "death_reported_2022_only": 32,
+      "retained_2022_death_with_observed_2020_endpoint": 32
+    },
+    {
+      "table": "nlsy_analysis_strict27_matched_age_actual4_16.csv.gz",
+      "csv_sha256": "7dad4d070d03cd31c26f87baa3b398489f5d0d84ed6181ca7b1862f2b8204660",
+      "rows": 2305,
+      "people": 2305,
+      "excluded": 0,
+      "retained": 2305,
+      "reasons": {
+        "eligible": 2305
+      },
+      "death_reported_by_2020": 0,
+      "latest_deceased_flag": 32,
+      "death_reported_2022_only": 32,
+      "retained_2022_death_with_observed_2020_endpoint": 32
+    },
+    {
+      "table": "nlsy_analysis_strict27_matched_age_actual4_8.csv.gz",
+      "csv_sha256": "51fabfc8b5566a4378ae564f396da94a2059279be68d71992581238b6537f9fb",
+      "rows": 613,
+      "people": 613,
+      "excluded": 0,
+      "retained": 613,
+      "reasons": {
+        "eligible": 613
+      },
+      "death_reported_by_2020": 0,
+      "latest_deceased_flag": 7,
+      "death_reported_2022_only": 7,
+      "retained_2022_death_with_observed_2020_endpoint": 7
+    },
+    {
+      "table": "nlsy_analysis_strict27_matched_age_nominal6.csv.gz",
+      "csv_sha256": "a46e3bd7fe54251413f862c4dbad9b2a3ea988868f1056359dbc3cfc4471b356",
+      "rows": 98,
+      "people": 98,
+      "excluded": 0,
+      "retained": 98,
+      "reasons": {
+        "eligible": 98
+      },
+      "death_reported_by_2020": 0,
+      "latest_deceased_flag": 2,
+      "death_reported_2022_only": 2,
+      "retained_2022_death_with_observed_2020_endpoint": 2
+    },
+    {
+      "table": "nlsy_external_full_baseline3_DOMAIN_SHIFT.csv.gz",
+      "csv_sha256": "ea75b655dc3d4143a7debaa21b322c251b288233aeb3a7ac9f91ba4ccd2b69d4",
+      "rows": 4476,
+      "people": 4476,
+      "excluded": 0,
+      "retained": 4476,
+      "reasons": {
+        "eligible": 4476
+      },
+      "death_reported_by_2020": 0,
+      "latest_deceased_flag": 71,
+      "death_reported_2022_only": 71,
+      "retained_2022_death_with_observed_2020_endpoint": 71
+    },
+    {
+      "table": "nlsy_external_full_strict27_DOMAIN_SHIFT.csv.gz",
+      "csv_sha256": "4e50798cd26efd79ac95fa32361bc6e884071d2822f0d7927ad7c6f3903c4b1e",
+      "rows": 3199,
+      "people": 3199,
+      "excluded": 0,
+      "retained": 3199,
+      "reasons": {
+        "eligible": 3199
+      },
+      "death_reported_by_2020": 0,
+      "latest_deceased_flag": 47,
+      "death_reported_2022_only": 47,
+      "retained_2022_death_with_observed_2020_endpoint": 47
+    }
+  ],
+  "stage2_nlsy_csv_sha256": "c90ca4abdcf4c495b870cd66bdfc8fa4cee2f3bffa696d84a4cc7c7bf74757bf",
+  "stage2": {
+    "rows": 2305,
+    "people": 2305,
+    "excluded": 0,
+    "retained": 2305,
+    "reasons": {
+      "eligible": 2305
+    },
+    "death_reported_by_2020": 0,
+    "latest_deceased_flag": 32,
+    "death_reported_2022_only": 32,
+    "retained_2022_death_with_observed_2020_endpoint": 32,
+    "analysis_roles": {
+      "development": 1845,
+      "locked_test": 460
+    },
+    "interview_mode_invalid_skip_with_date_and_observed_score": 2
+  }
+}

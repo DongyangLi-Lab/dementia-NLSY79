@@ -3963,6 +3963,19 @@
     "certificate": "metadata/survival_audit.json",
     "documentation": "planning/SURVIVAL_POLICY.md",
     "use": "Eligibility only; never a predictor or binary outcome recoding",
-    "scope": "Primary and sensitivity HRS pairs; NLSY mortality not independently audited"
+    "scope": "HRS primary and sensitivity pairs; NLSY79 has its own separate mortality certificate"
+  },
+  "nlsy_survival_eligibility": {
+    "policy": "nlsy79_endpoint_survival_v1",
+    "certificate": "metadata/nlsy_survival_audit.json",
+    "documentation": "planning/SURVIVAL_POLICY.md",
+    "use": "Eligibility only; never a predictor",
+    "death_codes": [
+      65,
+      75
+    ],
+    "death_fields": "RNI through the 2020 endpoint wave",
+    "latest_flag": "NDI_DECEASED_FLAG=1/2 is undated; do not backdate later death",
+    "mode_invalid_skip": "Officially interviewed cases with INTMODE=-3 require RNI=-4, matching valid date and observed cognition; weights do not determine survival"
   }
 }

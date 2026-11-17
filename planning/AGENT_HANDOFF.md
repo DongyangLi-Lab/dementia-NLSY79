@@ -142,3 +142,8 @@ Produce a sample-flow table, baseline/missingness table, direct-transfer table, 
 ## Survival rule update - 2026-11-16
 
 See [SURVIVAL_POLICY.md](SURVIVAL_POLICY.md) before rebuilding cohorts or fitting models. The pair-specific death-first rule now applies to primary and sensitivity HRS cohorts. All 12 existing HRS analysis tables and the model-ready export pass the Tracker audit; no rows or frozen archive members changed. Stage 02 construction and model data loading require the checksum-bound survival certificate. The observed 27-point target and feature lists are unchanged. No new training or locked-test evaluation was performed.
+
+
+### NLSY79 mortality audit completed - 2026-11-16 follow-up
+
+The earlier NLSY-not-audited limitation is superseded by the separate official RNI/NDI/interview audit. All eight NLSY analysis/export tables and model-ready NLSY data pass; none of the 1,211 respondents recorded dead through 2020 is in the 2,305-person main cohort. Thirty-two participants with observed 2020 cognition and death first reported in 2022 retain valid endpoints. Public NDI flags are undated and must not be backdated. Both cohort certificates are now mandatory for Stage 02 and training. See SURVIVAL_POLICY.md. No archive changes or retraining occurred.

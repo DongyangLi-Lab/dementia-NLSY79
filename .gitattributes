@@ -1,2 +1,3 @@
 # The survival certificate is verified by its exact bytes on every platform.
 metadata/survival_audit.json text eol=lf
+metadata/nlsy_survival_audit.json text eol=lf
